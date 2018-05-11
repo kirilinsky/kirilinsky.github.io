@@ -481,9 +481,9 @@ select:focus {
 
 
 
-@@media only screen 
-and (max-width : 675px)
-and (min-width : 280px) {
+@media only screen 
+and (max-width : 680px)
+and (min-width : 272px) {
 
 .achwrap {
 	flex-flow: column nowrap;
