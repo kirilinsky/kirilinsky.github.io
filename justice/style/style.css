@@ -481,7 +481,7 @@ select:focus {
 
 
 
-@media only screen 
+@@media only screen 
 and (max-width : 675px)
 and (min-width : 280px) {
 
@@ -549,6 +549,10 @@ and (min-width : 280px) {
 }
 .for-hover img {
 	border-radius: 13px 13px 0 0 ;
+}
+.for-hover a {
+	border-bottom: none;
+	width: 100%;
 }
 .for-hover h4 {
 	display: block;
