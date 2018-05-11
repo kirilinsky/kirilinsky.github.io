@@ -554,6 +554,7 @@ and (min-width : 272px) {
 .for-hover a {
 	border-bottom: none;
 	width: 100%;
+	padding:0;
 }
 .for-hover h4 {
 	display: block;
