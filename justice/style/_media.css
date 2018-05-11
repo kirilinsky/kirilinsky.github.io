@@ -1,0 +1,187 @@
+@media only screen 
+and (max-width : 675px)
+and (min-width : 280px) {
+
+.achwrap {
+	flex-flow: column nowrap;
+	width: 95%;
+}
+.topheader {
+	min-height: 300px;
+}
+.bottomheader {
+	min-height:350px;
+}
+.achbox {
+	min-height: 50vh;
+}
+.achitem {
+    width: 76%;
+    min-height: 357px;
+    display: flex;
+    margin: 17px auto 20px;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 15px grey;
+    padding-top: 11px;
+    border-radius: 12px;
+    transition: ease 0.4s;
+   }
+.achitem:first-child {
+	margin-top: 63px;
+}
+.achpic img {
+    max-width: 89%;
+    max-height: 89%;
+}
+.achdesc p {
+	font-size: 1.3rem;
+	line-height: 1.7rem;
+	padding: 5px;
+}
+.blockwrap {
+	width: 95%;	
+}
+.enter {
+	width: 88%;
+	margin: 20px auto;	
+}
+.enter h4 {
+	font-size: 1.7rem;
+	line-height: 2rem;
+}
+.examples {
+	width: 95%;	
+	margin: 0 auto;
+	flex-flow: column nowrap;
+}
+.for-hover {
+    width: 97%;
+    height: 263px;
+    margin: 47px auto;
+    position: relative;
+    border-radius: 13px 13px 0 0 ;
+    box-shadow: 2px 2px 4px grey;
+}
+.for-hover img {
+	border-radius: 13px 13px 0 0 ;
+}
+.for-hover h4 {
+	display: block;
+	box-shadow: 2px 2px 3px grey;
+	width: 100%;	
+	color: #fff;
+	letter-spacing: 2px;
+	text-shadow: 0 1px 5px black;
+	text-align: center;
+	background: grey;
+	font-size: 25px;
+	padding: 5px;
+	margin-top: -2px;
+	border-radius: 0 0 13px 13px;
+}
+.contactswrap {
+	flex-flow: column nowrap;
+}
+.line {
+	display: none;
+}
+.side {
+	width: 96%;	
+}
+p#form {
+	font-size: 1.1rem;
+}
+.formwrap {
+	width: 99%;	
+	font-size: 1.2rem;
+}
+footer {
+    width: 100%;
+    height: 55px;
+    font-size: 1.2rem;
+}
+.forbutton {
+    width: 59%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px auto;
+}
+.forinput {
+	width: 97%;	
+	margin: 24px auto;
+}
+label#label {
+    margin-left: 50px;
+    position: absolute;
+    min-width: 85px;
+    text-align: right;
+    top: 94%;
+    right: 8%;
+}
+.fortext {
+	width: 83%;	
+	margin-top:50px;
+}
+
+.forabout{
+	overflow-y: scroll;
+	height: 50vh;
+} 
+li>a {
+	font-size: 1.3rem;
+	letter-spacing: 1px;
+}
+.abouthead2 {
+    text-align: right;
+    font-size: 1.4rem;
+}
+.aboutitem {
+    width: 99%;
+    margin: 17px auto;
+    display: flex;
+    min-height: 325px;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 2px;
+}
+.navbutton {
+	width: 165px;
+}
+.aboutp img {
+    width: 99%;
+    height: 71%;
+}
+.aboutp p{
+	 width: 100%;
+	 margin: 17px 0;
+}
+.aboutp {
+	flex-flow: column nowrap;
+	height: 325px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.428571;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+
+}

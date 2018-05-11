@@ -30,7 +30,7 @@ html {
 	background: linear-gradient(to right, rgba(157,169,198,1) 0%,rgba(208,215,219,1) 60%,rgba(157,169,198,1) 100%);
 	box-shadow: 0 0 10px lightgrey;
 	position: sticky;
-	top:1px;
+	top:0px;
 	z-index: 213;
 	overflow: hidden;
 }
@@ -63,29 +63,37 @@ nav {
 }
 .achbox {
 	width: 100%;
-	height: 49vh;
 	background: #ccc;
 }
 .achwrap {
 	width: 80%;
 	background: #fff;
-	height: 100%;
+	min-height:412px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
 }
+.for-hover a {
+	width: 55%;
+	display: block;
+	color: #000;
+	border-bottom: 2px dashed lightgrey;
+	letter-spacing: 1px;
+	text-shadow: 1px 0 1px grey;
+}
 .achitem {
-	width: 17%;
-	height: 38vh;
+	width: 24%;
+	min-height: 40vh;
+	padding: 7px;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-around;
 	align-items: center;
-	box-shadow: 0 0 15px grey;
+	box-shadow: 0 0 25px grey;
 	padding-top: 14px;
-	border-radius: 10px;
+	border-radius: 12px;
 	transition: ease 0.4s;
 }
 .achitem:hover {
@@ -277,7 +285,7 @@ a#hovered:hover {
 .forabout {
 	width: 99%;
 	margin: 1px auto;
-	height: 60vh;
+	height: 55vh;
 	overflow-y: scroll;
 }
 .forabout.secondversion {
