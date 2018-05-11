@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>	Юридические услуги</title>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	 <div class="topheader" id="head">
+		<div class="imgbox"></div>
+	 </div>
+	 <div class="navbox">
+	 	<nav>
+	 		<a href="#head"  class="go_to">
+	 			<div class="navbutton">главная</div>
+	 		</a>
+	 		<a href="#servicelink" class="go_to">
+	 			<div class="navbutton">услуги и цены</div>
+	 		</a>
+	 		<a href="#aboutlink" class="go_to">
+	 			<div class="navbutton">о нас</div>
+	 		</a>
+	 		<a href="#contacts" class="go_to">
+	 			<div class="navbutton">контакты</div>
+	 		</a>
+	 	</nav>
+	 </div>
+	 <div class="bottomheader" >
+	 	<div class="achbox">
+	 		<div class="achwrap">
+	 			<div class="achitem">
+	 				<div class="achhead">Заключаем договор</div>
+	 				<div class="achpic">
+	 					<img src="img/1.png" alt="contract">
+	 				</div>
+	 				<div class="achdesc">
+	 					<p>
+	 						Перед началом работ заключаем договор на юридическое лицо. 
+	 						Вы можете быть уверены, что все обязательства будут выполнены.
+	 					</p>
+	 				</div>
+	 			</div>
+	 			<div class="achitem">
+	 				<div class="achhead">Точно в срок</div>
+	 				<div class="achpic">
+	 					<img src="img/2.png" alt="time">
+	 				</div>
+	 				<div class="achdesc">
+	 					<p>
+	 						Работаем строго по установленным срокам, которые прописаны 
+	 						в договоре. Если не успеваем, 
+	 						Вы платите меньше
+	 					</p>
+	 				</div>
+	 			</div>
+	 			<div class="achitem">
+	 				<div class="achhead">Всегда на связи</div>
+	 				<div class="achpic">
+	 					<img src="img/3.png" alt="phone">
+	 				</div>
+	 				<div class="achdesc">
+	 					<p>
+	 						Сопровождение и консультирование для наших клиентов 24/7, можно спрашивать что-угодно.
+	 					</p>
+	 				</div>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </div>		
+
+	<div class="block" id="service">
+		
+		<div class="blockwrap">
+				<div class="blockhead" id="servicelink">
+					Услуги и цены
+				</div>
+				<div class="enter">
+					<h4>
+						здесь можно ознакомиться с категориями 
+						предоставляемых услуг и их стоимостью
+					</h4>
+				</div>
+				
+				<div class="examples">
+
+						<div class="for-hover">
+							<div class="for-span">
+								<span id="hovered">категория:</span>
+								<h2 id="hovered">семейные споры</h2>
+								<a href="#family" data-toggle="modal" data-target="#family" id="hovered">услуги и цены</a>
+							</div>
+							<img src="img/sem.jpg" alt="picture">
+							<a href="#family" data-toggle="modal" data-target="#family"><h4>Семейные споры</h4></a>
+						</div>
+
+						<div class="for-hover">
+							<div class="for-span">
+								<span id="hovered">категория:</span>
+								<h2 id="hovered">наследство</h2>
+								<a  href="#nasled" data-toggle="modal" data-target="#nasled" id="hovered">услуги и цены</a>
+							</div>
+							<img src="img/nasled.jpg" alt="picture">
+							<a  href="#nasled" data-toggle="modal" data-target="#nasled"><h4>Наследство</h4></a>
+						</div>
+
+
+						<div class="for-hover">
+							<div class="for-span">
+								<span id="hovered">категория:</span>
+								<h2 id="hovered">жилищные споры</h2>
+								<a href="#jil" id="hovered"  data-toggle="modal" data-target="#jil">услуги и цены</a>
+							</div>
+							<img src="img/jil.jpg" alt="jile">
+							<a href="#jil" data-toggle="modal" data-target="#jil"><h4>Жилищные споры</h4></a>
+						</div>
+							
+
+						<div class="for-hover">
+							<div class="for-span">
+								<span id="hovered">категория:</span>
+								<h2 id="hovered">прочие вопросы</h2>
+								<a href="#others" id="hovered"  data-toggle="modal" data-target="#others">услуги и цены</a>
+							</div>
+							<img src="img/other.jpg" alt="picture">
+							<a href="#others" data-toggle="modal" data-target="#others"><h4>Прочее</h4></a>
+						</div>
+
+						
+						<!-- модал 1 -->
+							<div class="modal fade" tabindex="-1"  id="family">
+							  <div class="modal-dialog modal-lg">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        <h4 class="modal-title">Подробно об услугах в категории семейное право</h4>
+							      </div>
+							      <div class="modal-body">
+							      	<div class="modalwrap">
+										<!-- табы -->
+											
+											<!-- Навигационные вкладки -->  
+											<ul class="nav nav-tabs" role="tablist">
+											  <li role="presentation" class="active"><a href="#about1" role="tab" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
+											  <li role="presentation"><a href="#table1"role="tab" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
+											  <li role="presentation"><a href="#other1" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
+											</ul>
+
+											<!-- Вкладки панелей -->  
+											<div class="tab-content">
+											  <div role="tabpanel" class="tab-pane active" id="about1">
+											  	<div class="forabout">
+
+											  		<div class="aboutitem">
+											  			<div class="abouthead2">Развод</div>
+											  			<div class="aboutp">
+											  				<p>Развод это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+											  				<img src="img/modal/razvod.jpg" alt="razvod">
+											  			</div>
+											  		</div>
+
+											  		<div class="aboutitem">
+											  			<div class="abouthead">Алименты</div>
+											  			<div class="aboutp">
+											  				<img src="img/modal/alim.jpg" alt="alim">
+											  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+											  				
+											  			</div>
+											  		</div>
+
+
+											  		<div class="aboutitem">
+											  			<div class="abouthead2">Установление отцовства</div>
+											  			<div class="aboutp">
+											  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+											  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+											  			</div>
+											  		</div>
+											  	
+											  	
+											  
+											  		
+											  	</div>
+											  </div>
+											  <div role="tabpanel" class="tab-pane" id="table1">
+											  	<div class="fortable">
+											  		<table class="table table-striped">
+											  		  <tr>
+											  		  	<th>Услуга</th>
+											  		  	<th>Стоимость</th>
+											  		  </tr>
+											  		  <tr>
+											  		  	<td>Что-то</td>
+											  		  	<td>100 р.</td>
+											  		  </tr>
+											  		  <tr>
+											  		  	<td>Еще</td>
+											  		  	<td>320 р.</td>
+											  		  </tr>
+											  		  <tr>
+											  		  	<td>Еще</td>
+											  		  	<td> 400 р.</td>
+											  		  </tr>
+											  		  <tr>
+											  		  	<td>Еще</td>
+											  		  	<td> 400 р.</td>
+											  		  </tr>
+											  		  <tr>
+											  		  	<td>Еще</td>
+											  		  	<td> 400 р.</td>
+											  		  </tr>
+											  		</table>
+
+											  	</div>
+											  	<p>*подробные цены можно узнать после консультации</p>
+											  </div>
+											  <div role="tabpanel" class="tab-pane" id="other1">...</div>
+
+											</div>
+										<!-- табы конец -->
+							   		</div>
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+							        <button type="button" class="btn btn-success" style="font-size:1rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+							        
+							      </div>
+							    </div>  
+							  </div> 
+							</div>  
+
+							<!-- конец 1 модал -->
+
+
+							<!-- модал 2 -->
+								<div class="modal fade" tabindex="-1"  id="nasled">
+								  <div class="modal-dialog modal-lg">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title">Подробно об услугах в категории наследство </h4>
+								      </div>
+								      <div class="modal-body">
+								      	<div class="modalwrap">
+											<!-- табы -->
+												
+												<!-- Навигационные вкладки -->  
+												<ul class="nav nav-tabs" role="tablist">
+												  <li role="presentation" class="active"><a href="#about2" role="tab" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
+												  <li role="presentation"><a href="#table2"role="tab" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
+												  <li role="presentation"><a href="#other2" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
+												</ul>
+
+												<!-- Вкладки панелей -->  
+												<div class="tab-content">
+												  <div role="tabpanel" class="tab-pane active" id="about2">
+												  	<div class="forabout">
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Наследство</div>
+												  			<div class="aboutp">
+												  				<p>Наследство это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				<img src="img/nasled.jpg" alt="nasled">
+												  			</div>
+												  		</div>
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead">Алименты</div>
+												  			<div class="aboutp">
+												  				<img src="img/modal/alim.jpg" alt="alim">
+												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				
+												  			</div>
+												  		</div>
+
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Установление отцовства</div>
+												  			<div class="aboutp">
+												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+												  			</div>
+												  		</div>
+												  	
+												  	
+												  
+												  		
+												  	</div>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="table2">
+												  	<div class="fortable">
+												  		<table class="table table-striped">
+												  		  <tr>
+												  		  	<th>Услуга</th>
+												  		  	<th>Стоимость</th>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Что-то</td>
+												  		  	<td>100 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td>320 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		</table>
+
+												  	</div>
+												  	<p>*подробные цены можно узнать после консультации</p>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="other2">22..</div>
+
+												</div>
+											<!-- табы конец -->
+								   		</div>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+								        
+								      </div>
+								    </div>  
+								  </div> 
+								</div>  
+
+								<!-- конец 2 модал -->
+
+								<!-- модал 3 -->
+								<div class="modal fade" tabindex="-1"  id="jil">
+								  <div class="modal-dialog modal-lg">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title">Подробно об услугах в категории жилищные споры </h4>
+								      </div>
+								      <div class="modal-body">
+								      	<div class="modalwrap">
+											<!-- табы -->
+												
+												<!-- Навигационные вкладки -->  
+												<ul class="nav nav-tabs" role="tablist">
+												  <li class="active"><a href="#about3" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
+												  <li><a href="#table3" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
+												  <li role="presentation"><a href="#other3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
+												</ul>
+
+												<!-- Вкладки панелей -->  
+												<div class="tab-content">
+												  <div role="tabpanel" class="tab-pane active" id="about3">
+												  	<div class="forabout">
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Жилищные споры</div>
+												  			<div class="aboutp">
+												  				<p>Жилищные споры это Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты..</p>
+												  				<img src="img/jil.jpg" alt="jil">
+												  			</div>
+												  		</div>
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead">Алименты</div>
+												  			<div class="aboutp">
+												  				<img src="img/modal/alim.jpg" alt="alim">
+												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				
+												  			</div>
+												  		</div>
+
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Установление отцовства</div>
+												  			<div class="aboutp">
+												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+												  			</div>
+												  		</div>
+												  	
+												  	
+												  
+												  		
+												  	</div>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="table3">
+												  	<div class="fortable">
+												  		<table class="table table-striped">
+												  		  <tr>
+												  		  	<th>Услуга</th>
+												  		  	<th>Стоимость</th>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Что-то</td>
+												  		  	<td>1500 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td>3500 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		</table>
+
+												  	</div>
+												  	<p>*подробные цены можно узнать после консультации</p>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="other3">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок там раз языкового, текстами предупредила свой большого силуэт строчка всемогущая несколько залетают! Дал которое он, строчка заманивший текста назад!</div>
+												</div>
+											<!-- табы конец -->
+								   		</div>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+								        
+								      </div>
+								    </div>  
+								  </div> 
+								</div>  
+
+								<!-- конец 3 модал -->
+
+								<!-- модал 4 -->
+								<div class="modal fade" tabindex="-1"  id="others">
+								  <div class="modal-dialog modal-lg">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <h4 class="modal-title">Подробно об услугах вне категорий</h4>
+								      </div>
+								      <div class="modal-body">
+								      	<div class="modalwrap">
+											<!-- табы -->
+												
+												<!-- Навигационные вкладки -->  
+												<ul class="nav nav-tabs" role="tablist">
+												  <li class="active"><a href="#about4" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
+												  <li><a href="#table4" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
+												  <li role="presentation"><a href="#other4" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
+												</ul>
+
+												<!-- Вкладки панелей -->  
+												<div class="tab-content">
+												  <div role="tabpanel" class="tab-pane active" id="about4">
+												  	<div class="forabout">
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Вне категорий</div>
+												  			<div class="aboutp">
+												  				<p>Жилищные споры это Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты..</p>
+												  				<img src="img/jil.jpg" alt="jil">
+												  			</div>
+												  		</div>
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead">Алименты</div>
+												  			<div class="aboutp">
+												  				<img src="img/modal/alim.jpg" alt="alim">
+												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				
+												  			</div>
+												  		</div>
+
+
+												  		<div class="aboutitem">
+												  			<div class="abouthead2">Установление отцовства</div>
+												  			<div class="aboutp">
+												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
+												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+												  			</div>
+												  		</div>
+												  	
+												  	
+												  
+												  		
+												  	</div>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="table4">
+												  	<div class="fortable">
+												  		<table class="table table-striped">
+												  		  <tr>
+												  		  	<th>Услуга</th>
+												  		  	<th>Стоимость</th>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Что-то</td>
+												  		  	<td>1500 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td>3500 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		  <tr>
+												  		  	<td>Еще</td>
+												  		  	<td> 400 р.</td>
+												  		  </tr>
+												  		</table>
+
+												  	</div>
+												  	<p>*подробные цены можно узнать после консультации</p>
+												  </div>
+												  <div role="tabpanel" class="tab-pane" id="other4">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок там раз языкового, текстами предупредила свой большого силуэт строчка всемогущая несколько залетают! Дал которое он, строчка заманивший текста назад!</div>
+
+												</div>
+											<!-- табы конец -->
+								   		</div>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+								        
+								      </div>
+								    </div>  
+								  </div> 
+								</div>  
+
+								<!-- конец 4 модал -->
+
+
+						 
+			 </div>
+		 </div>
+	</div>
+
+	<div class="block" id="about">
+
+		<div class="blockwrap">
+			<div class="blockhead"  id="aboutlink">О нас </div>
+			Контора
+		</div>
+	</div>
+	<div class="block" id="contacts">
+		<div class="blockwrap">
+			<div class="blockhead">Контакты </div>
+				<div class="contactswrap">
+					<div class="side form">
+						<div class="formwrap">
+							<div class="sechead">
+								<div class="formheader">Задать вопрос</div>
+								<p id="form">напишите нам и мы обязательно свяжемся с Вами, чтобы подробно обсудить Ваш вопрос.</p>
+							</div>
+							<div class="ifsuccess ">
+							<span id="ifsuccess"><span id="success">Спасибо за заявку</span> совсем скоро с Вами свяжутся</span>
+							</div>
+							
+							
+							<form action="#">
+							
+			
+								<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="Юридическая Помощь">
+							<input type="hidden" name="admin_email" value="valera.az2016@yandex.ru">
+							<input type="hidden" name="form_subject" value="Поступил новый запрос">
+								<!-- END Hidden Required Fields -->
+
+							
+							<div class="forinput">
+								<input type="text" required id="name">
+								<label for="name" id="label"> Ваше Имя - <i class="fa fa-user" aria-hidden="true"></i></label>
+							</div>
+							
+							<div class="forinput">
+								<input type="email"  required id="email">
+								<label for="email" id="label"> Ваша Почта - <i class="fa fa-envelope" aria-hidden="true"></i></label>
+							</div>
+
+							<div class="forinput">
+								<input type="text" required id="phone">
+								<label for="phone" id="label"> Ваш Номер телефона - <i class="fa fa-phone" aria-hidden="true"></i></label>
+							</div>
+
+							<div class="fortext">
+								<textarea rows="5" name="message" required 	placeholder="Ваш вопрос"></textarea>
+							</div>
+
+							<div class="fortext">
+								<select name="category" id="category" required>
+									<option value=" " selected=" ">выберите тему вашего вопроса</option>
+									<option value="Семейные споры">Семейные споры</option>
+									<option value="Жилищные споры">Жилищные споры</option>
+									<option value="Вопрос по оформлению наслдества">Вопросы по оформлению наслдества</option>
+									<option value="Вопрос вне категорий">Вопрос вне категорий</option>
+								</select>
+							</div>
+							<div class="forbutton ">
+								<button class="btn">отправить вопрос</button>
+							</div>
+
+
+						</form>
+						</div>
+						
+					</div>
+					<div class="line"></div>
+					<div class="side contacts">
+						<div class="formwrap">
+							<div class="sechead">
+								<div class="formheader">Наши контакты</div>
+								<p id="form">Можете связаться с нами самостоятельно</p>
+							</div>
+							<ul>
+								<li>123123</li>
+								<li>1231</li>
+								<li>123</li>
+								<li>dfgdfg@234</li>
+								<li>21312.123</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="footerwrap">
+			<a href="#">доп инфо</a>
+			<a href="#">доп инфо</a>
+			<a href="#">доп инфо</a>
+			<a href="#">доп инфо</a>
+			<a href="#">доп инфо</a>
+			<a href="http://kirilinsky.ru" target="_blank">kirilisnky @ 2018</a>
+		</div>
+	</footer>
+
+	<script src="js/jq1_12.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		  $(document).ready(function(){
+		    $('.go_to').click( function(){ 
+		  var scroll_el = $(this).attr('href'); 
+		        if ($(scroll_el).length != 0) { 
+		      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
+		        }
+		      return false; 
+		    });
+		});
+
+	</script>
+</body>
+</html>

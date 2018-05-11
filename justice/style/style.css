@@ -1,0 +1,472 @@
+@font-face {
+	font-family: 'azbuka';
+	src: url(../fonts/azbuka.ttf);
+}
+* {
+	font-family: 'azbuka', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+html {
+	font-size: 16px;
+}
+* a, * a:hover, * a:active, a:link, a:visited {
+	text-decoration: none;
+}
+.imgbox {
+	width: 100%;
+	height: 45vh;
+	background: url(../img/head.jpg) 70% 1%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbox {
+	width: 100%;
+	min-height: 6vh;
+	background: linear-gradient(to right, rgba(157,169,198,1) 0%,rgba(208,215,219,1) 60%,rgba(157,169,198,1) 100%);
+	box-shadow: 0 0 10px lightgrey;
+	position: sticky;
+	top:1px;
+	z-index: 213;
+	overflow: hidden;
+}
+nav {
+	width: 95%;
+	margin: 0 auto;
+	min-height: 6vh;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.navbutton {
+	text-align: center;
+	width: 177px;
+	transition: ease 0.7s;
+	height: 6vh;
+	line-height: 6vh;
+	color: #030303;
+	font-size: 1.6rem;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	transition: ease 0.3s;
+	font-weight: 700;
+}
+.navbutton:hover, nav a:hover {
+	transition: ease 0.4s;
+	color: #fff;
+}
+.achbox {
+	width: 100%;
+	height: 49vh;
+	background: #ccc;
+}
+.achwrap {
+	width: 80%;
+	background: #fff;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.achitem {
+	width: 17%;
+	height: 38vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: 0 0 15px grey;
+	padding-top: 14px;
+	border-radius: 10px;
+	transition: ease 0.4s;
+}
+.achitem:hover {
+	border-radius: 1px;
+	box-shadow: 0 0 11px grey;
+	transition: ease 0.4s;
+}
+.achhead {
+	font-size: 1.6rem;
+}
+.achpic {
+	max-width: 60%;
+	height: 40%;
+	margin: 0 auto;
+}
+.achpic img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.achdesc {
+	width: 92%;
+	padding: 2px 7px;
+	line-height: 1.5rem;
+	text-align: center;
+}
+
+.block {
+	width: 100%;
+	background: #ccc;
+}
+.blockwrap {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	box-shadow: 0 2px 5px #fff;
+}
+.blockhead {
+	width: 100%;
+	height: 43px;
+	text-align: right;
+	padding-right: 55px;
+	font-size: 1.5rem;
+	box-shadow: 0 0 3px grey;
+	color: #000;
+    background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(157,169,198,1) 60%,rgba(237,242,244,1) 100%);
+}
+.servicebox h3 {
+	text-align: right;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+}
+.enter {
+	text-align: center;
+	width: 50%;
+	font-variant: small-caps;
+	margin: 40px auto 0; 
+}
+.enter h4 {
+	font-size: 2rem;
+	line-height: 2.9rem;
+}
+.examples {
+	width: 84%;
+	margin: 15px auto 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+footer {
+	width: 100%;
+	height: 45px;
+    background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(157,169,198,1) 60%,rgba(237,242,244,1) 100%);
+}
+.footerwrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+/* эффекты для категорий */
+
+.for-hover {
+	width:40%;
+	height: 279px;
+	margin: 56px auto;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px grey;
+}
+img {
+	width: 100%;
+	height: 100%;
+    border-radius: 5px;
+}
+.for-span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #000000bc;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: space-around;
+	align-items: center;
+	color: #fff;
+ 	box-shadow: 0 0 100px #000;
+	letter-spacing: 2px;
+	opacity: 0;
+  	border-radius: 10px;
+	transition: ease 1s;
+	font-size: 1.3rem;
+}
+span#hovered {
+  	color:#ffffffcf;
+	font-weight: 100;
+ 	margin-bottom: 13px;
+ 	margin-left: 30%;
+  	transition: ease 1s;
+}
+h2#hovered {
+	font-size: 29px;
+ 	text-transform: uppercase;
+	font-weight: 400;
+ 	margin-right: 19%;
+  	transition: ease 1s;
+}
+a#hovered {
+	text-decoration: none;
+	margin-top: 20px;
+	color: inherit;
+	font-variant: small-caps;
+	border: 2px solid #00000001;
+	padding: 9px;
+   	margin-bottom: -25%;
+	transition: ease 0.6s;
+}
+a#hovered:hover {
+	color: #fff;
+	text-shadow: 0 0 6px #fff;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	transition: ease 0.6s;
+}
+.for-span:hover {
+	opacity: 1;
+  	box-shadow: 0 0 9px #000;
+	transition: ease 0.6s;
+}
+.for-span:hover h2#hovered {
+	 margin-right: 0;
+	 transition: ease 1s;
+}
+.for-span:hover span#hovered {
+	 margin-left: 0;
+ 	 transition: ease 1s;
+}
+.for-span:hover a#hovered {
+ 	margin-bottom: 0;
+  	transition: ease 1s;
+}
+
+/* конец эффектов для категорий */
+/* модальное окно */
+
+.modalwrap {
+	width: 100%;
+	height: 64vh;
+}
+.fortable {
+	width: 90%;
+	margin:18px auto 0;
+	padding:10px 0 0 0;
+	background: lightgrey;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+}
+.fortable th, .fortable td {
+	text-align: center;
+	border-left: 1px solid grey;
+}
+.forabout {
+	width: 99%;
+	margin: 1px auto;
+	height: 60vh;
+	overflow-y: scroll;
+}
+.forabout.secondversion {
+	overflow-y:  visible;
+	min-height: 40vh;
+}
+.aboutitem {
+	width: 80%;
+	margin: 20px auto;
+	display: flex;
+	height: 200px;
+
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	padding: 5px;
+}
+.aboutp {
+	height: 230px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.abouthead {
+	font-size: 1.5rem;
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 8px;
+	padding: 0 25px;
+	background: lightgrey;
+	border-radius: 5px;
+}
+.abouthead2 {
+	text-align: right;
+	font-size: 1.6rem;
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 10px;
+	padding: 0 25px;
+	background: lightgrey;
+	border-radius: 5px;
+}
+.aboutp img {
+	width: 30%;
+	height: 100%;
+
+}
+.aboutp p {
+	width: 50%;
+
+}
+
+/* конец модального окна */
+
+.contactswrap {
+	width: 100%;
+	min-height: 75vh;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.side {
+	width: 49%;
+	min-height: 70vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+.line {
+	width: 0.3%;
+	height: 68vh;
+	background: linear-gradient(to right, rgba(206,220,231,1) 0%,rgba(157,169,198,1) 60%,rgba(237,242,244,1) 100%);
+	border-radius: 5px;
+}
+
+/* cтиль формы обратной связи */
+.ifsuccess {
+	width: 100%;
+	height:100%;
+	z-index:55;
+	position: absolute;
+	filter: blur(8px;);
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	display: none;
+}
+.ifsuccess.active {
+	background: #fff;
+	display: flex;
+
+}
+span#success {
+	font-size: 2rem;
+	display: block;
+	border-bottom: 1px solid grey;
+
+}
+.formwrap {
+	width: 95%;
+	margin: 0 auto;
+	min-height:65vh;
+	padding: 5px;
+	position: relative;
+	display: flex;
+	flex-flow: column wrap;
+}
+.formheader {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	margin: 7px 7px 0 ;
+	border-bottom: 1px solid grey;
+}
+p#form {
+	text-align: right;
+	margin: 0 14px 90px 0;
+	font-size: 0.8rem;
+}
+.forinput {
+	width: 90%;
+	position: relative;
+	display: flex;
+	flex-flow: column wrap;
+	margin: 15px auto;
+}
+.forinput input {
+	border-top: none;
+	border-right: none;
+	border-left: 1px dashed grey;
+	width: 85%;
+	margin: 10px auto 0;
+	border-bottom: 2px solid grey;
+}
+.forinput input:focus {
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid green;
+	box-shadow: none;
+	outline: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding-left: 3px;
+}
+label#label {
+	margin-left: 50px;
+	position: absolute;
+
+	min-width:85px;
+	text-align: right;
+	top: 22%;
+	right: 8%;
+}
+.fortext {
+	width: 77%;
+	display: flex;
+	flex-flow: column wrap;
+	margin: 25px auto;
+	font-size: 1rem;
+}
+textarea {
+	border-bottom: 2px solid grey;
+	border-right: 1px dashed grey;
+	border-top: none;
+	border-left: 1px dashed grey;
+}
+textarea:focus {
+	outline: none;
+	border-bottom: 2px solid green;
+	border-right: 1px dashed grey;
+	border-top: none;
+	border-left: 1px dashed grey;
+	letter-spacing: 1px;
+}
+.forbutton {
+	width: 45%;
+	display: flex;
+	flex-flow: column wrap;
+	margin: 25px auto;
+}
+select {
+	height: 3vh;
+	outline: none;
+
+	border-bottom: 2px solid grey;
+}
+select:focus {
+	outline: none;
+	border-bottom: 2px solid green;
+	border-top: none;
+}
+/* конец стиля обратной связи */
