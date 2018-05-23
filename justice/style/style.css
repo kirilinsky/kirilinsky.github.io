@@ -566,6 +566,7 @@ and (min-width : 272px) {
 	background: grey;
 	font-size: 25px;
 	padding: 5px;
+	font-variant: small-caps;
 	margin-top: -2px;
 	border-radius: 0 0 13px 13px;
 }
