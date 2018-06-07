@@ -3,7 +3,7 @@
 <head>
 	
 	<!-- title & meta -->
-	<title>Salon Beauty 1.0.2beta</title>
+	<title>Beauty Salon v 1.0.2</title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,20 +84,15 @@
 		<div class="block_gallery wow slideInUp" data-wow-delay="0.5s">
 			<h1>галерея</h1>
 			<div class="button-group gallery_buttons">
-			    <button type="button" class="button button-pill">Прически</button>
-			    <button type="button" class="button button-pill">Маникюр</button>
-			    <button type="button" class="button button-pill">Педикюр</button>
+			    <button type="button" class="button button-pill" id="click1">Прически</button>
+			    <button id="click2" type="button" class="button button-pill">Маникюр</button>
+			    <button id="click3" type="button" class="button button-pill">Педикюр</button>
 			  </div>
-			<div class="gallery_flex">
-				<div class="gallery_img wow flipInY"  data-wow-delay="1s"><img src="src/images/jpg/gal1.jpg" alt="pic 1"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.2s"><img src="src/images/jpg/gal2.jpg" alt="pic 2"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.3s"><img src="src/images/jpg/gal3.jpg" alt="pic 3"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.4s"><img src="src/images/jpg/gal4.jpg" alt="pic 4"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.5s"><img src="src/images/jpg/gal5.jpg" alt="pic 5"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.6s"><img src="src/images/jpg/gal6.jpg" alt="pic 6"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.7s"><img src="src/images/jpg/gal7.jpg" alt="pic 7"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.8s"><img src="src/images/jpg/gal8.jpg" alt="pic 8"></div>
-				<div class="gallery_img wow flipInY"  data-wow-delay="1.9s"><img src="src/images/jpg/gal9.jpg" alt="pic 9"></div>
+
+			  
+
+			<div class="gallery_flex" id="dad">
+				
 				
 			</div>
 		</div>
@@ -168,8 +163,8 @@
 	<script src="src/js/jq1_12.js"></script>
 	<script src="src/js/wow.min.js"></script>
 	<script>
-		  $(document).ready(function(){
-		    $('.go_to').click( function(){ 
+		$(document).ready(function(){
+		  $('.go_to').click( function(){ 
 		  var scroll_el = $(this).attr('href'); 
 		        if ($(scroll_el).length != 0) { 
 		      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
@@ -177,8 +172,60 @@
 		      return false; 
 		    });
 		});
+		var dad = document.getElementById("dad");
+		var source = "src/images/jpg/hair/";
+		var endSource = ".jpg";
+		var lengthPics = 9;
+		for(var i = 1;i <= lengthPics;i++){
+			var img = document.createElement("img");
+			img.classList.add("gallery_img", "wow", "flipInY");
+			img.src = source + i + endSource;
+			dad.appendChild(img);
+		}
+		var click1 = document.getElementById("click1");
+		var click2 = document.getElementById("click2");
+		var click3 = document.getElementById("click3");
+		click1.addEventListener("click", hair);
+		click2.addEventListener("click", man);
+		click3.addEventListener("click", ped);
 
-		
+		function hair(){
+			dad.innerHTML = '';
+			source = "src/images/jpg/hair/";
+			lengthPics = 9;
+			for(var i = 1;i <= lengthPics;i++) {
+			var img = document.createElement("img");
+			img.classList.add("gallery_img", "wow", "flipInX");
+			dad.appendChild(img);
+			img.src = source + i + endSource;
+			img.style = "transition: ease 0.3s";
+			}
+		}
+		function man(){
+			dad.innerHTML = '';
+			source = "src/images/jpg/manic/";
+			lengthPics = 6;
+			for(var i = 1;i <= lengthPics;i++) {
+			var img = document.createElement("img");
+			img.classList.add("gallery_img", "wow", "flipInX");
+			dad.appendChild(img);
+			img.src = source + i + endSource;
+			img.style = "transition: ease 0.3s";
+			}
+		}
+		function ped(){
+			dad.innerHTML = '';
+			source = "src/images/jpg/ped/";
+			lengthPics = 3;
+			for(var i = 1;i <= lengthPics;i++) {
+			var img = document.createElement("img");
+			img.classList.add("gallery_img", "wow", "flipInX");
+			dad.appendChild(img);
+			img.src = source + i + endSource;
+			img.style = "transition: ease 0.3s";
+			}
+		}
+
 	</script>
 	<script>
        new WOW().init();
