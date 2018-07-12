@@ -1,5 +1,5 @@
 <head>
-	<title>Ïðîâåðü ñåáÿ</title>
+	<title>Проверь себя</title>
 	<link rel="icon" href="favicon.ico" type="image/ico">
 	<style>
 		
@@ -104,16 +104,16 @@
 <body>
 	<div class="wrap">
 	<input id="hidname" value=" ">
-		<h2>Ïðîâåðü ñâîé ñêèëë</h2>
+		<h2>Проверь свой скилл</h2>
 		<hr width="380px">
 		<div class="forinput">
-			<label for="name">êàê òåáÿ çîâóò?</label>
+			<label for="name">как тебя зовут?</label>
 			<input type="text" id="name">
 		</div>
 		<br>
 		<div class="box">
-			<button id="btn" title="äàâàé, ðèñêíè">Ïðîâåðèòü</button>
-			<button id="res">Çàíîâî</button>
+			<button id="btn" title="давай, рискни">Проверить</button>
+			<button id="res">Заново</button>
 			<p id="nameIs"></p>
 			<p id="txt">***</p>
 			<img id="loo" src="123.jpg" style="display:none;">
@@ -145,7 +145,7 @@
 		var result2 = hid.value;
 		
 		if(result === '') {
-			pname.innerHTML =  'Èòàê, <b>íåçíàêîìåö</b>, òâîé ñêèëë ýòî:';
+			pname.innerHTML =  'Итак, <b>незнакомец</b>, твой скилл это:';
 			p.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
@@ -163,22 +163,22 @@
 				p.style.transform = 'scale(1.15)';
 				p.innerHTML = arr[res];
 			}, 2500);
-		} else if(result === 'äåíèñ') {
-			pname.innerHTML = 'Äàæå íå äóìàé...';
+		} else if(result === 'денис') {
+			pname.innerHTML = 'Даже не думай...';
 			pname.style.color = 'red';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
-		} else if(result === 'Äåíèñ') {
-			pname.innerHTML = 'Äàæå íå äóìàé...';
+		} else if(result === 'Денис') {
+			pname.innerHTML = 'Даже не думай...';
 			pname.style.color = 'red';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
 		} else if (result2 != ' ') {
-			pname.innerHTML = result + ', òû Áîæåíüêà Òåõ. Ïîääåðæêè';
+			pname.innerHTML = result + ', ты Боженька Тех. Поддержки';
 			pname.style.color = 'green';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
@@ -187,7 +187,7 @@
 			resD.style.display = 'block';
 		} else {
 			p.style.display = 'block';
-			pname.innerHTML = 'Èòàê, <b>' + result + '</b> òâîé ñêèëë ýòî:';
+			pname.innerHTML = 'Итак, <b>' + result + '</b> твой скилл это:';
 			resD.style.display = 'block';
 			p.innerHTML = '...';
 			setTimeout(function (){
@@ -206,7 +206,7 @@
 		}
 	}
 
-	var arr = ['Ïðîôè','Ìàòåðûé','Íè ðûáà, íè ìÿñî','Ìíèìûé ñïåö','Ñàëàãà','Ïîäíèìàòåëü ïðèîðèòåòîâ','Ñîâñåì Çåëåíûé','Ãóðó','Òèõèé óæàñ','Íà ñêèëëå', 'Ñïåö 5-é ëèíèè','Òû âñå ëîìàåøü,<br> äàæå ýòîò ñêðèïò!', 'Áåç øàíñîâ', 'Ãåíåðàë òåõ. ïîääåðæêè'];
+	var arr = ['Профи','Матерый','Ни рыба, ни мясо','Мнимый спец','Салага','Подниматель приоритетов','Совсем Зеленый','Гуру','Тихий ужас','На скилле', 'Спец 5-й линии','Ты все ломаешь,<br> даже этот скрипт!', 'Без шансов', 'Генерал тех. поддержки'];
 
 	 
 	</script>
