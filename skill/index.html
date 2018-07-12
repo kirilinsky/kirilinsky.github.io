@@ -1,5 +1,5 @@
 <head>
-	<title>Проверь себя</title>
+	<title>ГЏГ°Г®ГўГҐГ°Гј Г±ГҐГЎГї</title>
 	<link rel="icon" href="favicon.ico" type="image/ico">
 	<style>
 		
@@ -104,16 +104,16 @@
 <body>
 	<div class="wrap">
 	<input id="hidname" value=" ">
-		<h2>Проверь свой скилл</h2>
+		<h2>ГЏГ°Г®ГўГҐГ°Гј Г±ГўГ®Г© Г±ГЄГЁГ«Г«</h2>
 		<hr width="380px">
 		<div class="forinput">
-			<label for="name">как тебя зовут?</label>
+			<label for="name">ГЄГ ГЄ ГІГҐГЎГї Г§Г®ГўГіГІ?</label>
 			<input type="text" id="name">
 		</div>
 		<br>
 		<div class="box">
-			<button id="btn" title="давай, рискни">Проверить</button>
-			<button id="res">Заново</button>
+			<button id="btn" title="Г¤Г ГўГ Г©, Г°ГЁГ±ГЄГ­ГЁ">ГЏГ°Г®ГўГҐГ°ГЁГІГј</button>
+			<button id="res">Г‡Г Г­Г®ГўГ®</button>
 			<p id="nameIs"></p>
 			<p id="txt">***</p>
 			<img id="loo" src="123.jpg" style="display:none;">
@@ -145,7 +145,7 @@
 		var result2 = hid.value;
 		
 		if(result === '') {
-			pname.innerHTML =  'Итак, <b>незнакомец</b>, твой скилл это:';
+			pname.innerHTML =  'Г€ГІГ ГЄ, <b>Г­ГҐГ§Г­Г ГЄГ®Г¬ГҐГ¶</b>, ГІГўГ®Г© Г±ГЄГЁГ«Г« ГЅГІГ®:';
 			p.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
@@ -163,22 +163,22 @@
 				p.style.transform = 'scale(1.15)';
 				p.innerHTML = arr[res];
 			}, 2500);
-		} else if(result === 'денис') {
-			pname.innerHTML = 'Даже не думай...';
+		} else if(result === 'Г¤ГҐГ­ГЁГ±') {
+			pname.innerHTML = 'Г„Г Г¦ГҐ Г­ГҐ Г¤ГіГ¬Г Г©...';
 			pname.style.color = 'red';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
-		} else if(result === 'Денис') {
-			pname.innerHTML = 'Даже не думай...';
+		} else if(result === 'Г„ГҐГ­ГЁГ±') {
+			pname.innerHTML = 'Г„Г Г¦ГҐ Г­ГҐ Г¤ГіГ¬Г Г©...';
 			pname.style.color = 'red';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
 			btn.disabled = true;
 			resD.style.display = 'block';
 		} else if (result2 != ' ') {
-			pname.innerHTML = result + ', ты Боженька Тех. Поддержки';
+			pname.innerHTML = result + ', ГІГ» ГЃГ®Г¦ГҐГ­ГјГЄГ  Г’ГҐГµ. ГЏГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ';
 			pname.style.color = 'green';
 			p.style.display = 'none';
 			imgLo.style.display = 'block';
@@ -187,7 +187,7 @@
 			resD.style.display = 'block';
 		} else {
 			p.style.display = 'block';
-			pname.innerHTML = 'Итак, <b>' + result + '</b> твой скилл это:';
+			pname.innerHTML = 'Г€ГІГ ГЄ, <b>' + result + '</b> ГІГўГ®Г© Г±ГЄГЁГ«Г« ГЅГІГ®:';
 			resD.style.display = 'block';
 			p.innerHTML = '...';
 			setTimeout(function (){
@@ -206,7 +206,7 @@
 		}
 	}
 
-	var arr = ['Профи','Матерый','Ни рыба, ни мясо','Мнимый спец','Салага','Подниматель приоритетов','Совсем Зеленый','Гуру','Тихий ужас','На скилле', 'Спец 5-й линии','Ты все ломаешь,<br> даже этот скрипт!', 'Без шансов', 'Генерал тех. поддержки'];
+	var arr = ['ГЏГ°Г®ГґГЁ','ГЊГ ГІГҐГ°Г»Г©','ГЌГЁ Г°Г»ГЎГ , Г­ГЁ Г¬ГїГ±Г®','ГЊГ­ГЁГ¬Г»Г© Г±ГЇГҐГ¶','Г‘Г Г«Г ГЈГ ','ГЏГ®Г¤Г­ГЁГ¬Г ГІГҐГ«Гј ГЇГ°ГЁГ®Г°ГЁГІГҐГІГ®Гў','Г‘Г®ГўГ±ГҐГ¬ Г‡ГҐГ«ГҐГ­Г»Г©','ГѓГіГ°Гі','Г’ГЁГµГЁГ© ГіГ¦Г Г±','ГЌГ  Г±ГЄГЁГ«Г«ГҐ', 'Г‘ГЇГҐГ¶ 5-Г© Г«ГЁГ­ГЁГЁ','Г’Г» ГўГ±ГҐ Г«Г®Г¬Г ГҐГёГј,<br> Г¤Г Г¦ГҐ ГЅГІГ®ГІ Г±ГЄГ°ГЁГЇГІ!', 'ГЃГҐГ§ ГёГ Г­Г±Г®Гў', 'ГѓГҐГ­ГҐГ°Г Г« ГІГҐГµ. ГЇГ®Г¤Г¤ГҐГ°Г¦ГЄГЁ'];
 
 	 
 	</script>
