@@ -115,8 +115,8 @@
 	        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
 	        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 	    })();
-		var feed = document.getElementsByClassName('wcomments_count _wcomments_count');
-		feed[0].innerHTML = 'Отзывы';
+		var feed = document.querySelector('span.wcomments_count _wcomments_count');
+		feed.innerHTML = 'Отзывы';
 	</script>
 	<!-- /WhatsHelp.io widget -->
 </body>
