@@ -64,6 +64,10 @@
 		<script src="https://instawidget.net/js/instawidget.js?u=c2db031758c40a639e94e1333bb00af1bb2a2473fc41ac8a3aa4ec375c2404e5&width=265px"></script>
 		</div>
 	</div>
+	<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+</script>
 
 
 
@@ -77,13 +81,17 @@
 
 
 	<script src="materialize.min.js"></script>
-	</script>
 	<script>
 		 M.AutoInit();
 		 var elem = document.querySelector('.collapsible.expandable');
 		 var instance = M.Collapsible.init(elem, {
 		   accordion: false
 		 });
+	</script>
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?158"></script>
+
+	<script type="text/javascript">
+ 		 VK.init({apiId: API_ID, onlyWidgets: true});
 	</script>
 	<!-- WhatsHelp.io widget -->
 	<script type="text/javascript">
