@@ -12,12 +12,14 @@
 		body {
 			display: flex;
 			justify-content: center;
-			align-items:space-around;
+		}
+		html {
+			background: linear-gradient(45deg,beige, yellow, sienna);
 		}
 		.wrap {
 			margin-top: 100px;
-			width: 472px;
-			height: 558px;
+			width: 465px;
+			height: 575px;
 			border: 2px solid grey;
 			border-radius: 6px;
 			display: grid;
@@ -27,6 +29,32 @@
 			background: linear-gradient(45deg, #979797, #E7E7E7, #F6F6F6, #FFFFFF, #E7E7E7,#979797);
 			transform: perspective(900px) rotate3d(6,0,1,34deg);
 			border-bottom: 10px solid grey;
+			position:relative;
+		}
+		.solar {
+			position:absolute;
+			width: 155px;
+			box-shadow: inset 0 0 5px black, -1px -1px 1px black;
+			height: 29px;
+			right:21px;
+			top:5px;
+			background: url(sol.jpg);
+			border-radius: 3px;
+			margin:1px;
+		}
+		.brand{
+			position: absolute;
+			font-family: calibri;
+			font-variant: small-caps;
+			letter-spacing: 2.5px;
+			border: 2px solid lightgrey;
+			padding: 2px 9px;
+			text-shadow: 0 0 1px grey;
+			border-radius: 6px;
+			box-shadow: 1px 1px 1px black;
+			left:40%;
+			top:27%;
+			background: radial-gradient(white,lightgrey,grey,black);
 		}
 		.box {
 			min-height: 100px;
@@ -50,28 +78,30 @@
 			justify-content: center;
 			box-shadow: 6px -9px 14px black;
 		}
-		p {
+		p {	
+
 			box-shadow: inset 2px 2px 5px black;
 			width: 90%;
 			height: 99px;
-			font-size: 30.5px;
+			font-size: 31.2px;
 			border: 1px solid grey;
 			border-radius: 5px;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;
-			padding-right: 9px;
+			padding-right: 8px;
 			font-family: dds;
 			background: linear-gradient(0deg, #595959, #464646, black, #464646);
 			color:green;
 			font-weight: bold;
-			text-shadow: 1px 2px 3px #87BE14;
+			text-shadow: 1px -1px 1px #07947592;
 			letter-spacing: 7px;
 		}
+
 		#clear {
 			position:absolute;
 			top:73px;
-			left: 29px;
+			left: 24px;
 			z-index: 553;
 			width: 45px;
 			height: 45px;
@@ -82,6 +112,14 @@
 			align-items: center;
 			font-size: 21px;
 			font-weight: bold;
+		}
+		#cleara {
+			position:absolute;
+			top:83px;
+			left: 77px;
+			font-size: 16.2px;
+			font-family: sans-serif;
+			padding:1px;
 		}
 		a, a:link, a:visited, a:active {
 			text-decoration: none;
@@ -101,7 +139,7 @@
 			color: black;
 			text-shadow: -1px 0 1px grey, 0 -1px 1px grey;
 		}
-		.btn:hover, .ravno:hover, #clear:hover {
+		.btn:hover, .ravno:hover, #clear:hover, #cleara:hover {
 			cursor: pointer;
 			background: grey;
 			transition: ease 0.3s;
@@ -119,7 +157,7 @@
 		.ing {
 			border-radius: 5px;
 			transition: ease 0.3s;
-			font-size: 17.5px;
+			font-size: 18px;
 			font-weight: 600;
 			font-variant: small-caps;
 			height: 32px;
@@ -141,9 +179,12 @@
 		<div class="box">На главную</div>
 	</a>
 	<div class="wrap">
+		<div class="solar"></div>
+		<div class="brand">casio</div>
 		<div class="forinp">
 			<p id="inp2" class="inp">s</p>
 			<button class="btn2" id="clear">C</button>
+			<button class="btn2" id="cleara">AC</button>
 		</div>
 		<button class="ing" id="sqr">√x</button>
 		<button class="ing" id="qua">x<sup>2</sup></button>
@@ -178,6 +219,10 @@
 	var qua = document.getElementById('qua');
 	var qub = document.getElementById('qub');
 	var pow = document.getElementById('pow');
+	var cleara = document.getElementById('cleara');
+	cleara.addEventListener('click', clearA);
+
+	/*clear input*/
 	function clearP() {
 		str = '  ';
 		p.innerHTML = str;
@@ -190,35 +235,76 @@
 		nums[i].addEventListener('click', addNum);
 	}
 	function addNum() {
+		if(str === 'Error' ) {
+			clearP();
+		}
 		str+= this.innerHTML;
+		if(str.length >= 17) {
+			str = 'Error';
+			p.innerHTML = str;
+		} 
 		p.innerHTML = str;
+		
 	}
 	btnrav.addEventListener('click', getSum);
 	function getSum() {
-			var res = eval(str);
-			str = res;
-			p.innerHTML = str;
+			let x = eval(str);
+			let a = String(x);
+			if(a.length >= 15) {
+					str = Number(a).toPrecision(11);
+					p.innerHTML = str;
+				} else {
+					str = a;
+					p.innerHTML = str;
+				}
 	}
 
 	sqr.addEventListener('click', getSqr);
 	function getSqr() {
 		let x  = eval(parseInt(str));
-		str = Math.sqrt(x);
-		p.innerHTML = str;
+		let a = String(Math.sqrt(x));
+		if(a.length >= 12) {
+				str = Number(a).toPrecision(11);
+				p.innerHTML = str;
+			} else {
+				str = a;
+				p.innerHTML = str;
+			}
+			if(str === 'Error' ) {
+			clearP();
+		}
 	}
 	qua.addEventListener('click', getQuad);
 	function getQuad() {
-
+		if(str === 'Error') {
+			clearP();
+		}
 		let x  = eval(parseInt(str));
-		str = x * x;
-		p.innerHTML = str;
+		let a = String(x * x);
+
+		if(a.length >= 11) {
+				str = Number(a).toPrecision(10);
+				p.innerHTML = str;
+			} else {
+				str = a;
+				p.innerHTML = str;
+			}
+			
 	}
 	qub.addEventListener('click', getQube);
 	function getQube() {
-
 		let x  = eval(parseInt(str));
-		str = x * x * x;
-		p.innerHTML = str.toPrecision(18);
+		let a = String(x * x * x);
+		if(a.length >= 11) {
+				str = Number(a).toPrecision(10);
+				p.innerHTML = str;
+			} else {
+				str = a;
+				p.innerHTML = str;
+			}
+			if(str === 'Error' ) {
+			clearP();
+		}
 	}
 	pow.addEventListener('click', setPow);
 	function setPow(){
@@ -228,12 +314,33 @@
 		pow.removeEventListener('click', setPow);
 		pow.addEventListener('click', getPow);
 		function getPow() {
-			var value = parseInt(p.innerHTML);
-			str = Math.pow(number, value);
-			p.innerHTML = str;
+			var value = parseInt(p.innerHTML) || 1;
+			var z = String(Math.pow(number, value));
+			if(z.length > 11) {
+				str = Math.pow(number, value).toPrecision(10);
+				p.innerHTML = str;
+			} else {
+				str = Math.pow(number, value);
+				p.innerHTML = str;
+			} if(z == Infinity) {
+				str = 'Error';
+				p.innerHTML = str;
+			}
 			pow.removeEventListener('click', getPow);
 			pow.addEventListener('click', setPow);
 		}
 	}
+	function clearA() {
+		var x = String(p.innerHTML);
+		if(str === 'Error' ) {
+			clearP();
+		}
+		if(x.length < 13) {
+			str = str.slice(0, -1)
+			p.innerHTML = str;
+		}
+
+	}
 
 </script>
+</html>
