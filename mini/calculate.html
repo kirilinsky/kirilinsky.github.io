@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcualtor</title>
+  	<link href="http://allfont.ru/allfont.css?fonts=ds-crystal" rel="stylesheet" type="text/css" />
+	<style>
+		@font-face{
+			font-family: "dds";
+    		src: url(dss.ttf);
+		}
+		body {
+			display: flex;
+			justify-content: center;
+
+		}
+		.wrap {
+			margin-top: 100px;
+			width: 470px;
+			height: 560px;
+			border: 2px solid grey;
+			border-radius: 6px;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+			box-shadow: 0 0 4px grey, 5px 5px 10px black;
+			background: linear-gradient(45deg, #979797, #E7E7E7, #F6F6F6, #FFFFFF, #E7E7E7,#979797);
+			transform: perspective(900px) rotate3d(6,0,1,34deg);
+			border-bottom: 10px solid grey;
+		}
+		.box {
+			min-height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: orange;
+			color: white ;
+			transition: ease 0.4s;
+			box-shadow: 0 0 2px grey;
+			}
+		.btn2,.btn, .ravno {
+			margin: 5px;
+			box-shadow: 0 0 3px grey, 2px 2px 5px black;
+		}
+		.forinp {
+			grid-column: 1/5;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 6px -9px 14px black;
+		}
+		p {
+			box-shadow: inset 2px 2px 5px black;
+			width: 90%;
+			height: 99px;
+			font-size: 30.5px;
+			border: 1px solid grey;
+			border-radius: 5px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding-right: 9px;
+			font-family: dds;
+			background: linear-gradient(0deg, #595959, #464646, black, #464646);
+			color:green;
+			font-weight: bold;
+			text-shadow: 1px 2px 3px #87BE14;
+			letter-spacing: 7px;
+		}
+
+		#clear {
+			position:absolute;
+			top:73px;
+			left: 29px;
+			z-index: 553;
+			width: 45px;
+			height: 45px;
+			border: 2px solid grey;
+			border-radius: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 21px;
+			font-weight: bold;
+		}
+		a, a:link, a:visited, a:active {
+			text-decoration: none;
+			font-size: 20px;
+			font-variant: small-caps;
+			font-family: sans-serif;
+		}
+		#clear:hover {
+			background: grey;
+			transition: ease 0.3s;
+			cursor: pointer;
+		}
+		.btn2,.btn, .ravno {
+			font-size: 23px;
+			border-radius: 15px;
+			font-family: impact;
+			color: black;
+			text-shadow: -1px 0 1px grey, 0 -1px 1px grey;
+		}
+		.btn:hover, .ravno:hover, #clear:hover {
+			cursor: pointer;
+			background: grey;
+			transition: ease 0.3s;
+			color:white;
+			box-shadow:inset 2px 2px 3px black;
+			text-shadow: -1px 0 1px white, 0 -1px 1px white;
+		}
+		.box:hover {
+			background: teal;
+			transition: ease 0.3s;
+			cursor: pointer;		
+			color:orange;
+			box-shadow: 0 0 5px teal;
+		}
+		.ing {
+			border-radius: 5px;
+			transition: ease 0.3s;
+			font-size: 17.5px;
+			font-weight: 600;
+			font-variant: small-caps;
+			height: 32px;
+			width:91px;
+			margin:0 auto;
+		}
+		.ing:hover{
+			transition: ease 0.3s;
+			text-shadow: -1px 0 1px white, 0 -1px 1px white;
+			cursor: pointer;
+			background: grey;
+			color:white;
+			box-shadow:inset 2px 2px 3px black;
+		}
+	</style>
+</head>
+<body>
+	<a href="/">
+		<div class="box">На главную</div>
+	</a>
+	<div class="wrap">
+		<div class="forinp">
+			<p id="inp2" class="inp">s</p>
+			<button class="btn2" id="clear">C</button>
+		</div>
+		<button class="ing" id="sqr">√x</button>
+		<button class="ing" id="qua">x<sup>2</sup></button>
+		<button class="ing" id="qub">x<sup>3</sup></button>
+		<button class="ing" id="pow">x<sup>y</sup></button>
+		<button id="btn7" class="btn num">7</button>
+		<button id="btn8" class="btn num">8</button>
+		<button id="btn9" class="btn num">9</button>
+		<button id="btndel" class="btn num">/</button>
+		<button id="btn4" class="btn num">4</button>
+		<button id="btn5" class="btn num">5</button>
+		<button id="btn6" class="btn num">6</button>
+		<button id="btnumn" class="btn">*</button>
+		<button id="btn1_" class="btn num">1</button>
+		<button id="btn2" class="btn num">2</button>
+		<button id="btn3" class="btn num">3</button>
+		<button id="btnmin" class="btn">-</button>
+		<button id="btn0" class="btn num">0</button>
+		<button id="btndot" class="btn">.</button>
+		<button id="btnrav" class="ravno">=</button>
+		<button id="btnplu" class="btn">+</button>
+	</div>	
+</body>
+</html>
+
+<script>
+	var btnclear = document.getElementById('clear');
+	var btnrav = document.getElementById('btnrav');
+	var p = document.getElementById('inp2');
+	btnclear.addEventListener('click', clearP);
+	var sqr = document.getElementById('sqr');
+	var qua = document.getElementById('qua');
+	var qub = document.getElementById('qub');
+	var pow = document.getElementById('pow');
+	function clearP() {
+		str = '  ';
+		p.innerHTML = str;
+	}
+
+	var str = ' ';
+	p.innerHTML = str;
+	var nums = document.getElementsByClassName('btn');
+	for(var i = 0;i < nums.length;i++) {
+		nums[i].addEventListener('click', addNum);
+	}
+	function addNum() {
+		str+= this.innerHTML;
+		p.innerHTML = str;
+	}
+	btnrav.addEventListener('click', getSum);
+	function getSum() {
+			var res = eval(str);
+			str = res;
+			p.innerHTML = str;
+	}
+
+	sqr.addEventListener('click', getSqr);
+	function getSqr() {
+		let x  = eval(parseInt(str));
+		str = Math.sqrt(x);
+		p.innerHTML = str;
+	}
+	qua.addEventListener('click', getQuad);
+	function getQuad() {
+
+		let x  = eval(parseInt(str));
+		str = x * x;
+		p.innerHTML = str;
+	}
+	qub.addEventListener('click', getQube);
+	function getQube() {
+
+		let x  = eval(parseInt(str));
+		str = x * x * x;
+		p.innerHTML = str;
+	}
+	pow.addEventListener('click', setPow);
+	function setPow(){
+		var number = parseInt(p.innerHTML);
+		p.innerHTML = 'set pow';
+		str = '';
+		pow.removeEventListener('click', setPow);
+		pow.addEventListener('click', getPow);
+		function getPow() {
+			var value = parseInt(p.innerHTML);
+			str = Math.pow(number, value);
+			p.innerHTML = str;
+			pow.removeEventListener('click', getPow);
+			pow.addEventListener('click', setPow);
+		}
+	}
+
+</script>
