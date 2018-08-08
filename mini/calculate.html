@@ -12,12 +12,12 @@
 		body {
 			display: flex;
 			justify-content: center;
-
+			align-items:space-around;
 		}
 		.wrap {
 			margin-top: 100px;
-			width: 470px;
-			height: 560px;
+			width: 472px;
+			height: 558px;
 			border: 2px solid grey;
 			border-radius: 6px;
 			display: grid;
@@ -68,7 +68,6 @@
 			text-shadow: 1px 2px 3px #87BE14;
 			letter-spacing: 7px;
 		}
-
 		#clear {
 			position:absolute;
 			top:73px;
@@ -219,7 +218,7 @@
 
 		let x  = eval(parseInt(str));
 		str = x * x * x;
-		p.innerHTML = str;
+		p.innerHTML = str.toPrecision(18);
 	}
 	pow.addEventListener('click', setPow);
 	function setPow(){
