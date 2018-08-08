@@ -12,9 +12,21 @@
 		body {
 			display: flex;
 			justify-content: center;
+			position:relative;
 			background: beige;
 		}
-
+		.arrow {
+			position:absolute;
+			width: 161px;
+			height: 121px;
+			background: url(arrow.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 555;
+			top:44%;
+			left:12%;
+			transform: rotate(32deg);
+		}
 		.wrap {
 			margin-top: 100px;
 			width: 465px;
@@ -26,9 +38,10 @@
 			grid-gap: 10px;
 			box-shadow: 0 0 4px grey, 5px 5px 10px black;
 			background: linear-gradient(45deg, #979797, #E7E7E7, #F6F6F6, #FFFFFF, #E7E7E7,#979797);
-			transform: perspective(900px) rotate3d(6,0,1,34deg);
+			transform: perspective(880px) rotate3d(6,-2,1,35deg);
 			border-bottom: 10px solid grey;
 			position:relative;
+			transition: ease 2.3s;
 		}
 		.solar {
 			position:absolute;
@@ -77,8 +90,20 @@
 			justify-content: center;
 			box-shadow: 6px -9px 14px black;
 		}
+		.forpre {
+			display: none;
+			position:absolute;
+			width:380px;
+			height: 500px;
+			background: linear-gradient(0deg, #595959, #464646, black, #464646);
+			box-shadow: inset 0 0 5px white, -1px -1px 2px black;
+			top:18%;
+			left:40%;
+			z-index: 888;
+			border-radius: 5px;
+		}
 		p {	
-
+			
 			box-shadow: inset 2px 2px 5px black;
 			width: 90%;
 			height: 99px;
@@ -153,6 +178,17 @@
 			color:orange;
 			box-shadow: 0 0 5px teal;
 		}
+		pre {
+			color: white;
+			font-size: 9px;
+			padding:4px;
+			font-weight: bold;
+			color: white;
+			text-shadow: 2px 1px 2px green, 0 0 9px red, -1px 0 1px yellow;
+		}
+		.forpre {
+			overflow-y: scroll;
+		}
 		.ing {
 			border-radius: 5px;
 			transition: ease 0.3s;
@@ -177,7 +213,167 @@
 	<a href="/">
 		<div class="box">На главную</div>
 	</a>
-	<div class="wrap">
+	<div class="arrow" id="arr"></div>
+	<div class="forpre" id="forpre">
+		<pre id="pre">
+document.getElementById('pre').innerHTML = code;
+var btnclear = document.getElementById('clear');
+var btnrav = document.getElementById('btnrav');
+var p = document.getElementById('inp2');
+btnclear.addEventListener('click', clearP);
+var sqr = document.getElementById('sqr');
+var qua = document.getElementById('qua');
+var qub = document.getElementById('qub');
+var pow = document.getElementById('pow');
+var cleara = document.getElementById('cleara');
+cleara.addEventListener('click', clearA);
+var calc = document.getElementById('calc');
+var arrow = document.getElementById('arr');
+arrow.addEventListener('click', rotateCalc);
+function rotateCalc() {
+	calc.style.transform = ' perspective(800px) rotate3d(0,6,0,180deg)';
+	var ings = document.getElementsByClassName('ing');
+	setTimeout(function() {
+		for(var h =0;h < ings.length;h++){
+			ings[h].style.visibility = 'hidden';
+			}
+	}, 255);
+	setTimeout(function() {
+		var calcChildren = calc.children;
+		for(var j =0;j < calcChildren.length;j++){
+			calcChildren[j].style.visibility = 'hidden';
+			}
+	}, 555);
+	arrow.removeEventListener('click', rotateCalc);
+	arrow.addEventListener('click', rotateCalc2);
+}
+function rotateCalc2() {
+	calc.style.transform = ' perspective(880px) rotate3d(6,-2,1,35deg)';
+	var calcChildren = calc.children;
+	setTimeout(function() {
+		var calcChildren = calc.children;
+		for(var j =0;j < calcChildren.length;j++){
+				calcChildren[j].style.visibility = 'visible';
+		}
+	}, 570);
+	arrow.removeEventListener('click', rotateCalc2);
+	arrow.addEventListener('click', rotateCalc);
+}
+/*clear input*/
+function clearP() {
+	str = '  ';
+	p.innerHTML = str;
+}
+var str = ' ';
+p.innerHTML = str;
+var nums = document.getElementsByClassName('btn');
+for(var i = 0;i < nums.length;i++) {
+	nums[i].addEventListener('click', addNum);
+}
+function addNum() {
+	if(str === 'Error' ) {
+		clearP();
+	}
+	str+= this.innerHTML;
+	if(str.length >= 17) {
+		str = 'Error';
+		p.innerHTML = str;
+	} 
+	p.innerHTML = str;	
+}
+btnrav.addEventListener('click', getSum);
+function getSum() {
+		let x = eval(str);
+		let a = String(x);
+		if(a.length >= 15) {
+				str = Number(a).toPrecision(11);
+				p.innerHTML = str;
+			} else {
+				str = a;
+				p.innerHTML = str;
+			}
+}
+sqr.addEventListener('click', getSqr);
+function getSqr() {
+	let x  = eval(parseInt(str));
+	let a = String(Math.sqrt(x));
+	if(a.length >= 12) {
+			str = Number(a).toPrecision(11);
+			p.innerHTML = str;
+		} else {
+			str = a;
+			p.innerHTML = str;
+		}
+		if(str === 'Error' ) {
+		clearP();
+	}
+}
+qua.addEventListener('click', getQuad);
+function getQuad() {
+	if(str === 'Error') {
+		clearP();
+	}
+	let x  = eval(parseInt(str));
+	let a = String(x * x);
+	if(a.length >= 11) {
+			str = Number(a).toPrecision(10);
+			p.innerHTML = str;
+		} else {
+			str = a;
+			p.innerHTML = str;
+		}		
+}
+qub.addEventListener('click', getQube);
+function getQube() {
+	let x  = eval(parseInt(str));
+	let a = String(x * x * x);
+	if(a.length >= 11) {
+			str = Number(a).toPrecision(10);
+			p.innerHTML = str;
+		} else {
+			str = a;
+			p.innerHTML = str;
+		}
+		if(str === 'Error' ) {
+		clearP();
+	}
+}
+pow.addEventListener('click', setPow);
+function setPow(){
+	var number = parseInt(p.innerHTML);
+	p.innerHTML = 'set pow';
+	str = '';
+	pow.removeEventListener('click', setPow);
+	pow.addEventListener('click', getPow);
+	function getPow() {
+		var value = parseInt(p.innerHTML) || 1;
+		var z = String(Math.pow(number, value));
+		if(z.length > 11) {
+			str = Math.pow(number, value).toPrecision(10);
+			p.innerHTML = str;
+		} else {
+			str = Math.pow(number, value);
+			p.innerHTML = str;
+		} if(z == Infinity) {
+			str = 'Error';
+			p.innerHTML = str;
+		}
+		pow.removeEventListener('click', getPow);
+		pow.addEventListener('click', setPow);
+	}
+}
+function clearA() {
+	var x = String(p.innerHTML);
+	if(str === 'Error' ) {
+		clearP();
+	}
+	if(x.length < 13) {
+		str = str.slice(0, -1)
+		p.innerHTML = str;
+	}
+}	
+		</pre></div>
+	<div class="wrap" id="calc">
 		<div class="solar"></div>
 		<div class="brand">casio</div>
 		<div class="forinp">
@@ -210,6 +406,7 @@
 </html>
 
 <script>
+
 	var btnclear = document.getElementById('clear');
 	var btnrav = document.getElementById('btnrav');
 	var p = document.getElementById('inp2');
@@ -218,9 +415,47 @@
 	var qua = document.getElementById('qua');
 	var qub = document.getElementById('qub');
 	var pow = document.getElementById('pow');
+	var pre = document.getElementById('forpre');
 	var cleara = document.getElementById('cleara');
 	cleara.addEventListener('click', clearA);
+	var calc = document.getElementById('calc');
+	var arrow = document.getElementById('arr');
+	arrow.addEventListener('click', rotateCalc);
+	function rotateCalc() {
+		calc.style.transform = ' perspective(800px) rotate3d(0,6,0,180deg)';
+		var ings = document.getElementsByClassName('ing');
+		setTimeout(function() {
+			for(var h =0;h < ings.length;h++){
+							ings[h].style.visibility = 'hidden';
+						}
+					}, 255);
+		setTimeout(function() {
+			var calcChildren = calc.children;
+			for(var j =0;j < calcChildren.length;j++){
+				calcChildren[j].style.visibility = 'hidden';
+			}
+		}, 555);
+		setTimeout(function(){
+			pre.style.display = 'block';
+		}, 2000)
 
+		arrow.removeEventListener('click', rotateCalc);
+		arrow.addEventListener('click', rotateCalc2);
+	}
+	function rotateCalc2() {
+		pre.style.display = 'none';
+		calc.style.transform = ' perspective(880px) rotate3d(6,-2,1,35deg)';
+		var calcChildren = calc.children;
+		setTimeout(function() {
+					var calcChildren = calc.children;
+					for(var j =0;j < calcChildren.length;j++){
+						calcChildren[j].style.visibility = 'visible';
+					}
+				}, 670);
+
+		arrow.removeEventListener('click', rotateCalc2);
+		arrow.addEventListener('click', rotateCalc);
+	}
 	/*clear input*/
 	function clearP() {
 		str = '  ';
