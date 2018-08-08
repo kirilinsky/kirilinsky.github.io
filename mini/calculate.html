@@ -435,15 +435,13 @@ function clearA() {
 				calcChildren[j].style.visibility = 'hidden';
 			}
 		}, 555);
-		setTimeout(function(){
-			pre.style.display = 'block';
-		}, 2000)
+		
 
 		arrow.removeEventListener('click', rotateCalc);
 		arrow.addEventListener('click', rotateCalc2);
 	}
 	function rotateCalc2() {
-		pre.style.display = 'none';
+		
 		calc.style.transform = ' perspective(880px) rotate3d(6,-2,1,35deg)';
 		var calcChildren = calc.children;
 		setTimeout(function() {
