@@ -17,16 +17,15 @@ background: #EEF0F2;
 	padding: 40px;
 	min-height: 550px;
 	width: 70%;
-	margin: 0 auto;
+	margin: 0 0 0 70%;
 
 }
 .wrap2 {
 	width: 70%;
-	margin: 0 auto;
+	margin: 0 0 0 70%;
 	background: #EEF0F2;
 	height: 300px;
 	padding:5%;
-
 }
 .wrap2 h2 {
 	padding: 2px;
