@@ -276,7 +276,7 @@
 	}
 	function addNum() {
 		if(!str.length) {
-			if(this.value == '+' || this.value == '/' || this.value == '*' || this.value == '.' || this.value == '='){
+			if(this.value == '+' || this.value == '/' || this.value == '*' || this.value == '.'){
 				return;
 			}
 		}
@@ -303,6 +303,9 @@
 	}
 	btnrav.addEventListener('click', getSum);
 	function getSum() {
+			if(!str.length) {
+				return;
+			}
 			let x = eval(str);
 			let a = String(x);
 			if(a.length >= 15) {
