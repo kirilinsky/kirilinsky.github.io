@@ -321,6 +321,9 @@
 
 	sqr.addEventListener('click', getSqr);
 	function getSqr() {
+		if(!str.length) {
+			return;
+		}
 		let x  = eval(parseInt(str));
 		let a = String(Math.sqrt(x));
 		if(a.length >= 12) {
@@ -338,6 +341,9 @@
 	}
 	qua.addEventListener('click', getQuad);
 	function getQuad() {
+		if(!str.length) {
+			return;
+		}
 		if(str === 'Error') {
 			clearP();
 		}
@@ -357,6 +363,9 @@
 	}
 	qub.addEventListener('click', getQube);
 	function getQube() {
+		if(!str.length) {
+			return;
+		}
 		let x  = eval(parseInt(str));
 		let a = String(x * x * x);
 		if(a.length >= 11) {
