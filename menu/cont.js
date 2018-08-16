@@ -9,14 +9,13 @@ function setName() {
 	if(select.value == ''){
 		cusname.innerHTML = '';
 	} else if(select.value != '') {
-		cusname.innerHTML = ', ' + select.value;
+		cusname.innerHTML = ': ' + select.value;
 	} 
 	//egg
     if(select.value == 'Elon Musk') {
 		alert('Как тебе жаркое, Илон Маск?');
 	}
 }
-
 
 //days of week
 var days = ['- of sunday -','- of monday -','- of tuesday -','- of wednsday -','- of thursday -','- of friday -','- of saturday -'];
@@ -31,7 +30,7 @@ var btnSetToday = document.getElementById('setToday');
 btnChangeDay.addEventListener('click', getModal);
 function getModal() {
 	modal.style.display = 'flex';
-	wrap.style.filter = 'blur(10px)';
+	wrap.style.filter = 'blur(10px) grayscale(50%)';
 }
 //select day in modal
 var selectDay = document.getElementById('selectDay');
@@ -39,7 +38,7 @@ selectDay.addEventListener('change', changeDay);
 function changeDay() {
 	today.innerHTML = days[selectDay.value];
 	modal.style.display = 'none';
-	wrap.style.filter = 'blur(0)';
+	wrap.style.filter = 'blur(0) grayscale(0)';
 	createLists(selectDay.value);
 	selectDay.value = document.getElementById('defaultOption');
 }
@@ -47,7 +46,7 @@ btnSetToday.addEventListener('click', setToday);
 function setToday() {
 	today.innerHTML = days[nowDay];
 	modal.style.display = 'none';
-	wrap.style.filter = 'blur(0)';
+	wrap.style.filter = 'blur(0) grayscale(0)';
 	createLists(nowDay);
 }
 //clear all 
@@ -63,8 +62,6 @@ function clearAll() {
 	    table.removeChild(table.lastChild);
 	}
 }
-
-
 
 //week menu
 var firstDishes = [
@@ -95,8 +92,9 @@ var drinksList = [
 			[/*6*/'напитки','Кофе','Чай','Сок']
 		   ];		   
 
-//test
+//list creating
 function createLists(nn) {
+	//#1st list
 	var first = document.getElementById('ulmenu_fst');
 	while (first.hasChildNodes()) {
 	    first.removeChild(first.lastChild);
@@ -107,7 +105,7 @@ function createLists(nn) {
 		li.addEventListener('click', addToOrder);
 		first.appendChild(li);
 	}
-
+	//#2nd list
 	var second = document.getElementById('ulmenu_scn');
 	while (second.hasChildNodes()) {
 	    second.removeChild(second.lastChild);
@@ -118,7 +116,7 @@ function createLists(nn) {
 		li.addEventListener('click', addToOrder);
 		second.appendChild(li);
 	}
-
+	//#3rd list
 	var drinks = document.getElementById('ulmenu_drn');
 	while (drinks.hasChildNodes()) {
 	    drinks.removeChild(drinks.lastChild);
@@ -130,10 +128,11 @@ function createLists(nn) {
 		drinks.appendChild(li);
 	}
 }
+
 createLists(nowDay);
 
 
-//test 
+//create order 
 var table = document.getElementById('table_body');
 function addToOrder() {
 	//position
@@ -165,6 +164,7 @@ function addToOrder() {
 	this.removeEventListener('click', addToOrder);
 	this.addEventListener('click', addToOrderPlus);
 }
+//add value in order
 function addToOrderPlus() {
 	var elem = document.getElementById(this.innerHTML);
 	++elem.innerHTML;
