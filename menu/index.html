@@ -8,19 +8,35 @@
 </head>
 <body>
 	<div class="modal" id="modal">
-			<p>Please,<br> select another day of week</p>
+			<p>Пожалуйста,<br> выберите день недели</p>
 			<div class="btns">
 				<select name="selectDay" id="selectDay">
-					<option id="defaultOption" value="" disabled selected>set day</option>
-				<option value="0">sun</option>
-				<option value="1">mon</option>
-				<option value="2">tue</option>
-				<option value="3">wed</option>
-				<option value="4">thu</option>
-				<option value="5">fri</option>
-				<option value="6">sat</option>
+					<option id="defaultOption" value="" disabled selected>выбрать день...</option>
+				<option value="1">Пон</option>
+				<option value="2">Втр</option>
+				<option value="3">Сре</option>
+				<option value="4">Чтв</option>
+				<option value="5">Пят</option>
+				<option value="6">Суб</option>
+				<option value="0">Вск</option>
 			</select>
-			<div class="btn" id="setToday">or close and set today</div>
+			<span style="opacity: 0.3;margin:2px 0;font-size: 10px;">или</span>
+			<div class="btn" id="setToday">Выбрать сегодня</div>
+			</div>
+		</div>
+		<div class="modal2" id="modal2">
+			<p>Итоговое меню</p>
+			<div class="hor_line"> </div>
+			<div class="forpre">
+				<br>
+			  добро пожаловать,<br><br>
+			  здесь будет ваш чек! <br>
+			  -------------------------
+			</div>
+			<div class="btns2">
+				<div class="btn" id="back">вернуться</div>
+				<div class="btn" id="clearBack">очистить и вернуться</div>
+				<div class="btn" id="send">отправить</div>
 			</div>
 		</div>
 	<div class="wrap" id="wrap">
@@ -41,14 +57,14 @@
 		</aside>
 		<section id="main">
 			<div class="main_header">
-				<div class="for_order"><span id="order_of"> ORDER OF</span><span id="cusname"></span></div>
+				<div class="for_order"><span id="order_of"> заказ</span><span id="cusname"></span></div>
 			</div>
 			<div class="line sec"></div>
 			<div class="main_wrap">
 				<div class="customer">
-					<p>select customer</p>
+					<p>выберите клиента</p>
 					<select name="name" id="customer">
-						<option value=""  selected="selected" disabled>choose one...</option>
+						<option value=""  selected="selected" disabled>выбрать...</option>
 						<option value="Sergey Brin">Sergey Brin</option>
 						<option value="Elon Musk">Elon Musk</option>
 						<option value="Chu Chang">Chu Chang</option>
@@ -56,17 +72,18 @@
 				</div>
 				<div class="table">
 					<div class="table_top">
-						<div class="cell">position</div>
-						<div class="cell">value</div>
-						<div class="cell price">price</div>
-						<div class="cell total">total</div>
+						<div class="cell">наименование</div>
+						<div class="cell">кол-во</div>
+						<div class="cell price">цена</div>
+						<div class="cell totalH">итого</div>
+
 					</div>
 					<div class="table_body" id="table_body"></div>
 				</div>
 				<div class="buttons">
-					<div class="btn" id="changeDay">change day</div>
-					<div class="btn" id="clear">clear</div>
-					<div class="btn" id="final">final</div>
+					<div class="btn" id="changeDay">сменить день</div>
+					<div class="btn" id="clear">очистить</div>
+					<div class="btn" id="final">итог</div>
 				</div>
 			</div>
 		</section>

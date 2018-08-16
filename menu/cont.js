@@ -9,6 +9,7 @@ function setName() {
 	if(select.value == ''){
 		cusname.innerHTML = '';
 	} else if(select.value != '') {
+		var name = select.value;
 		cusname.innerHTML = ': ' + select.value;
 	} 
 	//egg
@@ -34,7 +35,10 @@ function getModal() {
 }
 //select day in modal
 var selectDay = document.getElementById('selectDay');
-selectDay.addEventListener('change', changeDay);
+selectDay.addEventListener('change', selectedTimeout);
+function selectedTimeout() {
+	setTimeout(changeDay, 700);
+}
 function changeDay() {
 	today.innerHTML = days[selectDay.value];
 	modal.style.display = 'none';
@@ -52,12 +56,13 @@ function setToday() {
 //clear all 
 var btnClear = document.getElementById('clear');
 btnClear.addEventListener('click', clearAll); 
+
 function clearAll() {
+
 	cusname.innerHTML = '';
 	select.value = '';
 	today.innerHTML = days[nowDay];
 	createLists(nowDay);
-	
 	while (table.hasChildNodes()) {
 	    table.removeChild(table.lastChild);
 	}
@@ -102,7 +107,16 @@ function createLists(nn) {
 	for(var i = 0;i < firstDishes[nn].length;i++) {
 		var li = document.createElement('li');
 		li.innerHTML = firstDishes[nn][i];
-		li.addEventListener('click', addToOrder);
+		li.classList.toggle('cat_fst');
+		//zebra
+		if(i > 0 && i % 2 == 1) {
+			li.style.background = '#E8C8A3';
+			li.style.color = '#362E30';
+		}
+		if(i > 0) {
+			li.addEventListener('click', addToOrder);
+		}
+		
 		first.appendChild(li);
 	}
 	//#2nd list
@@ -113,7 +127,17 @@ function createLists(nn) {
 	for(var z = 0;z < secondDishes[nn].length;z++) {
 		var li = document.createElement('li');
 		li.innerHTML = secondDishes[nn][z];
-		li.addEventListener('click', addToOrder);
+		li.classList.toggle('cat_scn');
+		//zebra
+		if(z > 0 && z % 2 == 1) {
+			li.style.background = '#E8C8A3';
+			li.style.color = '#362E30';
+		}
+
+		if(z > 0) {
+			li.addEventListener('click', addToOrder);
+		}
+
 		second.appendChild(li);
 	}
 	//#3rd list
@@ -124,7 +148,16 @@ function createLists(nn) {
 	for(var x = 0;x < drinksList[nn].length;x++) {
 		var li = document.createElement('li');
 		li.innerHTML = drinksList[nn][x];
-		li.addEventListener('click', addToOrder);
+		li.classList.toggle('cat_drn');
+		//zebra
+		if(x > 0 && x % 2 == 1) {
+			li.style.background = '#E8C8A3';
+			li.style.color = '#362E30';
+		}
+		if(x > 0) {
+			li.addEventListener('click', addToOrder);
+		}
+
 		drinks.appendChild(li);
 	}
 }
@@ -150,9 +183,16 @@ function addToOrder() {
 	//price
 	var cellPrice = document.createElement('div');
 	cellPrice.classList.add('cell');
-	cellPrice.innerHTML = 150;
+	if(this.classList.contains('cat_scn')){
+		cellPrice.innerHTML = 120;
+	} if(this.classList.contains('cat_fst')){
+		cellPrice.innerHTML = 165;
+	} if(this.classList.contains('cat_drn')){
+		cellPrice.innerHTML = 100;
+	}
 	cellPrice.id = this.innerHTML + ' price';
 	table.appendChild(cellPrice);
+
 	//total 
 	var cellTot = document.createElement('div');
 	cellTot.classList.add('cell');
@@ -160,10 +200,13 @@ function addToOrder() {
 	cellTot.id = this.innerHTML + ' total';
 	cellTot.innerHTML = cellPrice.innerHTML * cellValue.innerHTML;
 	table.appendChild(cellTot);
+
 	//first function end
 	this.removeEventListener('click', addToOrder);
 	this.addEventListener('click', addToOrderPlus);
+
 }
+
 //add value in order
 function addToOrderPlus() {
 	var elem = document.getElementById(this.innerHTML);
@@ -184,4 +227,26 @@ function addToOrderPlus() {
 }
 function alertOverTen(){
 			alert('Sorry, not more 10 positions at list, if you made a mistake - please reload page with button "Clear"');
+}
+
+//modal2
+var modal2 = document.getElementById('modal2');
+var btnFinal = document.getElementById('final');
+final.addEventListener('click', showFinal);
+function showFinal() {
+	modal2.style.display = 'flex';
+	wrap.style.filter = 'blur(10px) grayscale(50%)';
+}
+var btnBack = document.getElementById('back');
+var btnClearBack = document.getElementById('clearBack');
+btnBack.addEventListener('click', closeFinal);
+btnClearBack.addEventListener('click', closeClearFinal);
+function closeFinal() {
+	modal2.style.display = 'none';
+	wrap.style.filter = 'blur(0) grayscale(0)';
+}
+function closeClearFinal() {
+	modal2.style.display = 'none';
+	wrap.style.filter = 'blur(0) grayscale(0)';
+	clearAll();
 }

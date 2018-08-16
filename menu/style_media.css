@@ -81,6 +81,9 @@ section#main {
 	font-variant: small-caps;
 	box-shadow: 1px 0 1px #2F2729;
 }
+#order_of {
+	margin-left: 3.5%;
+}
 p#today {
 	padding: 0 8px;
 	margin: 1px 0 0 0;
@@ -113,27 +116,33 @@ h2 {
 }
 ul {
 	max-height: 25%;
-	width: 45%;
+	width: 75%;
 	font-family: Verdana, sans-serif;
 	letter-spacing: 1.1px;
 	line-height: 1.4;
 }
 ul.fst li:first-child{
 	list-style-image: url('fstlist.png');
-	margin-left: -40%;
+	margin-left: -20%;
 	margin-bottom: 5%;
+	font-size: 19px;
+	font-variant: small-caps;
 	border-bottom: 1px solid black;
 }
 ul.scn li:first-child{
 	list-style-image: url('secdish.png');
-	margin-left: -40%;
+	margin-left: -20%;
 	margin-bottom: 5%;
+	font-size: 19px;
+	font-variant: small-caps;
 	border-bottom: 1px solid black;
 }
 ul.drn li:first-child{
 	list-style-image: url('drink.png');
-	margin-left: -40%;
+	margin-left: -20%;
+	font-variant: small-caps;
 	margin-bottom: 5%;
+	font-size: 19px;
 	border-bottom: 1px solid black;
 }
 ul li:first-child:hover{
@@ -152,7 +161,7 @@ ul li:hover {
 	list-style-image: url('choose.png');
 	background: #2F2729;
 	color: #E1BF9A; 
-	box-shadow: 1px 1px 1px #2F2729;
+	box-shadow: 0 2px 1px #2F2729;
 	cursor: pointer;
 	list-style: red;
 	text-shadow: 0 0 1px #2F2729;
@@ -230,7 +239,8 @@ select:hover {
 #cusname {
 	font-style: italic;
 	font-variant: normal;
-	font-size: 21px;
+	font-size: 20.2px;
+	opacity: 0.7;
 }
 .modal {
 	border-radius: 10px;
@@ -255,8 +265,8 @@ select:hover {
 	font-size: 19px;
 }
 select#selectDay {
-	height: 26px;
-	width: 61%;
+	min-height: 27px;
+	min-width: 61%;
 }
 .btns {
 	display: flex;
@@ -266,7 +276,52 @@ select#selectDay {
 	min-height:30%;
 	align-items: center;
 }
-
+.modal2 {
+	background: #E9C6A0;
+	border:1px solid grey;
+	position:absolute;
+	z-index: 556;
+	width: 45%;
+	min-height: 70%;
+	padding:5px;
+	border-radius: 2px;
+	box-shadow: 0 0 10px grey, inset 0 0 2px beige;
+	display: none;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.modal2 p {
+	width: 45%;
+	text-align: left;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+.forpre {
+	padding:0 0 0 4px;
+	font-size: 13.6px;
+	color: #00000089;
+	width: 50%;
+	min-height: 285px;
+	overflow-y: scroll;
+	background: white;
+	margin:0 0 9px 0;
+	box-shadow: inset 1px 1px 1px black, 0 1px 1px grey;
+}
+.hor_line {
+	width: 45%;
+	height: 1px;
+	background: black;
+	margin: 7px 0 9px;
+}
+.btns2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: space-around;
+	margin: 7px 0;
+}
 @font-face {
 	font-family:american;
 	src:url('Hitchhiker.ttf');
@@ -276,6 +331,7 @@ select#selectDay {
 	display: grid;
 	grid-template-columns: 3fr 1fr 1fr 1fr;
 }
+
 .table_body {
 	font-weight: bold;
 }
@@ -290,10 +346,16 @@ select#selectDay {
 	font-family: cursive;
 	opacity: 0.9;
 }
-.cell.total {
+.cell.totalH {
 	font-style: normal;
 	font-size: 14.6px;
 	letter-spacing: 1px;
+}
+.cell.totalTotal{
+	grid-column: 1/5;
+	text-align: right;
+	font-weight: bold;
+	font-size: 15px;
 }
 @media only screen 
 and (max-width : 675px)
