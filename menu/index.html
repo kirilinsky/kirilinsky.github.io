@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu of A Day!</title>
+	<link rel="stylesheet" href="style_media.css">
+	<link rel="icon" href="fav.ico" type="icon/image">
+</head>
+<body>
+	<div class="modal" id="modal">
+			<p>please, select another day of week</p>
+			<div class="btns">
+				<select name="selectDay" id="selectDay">
+					<option id="defaultOption" value="" disabled selected>set day</option>
+				<option value="0">sun</option>
+				<option value="1">mon</option>
+				<option value="2">tue</option>
+				<option value="3">wed</option>
+				<option value="4">thu</option>
+				<option value="5">fri</option>
+				<option value="6">sat</option>
+			</select>
+			<div class="btn" id="setToday">or close and set today</div>
+			</div>
+		</div>
+	<div class="wrap" id="wrap">
+		<aside id="menu">
+			<div class="menu_header">
+				<h2>MENU</h2>
+				<p id="today"> - of monday - </p>
+			</div>
+			<div class="line"></div>
+			<div class="menu_wrap">
+				<ul id="ulmenu_fst" class="fst">
+				</ul>
+				<ul id="ulmenu_scn"  class="scn">
+				</ul>
+				<ul id="ulmenu_drn" class="drn">
+				</ul>
+			</div>
+		</aside>
+		<section id="main">
+			<div class="main_header">
+				<div class="for_order"><span id="order_of"> ORDER OF</span><span id="cusname"></span></div>
+			</div>
+			<div class="line sec"></div>
+			<div class="main_wrap">
+				<div class="customer">
+					<p>select customer</p>
+					<select name="name" id="customer">
+						<option value=""  selected="selected" disabled>choose one...</option>
+						<option value="Sergey Brin">Sergey Brin</option>
+						<option value="Elon Musk">Elon Musk</option>
+						<option value="Chjou Chang">Chjou Chang</option>
+					</select>
+				</div>
+				<div class="table">
+					<div class="table_top">
+						<div class="cell">position</div>
+						<div class="cell">value</div>
+						<div class="cell price">price</div>
+						<div class="cell total">total</div>
+					</div>
+					<div class="table_body" id="table_body"></div>
+				</div>
+				<div class="buttons">
+					<div class="btn" id="changeDay">change day</div>
+					<div class="btn" id="clear">clear</div>
+					<div class="btn" id="final">final</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="author"> <a href="http://kirilinsky.ru" target="_blank">dev by kirilinsky @ 2018</a></div>
+	<script src="cont.js"></script>
+</body>
+</html>
