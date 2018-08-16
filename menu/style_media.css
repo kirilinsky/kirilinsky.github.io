@@ -242,7 +242,7 @@ select:hover {
 	height: 35%;
 	display: none;
 	flex-flow: column wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	z-index: 555;
 	opacity: 0.9;
@@ -256,12 +256,13 @@ select:hover {
 }
 select#selectDay {
 	height: 26px;
+	width: 61%;
 }
 .btns {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: column wrap;
 	justify-content: space-around;
-	width: 50%;
+	width: 45%;
 	min-height:30%;
 	align-items: center;
 }
