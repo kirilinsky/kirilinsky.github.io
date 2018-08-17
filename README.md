@@ -1,6 +1,6 @@
 ![alt text](http://kirilinsky.ru/logo.svg)
 ### some special:
-
+<a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
 
 --------------------------------------------------------------------------|----------------------
 [PSD FREE](https://kirilinsky.github.io/free_psd/)                       |  Layot Training
