@@ -1,7 +1,7 @@
 ---
 <p align="center"><a href="http://kirilinsky.ru" target="_blank"><img width="355" src="https://kirilinsky.github.io/gif_git/scr.png"></a></p>
 <p align="center"><a href="http://kirilinsky.ru" target="_blank">portfolio page</a></p>
-
+<well, thats me
 
 
 ---
