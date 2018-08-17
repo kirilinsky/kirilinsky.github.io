@@ -21,8 +21,8 @@
 
 
 
-what                                                    | why
---------------------------------------------------------|----------------------
-[SkillMeter](https://kirilinsky.github.io/skill/).      | Skill-o-meter(_its_ _a_ _joke_).
-[F-A-Q](https://kirilinsky.github.io/faq/).             | FAQ page.
+looks like                                            | what                                             | why
+------------------------------------------------------|--------------------------------------------------|--------------------
+![Skill](https://kirilinsky.github.io/gif_git/sc1.png)|[SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
+![FAQ](https://kirilinsky.github.io/gif_git/sc2.png)  |[F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 
