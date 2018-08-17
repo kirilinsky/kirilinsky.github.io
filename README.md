@@ -1,10 +1,10 @@
 ![alt text](http://kirilinsky.ru/logo.svg)
-### some special:
+### some my projects:
+<a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
 
 --------------------------------------------------------------------------|----------------------
-[PSD FREE](https://kirilinsky.github.io/free_psd/)                       |  Layot Training
-[Justice Project 1.0.3b](https://kirilinsky.github.io/justice/)          | Own template for Justice site.
+<a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>       | Own template for Justice site.
 [Arcite 1.0.1](https://kirilinsky.github.io/arcite/)                     | Template art-deco site.
 [Salon Beauty 1.0.2beta](https://kirilinsky.github.io/beauty_1_0_b/dev/) | Beauty salon landing page.
 [SkillMeter](https://kirilinsky.github.io/skill/)                       | Skill-o-meter(_its_ _a_ _joke_).
