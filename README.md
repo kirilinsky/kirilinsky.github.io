@@ -1,4 +1,4 @@
-![alt text](http://kirilinsky.ru/logo.svg)
+<p align="center"><a href="http://http://kirilinsky.ru" target="_blank"><img width="400" src="https://kirilinsky.github.io/gif_git/scr.png"></a></p>
 ---
 ## some of my projects:
 <a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
