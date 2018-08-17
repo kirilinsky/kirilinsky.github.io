@@ -14,8 +14,8 @@
 <a href="https://kirilinsky.github.io/menu/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/menu.gif" width="288"></a>
 
 ## another yet...
-
----------------------------------------------------------------------------|----------------------
+ | 
+----------------|----------------------
 [SkillMeter](https://kirilinsky.github.io/skill/).                         | Skill-o-meter(_its_ _a_ _joke_).
 [F-A-Q](https://kirilinsky.github.io/faq/).                                | FAQ page
 
