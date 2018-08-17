@@ -23,6 +23,6 @@
 
 looks like                                            | what                                             | why
 ------------------------------------------------------|--------------------------------------------------|--------------------
-<img width="95" src="https://kirilinsky.github.io/gif_git/sc1.png">|[SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
-<img width="95" src="https://kirilinsky.github.io/gif_git/sc2.png">|[F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
+<img width="65" src="https://kirilinsky.github.io/gif_git/sc1.png">|[SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
+<img width="65" src="https://kirilinsky.github.io/gif_git/sc2.png">|[F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 
