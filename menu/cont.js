@@ -3,18 +3,23 @@ var wrap = document.getElementById('wrap');
 var cusname = document.getElementById('cusname');
 var select = document.getElementById('customer');
 select.addEventListener('change', setName);
-
+var num = 0;
+var data = {};
 //set name (for h2)
 function setName() {
 	if(select.value == ''){
 		cusname.innerHTML = '';
+
 	} else if(select.value != '') {
 		var name = select.value;
 		cusname.innerHTML = ': ' + select.value;
+		data.for = select.value;
+		
 	} 
 	//egg
     if(select.value == 'Elon Musk') {
 		alert('Как тебе жаркое, Илон Маск?');
+		data.for = select.value;
 	}
 }
 
@@ -66,24 +71,27 @@ function clearAll() {
 	while (table.hasChildNodes()) {
 	    table.removeChild(table.lastChild);
 	}
+	data = {};
 }
 
 //week menu
+
+
 var firstDishes = [
 			[/*0*/'первое','Гаспачо','Чеддар','Тыква'],
 			[/*1*/'первое','Борщ','Солянка','Окрошка'],
-			[/*2*/'первое','Дачный','Соевый','Окрошка'],
+			[/*2*/'первое','Дачный','Соевый суп','Окрошка'],
 			[/*3*/'первое','Крестьянский','Солянка','Гороховый'],
 			[/*4*/'первое','Чеддар','Тайский','Борщ'],
 			[/*5*/'первое','Борщ','Солянка','Гаспачо'],
-			[/*6*/'первое','Зеленый','Тыква','Окрошка']
+			[/*6*/'первое','Фасолевый суп','Тыква','Окрошка']
 		   ];
 var secondDishes = [
 			[/*0*/'второе','Ризотто','Кускус','Салат'],
-			[/*1*/'второе','Картофель','Овощи на гриле','Салат'],
+			[/*1*/'второе','Картофель','Овощи','Салат'],
 			[/*2*/'второе','Пашот','Ризотто','Нут'],
 			[/*3*/'второе','Ризотто','Салат','Горошек'],
-			[/*4*/'второе','Сырная тарелка','Плов','Ризотто'],
+			[/*4*/'второе','Сыры','Плов','Ризотто'],
 			[/*5*/'второе','Паста','Кальмар','Кускус'],
 			[/*6*/'второе','Кускус','Морошка','Салат']
 		   ];
@@ -98,6 +106,7 @@ var drinksList = [
 		   ];		   
 
 //list creating
+
 function createLists(nn) {
 	//#1st list
 	var first = document.getElementById('ulmenu_fst');
@@ -171,24 +180,45 @@ function addToOrder() {
 	//position
 	var cellPosition = document.createElement('div');
 	cellPosition.classList.add('cell');
+	cellPosition.classList.add('pos' + this.innerHTML);
+	cellPosition.classList.add('pos');
 	cellPosition.innerHTML = this.innerHTML;
 	cellPosition.id = 'position ' + this.innerHTML;
+	cellPosition.classList.add;
 	table.appendChild(cellPosition);
+
+	//obj
+	
+	var txt = cellPosition.innerHTML;
+	data[txt] = {};
+
+
+
+	//var data = {'position': {'name' : 'Чеддар', 'value': 1, 'price' : 200}};
+
 	//value 1
 	var cellValue = document.createElement('div');
 	cellValue.classList.add('cell');
 	cellValue.innerHTML = 1;
 	cellValue.id = this.innerHTML;
+	data[txt]['кол-во'] = cellValue.innerHTML;
+	cellValue.classList.add(txt);
 	table.appendChild(cellValue);
+	
+
+	//data[txt][cellPosition.innerHTML].value = cellValue.innerHTML;
 	//price
 	var cellPrice = document.createElement('div');
 	cellPrice.classList.add('cell');
 	if(this.classList.contains('cat_scn')){
 		cellPrice.innerHTML = 120;
+		data[txt].цена = cellPrice.innerHTML;
 	} if(this.classList.contains('cat_fst')){
 		cellPrice.innerHTML = 165;
+		data[txt].цена = cellPrice.innerHTML;
 	} if(this.classList.contains('cat_drn')){
 		cellPrice.innerHTML = 100;
+		data[txt].цена = cellPrice.innerHTML;
 	}
 	cellPrice.id = this.innerHTML + ' price';
 	table.appendChild(cellPrice);
@@ -197,8 +227,10 @@ function addToOrder() {
 	var cellTot = document.createElement('div');
 	cellTot.classList.add('cell');
 	cellTot.classList.add('total');
+	cellTot.classList.add('pos' + this.innerHTML);
 	cellTot.id = this.innerHTML + ' total';
 	cellTot.innerHTML = cellPrice.innerHTML * cellValue.innerHTML;
+	data[txt].итого = cellTot.innerHTML;
 	table.appendChild(cellTot);
 
 	//first function end
@@ -211,35 +243,65 @@ function addToOrder() {
 function addToOrderPlus() {
 	var elem = document.getElementById(this.innerHTML);
 	++elem.innerHTML;
+	var txt = elem.id;
+	data[txt]['кол-во'] = elem.innerHTML;
 	if(elem.innerHTML < 10){
 		var tot = document.getElementById(this.innerHTML+ ' total');
 		var price = document.getElementById(this.innerHTML + ' price');
 		tot.innerHTML = (Number(elem.innerHTML) * Number(price.innerHTML));
+		data[txt].итого = tot.innerHTML;
 	} else {
 		var tot = document.getElementById(this.innerHTML+ ' total');
 		var price = document.getElementById(this.innerHTML + ' price');
 		tot.innerHTML = (Number(elem.innerHTML) * Number(price.innerHTML));
+		data[txt].итого = tot.innerHTML;
 		this.removeEventListener('click', addToOrderPlus);
-		alert('Not over 10 positions in list!');
+		alert('Не более 10 позиций в заказе!');
 		this.addEventListener('click', alertOverTen);
 		return;
 	}
 }
 function alertOverTen(){
-			alert('Sorry, not more 10 positions at list, if you made a mistake - please reload page with button "Clear"');
+			alert('Извините, не более 10 позиций одного блюда в заказе. Если Вы допустили ошибку, нажмите кнопку "очистить"');
 }
 
 //modal2
 var modal2 = document.getElementById('modal2');
 var btnFinal = document.getElementById('final');
-final.addEventListener('click', showFinal);
+btnFinal.addEventListener('click', showFinal);
 function showFinal() {
 	modal2.style.display = 'flex';
 	wrap.style.filter = 'blur(10px) grayscale(50%)';
+	var forpre = document.getElementById('forpre');
+	var name = data.for || 'клиент';
+	var str = ' ';
+	var tot = 0;
+			for(key in data) {
+				if(key == 'for') {
+					continue;
+				} else {
+					str+= '<hr><b>' + key + '</b><br> ';
+				}
+
+				for(key2 in data[key]) {
+					if(key2 == 'итого') {
+						tot+= Number(data[key][key2]);
+					}
+					str+= key2 + ': ' + data[key][key2] + ' ';
+				}
+				str+= '<br><hr>';
+
+			}
+	var result = '<p class="check"><br> добрый день, ' + name + '!<br> Ваш заказ: <br></p>' + str + '<br> <p class="check back">ИТОГО: ' + tot + '</p>';	
+	forpre.innerHTML = result;
+
+
 }
 var btnBack = document.getElementById('back');
 var btnClearBack = document.getElementById('clearBack');
 btnBack.addEventListener('click', closeFinal);
+var btnSend = document.getElementById('send');
+btnSend.addEventListener('click', sendFinal);
 btnClearBack.addEventListener('click', closeClearFinal);
 function closeFinal() {
 	modal2.style.display = 'none';
@@ -250,3 +312,8 @@ function closeClearFinal() {
 	wrap.style.filter = 'blur(0) grayscale(0)';
 	clearAll();
 }
+
+function sendFinal() {
+
+} 
+console.log(data);
