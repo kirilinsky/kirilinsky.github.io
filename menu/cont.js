@@ -42,7 +42,7 @@ function getModal() {
 var selectDay = document.getElementById('selectDay');
 selectDay.addEventListener('change', selectedTimeout);
 function selectedTimeout() {
-	setTimeout(changeDay, 700);
+	setTimeout(changeDay, 450);
 }
 function changeDay() {
 	today.innerHTML = days[selectDay.value];
