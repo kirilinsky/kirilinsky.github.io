@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html {
+			font-family: sans-serif;
+		}
+		.box:hover {
+			background: teal;
+			transition: ease 0.3s;
+			cursor: pointer;		
+			color:orange;
+			box-shadow: 0 0 5px teal;
+		}
+		.box {
+			min-height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: orange;
+			color: white ;
+			transition: ease 0.4s;
+			box-shadow: 0 0 2px grey;
+			}
+		a {
+			text-decoration: none;
+			font-variant: small-caps;
+			font-size: 22px;
+		 	}
+		.wrap {
+			margin: 25px auto;
+			width: 90%;
+			min-height: 600px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.top {
+			width:90%;
+			min-height: 410px;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+		.game {
+			width: 410px;
+			height: 410px;
+			margin: 5px 5px 5px 100px;
+			display: grid;
+			grid-template-columns: 33% 33% 33%;
+			padding: 0;
+		}
+		.scoreboard {
+			width:18%;
+			margin: 15px;
+			padding:5px;
+			display: flex;
+			flex-flow: wrap column;
+			justify-content: center;
+			align-items: space-around;
+			border-radius: 3px;
+			box-shadow: 1px 1px 1px black, 0 0 2px grey;
+		}
+		.cell {
+			border: 1px solid black;
+			box-shadow: 0 0 1px grey;
+			transition: ease 0.5s;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cell:hover {
+			background: lightgrey;
+			transition: ease 0.5s;
+			box-shadow: inset 0 0 5px white;
+			cursor: pointer;
+		}
+		p {
+			text-align: center;
+		}
+		.bot{
+			width:50%;
+			display: flex;
+			flex-flow: wrap column;
+			align-items: center;
+			min-height: 50px;
+			justify-content: space-between;
+			padding:5px;
+		}
+		.now {
+			font-variant: small-caps;
+			font-size: 22px;
+		}
+		.modal {
+			display: none;
+			position: absolute;
+			width:25%;
+			height:310px;
+			background: #fcfcf3;
+			top:25%;
+			left: 36%;
+			box-shadow: 0 0 7px black;
+			opacity: 0.85;
+			border-radius: 10px 0 10px 0;
+			z-index: 555;
+			transition: ease 0.3s;
+		}
+		.inner{
+			height: 100%;
+			position:relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 25.3px;
+			letter-spacing: 1.2px;
+		}
+		button#close {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			background: transparent;
+			opacity: 0.7;
+			margin: 5px;
+			border: none;
+			font-size: 20px;
+			border-radius: 50%;
+			transition: ease 0.3s;
+			font-stretch: ultra-expanded;
+		}
+		button#close:hover {
+			cursor: pointer;
+
+			transform: rotateY(180deg);
+			font-weight: bold;
+			transition: ease 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<a href="/">
+		<div class="box">На главную</div>
+	</a>
+	<div class="wrap">
+		<div class="top">
+			<div class="game">
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+				<div class="cell"> </div>
+			</div>
+			<div class="scoreboard">
+				<p>Player 'X' score is <span id="one"></span></p>
+				<p>Player '0' score is <span id="two"></span></p>
+				<p>Standoff <span id="three"></span></p>
+			</div>
+		</div>
+		<div class="bot">
+			<div class="now"><span id="now"></span></div>
+			<div class="btns">
+				<button id="restart">restart</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal">
+		<div class="inner">
+			<button id="close">x</button>
+			<p id="isWin">Player ' ' is Win!</p>
+		</div>
+		
+	</div>
+
+	<script>
+		var closeBtn = document.getElementById('close');
+		var modal = document.getElementById('modal');
+		var isWin = document.getElementById('isWin');
+		closeBtn.addEventListener('click', closeModal);
+		function closeModal() {
+			modal.style.display = 'none';
+		}
+		var res = document.getElementById('restart');
+		res.addEventListener('click', restartAll);
+		function restartAll() {
+				for(var i = 0;i < cells.length;i++) {
+					cells[i].innerHTML = '';
+					now.innerHTML = nowtxt;
+				}
+				for(var i = 0;i < cells.length;i++) {
+				cells[i].addEventListener('click', funcX);
+				//cells[i].addEventListener('click', changeFlag);
+		}
+		}
+		var flag = true;
+		var nowtxt = 'click at any cell to <b>start</b>'
+		var cells = document.getElementsByClassName('cell');
+		var now = document.getElementById('now');
+		var scorex = 0;
+		var scoreo = 0;
+		var score = 0;
+		var scorexpalcer = document.getElementById('one');
+		var scoreoplacer = document.getElementById('two');
+		var scoreplacer = document.getElementById('three');
+		now.innerHTML = nowtxt;
+		for(var i = 0;i < cells.length;i++) {
+			cells[i].addEventListener('click', funcX);
+			//cells[i].addEventListener('click', changeFlag);
+		}
+		function funcX() {
+			changeFlag();
+			if(flag == true) {
+				this.innerHTML = 'X';
+				now.innerHTML = 'Now move is <span style="color:green">\'O\'</span>';
+				func();
+			} else {
+				this.innerHTML = 'O';
+				now.innerHTML = 'Now move is  <span style="color:green">\'X\'</span>';
+				func();
+			}
+			this.removeEventListener('click', funcX);
+		}
+		function changeFlag() {
+			if(flag == true) {
+				flag = false;
+			} else {
+				flag = true;
+			}
+
+		}
+		function winX() {
+			modal.style.display = 'block';
+			isWin.innerHTML = 'Player \'X\' is Win!';
+			scorex++;
+		}
+		function winO() {
+			modal.style.display = 'block';
+			isWin.innerHTML = 'Player \'O\' is Win!';
+			scoreo++;
+		}
+		function func() {
+			//all variants of win
+			if(cells[0].innerHTML == 'X' && cells[1].innerHTML == 'X' && cells[2].innerHTML == 'X') {
+				winX();
+			}
+			if(cells[3].innerHTML == 'O' && cells[4].innerHTML == 'O' && cells[5].innerHTML == 'O') {
+				winO();
+			}
+		}
+		func();
+
+	</script>
+</body>
+</html>
