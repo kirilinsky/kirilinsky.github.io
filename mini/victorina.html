@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Викторина</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		html{
+			font-size: 100%;
+			font-family: sans-serif;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			//height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.modal {
+			position:absolute;
+			width: 70%;
+			min-height: 66%;
+			background: teal;
+			border-radius: 5px;
+			box-shadow: 0 0 35px orange;
+			display: none;
+			padding: 5px;
+			border: 1px grey orange;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+			align-items: center;
+			z-index: 55;
+		}
+		.inModal {
+			position:relative;
+		}
+		#close {
+			position:absolute;
+			top:1%;
+			left: 0.5%;
+			color: teal;
+			transition: ease 0.5s;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 2px;
+		}
+		#close:hover {
+			background: white;
+			color:grey;
+			transform: rotate(180deg);
+			transition: ease 0.5s;
+			cursor: pointer;
+			box-shadow: 0 0 2px white;
+		}
+		.forResult {
+			width: 80%;
+			outline: 1px solid grey;
+			min-height: 85%;
+			box-sizing: border-box;
+			padding: 7px;
+			background: #038383;
+		}
+		.wrap {
+			margin-top: 100px;
+			width:86%;
+			min-height:85vh;
+			background: teal;
+			border-radius: 5px;
+			box-shadow: 0 0 5px teal;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.line {
+			box-sizing: border-box;
+			width: 100%;
+			height: 30px;
+			background: orange;
+			text-align: right;
+			padding:5px;
+			box-shadow: 1px 0 3px orange, 0 1px 1px black;
+			color: teal;
+			font-size: 1.35rem;
+		}
+		.wrap_body {
+			width: 90%;
+			height:70%;
+			border: 1px dashed orange;
+			border-radius: 3px;
+			background: #038383;
+			display: flex;
+			justify-content: space-around;
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+		.block {
+			width: 75%;
+			height: 30%;
+			padding:10px;
+			box-sizing: border-box;
+			color: orange;
+			letter-spacing: 1px;
+		}
+		.btns {
+			height: 10%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			padding:10px;
+			box-sizing: border-box;
+		}
+		.btn {
+			background: orange;
+			padding: 3px 10px;
+			border-radius: 2px;
+			box-shadow: 0 0 1px black;
+			font-weight: bold;
+			color: teal;
+			letter-spacing: 1px;
+			font-variant: small-caps;
+			transition: ease 0.4s all;
+		}
+		.btn:hover {
+			cursor: pointer;
+			background: white;
+			box-shadow: 0 0 8px white;
+			color: grey;
+			transition: ease 0.4s all;
+		}
+		.btn#back {
+			margin:15px 0;
+		}
+		ul {
+			list-style-position: inside;
+			list-style-type: square;
+		}
+		hr {
+			border-color: orange;
+		}
+		p#totalRange {
+			text-align: center;
+			line-height: 1.3rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="modal" id="modal">
+		<div class="line inModal"><span id="resultHead">Итого башка</span> <span id="close">X</span></div>
+		<div class="forResult">
+			<h3>Правильных ответов:</h3>
+			<p id="rightAnswers"></p>
+			<h3>Неправильных ответов:</h3>
+			<p id="wrongAnswers"></p>
+			<h3>Итоговый ранг:</h3>
+			<p id="totalRange"></p>
+		</div>
+		<div class="btn" id="back">заново</div>
+	</div>
+	<div class="wrap" id="wrap">
+		<div class="line"> Викторина</div>
+		<div class="wrap_body">
+			<div class="block1 block">
+				<form>
+				Какому государству формально принадлежит Гренландия?
+				<ul class="ul">
+					<li><input type="radio" name="fst" class="fst" id="flag1"> Дании</li>
+					<li><input type="radio"  name="fst" class="fst"> Канаде</li>
+					<li><input type="radio"  name="fst" class="fst"> Великобритании</li>
+					<li><input type="radio" name="fst" class="fst" id="flag4"> Франции</li>
+				</ul>
+			</div>
+			<div class="block2 block">
+				Автор истрического трактата - "Искусство Войны"
+				<ul class="ul">
+					<li><input type="radio" name="sec" class="sec"> Лао Цзы</li>
+					<li><input type="radio" name="sec" class="sec"  id="flag2"> Сунь Цзы</li>
+					<li><input type="radio"  name="sec" class="sec"> Конфуций</li>
+					<li><input type="radio" name="sec" class="sec"> Будда Шакьямуни</li>
+				</ul>
+			</div>
+			<div class="block3 block">
+				Какое из этих животных считается вымершим?
+				<ul class="ul">
+					<li><input type="radio" name="thr" class="thr"> Галапагосский Дрозд</li>
+					<li><input type="radio" name="thr" class="thr"> Белый Носорог</li>
+					<li><input type="radio"  name="thr" class="thr"> Гренландский Кит</li>
+					<li><input type="radio"  name="thr" class="thr" id="flag3"> Тасманский Волк</li>
+				</ul>
+				<hr>	
+			</div>
+			<div class="block btns"><div class="btn" id="check">проверить</div></div>
+			</form>
+		</div>
+	</div>
+	<script>
+		const checkBtn = document.getElementById('check');
+		const full = 3;
+		
+
+
+		const rad1 = document.getElementById('flag1');
+		const rad2 = document.getElementById('flag2');
+		const rad3 = document.getElementById('flag3');
+		
+		checkBtn.addEventListener('click', checkIt);
+		
+		
+		function checkIt() {
+			let value = 0;
+
+			if(rad1.checked) {
+				value += 1;
+			}
+			if(rad2.checked) {
+				value += 1;
+			}
+			if(rad3.checked) {
+				value += 1;
+			}
+			const modal = document.getElementById('modal');
+			const wrap = document.getElementById('wrap');
+			modal.style.display = 'flex';
+			wrap.style.filter = 'blur(5px) grayscale(65%)';
+			let modalHead = document.getElementById('resultHead');
+			let rightAnswers = document.getElementById('rightAnswers');
+			let wrongAnswers = document.getElementById('wrongAnswers');
+			let totalRange = document.getElementById('totalRange');
+			if(value == full) {
+				modalHead.innerHTML = 'Ура, победа!';
+				rightAnswers.innerHTML = '<span style="color:yellow;fonst-size:2.1rem;">3</span>';;
+				wrongAnswers.innerHTML = 0;
+				totalRange.innerHTML = 'Ты - Исаак Ньютон';
+			} else {
+				modalHead.innerHTML = 'Увы, не в этот раз...';
+				rightAnswers.innerHTML = value;
+				let wr = 0;
+				wr = full - value;
+				wrongAnswers.innerHTML = wr;
+				if(wr == 1) {
+					totalRange.innerHTML = 'Альберт Эйнштейн <br> (ранг, который можно получить по теории вероятности, ну конечно, ты всеё знал)';
+				}
+				if(wr == 2) {
+					totalRange.innerHTML = 'Лаборант - учиться, учиться и еще раз учиться';
+				}
+				if(wr == 3) {
+					modalHead.innerHTML = 'Режешь без ножа';
+					totalRange.innerHTML = 'Яблоко упавшее на Ньютона <br> (конечно, нельзя назвать тебя совсем бесполезным в науке. Остерегайся червей!) ';
+					wrongAnswers.innerHTML = '<span style="color:red;fonst-size:2rem;">' + wr + '</span>';
+				}
+			}
+			checkBtn.removeEventListener('click', checkIt);
+		}
+		const backBtn = document.getElementById('back');
+		const closeBtn = document.getElementById('close');
+		closeBtn.addEventListener('click', again);
+		backBtn.addEventListener('click', again);
+		function again() {
+			modal.style.display = 'none';
+			wrap.style.filter = 'blur(0) grayscale(0)';
+			let inputs = document.getElementsByTagName('input');
+			for(var x = 0;x < inputs.length;x++){
+				inputs[x].checked = false;
+			}
+			checkBtn.addEventListener('click', checkIt);
+
+
+		}
+	</script>
+</body>
+</html>
