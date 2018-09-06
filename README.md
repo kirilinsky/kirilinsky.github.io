@@ -6,7 +6,8 @@
 >well, 
 >
 >thats me
-
+<p align="center"><a href="http://http://inhabitable.ru" target="_blank">
+ <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"> Inhabitable - first opus project</a></p>
 
 ---
 # some of my projects:
