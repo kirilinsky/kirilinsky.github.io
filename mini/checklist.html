@@ -78,7 +78,7 @@
 							alert('Слишком длинное задание, пожалуйста, сократите.');
 							inp.value = '';
 						}
-						if(currentValue.length == 0) {
+						if(currentValue.length == 0 || currentValue == ' ') {
 							alert('Вы ввели пустое значение!');
 						}
 						if(currentValue.length <= 38 && currentValue.length > 0){
