@@ -25,14 +25,15 @@
 		}
 		.case {
 			border: 2px dashed grey;
-			width: 305px;
-			height: 31px;
+			width: 300px;
+			height: 30px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			border-radius: 2px;
 		}
-		input {
+		input#inp {
 			width:95%;
 		}
 		.close {
@@ -74,7 +75,11 @@
 						newCase.classList.add('case');
 						let currentValue = inp.value;
 						if(currentValue.length > 38) {
-							alert('Слишком длинное задание, пожалуйста, сократите.')
+							alert('Слишком длинное задание, пожалуйста, сократите.');
+							inp.value = '';
+						}
+						if(currentValue.length == 0) {
+							alert('Вы ввели пустое значение!');
 						}
 						if(currentValue.length <= 38 && currentValue.length > 0){
 							let newClose = document.createElement('div');
@@ -86,7 +91,7 @@
 							newCheck.addEventListener('click', checkThis);
 							newLabel.for = currentValue;
 							newLabel.id = currentValue + 'id';
-							newLabel.innerHTML = currentValue || 'empty!';
+							newLabel.innerHTML = currentValue;
 							newClose.classList.add('close');
 							newClose.id = 'close';
 							newClose.addEventListener('click', closeThis);
