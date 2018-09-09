@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Victorina - 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.wrap{
+			width: 65%;
+			height: 48%;
+			background: royalblue;
+			border-radius: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.main {
+			width: 95%;
+			height: 85%;
+			background: white;
+			border-radius: 5px;
+			box-shadow: inset 0 0 15px royalblue, 0 0 19px white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column nowrap;
+		}
+		.btn {
+			width:56px;
+			font-family: sans-serif;
+			text-align: center;
+			background: royalblue;
+			padding: 3px 10px;
+			border-radius: 2px;
+			box-shadow: 0 0 1px black;
+			font-weight: bold;
+			color: white;
+			letter-spacing: 1px;
+			font-variant: small-caps;
+			transition: ease 0.4s all;
+		}
+		.btn:hover {
+			cursor: pointer;
+			background: white;
+			box-shadow: 0 0 8px grey;
+			color: royalblue;
+			transition: ease 0.4s all;
+		}
+		.block {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main">
+			<div class="btn" id="start">Start</div>
+			<div class="block">
+				<ul>Сколько коров нужно для парного молока?
+					<li><input type="checkbox" id="name1"><label for="name1"> Двадцать семь</label></li>
+					<li><input type="checkbox" id="name2" ><label for="name2"> Тридцать три</label></li>
+					<li><input type="checkbox" id="name3"><label for="name3"> Одна</label></li>
+				</ul>
+				<div class="btn" id="next">next</div>
+			</div>
+			<div class="block">
+					<ul>Пятая от Солнца планета
+						<li><input type="checkbox" id="name4"><label for="name4"> Марс</label></li>
+						<li><input type="checkbox" id="name5"><label for="name5"> Нептун</label></li>
+						<li><input type="checkbox" id="name6" ><label for="name6"> Юпитер</label></li>
+					</ul>
+				<div class="btn" id="next">next</div>
+			</div>
+			<div class="block">
+				<ul>Оттенки какого цвета человек различает лучше всего?
+					<li><input type="checkbox" id="name7"><label for="name7"> Зеленого</label></li>
+					<li><input type="checkbox" id="name8"><label for="name8"> Красного</label></li>
+					<li><input type="checkbox" id="name9" ><label for="name9"> Синего</label></li>
+				</ul>
+				<div class="btn" id="next">next</div>
+			</div>
+			
+		</div>
+	</div>
+	<script>
+		const startBtn = document.getElementById('start');
+		const blocks = document.getElementsByClassName('block');
+		let counter = 0;
+		startBtn.addEventListener('click', startAll);
+		function startAll() {
+			this.style.display = 'none';
+			blocks[counter].style.display = 'block';
+			let btn = document.getElementById('next');
+			btn.addEventListener('click', next);
+		}
+		function next() {
+			blocks[counter].style.display = 'none';
+			counter++;
+			blocks[counter].style.display = 'block';
+			btn.addEventListener('click', next);
+		}
+	</script>
+</body>
+</html>

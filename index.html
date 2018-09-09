@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mini-projects</title>
+	<style>
+		body {
+			width: 80%;
+			margin: 55px auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr) ;
+			grid-gap: 15px;
+			grid-auto-rows: minmax(150px, auto);
+		}
+		.box {
+			min-height: 150px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: orange;
+			color: white ;
+			transition: ease 0.4s;
+			box-shadow: 0 0 2px grey;
+			text-align: center;
+			}
+		.last {
+			grid-column: 1/4;
+		}
+		.box:hover {
+			background: teal;
+			transition: ease 0.3s;
+			cursor: pointer;		
+			color:orange;
+			box-shadow: 0 0 5px teal;
+		}
+		a, a:link, a:visited, a:active {
+			text-decoration: none;
+			font-size: 25px;
+			font-variant: small-caps;
+			font-family: sans-serif;
+		}
+		
+	</style>
+</head>
+<body>
+	<a href="calculate.html">
+		<div class="box">Мини проект №1 <br> Калькулятор</div>
+	</a>
+	<a href="cross.html">
+		<div class="box">Мини проект №2 <br>Крестики - нолики </div>
+	</a>
+	<a href="victorina.html">
+		<div class="box">Мини проект №3 <br>Викторина</div>
+	</a>
+	<a href="victorina2.html" class="last">
+		<div class="box">Мини проект №4 <br>Викторина 2 часть</div>
+	</a>
+	<a href="checklist.html">
+		<div class="box">Мини проект №5 <br>Чек-Лист</div>
+	</a>
+	<a href="#">
+		<div class="box">Мини проект №6</div>
+	</a>
+	<a href="#">
+		<div class="box">Мини проект №7</div>
+	</a>
+	<a href="#" class="last">
+		<div class="box">Мини проект №8</div>
+	</a>
+	<a href="#">
+		<div class="box">Мини проект №9</div>
+	</a>
+	<a href="#">
+		<div class="box">Мини проект №10</div>
+	</a>
+	<a href="#">
+		<div class="box">Мини проект №11</div>
+	</a>
+</body>
+</html>
