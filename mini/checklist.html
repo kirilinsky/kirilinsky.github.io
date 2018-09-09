@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Чек Лист</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
 			margin: 0;
@@ -72,27 +73,33 @@
 						let newCase = document.createElement('div');
 						newCase.classList.add('case');
 						let currentValue = inp.value;
-						let newClose = document.createElement('div');
-						let newCheck = document.createElement('input');
-						let newLabel = document.createElement('label');
-						newCheck.type = 'checkbox';
-						newCheck.id = currentValue;
-						newCheck.classList.add('check');
-						newCheck.addEventListener('click', checkThis);
-						newLabel.for = currentValue;
-						newLabel.id = currentValue + 'id';
-						newLabel.innerHTML = currentValue || 'empty!';
-						newClose.classList.add('close');
-						newClose.id = 'close';
-						newClose.addEventListener('click', closeThis);
-						newClose.innerHTML = 'x';
-						parent.appendChild(newCase);
-						newCase.appendChild(newClose);
-						newCase.appendChild(newCheck);
-						newCase.appendChild(newLabel);
-						inp.value = '';
-						} 
-					}
+						if(currentValue.length > 38) {
+							alert('Слишком длинное задание, пожалуйста, сократите.')
+						}
+						if(currentValue.length <= 38 && currentValue.length > 0){
+							let newClose = document.createElement('div');
+							let newCheck = document.createElement('input');
+							let newLabel = document.createElement('label');
+							newCheck.type = 'checkbox';
+							newCheck.id = currentValue;
+							newCheck.classList.add('check');
+							newCheck.addEventListener('click', checkThis);
+							newLabel.for = currentValue;
+							newLabel.id = currentValue + 'id';
+							newLabel.innerHTML = currentValue || 'empty!';
+							newClose.classList.add('close');
+							newClose.id = 'close';
+							newClose.addEventListener('click', closeThis);
+							newClose.innerHTML = 'x';
+							parent.appendChild(newCase);
+							newCase.appendChild(newClose);
+							newCase.appendChild(newCheck);
+							newCase.appendChild(newLabel);
+							inp.value = '';
+						}
+						
+					} 
+				}
 		function closeThis(){
 			let parent = this.parentElement;
 			parent.remove();
