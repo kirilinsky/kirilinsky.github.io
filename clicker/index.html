@@ -35,7 +35,7 @@
 			align-items: center;
 		}
 		.canvas {
-			width: 70%;
+			width: 76.5%;
 			height: 90%;
 			display: flex;
 			justify-content: center;
@@ -88,7 +88,12 @@
 			justify-content: center;
 			display: flex;
 		}
-
+		img#drop {
+			max-width: 80%;
+		}
+		#currentApp {
+			font-size: 16px;
+		}
 	</style>
 </head>
 <body>
@@ -100,7 +105,7 @@
 			</div>
 			<div class="section section2" id="scoreD"> </div>
 			<div class="section section3" id="name" data-ripple></div>
-			<div class="section section4" id="currentScore"></div>
+			<div class="section section4" id="currentApp"></div>
 		</div>
 		<div class="forPlay">
 			<div class="canvas">
@@ -117,15 +122,15 @@
 		const block = document.getElementById('block');
 		const scoreD = document.getElementById('scoreD');
 		const name = document.getElementById('name');
-		const currentScore = document.getElementById('currentScore');
+		const currentApp = document.getElementById('currentApp');
 		let current = 0;
 		block.addEventListener('click', click1);
 		function click1() {
 			current++;
 			scoreD.style.display = 'flex';
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';
-			currentScore.style.display = 'flex';
-			currentScore.innerHTML = 'Your current applier<br><b>x1</b>';
+			currentApp.style.display = 'flex';
+			currentApp.innerHTML = `Your current applier<br><img src="drop.png" alt="drop" id="drop">`;
 			if(current == 1) {
 				plant.src = '1.png';
 				name.style.display = 'flex';
@@ -147,7 +152,7 @@
 		function click2() {
 			current += 2;
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';;
-			currentScore.innerHTML = 'Your current applier<br><b>x2</b>';
+			currentApp.innerHTML = `Your current applier<br><img src="drop2.png" alt="drop2" id="drop">`;
 			if(current > 100) {
 				plant.src = '4.png';
 				block.style.borderRadius = '20px';
@@ -158,10 +163,11 @@
 		}
 		function click3() {
 			current += 5;
-			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';;
-			currentScore.innerHTML = 'Your current applier<br><b style="color:red;">x5</b>';
+			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';
+			currentApp.innerHTML = `Your current applier<br><img src="drop5.png" alt="drop5" id="drop">`;
 			if(current > 500) {
 				plant.src = '5.png';
+				scoreD.innerHTML = 'Your current score<br><b style="color:green">' + current + '</b>';
 				block.style.borderRadius = '30px';
 				name.innerHTML = 'Your rank is <br><b>Giant!</b>';
 			}
