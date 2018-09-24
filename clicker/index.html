@@ -54,6 +54,9 @@
 			text-align: center;
 			user-select: none;
 			flex-direction: column;
+			background: linear-gradient(40deg, #fcfcfc, #f4fcfc, #e1f7f5);
+			display: none;
+			transition: ease 1s all;
 		}
 		.block#block {
 			width: 230px;
@@ -82,6 +85,8 @@
 		}
 		.section1 {
 			font-size: 18px;
+			justify-content: center;
+			display: flex;
 		}
 
 	</style>
@@ -93,7 +98,7 @@
 			<div class="section section1">
 				GrowUp your own <b>MonsterA!</b>
 			</div>
-			<div class="section section2" id="scoreD"></div>
+			<div class="section section2" id="scoreD"> </div>
 			<div class="section section3" id="name" data-ripple></div>
 			<div class="section section4" id="currentScore"></div>
 		</div>
@@ -117,10 +122,13 @@
 		block.addEventListener('click', click1);
 		function click1() {
 			current++;
+			scoreD.style.display = 'flex';
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';
+			currentScore.style.display = 'flex';
 			currentScore.innerHTML = 'Your current applier<br><b>x1</b>';
 			if(current == 1) {
 				plant.src = '1.png';
+				name.style.display = 'flex';
 				name.innerHTML = 'Your rank is <br><b>Tiny</b>';
 			}
 			if(current > 25) {
