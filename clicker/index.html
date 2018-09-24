@@ -55,23 +55,29 @@
 			flex-direction: column;
 		}
 		.block#block {
-			width: 28%;
-			height: 28%;
-			background: violet;
+			width: 230px;
+			height: 340px;
+			background: #57dbeb;
 			border-radius: 3px;
-			box-shadow: 1px 1px 2px grey;
-			border: 2px solid violet;
+			box-shadow: 6px 1px 2px #57dbeb;
+			border: none;
 			transition: ease 0.3s;
+			padding-left: 1px;
 		}
 		.block#block:hover {
 			background: lightgrey;
-			box-shadow: 1px 1px 4px violet;
+			box-shadow: 7px 1px 4px lightgrey;
 			transition: ease 0.6s all;
 		}
 		.block#block:active{
 			background: white;
 			transform: scale(1.1);
-			box-shadow: inset 0 0 25px violet, 0 0 5px lightgrey;
+			box-shadow: inset 0 0 25px #57dbeb, 0 0 5px lightgrey;
+		}
+		#plant {
+			z-index: 505;
+			max-width: 100%;
+			max-height: 100%;
 		}
 
 	</style>
@@ -89,15 +95,16 @@
 		</div>
 		<div class="forPlay">
 			<div class="canvas">
-				<div class="block inkMe" ink-color="violet" id="block" ></div>
+				<div class="block inkMe" ink-color="#57dbeb" id="block">
+					<img src="0.png" alt="zero" id="plant">
+				</div>
 			</div>
 		</div>
 	</div>
 	<script src="jq1_12.js"></script>
 	<script src="ink.js"></script>
 	<script async>
-
-
+		const plant = document.getElementById('plant');
 		const block = document.getElementById('block');
 		const scoreD = document.getElementById('scoreD');
 		const name = document.getElementById('name');
@@ -108,18 +115,18 @@
 			current++;
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';
 			currentScore.innerHTML = 'Your current applier<br><b>x1</b>';
-			if(current > 20) {
-				block.style.width = '40%';
-				block.style.height = '40%';
+			if(current == 1) {
+				plant.src = '1.png';
+			}
+			if(current > 25) {
 				block.style.transform = 'rotate(360deg)';
 				name.innerHTML = 'Your rank is <br><b>Young</b>';
+				plant.src = '2.png';
 			}
-			if(current > 45) {
+			if(current > 50) {
 				block.removeEventListener('click', click1);
 				block.addEventListener('click', click2);
-				block.style.transform = 'rotate(-360deg)';
-				block.style.width = '55%';
-				block.style.height = '55%';
+				plant.src = '3.png';
 				name.innerHTML = 'Your rank is <br><b>Junior</b>';
 			}
 
@@ -129,17 +136,20 @@
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';;
 			currentScore.innerHTML = 'Your current applier<br><b>x2</b>';
 			if(current > 100) {
-				block.style.width = '70%';
-				block.style.height = '70%';
-				block.style.transform = 'rotate(360deg)';
+				plant.src = '4.png';
 				block.style.borderRadius = '20px';
 				name.innerHTML = 'Your rank is <br><b>Serious</b>';
+				block.removeEventListener('click', click2);
+				block.addEventListener('click', click3);
 			}
-			if(current > 150) {
-				block.style.width = '85%';
-				block.style.height = '85%';
-				block.style.transform = 'rotate(-360deg)';
-				block.style.borderRadius = '35px';
+		}
+		function click3() {
+			current += 5;
+			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';;
+			currentScore.innerHTML = 'Your current applier<br><b style="color:red;">x5</b>';
+			if(current > 500) {
+				plant.src = '5.png';
+				block.style.borderRadius = '30px';
 				name.innerHTML = 'Your rank is <br><b>Giant!</b>';
 			}
 		}
