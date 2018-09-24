@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cLicker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="inkdrops.css"></link>  
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			width: 100%;
+			height: 90vh;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+		}
+		.forScore {
+			width: 99%;
+			height: 20%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-flow: row nowrap;
+		}
+		.forPlay {
+			width: 99%;
+			height: 75%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.canvas {
+			width: 70%;
+			height: 90%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.section {
+			width: 24%;
+			min-height: 100px;
+			border: 2px dashed lightgrey;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			box-shadow: inset 0 0 1px grey;
+			font-family: sans-serif;
+			font-size: 21px;
+			text-align: center;
+			user-select: none;
+			flex-direction: column;
+		}
+		.block#block {
+			width: 35%;
+			height: 35%;
+			background: violet;
+			border-radius: 3px;
+			box-shadow: 1px 1px 2px grey;
+			border: 2px solid violet;
+			transition: ease 0.3s;
+		}
+		.block#block:hover {
+			background: lightgrey;
+			box-shadow: 1px 1px 4px violet;
+			transition: ease 0.6s all;
+		}
+		.block#block:active{
+			background: white;
+			transform: scale(1.1);
+			box-shadow: inset 0 0 25px violet, 0 0 5px lightgrey;
+		}
+
+	</style>
+</head>
+<body>
+	<header></header>
+	<div class="wrap">
+		<div class="forScore">
+			<div class="section section1">
+				cLicker
+			</div>
+			<div class="section section2" id="scoreD">0</div>
+			<div class="section section3" id="name" data-ripple></div>
+			<div class="section section4" id="currentScore"></div>
+		</div>
+		<div class="forPlay">
+			<div class="canvas">
+				<div class="block inkMe" ink-color="violet" id="block" ></div>
+			</div>
+		</div>
+	</div>
+	<script src="jq1_12.js"></script>
+	<script src="ink.js"></script>
+	<script async>
+
+
+		const block = document.getElementById('block');
+		const scoreD = document.getElementById('scoreD');
+		const name = document.getElementById('name');
+		const currentScore = document.getElementById('currentScore');
+		let current = 0;
+		block.addEventListener('click', click1);
+		function click1() {
+			current++;
+			scoreD.innerHTML = 'Your current applier<br><b>' + current + '</b>';
+			currentScore.innerHTML = 'Your current applier<br><b>x1</b>';
+			if(current > 20) {
+				block.style.width = '40%';
+				block.style.height = '40%';
+				block.style.transform = 'rotate(360deg)';
+				name.innerHTML = 'Your rank is <br><b>Young</b>';
+			}
+			if(current > 45) {
+				block.removeEventListener('click', click1);
+				block.addEventListener('click', click2);
+				block.style.transform = 'rotate(-360deg)';
+				block.style.width = '45%';
+				block.style.height = '45%';
+				name.innerHTML = 'Your rank is <br><b>Junior</b>';
+			}
+
+		}
+		function click2() {
+			current += 2;
+			scoreD.innerHTML = 'Your current applier<br><b>' + current + '</b>';;
+			currentScore.innerHTML = 'Your current applier<br><b>x2</b>';
+			if(current > 100) {
+				block.style.width = '50%';
+				block.style.height = '50%';
+				block.style.transform = 'rotate(360deg)';
+				block.style.borderRadius = '20px';
+				name.innerHTML = 'Your rank is <br><b>Serious</b>';
+			}
+			if(current > 150) {
+				block.style.width = '53%';
+				block.style.height = '53%';
+				block.style.transform = 'rotate(-360deg)';
+				block.style.borderRadius = '35px';
+				name.innerHTML = 'Your rank is <br><b>Giant!</b>';
+			}
+		}
+
+	</script>
+</body>
+</html>
