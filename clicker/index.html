@@ -41,8 +41,8 @@
 			align-items: center;
 		}
 		.section {
-			width: 24%;
-			min-height: 100px;
+			width: 25%;
+			min-height: 25%;
 			border: 2px dashed lightgrey;
 			display: flex;
 			align-items: center;
@@ -118,8 +118,8 @@
 				block.removeEventListener('click', click1);
 				block.addEventListener('click', click2);
 				block.style.transform = 'rotate(-360deg)';
-				block.style.width = '45%';
-				block.style.height = '45%';
+				block.style.width = '55%';
+				block.style.height = '55%';
 				name.innerHTML = 'Your rank is <br><b>Junior</b>';
 			}
 
@@ -129,15 +129,15 @@
 			scoreD.innerHTML = 'Your current score<br><b>' + current + '</b>';;
 			currentScore.innerHTML = 'Your current applier<br><b>x2</b>';
 			if(current > 100) {
-				block.style.width = '50%';
-				block.style.height = '50%';
+				block.style.width = '70%';
+				block.style.height = '70%';
 				block.style.transform = 'rotate(360deg)';
 				block.style.borderRadius = '20px';
 				name.innerHTML = 'Your rank is <br><b>Serious</b>';
 			}
 			if(current > 150) {
-				block.style.width = '53%';
-				block.style.height = '53%';
+				block.style.width = '85%';
+				block.style.height = '85%';
 				block.style.transform = 'rotate(-360deg)';
 				block.style.borderRadius = '35px';
 				name.innerHTML = 'Your rank is <br><b>Giant!</b>';
