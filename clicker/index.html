@@ -318,11 +318,12 @@
 				solied = '95%';
 				soil.innerHTML = solied;
 			}
-			if(current >= 411) {
+			if(current >= 391) {
+				current += 7;
 				solied = '99%';
 				soil.innerHTML = solied;
 			}
-			if(current >= 550) {
+			if(current >= 542) {
 				solied = '100%';
 				soil.style.background = 'red';
 				soil.style.width = '88px';
@@ -358,12 +359,15 @@
 			soil.removeEventListener('click', getSoil);
 			soil.style.textDecoration = 'line-through';
 			soil.classList.remove('getSoil');
+			soil.classList.toggle('wow');
+			soil.classList.toggle('pulse');
 			
 		}
 		function click4() {
 			current += 10;
 			new WOW().init();
 			soil.classList.toggle('wow');
+			soil.classList.toggle('pulse');
 			scoreD.innerHTML = 'Your current score<br><b style="color:red;font-size:25px;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
