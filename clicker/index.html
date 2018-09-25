@@ -29,17 +29,19 @@
 		.forSoil {
 			position:absolute;
 			bottom: -2%;
-			left: 9%;
+			left: 8%;
 			z-index: 888;
-			width: 70px;
-			height: 70px;
+			width: 69px;
+			height: 69px;
 			border-radius: 35px;
 			background: grey;
+			opacity:0.9;
 			box-shadow: 0 0 13px brown;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: 30px;
+			font-size: 28px;
+			text-align:center;
 			color: #fff;
 			user-select: none;
 			font-weight: bold;
@@ -333,6 +335,7 @@
 				soil.innerHTML = solied;
 				soil.classList.add('getSoil');
 				soil.addEventListener('click', getSoil);
+				refresh.marginLeft = '56px';
 			}
 			if(current > 500) {
 				plant.src = '5.png';
