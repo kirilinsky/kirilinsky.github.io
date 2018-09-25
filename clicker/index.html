@@ -28,6 +28,7 @@
 		}
 		.forSoil {
 			position:absolute;
+			font-variant: small-caps;
 			bottom: -2%;
 			left: 8%;
 			z-index: 888;
@@ -141,6 +142,7 @@
 		}
 		.btn#refresh {
 			padding: 2px 0 2px 21px;
+			margin-left:0;
 			background: #57dbeb;
 			color: #fff;
 			letter-spacing: 2px;
@@ -327,7 +329,7 @@
 				soil.innerHTML = solied;
 			}
 			if(current >= 542) {
-				solied = '100%<br>click me!';
+				solied = '100%<br>click<br>me!';
 				soil.style.background = 'red';
 				soil.style.width = '115px';
 				soil.style.height = '115px';
