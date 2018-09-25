@@ -6,7 +6,7 @@
 >well, 
 >
 >thats me
-<p align="center"><a href="http://http://inhabitable.ru" target="_blank">
+<p align="center"><a href="http://inhabitable.ru" target="_blank">
  <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300" style="padding:2px;border:1px dashed grey;border-radius:5px;"><br> Inhabitable - first opus project</a></p>
 
 ---
@@ -28,4 +28,5 @@
 [SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 [Tickets to Mars](https://kirilinsky.github.io/space/).       | Now what, Elon?
+[Tickets to Mars](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
 
