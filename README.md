@@ -1,6 +1,5 @@
-<head>
-  <link rel="icon" type="icon/png" src="https://kirilinsky.github.io/favicon.png">
- </head>
+
+<link rel="icon" type="icon/png" href="https://kirilinsky.github.io/favicon.png">
 <p align="center"><a href="http://kirilinsky.ru" target="_blank"><img width="355" src="https://kirilinsky.github.io/gif_git/scr.png"></a></p>
 <p align="center"><a href="http://kirilinsky.ru" target="_blank">portfolio page</a></p>
 <p align="center"><a href="https://github.com/kirilinsky" target="_blank">this repository</a></p>
