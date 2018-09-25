@@ -28,5 +28,5 @@
 [SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 [Tickets to Mars](https://kirilinsky.github.io/space/).       | Now what, Elon?
-[Tickets to Mars](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
+[Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
 
