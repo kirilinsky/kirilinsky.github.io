@@ -8,193 +8,57 @@
     <meta property="og:image" content="og.jpg" />
 	<title>MonsterA!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="animate.css">
 	<link rel="stylesheet" href="inkdrops.css">
 	<link rel="icon" href="fav.png" type="icon/png">
-	<script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
-	<style>
-		body{
-			margin: 0;
-			padding: 0;
-		}
-		.wrap{
-			width: 100%;
-			height: 90vh;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			flex-direction: column;
-			position: relative;
-		}
-		.forSoil {
-			position:absolute;
-			font-variant: small-caps;
-			bottom: -2%;
-			left: 8%;
-			z-index: 888;
-			width: 69px;
-			height: 69px;
-			border-radius: 35px;
-			background: grey;
-			opacity:0.9;
-			box-shadow: 0 0 13px brown;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 28px;
-			text-align:center;
-			color: #fff;
-			user-select: none;
-			font-weight: bold;
-		}
-		.forScore {
-			width: 99%;
-			height: 20%;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			flex-flow: row nowrap;
-		}
-		.forPlay {
-			width: 99%;
-			height: 75%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.canvas {
-			width: 76.5%;
-			height: 90%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.section {
-			width: 23%;
-			height: 86px;
-			border: 2px dashed lightgrey;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			box-shadow: inset 0 0 1px grey;
-			font-family: sans-serif;
-			font-size: 21px;
-			text-align: center;
-			user-select: none;
-			flex-direction: column;
-			background: linear-gradient(40deg, #fcfcfc, #f4fcfc, #e1f7f5);
-			display: none;
-			transition: ease 0.9s all;
-			padding: 7px 0;
-		}
-		#time {
-			display: block;
-			font-size: 21.3px;
-			letter-spacing: 1px;
-		}
-		.section:hover {
-			border-radius: 3px;
-			transform: scale(1.2);
-			overflow: hidden;
-		}
-		.block#block {
-			width: 230px;
-			height: 340px;
-			background: #57dbeb;
-			border-radius: 3px;
-			box-shadow: 6px 1px 2px #57dbeb;
-			border: none;
-			transition: ease 0.3s;
-			padding-left: 1px;
-		}
-		.block#block:hover {
-			background: lightgrey;
-			box-shadow: 7px 1px 4px lightgrey;
-			transition: ease 0.6s all;
-		}
-		.block#block:active{
-			background: white;
-			transform: scale(1.1);
-			box-shadow: inset 0 0 25px #57dbeb, 0 0 5px lightgrey;
-		}
-		#plant {
-			z-index: 505;
-			max-width: 100%;
-			max-height: 100%;
-		}
-		.section1 {
-			font-size: 18px;
-			justify-content: center;
-			display: flex;
-		}
-		img#drop {
-			max-width: 80%;
-		}
-		#currentApp {
-			font-size: 16px;
-		}
-		.forNav {
-			width: 100%;
-			height: 19px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.btn#refresh {
-			padding: 2px 0 2px 21px;
-			margin-left:0;
-			background: #57dbeb;
-			color: #fff;
-			letter-spacing: 2px;
-			border-radius: 3px;
-			box-shadow: 0 0 2px grey;
-			font-family: sans-serif;
-			transition: ease 0.4s all;
-			user-select: none;
-			display: none;
-			opacity: 0.9;
-		}
-		span#re {
-			color: green;
-		}
-		.btn#refresh:hover, .btn#refresh:active {
-			background: #fff;
-			color: #000;
-			box-shadow: none;
-			text-shadow: 0 0 4px lightgrey;
-			cursor: pointer;
-			transition: ease 0.3s all;
-		}
-		.btn#refresh:active {
-			transform: scale(1.1);
-			transition: ease 0.4s all;
-		}
-		.btn#refresh:after, .btn#refresh:after {
-			content: ' ♺';
-			color:  #57dbeb;
-			transition: ease 0.4s all;
-		}
-		.btn#refresh:hover::after, .btn#refresh:hover::after {
-			content: ' ♺';
-			color: green;
-			transition: ease 0.4s all;
-		}
-		.getSoil {
-			transition: ease 0.3s;
-		}
-		.getSoil:hover {
-				cursor:pointer;
-				transform:scale(1.1);
-				transition: ease 0.3s;
-			}
-	</style>
 </head>
 <body>
-	<div class="wrap">
+	<div class="devlog" id="devlog">
+		<div class="dev_head">
+			Версия 1.0.31
+		</div>
+		<div class="dev_h1">Что нового:</div>
+		<ul>
+			<li>Добавлен 7-й уровень <i>(новая текстура и увеличение множителя)</i></li>
+			<li>Улучшена анимация основных блоков информации</li>
+			<li>Добавлена функция просмотра статистики перед закрытием игры</li>
+		</ul>
+		<div class="btn" id="close_devlog">закрыть</div>
+	</div>
+	<input type="text" id="adm">
+	<div class="stats" id="stats">
+		<div class="stats_header top">Your Statistics
+			</div>
+		<div class="stats_body">
+				<div class="stats_box">
+					<p class="stats_header">Clicks</p>
+					<p id="stat1">1</p>
+				</div>
+				<div class="stats_box">
+					<p class="stats_header">Time</p>
+					<p id="stat2"></p>
+				</div>
+				<div class="stats_box">
+					<p class="stats_header">Score</p>
+					<p id="stat3">3</p>
+				</div>
+				<div class="stats_box">
+					<p class="stats_header">Money</p>
+					<p id="stat4">4</p>
+				</div>
+				
+		</div>
+		<div class="stats_btns">
+			<div class="btn" id="refresh_modal">play again</div>
+		</div>
+	</div>
+	<div class="wrap" id="wrap">
 		<div class="forSoil wow bounceIn" id="soil">0%</div>
 		<div class="forScore">
-			<div class="section section1">
+			<div class="section section1" id="label">
 				GrowUp your own <b>MonsterA!</b>
+				<div class="new" id="showDevlog">?</div>
 			</div>
 			<div class="section section2 " id="scoreD"> </div>
 			<div class="section section3" id="name" data-ripple></div>
@@ -212,179 +76,9 @@
 			<div class="btn" id="refresh"><span id="re">re</span>fresh</div>
 		</div>
 	</div>
+	<script async src="main.js"></script>
 	<script src="jq1_12.js"></script>
 	<script src="wow.min.js"></script>
 	<script src="ink.js"></script>
-	<script async>
-		
-		const soil = document.getElementById('soil');
-		const refresh = document.getElementById('refresh');
-		const plant = document.getElementById('plant');
-		const block = document.getElementById('block');
-		const scoreD = document.getElementById('scoreD');
-		const name = document.getElementById('name');
-		const currentApp = document.getElementById('currentApp');
-		let current = 0;
-
-		let solied = '';
-		block.addEventListener('click', click1);
-		function click1() {
-			current++;
-			new WOW().init();
-			soil.classList.toggle('wow');
-			
-			scoreD.style.display = 'flex';
-			refresh.style.display = 'block';
-			scoreD.innerHTML = 'Your current score<br><b id="time">' + current + '</b>';
-			let timer = document.getElementById('time');
-			timer.classList.toggle('wow');
-			timer.classList.toggle('tada');
-			currentApp.style.display = 'flex';
-			currentApp.innerHTML = `Your current applier<br><img src="drop.png" alt="drop" id="drop">`;
-			let drop = document.getElementById('drop');
-			drop.classList.toggle('wow');
-			drop.classList.toggle('tada');
-			if(current == 1) {
-				plant.src = '1.png';
-				name.style.display = 'flex';
-				name.innerHTML = 'Your rank is <br><b>Tiny</b>';
-			}
-			if(current == 15) {
-				solied = '10%';
-				soil.innerHTML = solied;
-			}
-			if(current > 25) {
-				name.innerHTML = 'Your rank is <br><b>Young</b>';
-				plant.src = '2.png';
-			}
-			if(current == 35) {
-				solied = '25%';
-				soil.innerHTML = solied;
-			}
-			if(current >= 45) {
-				solied = '35%';
-				soil.innerHTML = solied;
-			}
-			if(current > 50) {
-				block.removeEventListener('click', click1);
-				block.addEventListener('click', click2);
-				plant.src = '3.png';
-				name.innerHTML = 'Your rank is <br><b>Junior</b>';
-			}
-
-
-		}
-		function click2() {
-			current += 2;
-			new WOW().init();
-			soil.classList.toggle('wow');
-			scoreD.innerHTML = 'Your current score<br><b id="time">' + current + '</b>';
-			let timer = document.getElementById('time');
-			timer.classList.toggle('wow');
-			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your current applier<br><img src="drop2.png" alt="drop2" id="drop">`;
-			let drop = document.getElementById('drop');
-			drop.classList.toggle('wow');
-			drop.classList.toggle('tada');
-			if(current >= 70) {
-				solied = '50%';
-				soil.innerHTML = solied;
-			}
-			if(current >= 86) {
-				solied = '65%';
-				soil.innerHTML = solied;
-			}
-			if(current > 100) {
-				plant.src = '4.png';
-				block.style.borderRadius = '20px';
-				name.innerHTML = 'Your rank is <br><b>Serious</b>';
-				block.removeEventListener('click', click2);
-				block.addEventListener('click', click3);
-			}
-		}
-		function click3() {
-			current += 5;
-			new WOW().init();
-			soil.classList.toggle('wow');
-			scoreD.innerHTML = 'Your current score<br><b id="time">' + current + '</b>';
-			let timer = document.getElementById('time');
-			timer.classList.toggle('wow');
-			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your current applier<br><img src="drop5.png" alt="drop5" id="drop">`;
-			let drop = document.getElementById('drop');
-			drop.classList.toggle('wow');
-			drop.classList.toggle('tada');
-
-			if(current >= 190) {
-				solied = '75%';
-				soil.innerHTML = solied;
-			}
-			if(current >= 290) {
-				solied = '95%';
-				soil.innerHTML = solied;
-			}
-			if(current >= 391) {
-				current += 7;
-				solied = '99%';
-				soil.innerHTML = solied;
-			}
-			if(current >= 542) {
-				solied = '100%<br>click<br>me!';
-				soil.style.background = 'red';
-				soil.style.width = '115px';
-				soil.style.height = '115px';
-				soil.style.borderRadus = '50px';
-				soil.innerHTML = solied;
-				soil.classList.add('getSoil');
-				soil.addEventListener('click', getSoil);
-				refresh.marginLeft = '56px';
-			}
-			if(current > 500) {
-				plant.src = '5.png';
-				scoreD.innerHTML = 'Your current score<br><b style="color:green">' + current + '</b>';
-				block.style.borderRadius = '30px';
-				name.innerHTML = 'Your rank is <br><b>Giant!</b>';
-			}
-		}
-
-		refresh.addEventListener('click', resetAll);
-		function resetAll() {
-			window.location.reload(false);
-		}
-		function getSoil() {
-			block.removeEventListener('click', click3);
-			scoreD.innerHTML = 'Your current score<br><b style="color:red;font-size:25px;">' + current + '</b>';
-			name.innerHTML = 'Your rank is <br><b style="color:red;">Wizard!</b>';
-			currentApp.innerHTML = `Your current applier<br><img src="potion.png" alt="pot" id="drop">`;
-			block.style.borderRadius = '45px';
-			block.style.boxShadow = '0 0 50px red';
-			plant.src = '6.png';
-			soiled = '0%'
-			soil.innerHTML = soiled;
-			block.addEventListener('click', click4);
-			soil.removeEventListener('click', getSoil);
-			soil.style.textDecoration = 'line-through';
-			soil.classList.remove('getSoil');
-			soil.classList.toggle('wow');
-			soil.classList.toggle('pulse');
-			
-		}
-		function click4() {
-			current += 10;
-			new WOW().init();
-			soil.classList.toggle('wow');
-			soil.classList.toggle('pulse');
-			scoreD.innerHTML = 'Your current score<br><b style="color:red;font-size:25px;">' + current + '</b>';
-			let timer = document.getElementById('time');
-			timer.classList.toggle('wow');
-			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your current applier<br><img src="potion.png" alt="pot" id="drop">`;
-			let drop = document.getElementById('drop');
-			drop.classList.toggle('wow');
-			drop.classList.toggle('flash');
-		}
-
-
-	</script>
 </body>
 </html>
