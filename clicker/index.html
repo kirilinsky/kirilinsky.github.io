@@ -14,22 +14,62 @@
 	<link rel="icon" href="fav.png" type="icon/png">
 </head>
 <body>
+	<div class="modal_store" id="modal_store">
+		<div class="modal_store_header">store
+			<div class="close_store" id="close_store">x</div>
+		</div>
+		<div class="modal_store_body">
+			<div class="cardstore" id="first_store_cell">
+				<div class="cardstore_img"><img src="potion3_fullsize.png" alt="pic1"></div>
+				<div class="cardstore_price">Cost: 2 coins</div>
+				<div class="cardstore_name">Potion multiplier x3</div>
+			</div>
+			<div class="cardstore">
+				<div class="cardstore_img"><img src="soon_Store.png" alt="pic2"></div>
+				<div class="cardstore_price"></div>
+				<div class="cardstore_name">---</div>
+			</div>
+			<div class="cardstore">
+				<div class="cardstore_img"><img src="soon_Store.png" alt="pic3"></div>
+				<div class="cardstore_price"></div>
+				<div class="cardstore_name">---</div>
+			</div>
+			<div class="cardstore">
+				<div class="cardstore_img"><img src="soon_Store.png" alt="pic4"></div>
+				<div class="cardstore_price"></div>
+				<div class="cardstore_name">---</div>
+			</div>
+		</div>
+		<div class="modal_store_footer">Gold coins available: <span id="nest">  100</span></div>
+	</div>
 	<div class="devlog" id="devlog">
 		<div class="dev_head">
-			Версия 1.0.31
+			Версия 1.0.41
 		</div>
 		<div class="dev_h1">Что нового:</div>
 		<ul>
 			<li>Добавлен 7-й уровень <i>(новая текстура и увеличение множителя)</i></li>
 			<li>Улучшена анимация основных блоков информации</li>
-			<li>Добавлена функция просмотра статистики перед закрытием игры</li>
+			<li style="color: red;" title="not yet">Бета-тест системы монет</li>
+			<li>Добавлены кнопки открытия/закрытия окна статистики</li>
 		</ul>
 		<div class="btn" id="close_devlog">закрыть</div>
 	</div>
+	<div class="isolation" id="isolation">
+		<div class="progress" id="progress"></div>
+		<div class="money" id="money">
+			<div class="money_wrap">
+				<div class="money_txt" id="money_txt">223</div>
+			</div>
+		</div>
+		<div class="store" id="btnStore"></div>
+	</div>
+	<!-- <p id="test"></p> -->
 	<input type="text" id="adm">
 	<div class="stats" id="stats">
 		<div class="stats_header top">Your Statistics
-			</div>
+			<div class="close_modal" id="close_modal">x</div>
+		</div>
 		<div class="stats_body">
 				<div class="stats_box">
 					<p class="stats_header">Clicks</p>
@@ -73,8 +113,9 @@
 		</div>
 
 		<div class="forNav">
+			<div class="btn" id="show_stat">show stat</div>
 			<div class="btn" id="refresh"><span id="re">re</span>fresh</div>
-		</div>
+			</div>
 	</div>
 	<script async src="main.js"></script>
 	<script src="jq1_12.js"></script>
