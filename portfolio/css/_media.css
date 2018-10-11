@@ -1,0 +1,226 @@
+@media only screen 
+and (max-width : 675px)
+and (min-width : 280px) {
+  .menuitem.links {
+    width: 45%;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.9rem;
+    text-align: right;
+  }
+  header.header {
+    position: sticky;
+    top:0;
+    z-index: 100;
+  }
+  .menuitem.label {
+      width: 50%;
+      font-variant: small-caps;
+      font-size: 0rem;
+      margin-right: 5px;
+  }
+  .container1 {
+    width: 95%;
+    margin: 40px auto 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftside {
+    width: 100%;
+    min-height: 495px;
+    display: flex;
+    margin-top: 0;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+  }
+  .betline {
+      position: relative;
+      width: 86%;
+      margin: 60px auto;
+      height: 3px;
+      top:0;
+      border-radius: 4px;
+  }
+  .rightside {
+      margin-top: 6px;
+      min-height: 70vh;
+      width: 100%;
+   }
+   .previewbox {
+       width: 90%;
+       margin: 26px auto;
+   }
+   .sectionbody.skills {
+       width: 95%;
+   }
+   .skillbox {
+     width: 37.5%;
+    height: 173px;
+    }
+    .legendbox {
+        width: 125px;
+        min-height: 219px;
+        margin: 25px 8px;
+    }
+    .modal-dialog {
+    width: 92%;
+  }
+  .sectiontech {
+    width: 24%;
+  }
+  .sectiontabs {
+    width: 64%;
+  }
+  .modalline {
+    width: 2px;
+    margin: 0 20px;
+  }
+  #sendto {
+      margin-bottom: 76px;
+      margin-top: 15px;
+      width: 95%;
+  }
+  #sendto>.sectionbody {
+      width: 85%;
+  }
+  
+
+}
+@media only screen 
+and (max-width : 1380px)
+and (min-width : 1010px) {
+  .circleart {
+    margin: 1px auto 3px;
+    width: 48px;
+    height: 48px;
+    background: #64AC8F;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E2F5DC;
+    font-size: 1.7rem;
+  }
+  .circle {
+      margin: 9px auto;
+      width: 140px;
+      height: 140px;
+      background: url(../guy.jpeg) no-repeat 45%;
+      background-size: cover;
+      border-radius: 70px;
+      box-shadow: 0 0 13px red, 0 2px 3px #000;
+      transition: 1.1s transform;
+  }
+  .sectionbody {
+      width: 90%;
+      border-left: 1px dashed #C0DFC2;
+      border-right: 1px dashed #C0DFC2;
+      padding: 2px 10px;
+      margin: 10px auto 3px;
+      font-size: 0.85rem;
+  }
+  .sectionheader {
+      
+      font-size: 1.25rem;
+  }
+  .leftside {
+      width: 33.5%;
+      height: 890px;
+      display: flex;
+      margin-top: -10px;
+      flex-flow: column nowrap;
+      align-items: center;
+      position: sticky;
+      top: 1px;
+  }
+  .previewbox {
+    width: 41%;
+  }
+
+
+
+
+
+}
+@media only screen 
+and (max-width : 1010px)
+and (min-width : 675px) {
+  .betline {
+      /* position: sticky; */
+      /* top: 65px; */
+      width: 83%;
+      /* display: none; */
+      margin: 41px auto 25px;
+      height: 4px;
+      background: #64AC8F;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px #000;
+      position: static;
+  }
+  .container1 {
+      width: 97%;
+      margin: 0 auto 40px;
+      display: flex;
+      flex-direction: column;
+  }
+  .leftside {
+    width: 99%;
+    align-items: flex-start;
+    flex-direction: row;
+    position: relative;
+    height: 333px;
+    display: flex;
+     margin-top: 19px;
+  }
+  .rightside {
+    width: 99%;
+  }
+  .menuitem.label {
+      width: 30%;
+  }
+  .circleart {
+    margin: 1px auto 3px;
+    width: 44px;
+    height: 44px;
+    background: #64AC8F;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E2F5DC;
+    font-size: 1.6rem;
+    transition: ease 0.3s;
+    opacity: 0.6;
+   }
+  .socialwrap {
+    font-size: 1.6rem;
+  }
+  .sectionbody {
+  font-size: 0.8rem;
+   }
+  .section {
+  width:99%;
+  
+}
+  .sectionheader {
+    /* letter-spacing: 1px; */
+    font-variant: small-caps;
+    font-size: 1.15rem;
+  }
+   .circle {
+    margin: 14px auto;
+    width: 120px;
+    height: 120px;
+  }
+  .previewbox {
+    width: 43%;
+  }
+
+
+
+
+
+}
