@@ -34,7 +34,7 @@
 		let label = document.getElementById('label');
 		let solied = '';
 		let animFlag = 0;
-		let divider = 33;
+		let divider = 1;
 		block.addEventListener('click', click1);
 		block.addEventListener('click', onTimer);
 		function onTimer() {
