@@ -3,13 +3,24 @@
 		
 		const admin = document.getElementById('adm');
 		adm.value = '';
+		adm.width = '10px';
 		adm.addEventListener('change', admValue);
 		function admValue() {
 			current = adm.value;
+			adm.removeEventListener('change', admValue);
+			adm.value = '';
+			adm.addEventListener('change', admMoney);
+		}
+		function admMoney() {
+			money = adm.value;
+			coin.style.display = 'flex';
+			moneyTxt.innerHTML = money;
+			adm.removeEventListener('change', admMoney);
+			adm.value = '';
 		}
 
 		/*defines*/
-
+		let isSoiled = false;
 		const wrap = document.getElementById('wrap');
 		const soil = document.getElementById('soil');
 		const refresh = document.getElementById('refresh');
@@ -34,7 +45,10 @@
 		let label = document.getElementById('label');
 		let solied = '';
 		let animFlag = 0;
-		let divider = 1;
+		let divider = 0.89;
+		let conFlag = 0;
+		let iso = 0;
+		let storeEnabled = false;
 		block.addEventListener('click', click1);
 		block.addEventListener('click', onTimer);
 		function onTimer() {
@@ -79,11 +93,11 @@
 			new WOW().init();
 			soil.style.display = 'flex';
 			soil.classList.toggle('wow');
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b id="time">' + current + '</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your<br>current<br> multiplier<br><img src="drop.png" alt="drop" id="drop">`;
+			currentApp.innerHTML = `Ваш<br>текущий<br> множитель<br><img src="drop.png" alt="drop" id="drop">`;
 			
 			if(current >= 1) {
 				plant.src = '1.png';
@@ -93,7 +107,7 @@
 				drop.classList.add('tada');
 				drop.setAttribute('data-wow-duration', '2s');
 				drop.setAttribute('data-wow-iteration', '2');
-				name.innerHTML = 'Your rank<br> is <br><b>Tiny</b>';
+				name.innerHTML = 'Ваш ранг <br><b>Кроха</b>';
 				showStat.style.display = 'block';
 			} 
 			if(current >= 6) {
@@ -106,7 +120,7 @@
 				soil.innerHTML = solied;
 			}
 			if(current > 29) {
-				name.innerHTML = 'Your rank is <br><b>Young</b>';
+				name.innerHTML = 'Ваш ранг <br><b>Молодой</b>';
 				plant.src = '2.png';
 			}
 			if(current == 39) {
@@ -121,7 +135,7 @@
 				block.removeEventListener('click', click1);
 				block.addEventListener('click', click2);
 				plant.src = '3.png';
-				name.innerHTML = 'Your rank<br> is <br><b>Junior</b>';
+				name.innerHTML = 'Ваш ранг <br><b>Подросток</b>';
 			}
 
 
@@ -132,11 +146,11 @@
 			animFlag = '';
 			clicks++;
 			soil.classList.toggle('wow');
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b id="time">' + current + '</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="drop2.png" alt="drop2" id="drop">`;
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="drop2.png" alt="drop2" id="drop">`;
 			if(flag2 >= 0) {
 					let drop = document.getElementById('drop');
 					drop.classList.add('wow');
@@ -150,8 +164,6 @@
 					drop.classList.remove('tada');
 					drop.removeAttribute('data-wow-duration');
 				}
-				
-			
 
 			if(current >= 71) {
 				solied = '50%';
@@ -164,7 +176,7 @@
 			if(current > 110) {
 				plant.src = '4.png';
 				block.style.borderRadius = '20px';
-				name.innerHTML = 'Your rank<br> is <br><b>Serious</b>';
+				name.innerHTML = 'Ваш ранг<br><b>Серьезный</b>';
 				block.removeEventListener('click', click2);
 				block.addEventListener('click', click3);
 			}
@@ -174,11 +186,11 @@
 			current += 5;
 			clicks++;
 			soil.classList.toggle('wow');
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b id="time">' + current + '</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="drop5.png" alt="drop5" id="drop">`;
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="drop5.png" alt="drop5" id="drop">`;
 			if(flag3 == 0) {
 					let drop = document.getElementById('drop');
 					drop.classList.add('wow');
@@ -207,7 +219,7 @@
 				soil.innerHTML = solied;
 			}
 			if(current >= 544) {
-				solied = '100%<br>click<br>me!';
+				solied = '100%<br>нажми<br>меня!';
 				soil.style.background = 'red';
 				soil.style.width = '115px';
 				soil.style.height = '115px';
@@ -219,26 +231,40 @@
 			}
 			if(current > 500) {
 				plant.src = '5.png';
-				scoreD.innerHTML = 'Your<br> current<br> score<br><b style="color:green" id="time">' + current + '</b>';
+				scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b style="color:green" id="time">' + current + '</b>';
 				block.style.borderRadius = '30px';
-				name.innerHTML = 'Your rank<br> is <br><b>Giant!</b>';
-			}
-			if(current > 991) {
-				if(confirm('Activate Soil?')){
-					getSoil();
-				} 
+				name.innerHTML = 'Ваш ранг<br><b>Гигант!</b>';
 			}
 			
+			if(current > 993 && conFlag == 0) {
+				conFlag = 1;
+				if(confirm('Применить зелье?')){
+					getSoil();
+				}
+			}
+			if(current >= 2355 && conFlag == 1) {
+				conFlag = 2;
+				if(confirm('Внимание! Это Ваш последний шанс применить зелье и стать на сторону тьмы. Далее такой возможности не будет..')) {
+					getSoil(2366);
+				} else {
+					soil.style.display = 'none';
+				}
+			}
+			if(current >= 2889) {
+				isolation.style.opacity = '1';
+				iso++;
+				startIsolation(iso,divider);
+				storeEnabled = true;
+			}
 		}
 		
 		/*soli*/
 		let flagS = 0;
-		function getSoil() {
-
+		function getSoil(score) {
 			block.removeEventListener('click', click3);
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:red;font-size:25px;">' + current + '</b>';
-			name.innerHTML = 'Your rank is <br><b style="color:red;">Wizard!</b>';
-			currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="potion.png" alt="pot" id="drop">`;
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:red;font-size:25px;">' + current + '</b>';
+			name.innerHTML = 'Ваш ранг<br><b style="color:red;">Волшебник!</b>';
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion.png" alt="pot" id="drop">`;
 			block.style.borderRadius = '45px';
 			block.style.boxShadow = '0 0 50px red';
 			plant.src = '6.png';
@@ -257,12 +283,17 @@
 				}
 			flagS++;
 			soil.innerHTML = soiled;
-			block.addEventListener('click', click4);
+			if(score >= 2015) {
+				block.addEventListener('click', click7);
+			} else {
+				block.addEventListener('click', click4);
+			}
 			soil.removeEventListener('click', getSoil);
 			soil.style.textDecoration = 'line-through';
 			soil.classList.remove('getSoil');
 			soil.classList.toggle('wow');
-			soil.classList.toggle('pulse');	
+			soil.classList.toggle('pulse');
+			isSoiled = true;	
 		}
 
 		/*continuation */
@@ -270,11 +301,11 @@
 			soil.style.display = 'none';
 			current += 11;
 			clicks++;
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:red;font-size:25px;">' + current + '</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:red;font-size:25px;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="potion.png" alt="pot" id="drop">`;
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion.png" alt="pot" id="drop">`;
 			if(current >= 1051) {
 				block.removeEventListener('click', click4);
 				block.addEventListener('click', click5);
@@ -285,8 +316,8 @@
 			scoreD.style.width = '28%';
 			currentApp.style.width = '28%';
 			name.style.width = '68%';
-			name.innerHTML = 'Your rank is <br><b style="color:blue;">Archimaister</b>';
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:blue;font-size:25px;">' + current + '</b>';
+			name.innerHTML = 'Ваш ранг <br><b style="color:blue;">Архимаг</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time" style="color:blue;font-size:25px;">' + current + '</b>';
 			clicks++;
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
@@ -300,11 +331,11 @@
 		function click6() {
 			current += 17;
 			clicks++;
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:blue;font-size:25.2px;text-shadow:0 0 1px red;">' + current + '</b>';
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.2px;text-shadow:0 0 1px red;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
-			currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="potion2.png" alt="pot" id="drop">`;
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion2.png" alt="pot" id="drop">`;
 			if(flag6 == 0) {
 					let drop = document.getElementById('drop');
 					drop.classList.add('wow');
@@ -323,12 +354,14 @@
 				block.addEventListener('click', click7);
 			}
 		}
-		let iso = 0;
+		
 		function click7() {
+			soil.style.display = 'none';
 			current += 18;
 			clicks++;
-			name.innerHTML = 'Your rank<br> is <br><b style="color:blue;text-shadow:0 0 2px black;">Necromancer</b>';
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:blue;font-size:25.3px;text-shadow:0 0 2px red;">' + current + '</b>';
+			name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Некромант</b>';
+			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion2.png" alt="pot" id="drop">`;
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.3px;text-shadow:0 0 2px red;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
@@ -338,6 +371,7 @@
 				isolation.style.opacity = '1';
 				iso++;
 				startIsolation(iso,divider);
+				storeEnabled = true;
 			}
 		}
 
@@ -363,7 +397,7 @@
 		}
 		refresh.addEventListener('click', resetAll);
 		function resetAll() {
-				let answer = confirm('Show statistics?');
+				let answer = confirm('Показать статистику?');
 				if(answer) {
 					showStatModal();
 				} else {
@@ -400,7 +434,7 @@
 				iso = 0;
 				return;
 				if(money == 999) {
-					alert('u are fuckin freak, buddy!');
+					alert('ты болен, приятель!');
 					window.location.reload(false);
 				}
 			}
@@ -418,45 +452,57 @@
 			let totalTime = endTime - startTime;
 			let finalTime = Math.round(totalTime / 1000);
 			if(finalTime >= 60){
-				finalTime = Math.round(finalTime / 60) + 'm';
+				finalTime = Math.round(finalTime / 60) + ' мин';
 			}
 			if(finalTime < 60){
-				finalTime = finalTime + 's';
+				finalTime = finalTime + ' сек';
 			}
 			if(finalTime >= 3600){
-				finalTime = Math.round(finalTime) + 'h';
+				finalTime = Math.round(finalTime) + ' ч';
 			}
 			stat_modal.style.display = 'flex';
 			wrap.style.filter = 'blur(10px) grayscale(3)';
 			stat1.innerHTML = clicks;
 			stat2.innerHTML = finalTime;
 			stat3.innerHTML = current;
-			if(money == 1){
-
-				stat4.innerHTML = money + '<br> gold coin';	
-			} else {
-				stat4.innerHTML = money + '<br> gold coins';
-			}
+			stat4.innerHTML = money + '<br> золота';	
 			refresh.style.display = 'none';
+			store.style.display = 'none';
+			isolation.style.opacity = '0';
+			
+
 		}
 		closeModal.addEventListener('click', closeStatModal);
 		function closeStatModal(){
 			stat_modal.style.display = 'none';
 			wrap.style.filter = 'none';
 			refresh.style.display = 'block';
+			if(storeEnabled) {
+				store.style.display = 'flex';
+				isolation.style.opacity = '1';
+			}
 		}
 
 		/*store modal*/
+		const pic1 = document.getElementById('pic1');
+		const name1 = document.getElementById('name1');
 		const store_modal = document.getElementById('modal_store');
 		const btn_close_store_modal = document.getElementById('close_store');
 		store.addEventListener('click', showStore);
 		let nest = document.getElementById('nest');
 		btn_close_store_modal.addEventListener('click', hideStore);
 		function showStore() {
+			if(isSoiled) {
+				pic1.src = 'potion3_fullsize.png';
+				name1.innerHTML = 'Зелье x3';
+			}if(!isSoiled) {
+				pic1.src = 'can2_fullsize.png';
+				name1.innerHTML = 'Лейка x2';
+			}
 			store_modal.style.display = 'flex';
 			store_modal.style.opacity = '0.95';
 			wrap.style.filter = 'blur(10px) grayscale(3)';
-			progress.style.filter = 'blur(10px) grayscale(3)';
+			isolation.style.opacity = '0';
 			store.style.display = 'none';
 			coin.style.display = 'none';
 			nest.innerHTML = money;
@@ -465,12 +511,13 @@
 			} else {
 				nest.style.color = 'green';
 			}
+
 		}
 		function hideStore() {
 			store_modal.style.opacity = '0';
 			store_modal.style.display = 'none';
 			wrap.style.filter = 'none';
-			progress.style.filter = 'none';
+			isolation.style.opacity = '1';
 			store.style.display = 'flex';
 			if(money == 0) {
 				coin.style.display = 'none';
@@ -481,14 +528,20 @@
 
 
 		/*store multipliers*/
-
+		let multi3Potion = false;
 		const firstCell = document.getElementById('first_store_cell');
 		firstCell.addEventListener('click', startFirstCell);
 		function startFirstCell() {
 			if(money < 2) {
-				alert('You such a poor for this! Come back later.');
+				alert('Ты слишком беден для этого, подзаработай и возвращайся');
 			} if(money >= 2) {
-				currentApp.innerHTML = `Your<br> current<br> multiplier<br><img src="potion3.png" alt="pot3" id="drop">`;
+				if(isSoiled) {
+					multi3Potion = true;
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
+				} if(!isSoiled) {
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+				}
+				
 				block.removeEventListener('click', click7);
 				block.addEventListener('click', click8);
 				firstCell.removeEventListener('click', startFirstCell);
@@ -496,18 +549,44 @@
 				hideStore();
 				money -= 2;
 				moneyTxt.innerHTML = money;
+				
 
 			}
 		}
 
+		const secondCell = document.getElementById('second_store_cell');
+		secondCell.addEventListener('click', startSecondCell);
+		function startSecondCell() {
+			if(money < 7 && isSoiled) {
+				alert('Ты слишком беден для этого, подзаработай и возвращайся');
+			}
+			if(!isSoiled) {
+				alert('Кажется, тебе это не нужно!');
+			} if(money >= 7 && isSoiled) {
+				plant.src = '5.png';
+				if(multi3Potion) {
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+				} else {
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can1.png" alt="pot3" id="drop">`;
+				}
+			}
+		}
 
-		/*click8 with purchased multiplier*/
+
+		/*click8 with purchased multiplier potion*/
 		flag8 = 0;
 		function click8() {
 			current += 27;
 			clicks++;
-			name.innerHTML = 'Your rank<br> is <br><b style="color:blue;text-shadow:0 0 2px black;">Dark Master</b>';
-			scoreD.innerHTML = 'Your<br> current<br> score<br><b  id="time" style="color:blue;font-size:25.6px;text-shadow:0 0 2px royalblue;">' + current + '</b>';
+			if(multi3Potion) {
+					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
+				} if(!multi3Potion) {
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+				}
+			
+			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.6px;text-shadow:0 0 2px royalblue;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');

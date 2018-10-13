@@ -5,10 +5,10 @@ body{
 		}
 		.wrap{
 			width: 100%;
-			height: 89vh;
+			height: 91vh;
 			display: flex;
 			align-items: center;
-			justify-content: space-around;
+			justify-content: center;
 			flex-direction: column;
 			position: relative;
 		}
@@ -18,9 +18,9 @@ body{
 			bottom: -1%;
 			left: 7%;
 			z-index: 1500;
-			width: 69px;
-			height: 69px;
-			border-radius: 35px;
+			width: 68px;
+			height: 68px;
+			border-radius: 34px;
 			background: grey;
 			opacity:0.9;
 			box-shadow: 0 0 13px brown;
@@ -35,7 +35,7 @@ body{
 		}
 		.forScore {
 			width: 100%;
-			height: 21%;
+			height: 19%;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -43,21 +43,22 @@ body{
 		}
 		.forPlay {
 			width: 99%;
-			height: 72%;
+			height: 70%;
+			margin-top: 3px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
 		.canvas {
-			width: 76.5%;
-			height: 89%;
+			width: 74%;
+			height: 85%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
 		.section {
 			min-width: 28%;
-			height: 86px;
+			height: 89px;
 			border: 2px dashed lightgrey;
 			display: flex;
 			align-items: center;
@@ -84,8 +85,8 @@ body{
 			overflow: hidden;
 		}
 		.block#block {
-			width: 230px;
-			height: 340px;
+			width: 227px;
+			height: auto;
 			background: #57dbeb;
 			border-radius: 3px;
 			box-shadow: 6px 1px 2px #57dbeb;
@@ -122,8 +123,8 @@ body{
 			font-size: 16px;
 		}
 		.forNav {
-			width: 50%;
-			height: 89px;
+			width: 67%;
+			height: 80px;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -178,19 +179,20 @@ body{
 			}
 		/* modal */
 		.stats {
-			width: 71%;
-			height: 69%;
+			width: 86%;
+			height: 82%;
 			background: beige;
 			position:absolute;
-			top:15%;
-			left:15%;
+			top:11%;
+			left:7%;
 			z-index: 5888;
 			font-family: sans-serif;
 			font-variant: small-caps;
 			word-spacing: 3px;
-			border-radius: 5px 0 5px 0;
+			border-radius: 5px;
 			display: none;
 			flex-flow: column nowrap;
+			box-shadow: 0 0 15px grey;
 			align-items: center;
 			justify-content: space-around;
 		}
@@ -198,10 +200,11 @@ body{
 			box-sizing: border-box;
 			width: 100%;
 			background: turquoise;
-			padding: 3px 19px;
+			padding: 2px 19px 5px;
 			position:relative;
 			border-radius: 10px 10px 0 0;
 			box-shadow: 0 0 7px turquoise;
+			text-shadow: 0 0 1px white;
 		}
 		.stats_header.top {
 			border-radius: 0;
@@ -217,6 +220,11 @@ body{
 			box-shadow: 0 0 5px aqua;
 			transition: all 0.2s ease-in;
 		}
+		.btn#refresh{
+			min-width: 167px;
+			box-sizing: border-box;
+			text-align: center;
+		}
 		.btn#refresh_modal:hover {
 			background: white;
 			color: turquoise;
@@ -228,8 +236,11 @@ body{
 				transform: scale(1.03);
 		}
 		.btn#show_stat {
+			min-width: 167px;
+			box-sizing: border-box;
 			user-select: none;
 			display: none;
+			text-align: center;
 		 	color: white;
 		 	background: #57dbeb;
 		 	font-variant: small-caps;
@@ -259,29 +270,32 @@ body{
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
-			width: 91%;
+			width: 99%;
 			box-sizing: border-box;
 			padding:5px;
-			height: 64.5%;
+			height: 68%;
 			flex-flow: row wrap;
 		}
 		.stats_box {
-			width: 38%;
-			height: 46%;
+			width: 40%;
+			height: 45%;
 			background: white;
 			border-radius: 10px;
-			box-shadow: 0 0 7px turquoise;
+			box-shadow: 0 0 3px turquoise, inset -1px -1px 1px grey;
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
+			justify-content: space-between;
 		}
 		p.stats_header {
 			margin: 0 ;
-			letter-spacing: 2.6px;
+			letter-spacing: 2.2px;
 			padding: 1px 0 2px 13px;
 		}
 		p.stats_header + p {
-			font-size: 32px;
+			margin-bottom: 35%;
+			font-size: 28px;
+			letter-spacing: 0.76px;
 			text-shadow: 0 0 2px turquoise;
 		}
 		#adm {
@@ -388,9 +402,9 @@ body{
 
 		.isolation {
 			position:absolute;
-			right:4.1%;
+			right:2.6%;
 			top:38%;
-			width: 25px;
+			width: 23px;
 			height: 185px;
 			border:1px solid orange;
 			box-shadow: 0 0 6px gold;
@@ -400,6 +414,7 @@ body{
 			border-radius: 1px;
 			opacity: 0;
 			transition: all 0.5s ease-in;
+			border-radius: 4px;
 		}
 		.progress {
 			width: 98%;
@@ -411,10 +426,10 @@ body{
 			position:absolute;
 			background: url(coin.png);
 			background-size: contain;
-			width: 84px;
-			height: 84px;
+			width: 82px;
+			height: 82px;
 			bottom:-92px;
-			border-radius: 42px;
+			border-radius: 41px;
 			right: -8px;
 			z-index: 8888;
 			display: none;
@@ -437,33 +452,33 @@ body{
 			position:absolute;
 			background: url(order.png) 0px 3px no-repeat;
 			background-size: cover;
-			width: 78px;
-			height: 78px;
-			bottom:-182px;
-			border-radius: 38px;
-			right: -6px;
+			width: 72px;
+			height: 72px;
+			bottom:-180px;
+			border-radius: 36px;
+			right: -3px;
 			z-index: 8888;
-			box-shadow: 0 0 9px brown;
+			box-shadow: 0 0 11px brown;
 			display: none;
-			transition: all 0.5s ease;
+			transition: all 0.6s ease;
 		}
 		.store:hover, .store:active {
 			cursor: pointer;
 			transition: all 0.4s ease;
 			transform: scale(1.07);
-			box-shadow: 0 0 16px brown;
+			box-shadow: 0 0 19px brown;
 		}
 		/* modal store */
 
 		.modal_store {
 			position:absolute;
 			z-index: 1000;
-			width: 81%;
+			width: 91%;
 			height: 99%;
 			background: #A5EDED;
 			z-index: 8999;
-			top:1%;
-			left:10%;
+			top: 2.5%;
+			left: 4%;
 			border-radius: 10px;
 			box-sizing: border-box;
 			justify-content: space-around;
@@ -476,7 +491,7 @@ body{
 			font-variant: small-caps;
 			font-size: 18px;
 			letter-spacing: 1px;
-			transition: all 8s ease-in;
+			transition: all 0.1s ease-in;
 			opacity: 0;
 			user-select: none;
 		}
@@ -485,12 +500,12 @@ body{
 			box-sizing: border-box;
 			min-height: 19px;
 			background: white;
-			padding:3px 30px;
+			padding:6px 27px;
 			position: relative;
 		}
 		.modal_store_body {
-			width: 86%;
-			height: 88%;
+			width: 99%;
+			height: 89%;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-around;
@@ -498,8 +513,8 @@ body{
 			overflow: auto;
 		}
 		.cardstore {
-			width:38.1%;
-			height: 43%;
+			width:39.2%;
+			height: 42%;
 			background: white;
 			margin:8px 5px;
 			display: flex;
@@ -551,7 +566,7 @@ body{
 			padding:8px 1px 3px;
 		}
 		.cardstore_img {
-			width:70%;
+			width:83%;
 			max-height: 60%;
 		}
 		.cardstore_img img {
@@ -582,7 +597,7 @@ body{
 		.modal_store_footer {
 			width: 100%;
 			background: #fff;
-			padding:7px 25% 2px;
+			padding:7px 11px;
 			box-sizing: border-box;
 			margin-bottom: 6px;
 			font-size: 16px;
