@@ -51,6 +51,7 @@
 		let storeEnabled = false;
 		block.addEventListener('click', click1);
 		block.addEventListener('click', onTimer);
+		let multi3Potion = false;
 		function onTimer() {
 			startTime = new Date();
 			block.removeEventListener('click', onTimer);
@@ -60,6 +61,7 @@
 		function click1() {
 			current++;
 			clicks++;
+			playAudio('08368.mp3');
 			if(animFlag == 0 && current == 1) {
 				label.style.display = 'none';
 				showStat.style.display = 'block';
@@ -142,6 +144,7 @@
 		}
 		let flag2 = 0;
 		function click2() {
+			playAudio('08368.mp3');
 			current += 2;
 			animFlag = '';
 			clicks++;
@@ -183,6 +186,7 @@
 		}
 		let flag3 = 0;
 		function click3() {
+			playAudio('08368.mp3');
 			current += 5;
 			clicks++;
 			soil.classList.toggle('wow');
@@ -298,6 +302,7 @@
 
 		/*continuation */
 		function click4() {
+			playAudio('08368.mp3');
 			soil.style.display = 'none';
 			current += 11;
 			clicks++;
@@ -312,6 +317,7 @@
 			}
 		}
 		function click5() {
+			playAudio('08368.mp3');
 			current = current + 13;
 			scoreD.style.width = '28%';
 			currentApp.style.width = '28%';
@@ -329,6 +335,7 @@
 		}
 		let flag6 = 0;
 		function click6() {
+			playAudio('08368.mp3');
 			current += 17;
 			clicks++;
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.2px;text-shadow:0 0 1px red;">' + current + '</b>';
@@ -356,23 +363,37 @@
 		}
 		
 		function click7() {
+			playAudio('08368.mp3');
 			soil.style.display = 'none';
 			current += 18;
 			clicks++;
-			name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Некромант</b>';
-			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion2.png" alt="pot" id="drop">`;
+			if(isSoiled){
+				name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Некромант</b>';
+				plant.src = '7.png';				
+			}
+			if(!isSoiled){
+				plant.src = '5.png';				
+			}
+			if(!isSoiled && !multi3Potion) {
+				name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник <br>фермера</b>';
+			}
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.3px;text-shadow:0 0 2px red;">' + current + '</b>';
 			let timer = document.getElementById('time');
 			timer.classList.toggle('wow');
 			timer.classList.toggle('tada');
 			timer.setAttribute('data-wow-duration', '2s');
-			plant.src = '7.png';
 			if(current >= 3000) {
 				isolation.style.opacity = '1';
 				iso++;
 				startIsolation(iso,divider);
 				storeEnabled = true;
 			}
+		}
+		/*audio*/
+		function playAudio(file){
+			let myAudio = new Audio;
+			myAudio.src = file;
+			myAudio.play();
 		}
 
 
@@ -387,6 +408,7 @@
 			dev_modal.style.display = 'flex';
 			wrap.style.filter = 'blur(10px) grayscale(3)';
 		}
+
 		function closeDevlog() {
 			dev_modal.style.display = 'none';
 			wrap.style.filter = 'none';			
@@ -528,7 +550,7 @@
 
 
 		/*store multipliers*/
-		let multi3Potion = false;
+		
 		const firstCell = document.getElementById('first_store_cell');
 		firstCell.addEventListener('click', startFirstCell);
 		function startFirstCell() {
@@ -536,12 +558,14 @@
 				alert('Ты слишком беден для этого, подзаработай и возвращайся');
 			} if(money >= 2) {
 				if(isSoiled) {
-					multi3Potion = true;
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
+					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
 				} if(!isSoiled) {
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
 				}
-				
+				multi3Potion = true;
+				playAudio('buy.wav');
 				block.removeEventListener('click', click7);
 				block.addEventListener('click', click8);
 				firstCell.removeEventListener('click', startFirstCell);
@@ -564,12 +588,62 @@
 				alert('Кажется, тебе это не нужно!');
 			} if(money >= 7 && isSoiled) {
 				plant.src = '5.png';
+				playAudio('buy.wav');
+				isSoiled = false;
+				secondCell.removeEventListener('click', startFirstCell);
+				secondCell.classList.add('unactive');
+				hideStore();
+				money -= 7;
+				moneyTxt.innerHTML = money;
+				currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
 				if(multi3Potion) {
-					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="can2" id="drop">`;
 				} else {
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can1.png" alt="pot3" id="drop">`;
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник<br>фермера</b>';			
 				}
 			}
+		}
+		const thirdCell = document.getElementById('third_store_cell');
+		thirdCell.addEventListener('click', startThirdCell);
+		const spider = document.getElementById('spider');
+		let sections = document.getElementsByClassName('section');
+		let pStatsHeaders = document.getElementsByClassName('stats_header');
+		const modalStoreBody = document.getElementById('modal_store_body');
+		function startThirdCell() {
+			if(money < 9) {
+				alert('Ты слишком беден для этого, подзаработай и возвращайся');
+			}
+			if(money >= 9) {
+				for(let i = 0;i < sections.length;i++) {
+					sections[i].style.borderBottom = '17px solid white';
+					sections[i].style.borderImage = 'url(hlbak.png) round round 50';
+				}
+				playAudio('buy.wav');
+				block.removeAttribute('ink-color');
+				block.setAttribute('ink-color', 'orange');
+				block.style.boxShadow = '0 0 23px orange';
+				block.style.background = 'ivory';
+				refresh.style.background = 'orange';
+				spider.style.display = 'block';
+				showStat.style.background = 'orange';
+				btn_close_store_modal.style.background = 'orange';
+				stat_modal.style.background = 'url(modalStoreBody.png)';
+				store_modal.style.background = 'url(modalStoreBody.png)';
+				for(let x =0;x < modalStoreBody.children.length;x++){
+					modalStoreBody.children[x].style.border = '1px solid grey';
+				}
+				for(let x = 0; x < pStatsHeaders.length; x++) {
+					pStatsHeaders[x].style.background = 'orange';
+				}
+				btnRefreshModal.style.background = 'orange';
+				thirdCell.removeEventListener('click', startThirdCell);
+				thirdCell.classList.add('unactive');
+				money -= 9;
+				moneyTxt.innerHTML = money;
+				nest.innerHTML = money;
+			}	
 		}
 
 
@@ -578,13 +652,18 @@
 		function click8() {
 			current += 27;
 			clicks++;
-			if(multi3Potion) {
-					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
-					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
-				} if(!multi3Potion) {
-					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
-					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
-				}
+			if(isSoiled) {
+				name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+			}
+			if(!isSoiled) {
+				name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+			}
+			if(multi3Potion && isSoiled) {
+				currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
+			}
+			if(multi3Potion && !isSoiled) {
+				currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
+			}
 			
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.6px;text-shadow:0 0 2px royalblue;">' + current + '</b>';
 			let timer = document.getElementById('time');

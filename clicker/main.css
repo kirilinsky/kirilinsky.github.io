@@ -2,7 +2,9 @@ body{
 			margin: 0;
 			padding: 0;
 			position:relative;
+
 		}
+
 		.wrap{
 			width: 100%;
 			height: 91vh;
@@ -35,7 +37,7 @@ body{
 		}
 		.forScore {
 			width: 100%;
-			height: 19%;
+			height: 19.3%;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -59,7 +61,8 @@ body{
 		.section {
 			min-width: 28%;
 			height: 89px;
-			border: 2px dashed lightgrey;
+			border: 2.5px dashed lightgrey;
+
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
@@ -69,7 +72,7 @@ body{
 			text-align: center;
 			user-select: none;
 			flex-direction: column;
-			background: linear-gradient(40deg, #fcfcfc, #f4fcfc, #e1f7f5);
+			background: linear-gradient(40deg, #fcfcfc, #f4fcfc, #fcfcfc);
 			display: none;
 			transition: ease 0.9s all;
 			padding: 7px 2px;
@@ -94,6 +97,7 @@ body{
 			transition: ease 0.3s;
 			padding-left: 1px;
 			z-index: 1000;
+			position:relative;
 		}
 		.block#block:hover {
 			background: lightgrey;
@@ -103,13 +107,24 @@ body{
 		.block#block:active{
 			background: white;
 			transition: ease 0.6s all;
-			transform: scale(1.09);
+			transform: scale(1.27);
 			box-shadow: inset 0 0 25px #57dbeb, 0 0 5px lightgrey;
 		}
 		#plant {
 			z-index: 505;
 			max-width: 100%;
 			max-height: 100%;
+		}
+		.spider {
+			display: none;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: url(spoder.png) 25px 100%;
+			bottom: 2px;
+			left: 0;
+			background-size: 79%;
+			background-repeat: no-repeat;
 		}
 		.section1 {
 			font-size: 18px;
@@ -566,8 +581,8 @@ body{
 			padding:8px 1px 3px;
 		}
 		.cardstore_img {
-			width:83%;
-			max-height: 60%;
+			max-width:83%;
+			height: 30%;
 		}
 		.cardstore_img img {
 			max-width: 100%;
