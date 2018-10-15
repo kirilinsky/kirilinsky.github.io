@@ -620,7 +620,7 @@
 					sections[i].style.borderBottom = '17px solid white';
 					sections[i].style.borderImage = 'url(hlbak.png) round round 50';
 				}
-				playAudio('buy.wav');
+				playAudio('crown.wav');
 				block.removeAttribute('ink-color');
 				block.setAttribute('ink-color', 'orange');
 				block.style.boxShadow = '0 0 23px orange';
@@ -652,6 +652,7 @@
 		function click8() {
 			current += 27;
 			clicks++;
+			playAudio('08368.mp3');
 			if(isSoiled) {
 				name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
 			}
