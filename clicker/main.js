@@ -1,27 +1,62 @@
 		
 		/*adm value*/
-		
-		const admin = document.getElementById('adm');
-		adm.value = '';
-		adm.width = '10px';
-		adm.addEventListener('change', admValue);
-		function admValue() {
-			current = adm.value;
-			adm.removeEventListener('change', admValue);
-			adm.value = '';
-			adm.addEventListener('change', admMoney);
+		const wrap = document.getElementById('wrap');
+		const cheatBtn = document.getElementById('cheat_modal_open');
+		const closeCheat = document.getElementById('close_cheat');
+		const cheatModal = document.getElementById('modal_cheat');
+		const cheatInp = document.getElementById('cheatInp');
+		const cheatApp = document.getElementById('cheatApp');
+		cheatBtn.addEventListener('click', openCheatModal);
+		let cheater = false;
+		function openCheatModal() {
+			cheatModal.style.display = 'flex';
+			wrap.style.filter = 'blur(10px) grayscale(3)';
+			closeStatModal();
+			cheatInp.value = '';
 		}
-		function admMoney() {
-			money = adm.value;
-			coin.style.display = 'flex';
-			moneyTxt.innerHTML = money;
-			adm.removeEventListener('change', admMoney);
-			adm.value = '';
+		cheatApp.addEventListener('click', isThatCheat);
+		function isThatCheat(){
+			if(cheatInp.value == 'truegamer'){
+				let answer = prompt('Задать счет', current);
+				if(isNaN(answer)){
+					alert('только цифры');
+				} else {
+					current = +answer;
+					alert('Ваш новый счет: ' + answer);
+					cheatInp.value = '';
+					scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time">' + current + '</b>';
+					cheater = true;
+					playAudio('buuu.mp3');
+				}
+			} if(cheatInp.value == 'moneymaker'){
+				let answer = prompt('Задать кол-во монет', money);
+				if(isNaN(answer)){
+					alert('только цифры');
+				} else {
+					money = +answer;
+					alert('В вашем кошельке: ' + answer);
+					cheatInp.value = '';
+					coin.style.display = 'flex';
+					moneyTxt.innerHTML = money;
+					cheater = true;
+					playAudio('buuu.mp3');
+				}
+			} else {
+				cheatInp.value = '';
+			}
 		}
+
+
+		closeCheat.addEventListener('click', closeCheatModal); 
+		function closeCheatModal() {
+			cheatModal.style.display = 'none';
+			wrap.style.filter = 'none';
+			showStatModal();
+		}
+
 
 		/*defines*/
 		let isSoiled = false;
-		const wrap = document.getElementById('wrap');
 		const soil = document.getElementById('soil');
 		const refresh = document.getElementById('refresh');
 		const plant = document.getElementById('plant');
@@ -109,7 +144,11 @@
 				drop.classList.add('tada');
 				drop.setAttribute('data-wow-duration', '2s');
 				drop.setAttribute('data-wow-iteration', '2');
-				name.innerHTML = 'Ваш ранг <br><b>Кроха</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг <br><b>Кроха</b>';
+				}
 				showStat.style.display = 'block';
 			} 
 			if(current >= 6) {
@@ -122,7 +161,11 @@
 				soil.innerHTML = solied;
 			}
 			if(current > 29) {
-				name.innerHTML = 'Ваш ранг <br><b>Молодой</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг <br><b>Молодой</b>';
+				}
 				plant.src = '2.png';
 			}
 			if(current == 39) {
@@ -137,7 +180,11 @@
 				block.removeEventListener('click', click1);
 				block.addEventListener('click', click2);
 				plant.src = '3.png';
-				name.innerHTML = 'Ваш ранг <br><b>Подросток</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг <br><b>Подросток</b>';
+				}
 			}
 
 
@@ -179,7 +226,11 @@
 			if(current > 110) {
 				plant.src = '4.png';
 				block.style.borderRadius = '20px';
-				name.innerHTML = 'Ваш ранг<br><b>Серьезный</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b>Серьезный</b>';
+				}
 				block.removeEventListener('click', click2);
 				block.addEventListener('click', click3);
 			}
@@ -237,7 +288,11 @@
 				plant.src = '5.png';
 				scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b style="color:green" id="time">' + current + '</b>';
 				block.style.borderRadius = '30px';
-				name.innerHTML = 'Ваш ранг<br><b>Гигант!</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b>Гигант!</b>';
+				}
 			}
 			
 			if(current > 993 && conFlag == 0) {
@@ -267,7 +322,11 @@
 		function getSoil(score) {
 			block.removeEventListener('click', click3);
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:red;font-size:25px;">' + current + '</b>';
-			name.innerHTML = 'Ваш ранг<br><b style="color:red;">Волшебник!</b>';
+			if(cheater) {
+				name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+			} else {
+				name.innerHTML = 'Ваш ранг<br><b style="color:red;">Волшебник!</b>';
+			}
 			currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion.png" alt="pot" id="drop">`;
 			block.style.borderRadius = '45px';
 			block.style.boxShadow = '0 0 50px red';
@@ -322,7 +381,11 @@
 			scoreD.style.width = '28%';
 			currentApp.style.width = '28%';
 			name.style.width = '68%';
-			name.innerHTML = 'Ваш ранг <br><b style="color:blue;">Архимаг</b>';
+			if(cheater) {
+				name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+			} else {
+				name.innerHTML = 'Ваш ранг <br><b style="color:blue;">Архимаг</b>';
+			}
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b id="time" style="color:blue;font-size:25px;">' + current + '</b>';
 			clicks++;
 			let timer = document.getElementById('time');
@@ -368,14 +431,22 @@
 			current += 18;
 			clicks++;
 			if(isSoiled){
-				name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Некромант</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Некромант</b>';
+				}
 				plant.src = '7.png';				
 			}
 			if(!isSoiled){
 				plant.src = '5.png';				
 			}
 			if(!isSoiled && !multi3Potion) {
-				name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник <br>фермера</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник <br>фермера</b>';
+				}
 			}
 			scoreD.innerHTML = 'Ваш<br> текущий<br> счет<br><b  id="time" style="color:blue;font-size:25.3px;text-shadow:0 0 2px red;">' + current + '</b>';
 			let timer = document.getElementById('time');
@@ -559,13 +630,21 @@
 			} if(money >= 2) {
 				if(isSoiled) {
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;
-					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+					if(cheater) {
+						name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+					} else {
+						name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+					}
 				} if(!isSoiled) {
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
-					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					if(cheater) {
+						name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+					} else {
+						name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					}
 				}
 				multi3Potion = true;
-				playAudio('buy.wav');
+				playAudio('buy.mp3');
 				block.removeEventListener('click', click7);
 				block.addEventListener('click', click8);
 				firstCell.removeEventListener('click', startFirstCell);
@@ -588,7 +667,7 @@
 				alert('Кажется, тебе это не нужно!');
 			} if(money >= 7 && isSoiled) {
 				plant.src = '5.png';
-				playAudio('buy.wav');
+				playAudio('buy.mp3');
 				isSoiled = false;
 				secondCell.removeEventListener('click', startFirstCell);
 				secondCell.classList.add('unactive');
@@ -597,11 +676,19 @@
 				moneyTxt.innerHTML = money;
 				currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="pot3" id="drop">`;
 				if(multi3Potion) {
-					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					if(cheater) {
+						name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+					} else {
+						name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+					}
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can2.png" alt="can2" id="drop">`;
 				} else {
 					currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="can1.png" alt="pot3" id="drop">`;
-					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник<br>фермера</b>';			
+					if(cheater) {
+						name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+					} else {
+						name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Помощник<br>фермера</b>';			
+					}
 				}
 			}
 		}
@@ -625,6 +712,7 @@
 				block.setAttribute('ink-color', 'orange');
 				block.style.boxShadow = '0 0 23px orange';
 				block.style.background = 'ivory';
+				cheatBtn.style.background = 'orange';
 				refresh.style.background = 'orange';
 				spider.style.display = 'block';
 				showStat.style.background = 'orange';
@@ -654,10 +742,19 @@
 			clicks++;
 			playAudio('08368.mp3');
 			if(isSoiled) {
-				name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b style="color:blue;text-shadow:0 0 2px black;">Темный Лорд</b>';
+				}
 			}
 			if(!isSoiled) {
-				name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+				if(cheater) {
+					name.innerHTML = 'Ваш ранг <br><b>Читер</b>';
+				} else {
+					name.innerHTML = 'Ваш ранг<br><b style="color:green;text-shadow:0 0 2px black;">Фермер</b>';
+				}
+
 			}
 			if(multi3Potion && isSoiled) {
 				currentApp.innerHTML = `Ваш<br> текущий<br> множитель<br><img src="potion3.png" alt="pot3" id="drop">`;

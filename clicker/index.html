@@ -14,6 +14,18 @@
 	<link rel="icon" href="fav.png" type="icon/png">
 </head>
 <body>
+	<div class="modal_cheat" id="modal_cheat">
+		<div class="modal_store_header">Чит-код
+			<div class="close_store" id="close_cheat">x</div>
+		</div>
+		<div class="modal_store_body">
+			<div class="forCheat">
+				<p id="cheatP">введите чит-код</p>
+				<input type="text" id="cheatInp">
+				<button id="cheatApp">применить</button>
+			</div>
+		</div>
+	</div>
 	<div class="modal_store" id="modal_store">
 		<div class="modal_store_header">Магазин
 			<div class="close_store" id="close_store">x</div>
@@ -65,7 +77,6 @@
 		<div class="store" id="btnStore"></div>
 	</div>
 	<!-- <p id="test"></p> -->
-	<input type="text" id="adm">
 	<div class="stats" id="stats">
 		<div class="stats_header top">Ваша статистика
 			<div class="close_modal" id="close_modal">x</div>
@@ -91,6 +102,7 @@
 		</div>
 		<div class="stats_btns">
 			<div class="btn" id="refresh_modal">начать заново</div>
+			<div class="btn" id="cheat_modal_open">ввести код</div>
 		</div>
 	</div>
 	<div class="wrap" id="wrap">
