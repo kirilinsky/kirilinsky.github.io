@@ -20,11 +20,23 @@
 		label{
 			padding: 3px;
 		}
+		table{
+			width: 98%;
+		}
 		.guestsAdd{
 			margin:5px;
+			height: 44px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
 		}
-		span.alert {
-			margin:15px 0;
+		.fle{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition:ease 1s;
 		}
 		.badge:hover {
 			cursor: pointer;
@@ -37,10 +49,10 @@
 			opacity: 0;
 		}
 		.slide-enter-active{
-			transition: opacity 0.5s;
+			transition: opacity 0.4s;
 		}
 		.slide-leave-active{
-			transition: opacity 0.5s;
+			transition: opacity 0.4s;
 		}
 		.slide-leave-to{
 			opacity: 0;
@@ -57,12 +69,22 @@
 			<label for="surname">Your Surname</label>
 			<input type="text" class="form-control" id="surname" v-model="surname">
 			<label for="phone">Your phone</label>
-			<input type="text" class="form-control" id="phone" v-model="phone">
+			<input type="number" class="form-control" id="phone" v-model="phone">
 			<br>
 			<div class="guestsAdd">
-				<span v-show="!noMoreGuests">Guests </span> 
-				<input type="button" class="btn btn-primary" value=" +" v-on:click="addNew($event)" v-show="!noMoreGuests">
-				<span class="alert alert-danger" v-show="noMoreGuests">No more Guests, please.</span>
+				<div class="fle">
+					<transition name="slide">
+						<span style="border-bottom: 1px solid lightgrey;" v-if="sized <= 2">Guests</span>
+					</transition>
+					<transition name="slide">
+						<input type="button" class="btn btn-primary" value=" +" v-on:click="addNew($event)" v-if="sized <= 2">
+					</transition>
+				</div>
+				<div>
+					<transition name="slide">
+						<span class="alert alert-danger" v-if="sized >= 3">No more Guests, please.</span>
+					</transition>
+				</div>				 	
 			</div>
 			<br><hr>
 		<transition name="slide" v-for="(value,index) in guests" >
@@ -75,8 +97,8 @@
 			    <span class="badge badge-pill badge-danger" @click="deleteAll()">delete all</span>
 			  </div>
 			</div>
-		</transition>
-			
+		</transition>	
+		<br>	
 		<transition name="slide">
 			<input type="button" class="btn btn-success" value="send Data" @click="allDone = !allDone" v-show="checkAll">
 		</transition>
@@ -105,7 +127,7 @@
 					<th colspan="2">Guests with {{ name }}</th>
 				</tr>
 			</thead>
-			<tr>
+			<tr v-show="sized > 0">
 				<tr v-for="(item,index) in guests">
 					<td>Guest №{{index +1}}</td>
 					<td>{{ guests[index]}}</td>
@@ -125,16 +147,12 @@
 			phone:'',
 			guests:[],
 			allDone: false,
-			size:0,
 			noMoreGuests: false
+			
 		},
 		methods:{
 			addNew(e){
 				this.guests.push('');
-				console.log(this.guests);
-				if(this.guests.length > 3){
-					this.noMoreGuests = true;
-				}
 			},
 			deleteThis(index){
 				this.guests.splice(index,1);
@@ -145,19 +163,22 @@
 		},
 		computed:{
 			sized(){
-				this.size = this.guests.length;
 				return this.guests.length;
 			},
 			fullName(){
-				let x = this.name + ' ' + this.surname;
-				return x;
+				if(this.name != '',
+					this.surname != ''){
+					let x = this.name + ' ' + this.surname;
+					return x;
+				};
+				
 			},
 			checkAll(){
 				if(
 					(this.email == '',
 					this.name == '',
 					this.surname == '',
-					this.phone == ''
+					this.phone.length < 7
 					) || (this.guests.length != 0 && this.guests[0] == '')){
 					return false;
 				} else {
