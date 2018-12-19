@@ -26,6 +26,13 @@
 		span.alert {
 			margin:15px 0;
 		}
+		.badge:hover {
+			cursor: pointer;
+			box-shadow: 0 0 3px red;
+		}
+		form{
+			width: 290px;
+		}
 	</style>
 </head>
 <body>
@@ -41,15 +48,20 @@
 			<input type="text" class="form-control" id="phone" v-model="phone">
 			<br>
 			<div class="guestsAdd">
-				<span v-show="!noMoreGuests">Guests</span> 
-				<input type="button" class="btn btn-primary" value="+" v-on:click="addNew($event)" v-show="!noMoreGuests">
+				<span v-show="!noMoreGuests">Guests </span> 
+				<input type="button" class="btn btn-primary" value=" +" v-on:click="addNew($event)" v-show="!noMoreGuests">
 				<span class="alert alert-danger" v-show="noMoreGuests">No more Guests, please.</span>
 			</div>
 			<br>
-			<div v-for="(value,index) in guests">
-				<label v-bind:for="index+1">Guest №{{ (index+1) }}</label>
-				<br>
-				<input type="text" :id="index+1" class="form-control" v-model="guests[index]" placeholder="Type name">
+
+			<div class="card" style="width: 18rem;"  v-for="(value,index) in guests" >
+			  <div class="card-body">
+			    <h5 class="card-title">Guest №{{ (index+1) }}</h5>
+			    <h6 class="card-subtitle mb-2 text-muted">added person</h6>
+			    <input required="true" type="text" :id="index+1" class="form-control" v-model="guests[index]" placeholder="Type name">
+			    <span class="badge badge-pill badge-light" @click="deleteThis(index)">delete this</span>
+			    <span class="badge badge-pill badge-danger" @click="deleteAll()">delete all</span>
+			  </div>
 			</div>
 			<hr>
 			<input type="button" class="btn btn-success" value="send Data" @click="allDone = !allDone" v-show="checkAll">
@@ -65,13 +77,10 @@
 				<td>{{ email }}</td>
 			</tr>
 			<tr>
-				<td>Name</td>
-				<td>{{ name }}</td>
+				<td>Full Name</td>
+				<td>{{ fullName }}</td>
 			</tr>
-			<tr>
-				<td>Surname</td>
-				<td>{{ surname }}</td>
-			</tr>
+
 			<tr>
 				<td>Phone</td>
 				<td>{{ phone }}</td>
@@ -111,6 +120,12 @@
 				if(this.guests.length > 3){
 					this.noMoreGuests = true;
 				}
+			},
+			deleteThis(index){
+				this.guests.splice(index,1);
+			},
+			deleteAll(){
+				this.guests.splice(0);
 			}
 		},
 		computed:{
@@ -118,13 +133,17 @@
 				this.size = this.guests.length;
 				return this.guests.length;
 			},
+			fullName(){
+				let x = this.name + ' ' + this.surname;
+				return x;
+			},
 			checkAll(){
 				if(
-					this.email == '',
+					(this.email == '',
 					this.name == '',
 					this.surname == '',
 					this.phone == ''
-					){
+					) || (this.guests.length != 0 && this.guests[0] == '')){
 					return false;
 				} else {
 					return true;
