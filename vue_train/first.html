@@ -74,15 +74,17 @@
 			<div class="guestsAdd">
 				<div class="fle">
 					<transition name="slide">
-						<span style="border-bottom: 1px solid lightgrey;" v-if="sized <= 2">Guests</span>
+						<span style="border-bottom: 1px solid lightgrey;" v-if="sized <= 3">Guests</span>
 					</transition>
 					<transition name="slide">
-						<input type="button" class="btn btn-primary" value=" +" v-on:click="addNew($event)" v-if="sized <= 2">
+						<button type="button" class="btn btn-primary" v-on:click="addNew($event)" v-if="sized <= 3">
+						  add <span class="badge badge-light">{{ (sized == 0) ? '' : sized }}</span>
+						</button>
 					</transition>
 				</div>
 				<div>
 					<transition name="slide">
-						<span class="alert alert-danger" v-if="sized >= 3">No more Guests, please.</span>
+						<span class="alert alert-danger" v-if="sized >= 4">No more Guests, please.</span>
 					</transition>
 				</div>				 	
 			</div>
