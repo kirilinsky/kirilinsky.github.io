@@ -29,4 +29,5 @@
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 [Tickets to Mars](https://kirilinsky.github.io/space/).       | Now what, Elon?
 [Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
+[Vue Training](https://kirilinsky.github.io/vue_train/).       | Look at me, ive got that exemplar vue now
 
