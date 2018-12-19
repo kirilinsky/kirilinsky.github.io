@@ -33,6 +33,18 @@
 		form{
 			width: 290px;
 		}
+		.slide-enter{
+			opacity: 0;
+		}
+		.slide-enter-active{
+			transition: opacity 0.5s;
+		}
+		.slide-leave-active{
+			transition: opacity 0.5s;
+		}
+		.slide-leave-to{
+			opacity: 0;
+		}
 	</style>
 </head>
 <body>
@@ -52,9 +64,9 @@
 				<input type="button" class="btn btn-primary" value=" +" v-on:click="addNew($event)" v-show="!noMoreGuests">
 				<span class="alert alert-danger" v-show="noMoreGuests">No more Guests, please.</span>
 			</div>
-			<br>
-
-			<div class="card" style="width: 18rem;"  v-for="(value,index) in guests" >
+			<br><hr>
+		<transition name="slide" v-for="(value,index) in guests" >
+			<div class="card" style="width: 18rem;"  >
 			  <div class="card-body">
 			    <h5 class="card-title">Guest №{{ (index+1) }}</h5>
 			    <h6 class="card-subtitle mb-2 text-muted">added person</h6>
@@ -63,8 +75,11 @@
 			    <span class="badge badge-pill badge-danger" @click="deleteAll()">delete all</span>
 			  </div>
 			</div>
-			<hr>
+		</transition>
+			
+		<transition name="slide">
 			<input type="button" class="btn btn-success" value="send Data" @click="allDone = !allDone" v-show="checkAll">
+		</transition>
 		</form>
 		<table class="table table-striped table-bordered text-center" v-else>
 			<thead class="thead-dark">
