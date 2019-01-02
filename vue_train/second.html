@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Second</title>
+	<link rel="stylesheet" href="boot.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+
+	<style>
+		.el {
+			margin:21px auto;
+			width: 55%;
+			border: 1px solid lightgrey;
+			box-shadow: 4px 3px 2px grey;
+			border-radius: 25px;
+			padding: 65px; 	
+		}
+		.flex{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		.progress-bar{
+
+			transition: width 0.65s;
+		}
+		label{
+			display: block;
+			position: relative;
+			margin-bottom: 10px;
+		}
+		.oi{
+			position:absolute;
+			right: 7px;
+			top:7px;
+		}
+		.slide-enter{
+			opacity: 0;
+		}
+		.slide-enter-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-to{
+			opacity: 0;
+		}
+		.forTitle {
+			user-select: none;
+			transition: ease 0.4s;
+		}
+		.forTitle:hover, .forTitle:active{
+			box-shadow: 0 0 5px red;
+			text-shadow: 0 0 1px grey;
+			transition: ease 0.4s;
+		}
+		.relat{
+			position:relative !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="el">
+		<div v-if="!showInfo">
+				<div class="form-group">
+					<transition name="slide">
+						<div class="progress" v-show="isAny">
+						  <div class="progress-bar" :class="checkProgress" :style="progressWidth" role="progressbar" style="height: 18px;"  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</transition>
+				</div>
+				<br>
+				<div class="form-group" v-for="(item, index) in info">
+					<label >{{ item.name }}
+					<div class="forSpan" v-if="item.value != ''">
+						<span v-if="controls[index].error" class="oi oi-ban text-danger"></span>
+					 	<span v-else class="oi oi-check text-success"></span>
+					</div>
+					</label>
+					<input class="form-control"
+					 type="text" :id="item.name"
+					  :placeholder="'Type your ' + item.name"
+					  :value="item.value" 
+					  @input="inInput($event.target.value, index)"
+					  >
+				</div>
+
+				<br>
+				<hr>
+				<br>
+				
+				
+					<div v-if="doneBio > 2">
+						<div   class="form-group" v-for="(item, index) in questions">
+							
+								<label for="key">Question №{{ index + 1 }}
+									<span v-if="!item.right" class="oi oi-question-mark text-muted"></span>
+									<span v-else class="oi oi-check text-success"></span>
+								</label>
+							
+								<input class="form-control" type="text" @input="quest($event.target.value, index)">
+								<small class="form-text text-muted">for check complete type answer: <span class="font-weight-bold">{{ item.question }}</span></small>
+							
+						</div>
+					</div>
+				</transition>
+				
+				<br>
+
+				<div v-if="isAny" class="form-group flex">
+					<transition name="slide">
+					<button class="btn btn-info" :class="checkProgress" :disabled="doneBio < 5" @click="showInfo = true">Send Data</button>
+					</transition>
+				</div>
+			</div>
+			<transition name="slide">
+				<div v-if="showInfo">
+					<table  class="table table-striped table-bordered text-center">
+						<tr>
+							<thead class="thead-dark">
+								<tr>
+									<th colspan="2">Final Result</th>
+								</tr>
+							</thead>
+						</tr>
+						<tr v-for="(item, index) in info">
+							<th>{{ item.name }}</th>
+							<td>{{ item.value }}</td>
+						</tr>
+						<tr class="alert-success">
+								<th> Questions</th>
+								<td><span class="oi oi-check relat" > Done! </span></td>
+						</tr>
+					</table>
+				</div>
+			</transition>
+
+			
+	</div>
+	<script src="vue.js"></script>
+	<script>
+	let app = new Vue({
+		el: '.el',
+		data: {
+			showInfo: false,
+			info: [
+				{
+				name:'Name',
+				value:'',
+				pattern: /^[a-zA-Z ]{2,30}$/
+				},
+				{
+				name:'Phone',
+				value:'',
+				pattern: /^[0-9]{7,14}$/
+				},
+				{
+				name:'E-mail',
+				value:'',
+				pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+				}
+			],
+			questions: [
+				{
+					question: '45 + 14 / 2',
+					value:'',
+					answer: '51',
+					right:false
+				},
+				{
+					question: 'the Capital of Great Britain',
+				 	value:'',
+				 	answer: 'London',
+				 	right:false
+				}
+			],
+			controls: [],
+			questDone: false
+		},
+		beforeMount(){
+			for(let x = 0;x < this.info.length; x++) {
+				this.controls.push({
+					error: true,
+					activated:false
+				})
+			}
+		},
+		methods:{
+			inInput(value, index){
+				let control = this.controls[index];
+				let data = this.info[index];
+				data.value = value;
+				control.error = !data.pattern.test(value);
+				control.activated = true;
+			},
+			quest(value, index){
+				let counter = 0;
+				let data = this.questions[index];
+				data.value = value;
+				if(data.answer == data.value){
+					data.right = true
+				}
+			}
+		},
+		computed:{
+			isAny(){
+				for(let x = 0;x < this.controls.length;x++){
+					if(this.controls[x].activated){
+						return true
+					} else {
+						return false
+					}
+				}
+			},
+			doneBio(){
+				let done = 0;
+				for(let x = 0;x < this.controls.length; x++){
+					if(!this.controls[x].error){
+						done++;
+					}
+				}
+				for(let x = 0;x < this.questions.length; x++){
+					if(this.questions[x].right){
+						done++;
+					}
+				}
+				return done
+			},
+			progress(){
+				return 100 / (this.info.length + this.questions.length) * this.doneBio
+				
+			},
+			progressWidth(){
+				return {width: this.progress + '%'}
+			},
+			checkProgress(){
+				if(this.doneBio == 5){
+					return 'bg-success'
+				}
+			}
+		}
+		
+	})
+	
+	</script>
+</body>
+</html>
