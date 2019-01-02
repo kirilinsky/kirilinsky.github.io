@@ -5,7 +5,9 @@
 	<title>Second</title>
 	<link rel="stylesheet" href="boot.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
 
 	<style>
 		.el {
@@ -77,8 +79,8 @@
 				<div class="form-group" v-for="(item, index) in info">
 					<label >{{ item.name }}
 					<div class="forSpan" v-if="item.value != ''">
-						<span v-if="controls[index].error" class="oi oi-ban text-danger"></span>
-					 	<span v-else class="oi oi-check text-success"></span>
+						<i v-if="controls[index].error" class="far fa-times-circle oi text-danger"></i>
+					 	<i v-else class="oi far fa-check-circle text-success"></i>
 					</div>
 					</label>
 					<input class="form-control"
@@ -98,8 +100,8 @@
 						<div   class="form-group" v-for="(item, index) in questions">
 							
 								<label for="key">Question №{{ index + 1 }}
-									<span v-if="!item.right" class="oi oi-question-mark text-muted"></span>
-									<span v-else class="oi oi-check text-success"></span>
+									<i v-if="!item.right" class="oi far fa-question-circle text-muted"></i>
+									<i v-else class="oi far fa-check-circle text-success"></i>
 								</label>
 							
 								<input class="form-control" type="text" @input="quest($event.target.value, index)">
@@ -168,7 +170,7 @@
 				{
 					question: '45 + 14 / 2',
 					value:'',
-					answer: '51',
+					answer: 52,
 					right:false
 				},
 				{
