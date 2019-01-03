@@ -84,7 +84,7 @@
 					</div>
 					</label>
 					<input class="form-control"
-					 type="text" :id="item.name"
+					 :type="trim(item.name)" :id="item.name"
 					  :placeholder="'Type your ' + item.name"
 					  :value="item.value" 
 					  @input="inInput($event.target.value, index)"
