@@ -84,7 +84,7 @@
 					</div>
 					</label>
 					<input class="form-control"
-					 :type="trim(item.name)" :id="item.name"
+					 :type="item.type" :id="item.name"
 					  :placeholder="'Type your ' + item.name"
 					  :value="item.value" 
 					  @input="inInput($event.target.value, index)"
@@ -152,16 +152,19 @@
 			info: [
 				{
 				name:'Name',
+				type: 'text',
 				value:'',
 				pattern: /^[a-zA-Z ]{2,30}$/
 				},
 				{
 				name:'Phone',
+				type: 'number',
 				value:'',
 				pattern: /^[0-9]{7,14}$/
 				},
 				{
 				name:'E-mail',
+				type: 'email',
 				value:'',
 				pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 				}
