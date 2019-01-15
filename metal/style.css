@@ -70,10 +70,8 @@ main .txt {
 	right:8%;
 	min-width: 30%;
 	background: #384A7DDF;
-	padding: 25px 50px;
+	padding: 25px 55px;
 	color:#fff;
-	border-right: 2px solid #fff;
-	border-bottom: 1px solid #fff;
 }
  h2 {
 	font-size: 2.41rem;
