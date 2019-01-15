@@ -1,0 +1,142 @@
+body{
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%;
+}
+.wrap{
+	margin: 0 auto;
+	width: 80%;
+	height: 100vh;
+	display: grid;
+	grid-template-areas: "head"
+                         "main"
+                         "foot";
+	grid-template-columns: 1fr;
+	grid-template-rows: 185px auto 185px;
+	grid-gap: 10px;
+}
+header{
+	grid-area: head;
+	background: #E9E9E9 ;
+	border-radius: 0 0 10px 10px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: space-around;
+	flex-direction: row;
+	position:sticky;
+	top:0;
+}
+.label{
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+.contacts{
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+.bordered{
+	padding-bottom: 5px;
+	border-bottom: 7px solid #FBBD03;
+}
+.badge {
+	min-width: 35%;
+	padding: 10px;
+	font-size: 1.2rem;
+	margin: 5px auto;
+}
+.badge a{
+	color: inherit;
+}
+
+main{
+	grid-area: main;
+	position: relative;
+	background: url(gril.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 80vh;
+}
+
+main .txt {
+	position:absolute;
+	bottom:15%;
+	right:8%;
+	min-width: 30%;
+	background: #384A7DDF;
+	padding: 25px 50px;
+	color:#fff;
+	border-right: 2px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+ h2 {
+	font-size: 2.41rem;
+	font-variant: small-caps;
+}
+ p {
+	display: block;
+	text-align: center;
+	font-size: 1.08rem;
+	letter-spacing: 1.2px;
+}
+
+footer{
+	border-radius: 10px 10px 0 0 !important; 
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;
+	grid-area:foot;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.line{
+	width:2px;
+	background: #000;
+	height: 85%;
+}
+section{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+li{
+	background: transparent !important;
+}
+iframe{
+	width: 95%;
+}
+@media (max-width: 787px){
+	.wrap{
+		width: 90%;
+		grid-template-rows: 250px auto auto;
+	}
+	footer,header{
+		flex-direction: column;
+		align-items: center;
+	}
+	main{
+		position:sticky;
+		top:245px;
+	}
+	section, .label,.contacts {
+		width: 87%;
+	}
+	.line{
+		width: 90%;
+		height: 1px;
+		margin:20px;
+	}
+	iframe{
+		width: 100%;
+		margin: 5px;
+	}
+}
