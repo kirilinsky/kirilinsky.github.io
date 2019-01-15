@@ -27,6 +27,7 @@
 --------------------------------------------------|--------------------
 [SkillMeter](https://kirilinsky.github.io/skill/).|Skill-o-meter(_its_ _a_ _joke_).
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
+[MMM](https://kirilinsky.github.io/metal/).       | Metal and Girls
 [Tickets to Mars](https://kirilinsky.github.io/space/).       | Now what, Elon?
 [Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
 [Vue Training](https://kirilinsky.github.io/vue_train/).       | Look at me, ive got that exemplar vue now
