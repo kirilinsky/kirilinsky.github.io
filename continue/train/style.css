@@ -1,0 +1,221 @@
+html {
+	font-size: 100%;
+}
+@font-face {
+font-family: 'Segoe WP N';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe WP N'), url('SegoeWPN.woff') format('woff');
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: padding-box;
+
+}
+header.header {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	flex-flow: column nowrap;
+	background: url(Layer1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 5;
+}
+.fixedhead{
+	width: 100%;
+	min-height: 9vh;
+	background: #ffffff45;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	font-family: 'Segoe WP N';
+	font-size: 27.3px;
+	color:#fff;
+	margin-left: 5%;
+	position: relative;
+}
+.fa-instagram{
+	
+	transition: ease 0.3s all;
+}
+.fa-instagram:hover {
+	color:#ffffff45;
+	cursor: pointer;
+	transform: rotate(180deg);
+	transition: ease 0.3s all;
+}
+.shape {
+	position: absolute;
+    width: 9.2px;
+    height: 10px;
+    border-radius: 90%;
+    background: #fff;
+    top: 41%;
+    left: 35%;
+}
+.button {
+	width: 59px;
+    min-height: 57px;
+    margin-right: 5%;
+    background: #ffffff45;
+    color:#fff;
+    transition: ease 0.3s all;
+    position: relative;
+}
+.button:hover {
+	cursor: pointer;
+	background:#00000055;
+	color:#00000077;
+	transition: ease 0.4s all;
+}
+.button i{
+	position: absolute;
+	top: 5px;
+	left: 8px;
+}
+.button:hover i {
+	transform: rotate(180deg);
+	transition: ease 0.3s all;
+}
+.flexhead {
+	width: 100%;
+	height: 41vh;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+}
+.arrow1 {
+	width: 41px;
+	height: 41px;
+	border-top:2px solid #fff;
+	border-left: 2px solid #fff;
+	margin-left: 2.5%;
+	transform: rotate(-45deg);
+	border-radius: 3px;
+	transition: ease 1s box-shadow;
+}
+.arrow1:hover {
+	cursor: pointer;
+	border-top:3px solid #fff;
+	border-left: 3px solid #fff;
+	box-shadow: -1px -1px 1px #fff;
+	transition: ease 1s box-shadow;
+}
+
+.arrow2 {
+	width: 41px;
+	height: 41px;
+	border-top:2px solid #fff;
+	border-left: 2px solid #fff;
+	margin-right: 2.5%;
+	transform: rotate(135deg);
+	border-radius: 3px;
+	transition: ease 0.3s box-shadow;
+}
+.arrow2:hover {
+	cursor: pointer;
+	border-top:3px solid #fff;
+	border-left: 3px solid #fff;
+	box-shadow: -1px -1px 1px #fff;
+	transition: ease 1s box-shadow;
+}
+.searchcolumn {
+	font-family: 'Segoe WP N';
+	max-width: 380px; 
+	color:#fff;
+	font-size: 27.3px;
+	line-height: 1.2;
+  	text-align: center;
+  	text-shadow: 0 0 1px #fff;
+  	letter-spacing: 1px;
+  	position: relative;
+  	margin-right: 45%;
+}
+input {
+	min-height: 6vh;
+	width: 360px;
+	font-size: 21.3px;
+	font-family: 'Segoe WP N';
+	color: rgb(175, 175, 175);
+	line-height: 1.2;
+	padding-left: 4.5%;
+	opacity: 0.9;
+	border: none;
+	box-shadow: 0 0 1px #fff;
+	transition: ease 0.3s all;
+}
+.fa-search {
+	color: rgb(175, 175, 175);
+	position: absolute;
+	top: 76.2%;
+    right: 3%;
+    z-index: 55;
+    opacity: 0.6;
+}
+input:focus {
+	box-shadow: inset 0 0 15px #8AC8D7;
+	transition: ease 0.3s all;
+}
+
+.joinblock {
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+  	text-align: center;
+}
+#join {
+	font-family: 'Segoe WP N';
+	font-size: 37.3px;
+	line-height: 1.2;
+	color: rgb(175, 175, 175);
+}
+a#join {
+	color: #fff;
+	display: block;
+	background: #8FCDDC;
+	text-decoration: none;
+	padding: 10px 14px 12px;
+	margin-left: 5%;
+	font-weight: 100;
+	border: 1px solid transparent;
+	transition: ease 0.3s all;
+}
+a#join:hover {
+	color: #8FCDDC;
+	background: #fff;
+	transition: ease 0.3s all;
+	border: 1px solid #8FCDDC65;
+	box-shadow: inset 0 0 35px #8FCDDC95, 0 0 2px #8FCDDC95; 
+}
+h2#join {
+	margin-top: 2%;
+	text-align: center;
+	font-size: 27.3px;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.gridarea {
+	width: 76%;
+	margin: 30px auto;
+	height: 20vh;
+	display: flex;
+	justify-content: space-between;
+}
+.gridcolumn{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	color: rgb(175, 175, 175);
+	font-family: 'Segoe WP N';
+}

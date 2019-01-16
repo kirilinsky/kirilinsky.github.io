@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="leftSide">
+			<div class="forScore">
+				<div class="section">{{ nameScore + ' ' +  score }}</div>
+				<div class="section">{{ nameRank + ' ' + rank }}</div> 
+				<div class="section">{{ nameMulti + ' x' + multi }}</div>
+			</div>
+			<div class="forButtons">
+				<button class="btn btn-primary">menu</button>
+				<button class="btn btn-info">restart</button>
+			</div>
+		</div>
+		<div class="rightSide">
+			<div class="clicker" v-on:click="multiScore()"></div>
+		</div>
+		<div class="subSide"></div>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+		var wrap = new Vue({
+			el:'.wrap',
+			data:{
+				nameScore: 'score',
+				score: 0,
+				nameRank: 'Rank',
+				rank: 'newbie',
+				nameMulti: 'multi',
+				multi: 1
+			},
+			methods:{
+				multiScore( isBtn){
+					this.score += this.multi;
+					if(this.score >= 5){
+						this.multi = 2;
+						this.rank = 'jun';
+				}
+
+			}}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Four</title>
+	<link rel="stylesheet" href="boot.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+	<style>
+		.el {
+			margin:19px auto;
+			width: 95%;
+			border: 1px solid lightgrey;
+			box-shadow: 4px 3px 2px grey;
+			border-radius: 25px;
+			padding: 60px; 	
+		}
+		.slide-enter{
+			opacity: 0;
+		}
+		.slide-enter-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-to{
+			opacity: 0;
+		}
+		h2{
+			transition: 0.9s;
+		}
+	</style>
+</head>
+<body>
+	<div class="el">
+			<h2>{{ clicks }}</h2>
+			<hr>
+			<button class="btn btn-outline-primary" @click.prevent="onclick">Plus</button>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+	let app = new Vue({
+		el: '.el',
+		data: {
+			clicks: 0
+		},
+		methods:{
+			onclick(){
+				this.clicks++;
+			}
+		}
+	})
+	
+	</script>
+</body>
+</html>

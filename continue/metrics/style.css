@@ -1,0 +1,67 @@
+* {
+	transition: all 0.5s;
+}
+.box2 {
+	width: 690px;
+	min-height: 380px;
+	border: 2px dashed green;
+	margin: 100px auto;
+	padding: 25px;
+	font-family: sans-serif;
+
+}
+p {
+	border: 1px dashed grey;
+	padding: 5px;
+}
+table,td,tr {
+	border: 1px solid blue;
+	padding:7px 9px;
+}
+table {
+	border-collapse: collapse;
+}
+ul:hover {
+	cursor: pointer;
+	font-weight: bolder;
+}
+option{
+	font-size: 11px;
+	border-bottom: 1px dashed grey;
+}
+option:nth-child(2)::before {
+	content: " " url(1.jpg);
+	vertical-align: middle;
+}
+option:nth-child(3)::before {
+	content: " " url(2.jpg);
+	 vertical-align: middle;
+}
+option:nth-child(4)::before {
+	content: " " url(3.jpg);
+	 vertical-align: middle;
+}
+select {
+	overflow: hidden;
+	padding:1px;
+	transition:all 1s;
+}
+input#inp2 {
+	text-align: center;
+	font-size: 19.2px;
+	width: 28%;
+	padding: 10px 1px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.box3 {
+	margin:25px;
+	width: 96%;
+	height: 399px;
+	border: 1px solid black;
+	box-shadow: 0 0 5px black;
+}
+tr,td {
+	text-align: center;
+	vertical-align: middle;
+}

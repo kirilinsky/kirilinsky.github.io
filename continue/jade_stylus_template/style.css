@@ -1,0 +1,26 @@
+.wrap{
+	display: grid;
+	grid-template-rows: 200px 200px;
+	grid-template-columns: 200px 200px 200px ;
+	grid-template-areas: "header header header"
+	 "sidebar content content";
+
+}
+header {
+	grid-area: header;
+	background: red;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 21px;
+}
+.sidebar{
+	grid-area: sidebar;
+	background: grey;
+}
+.content{
+	grid-area: content;
+	background: green;
+}

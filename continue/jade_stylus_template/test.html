@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		function feb(n){
+			console.log(n);
+			if((n==1)||(n==2)){
+				return 1
+			} else {
+				//
+				return feb(n-1) + feb(n-2)
+			}
+
+		}
+		console.log(feb(4));
+	</script>
+</body>
+</html>

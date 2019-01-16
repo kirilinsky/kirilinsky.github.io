@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Is Anybody Home?</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="radio.css">
+	<style>
+		.wrap {
+			width:99%;
+			height: 95vh;
+			outline: 1px solid red;
+			margin:3% auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.item {
+			width: 44%;
+			height: 43%;
+			border: 2px dashed grey;
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+		}
+
+		.itemswitch {
+			width: 90%;
+			height: 95%;
+
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="item">
+			<div class="itemswitch">
+				<p>
+				  please 
+				  <label><input type="radio" name="milk" value="yes" checked><span>buy</span></label><br>
+				  <label><input type="radio" name="milk" value="no"><span>not buy</span></label> 
+				  some milk
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="itemswitch">
+				<p>
+				  please 
+				  <label><input type="radio" name="bread" value="yes" checked><span>buy</span></label>
+				  <label><input type="radio" name="bread" value="no"><span> not buy</span></label> 
+				  some bread
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="itemswitch">
+				<p>
+				  please 
+				  <label><input type="radio" name="cookies" value="yes" checked><span>buy</span></label>
+				  <label><input type="radio" name="cookies" value="no"><span>not buy</span></label> 
+				  some cookies
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="itemswitch">
+				<p>
+				  please 
+				  <label><input type="radio" name="caf" value="yes" checked><span>buy</span></label>
+				  <label><input type="radio" name="caf" value="no"><span>not buy</span></label> 
+				  some cats food
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

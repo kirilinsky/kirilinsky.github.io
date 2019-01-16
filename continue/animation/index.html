@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		.wrap{
+			width: 90%;
+			border-radius: 5px;
+			box-shadow: 3px 2px 1px grey, 0 0 15px black;
+			height: 370px;
+			background: black;
+			margin: 50px auto;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-family: sans-serif;
+			font-weight: bold;
+			letter-spacing: 1.3px;
+		}
+		.loader{
+			display: flex;
+			justify-content: center;
+			margin-bottom:75px;
+
+		}
+		.bar{
+			width: 14px;
+			height: 88px;
+			background: #fff;
+			margin-right: 10px;
+			animation: loader 1.6s infinite ease-in-out;
+			border-radius: 5px 5px 0 0;
+			opacity: 0;
+			//transform-origin: bottom;
+		}
+.waiter {
+	animation: waiter 1.7s 1 ease;
+}
+
+@keyframes waiter {
+	0%{
+		transform: rotateZ(72deg);
+	}
+	12%{
+		transform: rotateZ(108deg);
+	}
+	25%{
+		transform: rotateZ(144deg);
+	}
+	37%{
+		transform: rotateZ(180deg);
+	}
+	50%{
+		transform: rotateZ(218deg);
+	}
+	62%{
+		transform: rotateZ(254deg);
+	}
+	75%{
+		transform: rotateZ(288deg);
+	}
+	87%{
+		transform: rotateZ(324deg);
+	}
+100%{
+		transform: rotateZ(360deg);
+	}
+}
+
+.loader .bar:last-child{
+	border-radius:  0 5px 5px 0;
+}
+.loader .bar:first-child{
+	border-radius:  5px 0 0 5px;
+}
+
+		@keyframes loader{
+			0% {
+				background: #fff;
+				transform: scaleY(.11);
+				opacity: 1;
+			}
+			25%{
+				background: indigo;
+			}
+			50% {
+				background: turquoise;
+				transform: scaleY(1.45);
+				opacity: 0.9;
+			}
+			75%{
+				background: #fff;
+			}
+			100% {
+				background: red;
+				transform: scaleY(.12);
+				opacity: 1;
+			}
+		}
+.btns{
+	display: flex;
+	justify-content: space-around;
+}
+.btn{
+	user-select:none;
+	margin:5px;
+	background:grey;
+	padding:5px;
+	width: 65px;
+	text-align:center;
+	transition: all 0.2s ease;`
+	border:3px solid grey;
+}
+.btn:hover{
+	background:transparent;
+	border: 3px solid grey;
+	cursor:pointer;
+	transition: all 0.2s ease;
+	box-shadow: 0 0 1px white;
+}
+.btn:active{
+	transition: all 0.2s ease;
+	background:red;
+}
+
+
+	</style>
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="loader" id="loader">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>	
+		</div>
+		<div class="btns">
+			<div class="btn" id="random">random</div>
+			<div class="btn" id="linear">linear</div>
+		</div>
+	</div>
+	
+	<script>
+	let loader = document.querySelector('#loader');
+		let btnRandom = document.getElementById('random');
+		let btnLinear = document.getElementById('linear');
+		let bars = document.querySelectorAll('.bar');
+		loader.style.visibility = 'hidden';
+		btnRandom.onclick = function(){
+			this.innerHTML = 'x';
+			btnRandom.classList.toggle('waiter');
+			setTimeout((function(){
+				btnRandom.innerHTML = 'random';
+				loader.style.visibility = 'visible';
+				btnRandom.classList.toggle('waiter');
+					for(let x = 0;x < bars.length;x++){
+						if(x > 9) {
+							let y = x.toString().charAt(0);
+							bars[x].style.animationDelay = y + '.' + getRandomInt(0,bars.length) + 's';
+						} else{
+						bars[x].style.animationDelay = '0.' + getRandomInt(0,9) + 's';
+						}
+					}	
+			}), 1700);
+			
+		}
+		btnLinear.onclick = function(){
+			loader.style.visibility = 'visible';
+			for(let x = 0;x < bars.length;x++){
+					if(x > 9) {
+						let y = x.toString().charAt(0);
+						let z = x.toString().charAt(1);
+						bars[x].style.animationDelay = y + '.' + z + 's';
+					} if(x <= 9){
+					bars[x].style.animationDelay = '0.' + x + 's';
+					}
+				}
+		}
+		getRandomInt = (min,max) => {
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+
+	</script>
+</body>
+</html>

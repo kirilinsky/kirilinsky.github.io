@@ -1,0 +1,15 @@
+wrap
+	display grid
+	grid-template-columns 1fr 1fr 2fr
+	grid-template-rows 150px 1 fr 250px
+	grid-template-area "header header header sidebar content content sidebar content content content content content"
+
+header
+	background red
+	grid-area header
+
+.sidebar
+	grid-area sidebar
+	
+.content
+	grid-area content

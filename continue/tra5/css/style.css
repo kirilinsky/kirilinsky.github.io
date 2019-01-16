@@ -1,0 +1,251 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	width: 1000px;
+	height: 135px;
+	margin: 0 auto;
+}
+.topheadblock {
+	width: 1000px;
+	height: 60px;
+	background-color: #2e2e2e;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.signmenu {
+	width: 253px;
+	height: 13px;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin-left: 10px;
+}
+.signmenu a {
+	text-decoration: none;
+	color: #9f9f9f;
+}
+.signmenu a:hover {
+	color:#fff;
+	text-shadow: 0 0 1px #fff;
+}
+.line {
+	width: 1px;
+	height: 12px;
+	background-color: #9f9f9f;
+	margin:0 5px;
+}
+.socialmenu {
+	width: 200px;
+	height: 32px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin-right: 12px;
+}
+.socialbutton {
+	width: 32px;
+	height: 32px;
+	background-color: #787878;
+	border-radius: 16px;
+	margin:0 5px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	transition: linear 0.6s all;
+}
+a {
+	color:#Fff;
+	text-decoration: none;
+	transition: linear 0.6s all;
+}
+.socialbutton:hover {
+ 	background-color: #db4a39;
+ 	transform: rotateY(180deg);
+ 	transition: linear 0.6s all;
+}
+.socialbutton:hover {
+	transform: rotateY(360deg);
+	transition: linear 0.6s all;
+}
+.bottomblockmenu {
+	width: 960px;
+	height: 60px;
+	margin: 10px auto 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;;
+}
+.menuwrap {
+	width: 820px;
+	height: 10px;
+	margin-left: 10px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.meublock {
+	margin: 1px 5px 0;
+	line-height: 14px;
+	transition: ease 0.3s;
+}
+.meublock a {
+	color: #9f9f9f;
+	font-family: Georgia;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: ease 0.3s;
+	border-bottom: 5px solid transparent;
+	padding-bottom: 21px;
+}
+.meublock a:hover {
+	color: #000;
+	text-shadow: 0 0 1px #9f9f9f;
+	transition: ease 0.3s;
+	border-bottom: 5px solid #0099ff;
+}
+.bottomline {
+	width: 960px;
+	height: 5px;
+	background-color: #f1f1f1;
+	margin: 0 auto;
+}
+.titlebox {
+	width: 960px;
+	height: 140px;
+	margin:0 auto;
+}
+.titlewrap {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.lefttitle {
+	margin-left: 15px;
+}
+.righttitle {
+	margin-right: 10px;
+}
+input#titlesearch {
+	width: 215px;
+	height: 31px;
+	background-color: #f1f1f1;
+	margin-right: 3px;
+	opacity: 0.9;
+	border-radius: 6px;
+	border:none;
+	padding-left: 5px;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+}
+button#titlebutton {
+	width: 69px;
+	height: 31px;
+	background-color: #0099ff;
+	border-radius: 5px;
+	border:none;
+	text-transform: uppercase;
+	padding: 0 5px;
+	color: #ffffff;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+	transition: ease 0.3s;
+}
+button#titlebutton:hover {
+	cursor: pointer;
+	color: #0099ff;
+	background-color: #ffffff;
+	border: 1px solid #0099ff;
+	box-shadow: inset 0 0 5px #0099ff;
+	transition: ease 0.3s; 
+}
+h2#lefttitle {
+	color: #333333;
+	font-family: Georgia;
+	font-size: 37px;
+	font-weight: 400;
+	line-height: 43.2px;
+	margin-bottom: 8px;
+}
+p#titled {
+	margin-top: 0 ;
+	color: #999999;
+	font-family: Georgia;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+}
+.interval_line {
+	width: 1000px;
+	height: 3px;
+	background-color: #e9e9e9;
+	margin: 0 auto;
+}
+.slideblock {
+	width: 1000px;
+	height: 450px;
+	background-color: #f1f1f1;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.leftside{
+	width: 450px;
+	height: 450px;
+}
+.slidertextwrap{
+	width: 355px;
+	height: 100%;
+	display: flex;
+	margin-left: 20px;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+button#slider {
+	background-color: #0099ff;
+	border-radius: 5px;
+	height: 31px;
+	border:none;
+	text-transform: uppercase;
+	padding: 0 7px;
+	color: #ffffff;
+	font-family: Georgia;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 14.4px;
+	transition: ease 0.3s;
+	border: 1px solid transparent;
+}
+button#slider:hover {
+	cursor: pointer;
+	color: #0099ff;
+	background-color: #ffffff;
+	border: 1px solid #0099ff;
+	box-shadow: inset 0 0 5px #0099ff;
+	transition: ease 0.3s; 
+}
+.rightslide {
+	width: 550px;
+	height: 440px;
+	background-color: #333333;
+}

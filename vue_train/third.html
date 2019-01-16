@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Third</title>
+	<link rel="stylesheet" href="boot.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<style>
+		.el {
+			margin:27px auto;
+			width: 90%;
+			border: 2px solid lightgrey;
+			box-shadow: 1px 1px 2px grey;
+			border-radius: 5px;
+			min-height: 429px;
+			display: flex;
+			justify-content: space-around;
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+		.slide-enter{
+			opacity: 0;
+		}
+		.slide-enter-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-to{
+			opacity: 0;
+		}
+		.forTitle {
+			user-select: none;
+			transition: ease 0.4s;
+		}
+		.forTitle:hover, .forTitle:active{
+			box-shadow: 0 0 5px red;
+			text-shadow: 0 0 1px grey;
+			transition: ease 0.4s;
+		}
+		.textArea {
+			width: 45%;
+			height:390px;
+			padding: 14px;
+			line-height: 2.3;
+			overflow-y: scroll;
+		}
+		.table{
+			width: 59%;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="el">
+		<div class="textArea alert alert-info" @scroll="showBtns = true" v-if="!allDone">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet esse, numquam nobis quos doloribus error veritatis nemo temporibus libero dolorum tenetur iste. Nobis alias voluptas tempora cumque molestias, pariatur tenetur!</div>
+			<div>Libero illo nulla fugiat aut inventore sapiente ad asperiores est nostrum architecto dignissimos quisquam facilis molestias ab sunt ullam mollitia, non cumque harum omnis, officiis corrupti placeat voluptates. Eius, fuga.</div>
+			<div>Illo, soluta, iure! Consequatur voluptates omnis sit maxime vero suscipit, ipsam, autem reprehenderit. Suscipit, ullam quia maiores soluta pariatur repudiandae. Similique voluptatibus pariatur, quod, explicabo impedit obcaecati eaque animi eum.</div>
+			<div>Molestiae necessitatibus ipsam itaque possimus, officia optio enim, placeat voluptates vitae corporis nam facilis pariatur ex consectetur atque ullam commodi aliquid id suscipit harum? Provident debitis esse repellat, incidunt temporibus.</div>
+			<div>Velit, inventore iure culpa, aliquam quasi cumque sapiente praesentium deleniti odio fugit. Cupiditate deleniti voluptatibus necessitatibus, beatae nesciunt fugiat ducimus omnis. Sequi corrupti, ipsam quae error excepturi fugit aperiam. Iste.</div>
+			<div>Hic dolor perspiciatis, aspernatur nemo quae, asperiores facilis illum dolorem minima doloremque sequi. Dolorum vel suscipit magni sint quis mollitia animi, labore consequatur officiis deserunt, ea itaque consequuntur ratione esse.</div>
+			<div>Corporis, minus fugit non aliquid aperiam voluptas rem hic dignissimos cupiditate repudiandae veritatis commodi amet enim ad aliquam quos architecto doloribus quae quaerat odio, officia illo sit at officiis. Distinctio.</div>
+			<div>Labore reiciendis qui magnam autem molestias saepe, corporis cumque consequatur ducimus aut quasi, obcaecati ad delectus dolorum dignissimos ex fuga alias. Consectetur rem eveniet quisquam modi perspiciatis et aperiam inventore?</div>
+			<div>Necessitatibus earum, suscipit quod alias laborum esse corporis voluptates distinctio! Ad porro vitae esse, consectetur animi temporibus, praesentium, vero unde quidem eaque nemo, corrupti a ullam iure minima non rerum.</div>
+			<div>Quia magni architecto ex voluptates tempora dignissimos praesentium laudantium nulla velit cumque, sequi adipisci aliquam, excepturi. Unde numquam a recusandae magnam. Similique, quaerat, natus. Velit maiores nihil ex similique officiis!</div>
+			<div>Asperiores maiores commodi, a aliquam dolor incidunt illum dolorem, tenetur, corporis veritatis deleniti! Fugit, libero, recusandae. Dolor vel, voluptatibus, maxime sequi accusamus expedita voluptas, eos quaerat velit rerum ullam illum.</div>
+			<div>Quam necessitatibus dolorem qui, veritatis ab cumque tenetur unde, doloremque perferendis neque commodi et aliquid quod quibusdam. Pariatur eum, ratione sunt placeat possimus recusandae, iure, incidunt cumque ipsam optio nisi.</div>
+			<div>Repellat tenetur, quo! Veniam eaque fuga, perferendis omnis ratione eligendi enim repellendus nesciunt explicabo ipsum iusto aperiam magnam ab ea, ex at, illo quisquam sequi! Officiis earum quibusdam, nesciunt harum?</div>
+			
+		</div>
+		<form v-if="showBtns && !allDone" >
+			<transition name="slide">
+				<div class="form-group form-check">
+				    <input type="checkbox" id="agree" v-model="showSpam">
+				    <label for="agree">I agree this text</label><br>
+				 </div>
+			 </transition>
+			 <transition name="slide">
+				 <div class="form-group form-check" v-if="showSpam">
+				    <input type="checkbox" id="spam" v-model="showInputs">
+				    <label for="spam">Send me spam</label>
+				 </div>
+			 </transition>
+			<transition name="slide">
+				<div class="form-group" v-if="showInputs">
+					 <label for="spam">My Phone Number</label><br>
+					<input type="number" v-model="phone"><br>
+					 <label for="spam">My Email</label><br>
+					<input type="email" v-model="email">
+				</div>
+			</transition>
+			<transition name="slide">
+				<div class="form-group" v-if="checkSend">
+					<input type="button" class="btn-danger" value="Send Data" @click="allDone = true">
+				</div>
+			</transition>
+
+		</form>
+		<table v-if="allDone" class="table table-striped table-dark text-center">
+			
+			<thead>
+				<tr>
+					<th colspan="2"><i class="fas fa-fire text-danger"></i> You Successfully subscribed for spam!</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<th>Your Phone</th>
+					<td>{{ phone }}</td>
+				</tr>
+				<tr>
+					<th>Your E-mail</th>	
+					<td>{{ email }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+	let app = new Vue({
+		el: '.el',
+		data: {
+			allDone:false,
+			showSpam: false,
+			showInputs: false,
+			showBtns: false,
+			phone:'',
+			email:''
+		},
+		computed:{
+			checkSend(){
+				if(this.phone != '' && this.email != ''){
+					return true
+				} else {
+					return false
+				}
+			}
+		}
+	})
+
+	
+	</script>
+</body>
+</html>

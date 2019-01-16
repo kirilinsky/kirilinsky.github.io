@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" >
+<head>
+    <base href="http://www.carsbag.ru/" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>CarsBag - Саквояжи для Вашего автомобиля</title>
+	<link href="http://www.carsbag.ru/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection">
+
+
+<link href="http://www.carsbag.ru/assets/css.css?ver=a6bda8e02c78f75ab269a6a104e75aee" rel="stylesheet" type="text/css"/>
+		
+<script type="text/javascript" src="http://www.carsbag.ru/assets/top.js?ver=0.2"></script>
+		
+<script>var serverfullname="http://www.carsbag.ru/";</script>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.carsbag.ru/js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="http://www.carsbag.ru/js/waypoints.min.js"></script>
+    <script type="text/javascript" src="http://www.carsbag.ru/js/animate-css.js"></script>
+    <script type="text/javascript" src="http://www.carsbag.ru/js/countdown.js"></script>
+    <script>
+        function countdownTimer(){var countDownContainer=$('.coundown');if(countDownContainer.length){countDownContainer.countdown({date:"December 4, 2087 09:59:59"});};}
+        function CounterNumberChanger(){var timer=$('.timer');if(timer.length){timer.each(function(){$(this).appear(function(){var value=$(this).text();$(this).countTo({from:1,to:value,speed:3000});});});}}
+        $(document).on('ready',function(){
+            countdownTimer();
+            CounterNumberChanger();
+        });
+    </script>
+    <script type="text/javascript">
+
+
+        jQuery(document).ready(function () {
+           
+
+            jQuery('.menutoggler').click(function(){
+                jQuery('#menu .nav.menu').slideToggle('normal');
+                return false;
+            });
+            
+            
+          
+           jQuery("#menu, .fmenu, .slider-go").on("click","a", function (event) {
+                event.preventDefault();
+                var id = jQuery(this).attr('href'),
+                 
+                top = jQuery(id).offset().top;
+                jQuery('body,html').animate({scrollTop: top}, 1000);
+            });
+            
+            jQuery('.row1-form').animated('slideInRight');
+            jQuery('.row1-desc').animated('slideInLeft');
+            jQuery('.r2-form1-left').animated('slideInLeft');
+            jQuery('.r2-form1-right').animated('slideInRight');
+            jQuery('.r2-form2-img').animated('slideInUp');
+            jQuery('.row3-title, .h3').animated('slideInUp');
+            jQuery('.row3-inner-label, .row3-inner-label3').animated('slideInRight');
+            jQuery('.row3-inner-label2').animated('slideInLeft');
+
+            jQuery('.c-hamburger').click(function(){
+                jQuery('#menu').slideToggle('normal');
+                jQuery(this).toggleClass('is-active');
+                return false;
+            });
+        });
+    </script>
+    <style>
+        .totalPrice {
+            text-align: center;
+            margin: 20px auto;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div id="wrapp">
+    <div id="main">
+        <div id="header">
+            <div class="container">
+                <div class="menutoggler">
+                    <button class="c-hamburger c-hamburger--htx">
+                        <span>Раскрыть меню</span>
+                    </button>
+                </div><!-- end menutoggler -->
+                <div id="logo">
+                    <a href="http://www.carsbag.ru/"></a>
+                </div><!-- end logo -->
+                <div id="head-call">
+                    <a href="#" data-reveal-id="OrderModal">Заказать звонок</a>
+                </div><!-- end head-call -->
+                <!--<div id="head-phone">
+                    <a href="tel:88006005278">8 800 600 52 78</a>
+                    <div id="head-desc">Бесплатный звонок по РФ</div>
+                </div>
+                -->
+                <!-- end head-phone -->
+                <div class="clr"></div>
+            </div><!-- end .inner -->
+        </div><!-- end header -->
+        <div id="menu">
+            <div class="container">
+            
+          
+        
+            <ul class="nav-navbar-nav">
+       <li class=""><a href="#row1" >Подобрать саквояж </a></li> <li class=""><a href="#preim" >Преимущества</a></li> <li class=""><a href="#gallery" >Фотогалерея</a></li> <li class=""><a href="#video" >Видеоотзывы</a></li> <li class=""><a href="#contacts" >Контакты</a></li></ul>     
+                
+            
+                            </div><!-- end inner -->
+        </div><!-- end menu -->
+
+
+
+
+ <div id="row1">
+ <div id="slider-on-main"><div class="slideronmain slider-widget" data-pagination="" data-dots="" style=""><div class="owl-carousel owl-theme"><div class="item_wrapper bgdark"><img  src="http://www.carsbag.ru/cache/slider/1800x500x5c1ce93cd3467.png"><div><div class="slide_text_wrapper"><div class="line1">Саквояж для вашего автомобиля </div><div class="line2"> </div><div class="line3">Сохрани чистоту и порядок в салоне автомобиля</div><div class="undername"></div><div class="link"><a class="link" href=""></a></div></div></div></div><div class="item_wrapper bgdark"><img  src="http://www.carsbag.ru/cache/slider/1800x500x5c1ceec452c9c.jpg"><div><div class="slide_text_wrapper"><div class="line1">Порядок в салоне и багажнике</div><div class="line2"> </div><div class="line3">Любой нужный инструмент или аксессуар у вас всегда в одном месте</div><div class="undername"></div><div class="link"><a class="link" href=""></a></div></div></div></div><div class="item_wrapper bgdark"><img  src="http://www.carsbag.ru/cache/slider/1800x500x5c1cf0070aed4.jpg"><div><div class="slide_text_wrapper"><div class="line1">Индивидуальный стиль</div><div class="line2"> </div><div class="line3">Вы можете выбрать цвет материала саквояжа, а также цвет нити и окантовки</div><div class="undername"></div><div class="link"><a class="link" href=""></a></div></div></div></div></div></div></div>
+
+<!-- end slider-inner -->
+                <!--	<div class="coundown__shell">
+                    <p class="coundown__title">Время акции <span class="coundown__text">Успей купить по новой цене</span></p>
+                    <ul class="list-inline coundown"></ul>
+                    </div>-->
+            </div><!-- end row1 -->
+<a id="goodconstructor"></a>
+           <div  class="widgetblock-onmain widgetblock orderform"><div id="row2" class="orderplate" data-good="1" data-baseprice="3000" data-count="1">
+                <div class="row2-title" style="display:none">Подобрать саквояж</div>
+                <div class="steps steps__shell" style="display:none">
+                    <p class="steps__cell">Подберите цвет саквояжа<span class="steps__description">Цвет материала, нити и окантовки, добавление значка</span></p>
+                    <p class="steps__cell">Добавьте значок с логотипом<span class="steps__description">+ 200 руб к стоимости</span></p>
+                    <p class="steps__cell">Оформить заказ<span class="steps__description">И купить саквояж</span></p>
+                </div>
+                <div id="orderform">
+<div class="container">                    <div class="new__block-1">
+                        <div class="inner">
+	<div class="row2-title">
+		<div>Подберите саквояж</div>
+		<div class="choice__price">Стоимость: 3 100 <span>руб.</span></div>
+	</div>
+	<div class="newStyle__shell">
+	<div class="r2-form1-left">
+		<img id="r2-form1-img1" src="">
+		<img id="r2-form1-img2" src="">
+		<img id="r2-form1-img3" src="">
+	
+               
+	</div><!-- end r2-form1-left -->
+	<div class="r2-form1-right">
+		<div class="option-block materialcolor-block"><div class="option-name" >Цвет материала</div><div class="option-data showed"><ul class="option-0"><li class="selected"><span class="option option- material-color-black optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51ca3af766.png" data-class="material-color-black" data-good="1" data-cat="185" data-show="2" data-id="2" data-container="option-0" data-param="35" data-value="2"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51ca3af766.png"></span> <span class="name">Черный</span></span></li><li ><span class="option option- material-color-red optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51c7eb4202.png" data-class="material-color-red" data-good="1" data-cat="185" data-show="1" data-id="1" data-container="option-0" data-param="35" data-value="1"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51c7eb4202.png"></span> <span class="name"> Красный</span></span></li><li ><span class="option option- material-color-blue optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51d0d2339a.png" data-class="material-color-blue" data-good="1" data-cat="185" data-show="3" data-id="3" data-container="option-0" data-param="35" data-value="3"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51d0d2339a.png"></span> <span class="name"> Синий</span></span></li><li ><span class="option option- material-color-gray optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51d2af16b5.png" data-class="material-color-gray" data-good="1" data-cat="185" data-show="4" data-id="4" data-container="option-0" data-param="35" data-value="4"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51d2af16b5.png"></span> <span class="name">Серый</span></span></li><li ><span class="option option- material-color-beg optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51d3da8ebf.png" data-class="material-color-beg" data-good="1" data-cat="185" data-show="5" data-id="5" data-container="option-0" data-param="35" data-value="5"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51d3da8ebf.png"></span> <span class="name">Бежевый</span></span></li><li ><span class="option option- material-color-brown optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf51d54e3ed6.png" data-class="material-color-brown" data-good="1" data-cat="185" data-show="6" data-id="6" data-container="option-0" data-param="35" data-value="6"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf51d54e3ed6.png"></span> <span class="name"> Коричневый</span></span></li><li ><span class="option option- material-color-orange optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5c21c5f653403.png" data-class="material-color-orange" data-good="1" data-cat="185" data-show="20" data-id="20" data-container="option-0" data-param="35" data-value="20"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5c21c5f653403.png"></span> <span class="name">Оранжевый</span></span></li><li ><span class="option option- material-color-biruza optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5c21c72152c91.png" data-class="material-color-biruza" data-good="1" data-cat="185" data-show="21" data-id="21" data-container="option-0" data-param="35" data-value="21"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5c21c72152c91.png"></span> <span class="name">Бирюзовый</span></span></li><li ><span class="option option- material-color-white optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5c24128ae0403.png" data-class="material-color-white" data-good="1" data-cat="185" data-show="22" data-id="22" data-container="option-0" data-param="35" data-value="22"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5c24128ae0403.png"></span> <span class="name">Белый</span></span></li></ul></div></div>
+		<div class="option-block threadcolor-block"><div class="option-name" >Цвет нити</div><div class="option-data showed"><ul class="option-1"><li class="selected"><span class="option option- thread-color-black optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf521d2a7581.png" data-class="thread-color-black" data-good="1" data-cat="185" data-show="8" data-id="8" data-container="option-1" data-param="36" data-value="8"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf521d2a7581.png"></span> <span class="name"> Черный</span></span></li><li ><span class="option option- thread-color-red optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf521b923dea.png" data-class="thread-color-red" data-good="1" data-cat="185" data-show="7" data-id="7" data-container="option-1" data-param="36" data-value="7"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf521b923dea.png"></span> <span class="name">Красный</span></span></li><li ><span class="option option- thread-color-blue optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf521e8890c3.png" data-class="thread-color-blue" data-good="1" data-cat="185" data-show="9" data-id="9" data-container="option-1" data-param="36" data-value="9"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf521e8890c3.png"></span> <span class="name">Синий</span></span></li><li ><span class="option option- thread-color-gray optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf5220a0cb60.png" data-class="thread-color-gray" data-good="1" data-cat="185" data-show="10" data-id="10" data-container="option-1" data-param="36" data-value="10"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf5220a0cb60.png"></span> <span class="name">Серый</span></span></li><li ><span class="option option- thread-color-beg optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf522205bedf.png" data-class="thread-color-beg" data-good="1" data-cat="185" data-show="11" data-id="11" data-container="option-1" data-param="36" data-value="11"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf522205bedf.png"></span> <span class="name">Бежевый</span></span></li><li ><span class="option option- thread-color-white optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf5223a3e5dc.png" data-class="thread-color-white" data-good="1" data-cat="185" data-show="12" data-id="12" data-container="option-1" data-param="36" data-value="12"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf5223a3e5dc.png"></span> <span class="name">Белый</span></span></li></ul></div></div>
+		<div class="option-block bordercolor-block"><div class="option-name" >Цвет окантовки</div><div class="option-data showed"><ul class="option-2"><li class="selected"><span class="option option- border-color-black optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf522c41e1c9.png" data-class="border-color-black" data-good="1" data-cat="185" data-show="14" data-id="14" data-container="option-2" data-param="37" data-value="14"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf522c41e1c9.png"></span> <span class="name"> Черный</span></span></li><li ><span class="option option- border-color-red optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf522afab397.png" data-class="border-color-red" data-good="1" data-cat="185" data-show="13" data-id="13" data-container="option-2" data-param="37" data-value="13"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf522afab397.png"></span> <span class="name">Красный</span></span></li><li ><span class="option option- border-color-blue optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf522d89eaf6.png" data-class="border-color-blue" data-good="1" data-cat="185" data-show="15" data-id="15" data-container="option-2" data-param="37" data-value="15"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf522d89eaf6.png"></span> <span class="name"> Синий</span></span></li><li ><span class="option option- border-color-white optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf522ef1f623.png" data-class="border-color-white" data-good="1" data-cat="185" data-show="16" data-id="16" data-container="option-2" data-param="37" data-value="16"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf522ef1f623.png"></span> <span class="name">Белый</span></span></li><li ><span class="option option- border-color-beg optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf52310ad2f6.png" data-class="border-color-beg" data-good="1" data-cat="185" data-show="17" data-id="17" data-container="option-2" data-param="37" data-value="17"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf52310ad2f6.png"></span> <span class="name">Бежевый</span></span></li><li ><span class="option option- border-color-brown optionparent islast"  data-imagedict="http://www.carsbag.ru/cache/dict/200x200x5bf5232aa9090.png" data-class="border-color-brown" data-good="1" data-cat="185" data-show="18" data-id="18" data-container="option-2" data-param="37" data-value="18"  data-price='{"price":null,"count":"1","image":""}'><span class="wrp-image"><img src="http://www.carsbag.ru/cache/dict/200x200x5bf5232aa9090.png"></span> <span class="name">Коричневый</span></span></li></ul></div></div>
+			</div><!-- end r2-form1-right -->
+	<div class="clr"></div>
+</div>
+</div>
+<!-- end inner -->
+                    </div>
+                    <div class="new__blocks-2" style="display:block">
+                        <div class="inner r2f2-margin">
+	<div class="row2-title">
+		Добавить логотип
+		<div>Стоимость: <span id="shieldcost"></span> руб.</div>
+
+</div>
+	<div><div class="r2-form2-img r2-form2-img-bottom"  >
+		<!--<img src="/images/r2-form2.jpg" />-->
+		<img id="r2-form1-img1-bottom" src="">
+		<img id="r2-form1-img2-bottom" src="">
+		<img id="r2-form1-img3-bottom" src="">
+		<div class="r2-form2-label"></div>
+	</div>
+	</div></div>
+	<!-- end r2-form2-img -->
+</div><!-- end inner -->
+   </div>
+<div class="r2-form2-inner">
+	<div class="container inner-action">
+		<ul class="ul conngoods"><li class="selected">
+			<div class="r2-form2-cell">
+				<label class="r2i31" style="background:url(http://www.carsbag.ru/images/bz.jpg)"><input type="radio" name="mark" value="Без логотипа" checked /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"19","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Mercedes-Benz","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923b2a5c6b.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923b2a5c6b.png)"><input type="radio" name="mark" value="Шильдик Mercedes-Benz" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"5","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Amg","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0922cb596b3.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0922cb596b3.png)"><input type="radio" name="mark" value="Шильдик Amg" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"4","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Audi","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0922e6036e2.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0922e6036e2.png)"><input type="radio" name="mark" value="Шильдик Audi" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"29","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Toyota","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c092444a7120.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c092444a7120.png)"><input type="radio" name="mark" value="Шильдик Toyota" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"6","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Bmw M","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09230c9f490.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09230c9f490.png)"><input type="radio" name="mark" value="Шильдик Bmw M" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"7","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Bmw","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0922ffd4805.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0922ffd4805.png)"><input type="radio" name="mark" value="Шильдик Bmw" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"8","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Citroen","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923260e4ef.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923260e4ef.png)"><input type="radio" name="mark" value="Шильдик Citroen" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"2","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Chevrolet","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5bf5242e46628.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5bf5242e46628.png)"><input type="radio" name="mark" value="Шильдик Chevrolet" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"10","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Ford","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923319a7da.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923319a7da.png)"><input type="radio" name="mark" value="Шильдик Ford" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"11","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Hyundai","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09234b31c81.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09234b31c81.png)"><input type="radio" name="mark" value="Шильдик Hyundai" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"12","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Honda","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09233e38e9c.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09233e38e9c.png)"><input type="radio" name="mark" value="Шильдик Honda" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"13","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Infinity","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c092358943e9.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c092358943e9.png)"><input type="radio" name="mark" value="Шильдик Infinity" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"14","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Jaguar","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923642088d.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923642088d.png)"><input type="radio" name="mark" value="Шильдик Jaguar" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"15","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Jeep","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923700a324.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923700a324.png)"><input type="radio" name="mark" value="Шильдик Jeep" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"16","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Kia","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09237cca68b.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09237cca68b.png)"><input type="radio" name="mark" value="Шильдик Kia" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"18","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Lada","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09238b178a0.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09238b178a0.png)"><input type="radio" name="mark" value="Шильдик Lada" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"32","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a \u041b\u0435\u043a\u0441\u0443\u0441","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c3285c0701fd.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c3285c0701fd.png)"><input type="radio" name="mark" value="Шильдик Лексус" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"17","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Land Rover","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c092399729c3.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c092399729c3.png)"><input type="radio" name="mark" value="Шильдик Land Rover" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"20","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Mazda","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923a625a6c.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923a625a6c.png)"><input type="radio" name="mark" value="Шильдик Mazda" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"21","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Mini","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923be98cf6.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923be98cf6.png)"><input type="radio" name="mark" value="Шильдик Mini" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"22","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Mitsubishi","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923cb277b6.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923cb277b6.png)"><input type="radio" name="mark" value="Шильдик Mitsubishi" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"23","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Opel","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923d632a04.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923d632a04.png)"><input type="radio" name="mark" value="Шильдик Opel" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"24","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Peogeot","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923e29dc7a.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923e29dc7a.png)"><input type="radio" name="mark" value="Шильдик Peogeot" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"25","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Porsche","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0923fe8999e.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0923fe8999e.png)"><input type="radio" name="mark" value="Шильдик Porsche" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"26","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Renault","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c09240dbe832.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c09240dbe832.png)"><input type="radio" name="mark" value="Шильдик Renault" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"3","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Skoda","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5bf524397497d.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5bf524397497d.png)"><input type="radio" name="mark" value="Шильдик Skoda" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"27","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Subaru","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0924249a978.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0924249a978.png)"><input type="radio" name="mark" value="Шильдик Subaru" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"28","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Suzuki","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c092437df566.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c092437df566.png)"><input type="radio" name="mark" value="Шильдик Suzuki" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"30","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a Volvo","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0924619105d.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0924619105d.png)"><input type="radio" name="mark" value="Шильдик Volvo" /><span class="r2f2span"></span></label>
+			</div>
+</li><li >
+<div class="r2-form2-cell">
+				<label class="r2i31" data-connected='{"price":"200","good":"31","name":"\u0428\u0438\u043b\u044c\u0434\u0438\u043a VolksWagen","bg":"http:\/\/www.carsbag.ru\/cache\/goods_photos\/300x200x5c0924530a34b.png"}'  style="background:url(http://www.carsbag.ru/cache/goods_photos/300x200x5c0924530a34b.png)"><input type="radio" name="mark" value="Шильдик VolksWagen" /><span class="r2f2span"></span></label>
+			</div>
+</li></ul>
+		</div><!-- end inner -->
+<span class="r2f3__button r2f3__button-action">Показать остальные марки</span>
+</div><!-- end r2-form2-inner -->
+    
+    <div class="btnaddtoorder_wrp btnaddtoorder_wrp_oneclick">
+   <div id="popup_oneclick" style="display: none;">
+<div class="oneclick">
+<form  method=post id="oneclick" onsubmit="MakeOrderSimple(this);try{ fbq('track', 'Lead');}catch(e){};return false">
+<div class="row">
+	<div class="col-md-6">
+		<div class="r2-form3-cell inner__name">
+			<label>Ваше имя </label>
+			<input type="text" name="i" required="required">
+		</div>
+	</div>
+<div class="col-md-6">
+
+	<div class="r2-form3-cell inner__phone">
+			<label>Ваш телефон </label>
+			<input type="text" class="inputphone" name="phone" required="">
+			
+</div>
+
+</div>
+</div>
+
+
+<label class="r2-form3-agree">
+<input type="checkbox" checked="checked" required="required" class="checkbox-form">Я согласен с <a href="http://www.carsbag.ru/policy/" target="_blank">правилами</a> сайта</label>
+  <button name="r2go" class="r2go" >Купить в 1 клик</button>
+ <div id="errormessage" style="text-align: center;color: red"></div>
+    </form>
+</div>
+ </div>
+    <button name="r2go" class="r2go" onclick="OpenPopupOneClick()"  >Купить в 1 клик</button>
+               </div>     
+ 	<div class="btnaddtoorder_wrp1">	<button name="r2go" class="r2go r2gofull" style="margin: auto;"  onclick="AddToBasket(this);return false;">Оформить заказ</button></div>
+	</div><!-- end inner -->
+</div></div>
+
+
+<a id="preim"></a>
+                         <div id="row3">
+              <div class="row3-inner">
+	<div class="goods goods-type-standart">
+	<div  class="widgetblock-plateonmain widgetblock plateonmain"><h2>Саквояжи Car’sBag это</h2><div class="goods__shell"><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3d79edeff5.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3d79edf0e1.png)"></span> Порядок в салоне и багажнике<h3>
+					<p class="goods__text">С саквояжем CarsBag в салоне и багажнике вашего автомобиля будет всегда царить чистота и порядок. Любой нужный инструмент или аксессуар у вас всегда в одном месте, а значит не придется тратить время на его поиски.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3d7d059af7.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3d7d059bce.png)"></span> Экономия пространства<h3>
+					<p class="goods__text">Вместительный саквояж Car’sBag легко вмещается и гармонично вписывается в багажник любой марки автомобиля. Он не занимает много места и экономит пространство.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e1f263143.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e1f263232.png)"></span> Индвидуальный стиль<h3>
+					<p class="goods__text">Вы можете выбрать текстуру и цвет материала саквояжа, а также цвет нити и окантовки. После выбора цвета материала, нити и окантовки, вы можете заказать нанесения значка марки вашего автомобиля выполенного из метала.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e20ad6a61.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e20ad6bbd.png)"></span> Быстрая<br>доставка<h3>
+					<p class="goods__text">Быстрая доставка Почтой России и службой доставки CDEK.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e21dc7b7a.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e21dc7c74.png)"></span> Собственное производство<h3>
+					<p class="goods__text">Мы сами изготавливаем наши саквояжи, уделяя особое внимание качеству и скорости изготовления заказа.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e23561e7e.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e23561f56.png)"></span> Оплата при получении<h3>
+					<p class="goods__text">Вы оплачиваете заказ только после того как получите его на руки.</p>
+				</div>       </div></div></div>
+	</div>	
+
+</div>
+            </div><!-- end row3 -->
+          <a id="gallery"></a>
+                            <div id="row4">
+                <div class="inner">
+							<div class="h3">Фотогалерея</div>
+						
+			<div  class="widgetblock-onmain widgetblock "><div class="container"><div class="slideme"><div class="slider-params" data-count="4" data-pagination="" data-dots="1"></div><div class=" owl-carousel owl-theme "><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c25ca3b3b801.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c25ca3b3b801.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c25ca2cb5baf.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c25ca2cb5baf.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c25ca2053890.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c25ca2053890.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c25ca12a636a.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c25ca12a636a.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c25c9e7b60ac.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c25c9e7b60ac.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a86196d9bb.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a86196d9bb.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a84809887c.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a84809887c.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a8480985c0.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a8480985c0.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a8480982c8.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a8480982c8.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848097ffc.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848097ffc.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848097d51.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848097d51.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848097a42.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848097a42.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848097490.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848097490.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848097193.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848097193.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848096b3b.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848096b3b.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848096849.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848096849.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a848095fa1.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a848095fa1.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a8480956ef.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a8480956ef.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5c0a84809506f.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5c0a84809506f.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5bf3eae07b504.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5bf3eae07b504.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5bf3ea679050f.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5bf3ea679050f.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5bf3ea678fffa.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5bf3ea678fffa.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5bf3ea678fbaa.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5bf3ea678fbaa.jpg"><div class="zoom"></div></a></div></div><div><div class="gallery-item"><a data-fancybox="gallery" href="http://www.carsbag.ru/cache/gallery/1024x768x5bf3ea678e537.jpg" title=""><img title="" src="http://www.carsbag.ru/cache/gallery/250x250x5bf3ea678e537.jpg"><div class="zoom"></div></a></div></div></div></div></div></div>
+
+	
+                </div><!-- end inner -->
+            </div><!-- end row4 -->
+        <a id="video"></a>
+            <div id="row5">
+                <div class="inner">
+					<div  class="widgetblock-vodeoonmain widgetblock video__shell"><div class="container"><h2>Видео о саквояжах Car’sBag</h2><div class="row "><div class="col-md-6"><div class="" > <div class="video__cell"> <iframe width="560" height="315" src="https://www.youtube.com/embed/4MZFt86uYY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>    </div></div><div class="col-md-6"><div class="" > <div class="video__cell"> <iframe width="560" height="315" src="https://www.youtube.com/embed/9ojrlUwqBVY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>    </div></div><div class="col-md-6"><div class="" > <div class="video__cell"> <iframe width="560" height="315" src="https://www.youtube.com/embed/saKyVAPZXEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>    </div></div><div class="col-md-6"><div class="" > <div class="video__cell"> <iframe width="560" height="315" src="https://www.youtube.com/embed/FwsLRqXljoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>    </div></div></div></div></div>
+                </div><!-- end inner -->
+            </div><!-- end row5 -->
+
+                        
+
+<a id="contacts"></a>
+        <div class="contacts contacts__block">
+            <div class="contacts__left">
+                <div class="contacts__shell">
+                    <h2 class="contacts__title">
+	Контакты</h2>
+<p class="contacts__text">
+	Прием заказов круглосуточно</p>
+<p>
+	<a class="contacts__link contacts__link-type-mail" href="#">E-mail <span class="contacts__span">carsbagg@gmail.com</span></a> <!--<a class="contacts__link contacts__link-type-phone" href="#">Телефон <span class="contacts__span">8 800 600 52 78</span></a>--></p>
+
+                </div>
+            </div>
+            <div class="contacts__right">
+                <h2 class="contacts__title contacts__title-type-black">Обратная связь</h2>
+                <p class="contacts__text contacts__text-type-black">Оставьте Ваше сообщение и мы свяжемся с Вами</p>
+                <form method="post" id="contactform" class="contacts__form" onsubmit="SendRequest(this);return false;">
+                    <div class="contacts__formShell"><label class="contacts__label">Ваше имя</label><input required name="Ваше имя" type="text" class="contacts__input"></div>
+                    <div class="contacts__formShell"><label class="contacts__label">Ваш телефон</label><input name="Ваш телефон" type="text" class="contacts__input"></div>
+                    <div class="contacts__formShell"><label for="sitelaw" class="contacts__lawLabel"><input id="sitelaw" class="contacts__checkbox" type="checkbox" name="fagree" checked required="required">Я согласен с правилами сайта</label></div>
+                    <div class="contacts__formShell"><input name="fsend" class="contacts__submit" type="submit" value="Отправить"></div>
+                </form>
+            </div>
+        </div>
+<!-- 
+
+<div class="clear"></div>
+<div> <div  class="widgetblock-plateonmain widgetblock plateonmain"><h2>Саквояжи Car’sBag это</h2><div class="goods__shell"><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3d79edeff5.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3d79edf0e1.png)"></span> Порядок в салоне и багажнике<h3>
+					<p class="goods__text">С саквояжем CarsBag в салоне и багажнике вашего автомобиля будет всегда царить чистота и порядок. Любой нужный инструмент или аксессуар у вас всегда в одном месте, а значит не придется тратить время на его поиски.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3d7d059af7.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3d7d059bce.png)"></span> Экономия пространства<h3>
+					<p class="goods__text">Вместительный саквояж Car’sBag легко вмещается и гармонично вписывается в багажник любой марки автомобиля. Он не занимает много места и экономит пространство.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e1f263143.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e1f263232.png)"></span> Индвидуальный стиль<h3>
+					<p class="goods__text">Вы можете выбрать текстуру и цвет материала саквояжа, а также цвет нити и окантовки. После выбора цвета материала, нити и окантовки, вы можете заказать нанесения значка марки вашего автомобиля выполенного из метала.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e20ad6a61.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e20ad6bbd.png)"></span> Быстрая<br>доставка<h3>
+					<p class="goods__text">Быстрая доставка Почтой России и службой доставки CDEK.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e21dc7b7a.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e21dc7c74.png)"></span> Собственное производство<h3>
+					<p class="goods__text">Мы сами изготавливаем наши саквояжи, уделяя особое внимание качеству и скорости изготовления заказа.</p>
+				</div>       </div><div class="plate blackplate" style="background:url(http://www.carsbag.ru/images/html_content/5bf3e23561e7e.jpg)">       <div class="goods__cell">
+					<h3 class="goods__title goods__title-icon-1"><span class="icon"  style="background:url(images/html_content/5bf3e23561f56.png)"></span> Оплата при получении<h3>
+					<p class="goods__text">Вы оплачиваете заказ только после того как получите его на руки.</p>
+				</div>       </div></div></div></div>
+<div class="clear"></div>
+<div> [goodsonmain]</div>
+
+	[manufacturers]
+<div class="container"><div class="row"><div class="col-md-12">	<div>
+	Материал EVA, из которого мы изготавливаем автомобильные коврики, обладает прекрасной амортизацией, практически не изнашивается, стоек к воздействиям растворителей, масел и других химических веществ, выдерживает очень низкую и высокую температуру окружающей среды (от &minus;80 до +55 градусов).&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Кроме того, материал не пропускает воду и грязь и не проводит электричество. Но одним из главных преимуществ этого полимера является тот факт, что автоковрики из этиленвинилацетата абсолютно экологичны и безопасны, не вызывают аллергии и стойки к воздействию болезнетворных бактерий и грибков, что особенно важно, если в салоне машины находятся дети.</div>
+</div></div></div>
+
+		[blockvideo]
+		
+		<div class="articlesblock">
+				[articles]
+				</div>
+		<div class=" newsblock">
+
+				[news]
+				</div>
+
+ -->
+
+
+
+
+
+
+
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+
+
+        <div id="footer">
+            <div class="container">
+                <div class="fcopy">
+                    <div  class="widgetblock-footertext widgetblock ">2018 © Саквояжи Car’sBag. Все права защищены.
+
+                    <div class="policy"><a href="/policy" target="_blank">Политика конфиденциальности</a>
+                        <div> ИП Буюклян М. А. </div>
+                        <div> ОГРНИП: 318619600208813</div>
+                    </div>
+</div>
+                    
+                                        <p class="footerSocial footerSocial__shell"><span>Мы в соцсетях</span>
+<div  class="widgetblock-social widgetblock social"><ul class=""><li class="selected"><a class=""  href="https://vk.com/carsbag">  <img src="http://www.carsbag.ru/images/html_content/5bf3d12aca8b8.png"></a></li><li ><a class=""  href="https://www.instagram.com/carsbag/">  <img src="http://www.carsbag.ru/images/html_content/5bf3d13e0390e.png"></a></li></ul></div>                    
+</p>
+                </div><!-- end fcopy -->
+                <div class="fmenu">
+                                              
+          
+        
+            <ul class="nav-navbar-nav">
+       <li class=""><a href="#row1" >Подобрать саквояж </a></li> <li class=""><a href="#preim" >Преимущества</a></li> <li class=""><a href="#gallery" >Фотогалерея</a></li> <li class=""><a href="#video" >Видеоотзывы</a></li> <li class=""><a href="#contacts" >Контакты</a></li></ul>     
+                
+            
+                                    </div><!-- end fmenu -->
+                <div class="fright">
+                    <!-- <div id="footer-phone">
+                        <a href="tel:88006005278">8 800 600 52 78</a>
+                    </div>
+                    <div id="footer-desc">Бесплатный звонок по РФ</div>
+                     -->
+                    <div id="footer-call">
+                        <a href="#" data-reveal-id="OrderModal">Заказать звонок</a>
+                    </div><!-- end head-call -->
+                    <!-- end head-desc -->
+                </div><!-- end fright -->
+                <div class="clr"></div>
+            </div><!-- end inner -->
+     <div class="develop"><div class="pt20px"><a class="dev-link" href="http://www.web-2a.ru">Разработка сайта</a>, web-2a.ru</div></div>
+     
+        </div><!-- end footer -->
+    
+    </div><!-- end main -->
+</div><!-- end wrapp -->
+<div id="OrderModal" class="reveal-modal medium">
+    <a class="close-reveal-modal">&#215;</a>
+    <div class="order-title">Закажите звонок</div>
+    <form method="post" name="contact" id="contactform" onsubmit="SendRequest(this);return false;">
+        <label>
+            <input required name="fname" type="text" placeholder="Ваше имя" />
+            <input class="hfield" name="hffield" type="text" />
+        </label>
+        <label>
+            <input required id="phone_field2" class="inputphone" name="fphone" type="text" placeholder="Ваш телефон" />
+        </label>
+        <label>
+            <input type="checkbox" checked required="required" name="fagree" class="checkbox-form" />
+            Я согласен с <a href="http://www.carsbag.ru/policy/" target="_blank">правилами</a> сайта
+        </label>
+        <input name="fsend" class="button b-green" type="submit" value="Отправить" onclick="yaCounter50186542.reachGoal ('zvonok');" />
+    </form>
+</div><!-- end OrderModal -->
+<script>
+$(document).ready(function(){
+  $('.new-photo-slider').owlCarousel({
+    responsive : {
+      0 : {
+		items: 1
+      },
+      480 : {
+		items: 2
+      },
+      768 : {
+		items: 3
+      },
+      1024 : {
+		items: 4
+      }
+    }
+  });
+  jQuery('.r2f3__button-action').click(function(){
+    jQuery('.r2f3__button-action').hide();
+    jQuery('.r2-form2-inner').addClass('inner-action-hide');
+  });
+});
+</script>
+<!-- Yandex.Metrika counter -->
+<script>
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50186542 = new Ya.Metrika2({
+                    id:50186542,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<!-- noscript><div><img src="https://mc.yandex.ru/watch/50186542" style="position:absolute; left:-9999px;" alt="" /></div></noscript -->
+<!-- /Yandex.Metrika counter -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '465874707272313');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=465874707272313&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript" src="http://www.carsbag.ru/assets/bottom.js?ver=0.2"></script>
+		
+
+</body>
+</html>
+
+      

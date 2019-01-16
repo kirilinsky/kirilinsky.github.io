@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<link rel="stylesheet" href="style.css">
+		</head>
+		<body>
+			<div class="wrap">
+				
+			</div>
+			<script>
+				console.log(sum(1)(2));
+				console.log(sum(48)(2));
+				function sum(a){
+					return function(b){
+						return a + b;
+					}
+				}
+
+				function makeBuffer(str) {
+					let strings = '';
+					
+					function buffer(str){
+						if(arguments.length == 0) {
+							console.log(strings);
+						} else{
+							strings += str;
+						}
+					}
+					buffer.clear = function(){
+						strings = '';
+					}
+					return buffer;
+
+
+				}
+				let buffer = makeBuffer();
+				buffer('Замыкания');
+				buffer(' Использовать');
+				buffer(' Нужно!');
+				buffer();
+				buffer.clear();
+				buffer('add new text');
+				buffer();
+			</script>
+			
+		</body>
+		</html>		

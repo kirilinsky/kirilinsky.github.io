@@ -1,0 +1,36 @@
+
+.wrap {
+	width: 490px;
+	height: 606px;
+	background: ivory;
+	box-shadow: 0 0 30px indigo;
+	margin: 105px auto;
+	padding: 15px;
+}
+a, a:link {
+	text-decoration: none;
+	color: brown;
+	font-family: sans-serif;
+	letter-spacing: 2px;
+	padding:2px 0;
+}
+li{
+	border: 1px solid lightgrey;
+	list-style: none;
+	transition: all 0.9s ease-in;
+}
+li:nth-child(odd) {
+	background: lightgrey;
+}
+li:nth-child(odd):hover {
+	background: yellow;
+}
+li{
+	padding:1px 0 0 3px;
+}
+li +.submenu {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: all 0.9s ease-in;
+}

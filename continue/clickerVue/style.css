@@ -1,0 +1,74 @@
+body {
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+.wrap {
+	width: 100%;
+	height: 99vh;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.leftSide{
+	width: 20%;
+	height: 99%;
+	outline: 1px solid green;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.rightSide {
+	width: 70%;
+	height: 99%;
+	outline: 1px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.subSide {
+	width: 7.5%;
+	height: 99%;
+	outline: 1px solid blue;
+}
+.forScore {
+	width: 99%;
+	height: 54%;
+	outline: 1px solid green;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.forButtons {
+	width: 99%;
+	height: 43%;
+	outline: 2px solid black;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.section {
+	width: 80%;
+	background: grey;
+	height: 32%;
+	border-radius: 5px;
+}
+.clicker {
+	width: 20%;
+	height: 20%;
+	background: aqua;
+	box-shadow: 0 0 5px blue;
+	transition:ease 0.5s;
+}
+.clicker:hover,.section:hover {
+	cursor: pointer;
+	box-shadow: 0 0 15px grey;
+	transition:ease 0.5s;
+}
+.clicker:active{
+	transition:ease 0.5s;
+	transform: scale(0.95);
+}

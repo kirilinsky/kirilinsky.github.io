@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Range</title>
+</head>
+<body>
+	<section id="forRange">
+		<input oninput="changer()" id="range" type="range" min="0" max="32" step="1" default="0">
+		<p id="txt"></p>
+	</section>
+
+	<script>
+		const txt = document.getElementById('txt');
+		txt.innerHTML = 0;
+		function changer() {
+			let range = document.getElementById('range');
+			
+			txt.innerHTML = range.value + ' человек';
+		}
+		
+	</script>
+</body>
+</html>
