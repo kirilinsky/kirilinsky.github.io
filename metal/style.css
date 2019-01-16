@@ -3,6 +3,12 @@ body{
 	padding: 0; 
 	font-size: 100%;
 }
+
+#foo{
+	width: 87%;
+	padding: 1px;
+}
+
 .wrap{
 	margin: 0 auto;
 	width: 80%;
@@ -24,7 +30,7 @@ header{
 	justify-content: center;
 	align-items: space-around;
 	flex-direction: row;
-	position:sticky;
+	//position:sticky;
 	top:0;
 }
 .label{
@@ -95,7 +101,7 @@ footer{
 }
 .line{
 	width:2px;
-	background: #000;
+	background: #FBBD03;
 	height: 85%;
 }
 section{

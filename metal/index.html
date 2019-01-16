@@ -9,13 +9,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="bootstrap.min.css">
+
 	<link rel="stylesheet" href="animate.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="fav.png" type="image/png">
 </head>
 <body>
+	 <!-- модальное окно превью  -->
+
+
+
 	<div class="wrap">
-		<header>
+		<header class="wow fadeIn">
 			<div class="label">
 				<h2 class="bordered">Юг-Трубосервис</h2>
 				<p>Продажа и хранение металлопроката</p>
@@ -30,30 +35,121 @@
 
 			</div>
 		</header>
-		<main>
+		<main class="wow fadeIn">
 			<div class="txt wow fadeInRight" data-wow-delay="2s">
 				<h2>Юг-Трубосервис</h2>
 				<p>Продажа и хранение металлопроката</p>
 			</div>
 			
 		</main>
-		<footer class="alert alert-secondary">
+		
+
+		<footer class="alert alert-secondary wow fadeIn">
 			<section>
-				<h4>Наши Реквизиты</h4>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">БИК  ************</li>
-					<li class="list-group-item">К/Счет ********</</li>
-				</ul>
+				<button type="button" class="btn badge-pill badge-warning" data-toggle="modal" data-target="#exampleModal">
+				  Наши реквизиты
+				</button>
 			</section>
 			<div class="line"></div>
 			<section>
 				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab9be53a1c85a5c8bb4c8b82b88259aa975287fcc330cb0b83e22e4b2efbc2c86&amp;source=constructor" width="auto" height="auto" frameborder="0"></iframe>
 			</section>
 		</footer>
+
 	</div>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Карточка компании</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <table class="table table-hover">
+	          <tbody>
+	            <tr>
+	              <td>Номер счета</td>
+	              <td>4070281026080001339</td>
+	            </tr>
+	            <tr>
+	              <td>Валюта</td>
+	              <td>RUR</td>
+	            </tr>
+	            <tr>
+	              <td>Название</td>
+	              <td>ООО "Юг-ТРУБОСЕРВИС"</td>	
+	            </tr>
+	            <tr>
+	              <td>ИНН</td>
+	              <td>6165213837</td>	
+	            </tr>
+	            <tr>
+	              <td>КПП</td>
+	              <td>616501001</td>	
+	            </tr>
+	            <tr>
+	              <td>Банк</td>
+	              <td>ФИЛИАЛ "РОСТОВСКИЙ" АО "АЛЬФА-БАНК"</td>	
+	            </tr>
+	            <tr>
+	              <td>БИК</td>
+	              <td>046015207</td>	
+	            </tr>
+	            <tr>
+	              <td>Кор.Счет</td>
+	              <td>30101810500000000207</td>	
+	            </tr>
+	            <tr>
+	              <td>Юр-Адрес</td>
+	              <td>г. Ростов-на-Дону, ул. Вавилова, д.73в, оф. 8</td>	
+	            </tr>
+	            
+	          </tbody>
+	        </table>
+	      </div>
+	      <div class="modal-footer">
+	      	<input id="foo" value="Номер счета - 4070281026080001339 | Валюта - RUR | Название - ООО 'Юг-ТРУБОСЕРВИС' | ИНН - 6165213837 | КПП - 616501001 | Банк - ФИЛИАЛ 'РОСТОВСКИЙ' АО АЛЬФА-БАНК | БИК - 046015207 | Кор.Счет - 30101810500000000207 | Юр-Адрес - г. Ростов-на-Дону, ул. Вавилова, д.73в, оф. 8">
+
+	      	<!-- Trigger -->
+	      	<button id="copy" class="btn btn-primary" data-clipboard-target="#foo">
+	      	    Скопировать
+	      	</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+
+	
+
+
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+	  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<script src="bootstrap.min.js"></script>
 	<script src="wow.min.js"></script>
 	<script>
 		 new WOW().init();
+		 let copBtn = document.getElementById('copy');
+
+		 var clipboard = new ClipboardJS('.btn');
+
+		 clipboard.on('success', function(e) {
+		     copBtn.innerHTML = 'Скопировано';
+		     copBtn.classList.add('btn-success');
+		     setTimeout((function(){
+		     	copBtn.innerHTML = 'Скопировать';
+		     	copBtn.classList.remove('btn-success');
+		     }),1500)
+		     e.clearSelection();
+		 });
+
 	</script>
 </body>
 </html>
