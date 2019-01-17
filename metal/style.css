@@ -7,21 +7,27 @@ body{
 #foo{
 	width: 87%;
 	padding: 1px;
+
 }
 
 .wrap{
 	margin: 0 auto;
 	width: 80%;
 	height: 100vh;
+	display: -ms-grid;
 	display: grid;
-	grid-template-areas: "head"
+	    grid-template-areas: "head"
                          "main"
                          "foot";
-	grid-template-columns: 1fr;
-	grid-template-rows: 185px auto 185px;
+	-ms-grid-columns: 1fr;
+	    grid-template-columns: 1fr;
+	-ms-grid-rows: 185px auto 185px;
+	    grid-template-rows: 185px auto 185px;
 	grid-gap: 10px;
 }
 header{
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
 	grid-area: head;
 	background: #E9E9E9 ;
 	border-radius: 0 0 10px 10px;
@@ -30,7 +36,8 @@ header{
 	justify-content: center;
 	align-items: space-around;
 	flex-direction: row;
-	//position:sticky;
+	position:-webkit-sticky;
+	position:sticky;
 	top:0;
 }
 .label{
@@ -62,6 +69,8 @@ header{
 }
 
 main{
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
 	grid-area: main;
 	position: relative;
 	background: url(gril.jpg);
@@ -74,9 +83,9 @@ main .txt {
 	position:absolute;
 	bottom:15%;
 	right:8%;
-	min-width: 30%;
+	min-width: 29%;
 	background: #384A7DDF;
-	padding: 25px 55px;
+	padding: 22px 52px;
 	color:#fff;
 }
  h2 {
@@ -94,6 +103,8 @@ footer{
 	border-radius: 10px 10px 0 0 !important; 
 	padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
+	-ms-grid-row:3;
+	-ms-grid-column:1;
 	grid-area:foot;
 	display: flex;
 	justify-content: space-around;
@@ -121,23 +132,27 @@ iframe{
 @media (max-width: 787px){
 	.wrap{
 		width: 90%;
-		grid-template-rows: 250px auto auto;
+		-ms-grid-rows: 270px auto 325px;
+		    grid-template-rows: 270px auto 325px;
 	}
 	footer,header{
 		flex-direction: column;
 		align-items: center;
 	}
-	main{
-		position:sticky;
-		top:245px;
-	}
+
 	section, .label,.contacts {
-		width: 87%;
-	}
-	.line{
 		width: 90%;
-		height: 1px;
-		margin:20px;
+	}
+	.contacts .badge {
+		margin: 12px 0;
+	}
+	.line {
+		width: 75%;
+		height: 2px;
+		margin:12px;
+	}
+	main .txt {
+		right: 0;
 	}
 	iframe{
 		width: 100%;
