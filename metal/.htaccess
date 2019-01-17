@@ -1,0 +1,36 @@
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+<ifModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+<ifModule mod_headers.c>
+	<FilesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=93200"
+	</FilesMatch>
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=934800"
+	</FilesMatch>
+	<FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=4592000"
+	</FilesMatch>
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+
+<ifModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month 15 days 2 hours"
+	ExpiresByType image/jpeg "access plus 1 month 15 days 2 hours"
+	ExpiresByType image/png "access plus 21 month 15 days 2 hours"
+	ExpiresByType image/gif "access plus 21 month 15 days 2 hours"
+	ExpiresByType application/x-shockwave-flash "access plus 21 month 15 days 2 hours"
+	ExpiresByType text/css "access plus 1 month 12 days 2 hours"
+	ExpiresByType text/javascript "access plus 1 month 15 days 2 hours"
+	ExpiresByType application/javascript "access plus 1 month 15 days 2 hours"
+	ExpiresByType application/x-javascript "access plus 1 month 15 days 2 hours"
+	ExpiresByType text/html "access plus 1 month 15 days 2 hours"
+	ExpiresByType application/xhtml+xml "access plus 1 month 15 days 2 hours"
+</ifModule>
