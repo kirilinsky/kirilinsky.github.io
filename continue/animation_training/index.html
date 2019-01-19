@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation lesson 6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100vh;
+			font-family: Gotham;
+			position: absolute;
+		}
+		.search{
+			width: 40px;
+			height: 40px;
+			border-radius: 20px;
+			background: #e5e5e5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			transform: rotate(0);
+			margin-right: 1px;
+			transition: all 125ms ease-in-out;
+		}
+		.search svg {
+			width: 20px;
+		}
+		.search-box{
+			height: 40px;
+			transition: all 125ms ease-in-out;
+			background: #e5e5e5;
+			overflow: hidden; 
+			width: 40px;
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		input{
+			height: 30px;
+			width: 0px;
+			border-radius: 15px;
+			border: none;
+			opacity: 0;
+			margin-left: 5px;
+			outline: none;
+			
+			background: black;
+			color: white;
+		}
+		.search-box:hover{
+			width: 200px;
+			transition: all 100ms ease-in-out;
+			cursor: pointer;
+		}
+		.search-box:hover input {
+			width: 140px;
+			opacity: 1;
+			padding-left: 10px;
+		}
+		.search-box:hover .search {
+			transition: all 700ms ease-in-out;
+			transform: rotate(360deg);
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="search-box">
+		<input type="text">
+		<div class="search">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 52.966 52.966" style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+			<circle style="fill:#57ABC1;" cx="21.983" cy="21" r="20"/>
+			<line style="fill:none;stroke:#556080;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="35.437" y1="35.798" x2="50.983" y2="51.966"/>
+			<path style="fill:#7CCBD8;" d="M3.002,27.253c0.848,2.582,2.24,5.018,4.167,7.146L35.382,6.186
+				c-2.129-1.928-4.564-3.319-7.146-4.167L3.002,27.253z"/>
+			<path style="fill:#556080;" d="M21.983,42c-11.58,0-21-9.42-21-21s9.42-21,21-21s21,9.42,21,21S33.562,42,21.983,42z M21.983,2
+				c-10.477,0-19,8.523-19,19s8.523,19,19,19s19-8.523,19-19S32.459,2,21.983,2z"/>
+			</svg>
+		</div>
+	</div>
+
+</body>
+</html>
