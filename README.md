@@ -53,7 +53,7 @@
 			
 			<a href="https://kirilinsky.github.io/faq/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
-		      <h5 class="mb-1"FAQ page.</h5>
+		      <h5 class="mb-1">FAQ page.</h5>
 		      <small>28/11/18</small>
 		    </div>
 		    <p class="mb-1">FAQ page, dont completed yet...</p>
