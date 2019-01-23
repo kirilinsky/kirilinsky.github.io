@@ -39,7 +39,7 @@
 		      <small>28/11/18</small>
 		    </div>
 		    <p class="mb-1">My Vue Trainig little Projects</p>
-		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small><i class="fab fa-vuejs"></i>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small> <i class="fab fa-vuejs"></i>
 		  </a>
 			
 			<a href="https://https://kirilinsky.ru/ajax/index.php" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -48,7 +48,7 @@
 		      <small>28/11/18</small>
 		    </div>
 		    <p class="mb-1">Simple app to adding small comments to SQL database</p>
-		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small><i class="fas fa-database"></i><i class="fab fa-php"></i>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small><i class="fas fa-database"></i> <i class="fab fa-php"></i>
 		  </a>
 			
 			<a href="https://kirilinsky.github.io/clicker/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
