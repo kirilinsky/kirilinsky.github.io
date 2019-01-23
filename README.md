@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-</head>
+</head>   
 <body>
 	<div class="wrap">
 		<div class="list-group">
@@ -39,7 +39,16 @@
 		      <small>28/11/18</small>
 		    </div>
 		    <p class="mb-1">My Vue Trainig little Projects</p>
-		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small><i class="fab fa-vuejs"></i>
+		  </a>
+			
+			<a href="https://https://kirilinsky.ru/ajax/index.php" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Testing via AJAX/MySQL</h5>
+		      <small>28/11/18</small>
+		    </div>
+		    <p class="mb-1">Simple app to adding small comments to SQL database</p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small><i class="fas fa-database"></i><i class="fab fa-php"></i>
 		  </a>
 			
 			<a href="https://kirilinsky.github.io/clicker/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
