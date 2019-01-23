@@ -1,7 +1,7 @@
 .wrap{
-			margin: 25px auto;
-			width: 65%;
-			box-shadow: 0 0 13px grey;
+			margin: 20px auto;
+			width: 77%;
+			box-shadow: 0 0 10px grey;
 		}
 		a.list-group-item:hover {
 			background: #2CA7FC;
