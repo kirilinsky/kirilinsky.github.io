@@ -1,6 +1,6 @@
 
 <link rel="icon" type="icon/png" href="https://kirilinsky.github.io/favicon.png">
-<p align="center"><a href="https://kirilinsky.ru" target="_blank"><img width="576" src="https://kirilinsky.github.io/gif_git/main.gif"></a></p>
+<p align="center"><a style="border:1px dashed grey;" href="https://kirilinsky.ru" target="_blank"><img width="576" src="https://kirilinsky.github.io/gif_git/main.gif"></a></p>
 <p align="center"><a href="https://kirilinsky.ru" target="_blank">my own portfolio</a></p>
 <p align="center"><a href="https://github.com/kirilinsky/kirilinsky.github.io" target="_blank">this repository</a></p>
 
@@ -32,4 +32,11 @@
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
 [Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
 [Vue Training](https://kirilinsky.github.io/vue_train/).       | Look at me, ive got that exemplar vue now
-
+<a href="https://kirilinsky.github.io/continue/drop/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Adaptive Dropdown list</h5>
+		      <small>26/09/18</small>
+		    </div>
+		    <p class="mb-1">Lesson for a little bit responsive. Menu with drowdown hover effect.</p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
+		  </a>
