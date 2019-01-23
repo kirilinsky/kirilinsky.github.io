@@ -24,32 +24,42 @@
 ## another yet...
 
 
-
-
- what                                             | why
---------------------------------------------------|--------------------
-[Forgotten works](https://kirilinsky.github.io/continue/continue.html).|You're too, Brutus?
-[F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
-[Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
-[Vue Training](https://kirilinsky.github.io/vue_train/).       | Look at me, ive got that exemplar vue now
-<a href="https://kirilinsky.github.io/continue/drop/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
-
-<br>
-
-
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="bootstrap.min.css">
-	<title>Well, thats boring</title>
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
-	<a href="https://kirilinsky.ru" class="backToSchool">
-		<i class="fas fa-home"></i>
-	</a>
 	<div class="wrap">
 		<div class="list-group">
+			<a href="https://kirilinsky.github.io/vue_train/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">[Vue Training]</h5>
+		      <small>28/11/18</small>
+		    </div>
+		    <p class="mb-1">My Vue Trainig little Projects</p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
+		  </a>
+			
+			<a href="https://kirilinsky.github.io/clicker/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Monster'A!</h5>
+		      <small>28/11/18</small>
+		    </div>
+		    <p class="mb-1">Dont forget water your monster'a!</p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
+		  </a>
+			
+			<a href="https://kirilinsky.github.io/faq/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1"FAQ page.</h5>
+		      <small>28/11/18</small>
+		    </div>
+		    <p class="mb-1">FAQ page, dont completed yet...</p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> </small>
+		  </a>
+			
 		  <a href="https://kirilinsky.github.io/continue/adaptivemenu/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Adaptive Menu</h5>
