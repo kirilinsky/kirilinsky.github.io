@@ -18,6 +18,7 @@
 <a href="https://kirilinsky.github.io/mini/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/mini.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/menu/" target="_blank" ><img src="https://kirilinsky.github.io/gif_git/menu.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/metal/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/metal.gif" width="288"></a>
+<a href="https://kirilinsky.github.io/space/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/save.gif" width="288"></a>
 
 ## another yet...
 
@@ -28,7 +29,6 @@
 --------------------------------------------------|--------------------
 [Forgotten works](https://kirilinsky.github.io/continue/continue.html).|You're too, Brutus?
 [F-A-Q](https://kirilinsky.github.io/faq/).       | FAQ page.
-[Tickets to Mars](https://kirilinsky.github.io/space/).       | Now what, Elon?
 [Monster'A!](https://kirilinsky.github.io/clicker/).       | Dont forget water your monster'a!
 [Vue Training](https://kirilinsky.github.io/vue_train/).       | Look at me, ive got that exemplar vue now
 
