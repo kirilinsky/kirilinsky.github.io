@@ -493,7 +493,7 @@ and (min-width : 200px){
 		margin:18px;
 	}
 	.btns{
-		width:78%;
+		width:100%;
 		z-index: 100;
 		position: fixed;
 		top:0;
@@ -543,7 +543,7 @@ and (min-width : 200px){
 		display: block;
 		width: 99%;
 		text-align: center;
-		font-size: 1.1rem;
+		font-size: 1.14rem;
 		background: #00000015;
 		padding: 15px 2px;
 	}
@@ -566,7 +566,7 @@ and (min-width : 200px){
 		display: block;
 		width: 75%;
 		text-align: center;
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 	}
 	.label {
 		margin: 0;
