@@ -434,7 +434,7 @@ and (min-width : 200px){
 	form{
 		flex-flow: column nowrap;
 		height: auto;
-		width: 65%;
+		width: 99%;
 		margin:25px auto;
 		justify-content: space-between;
 		align-items: center;
@@ -444,6 +444,7 @@ and (min-width : 200px){
 		width: 95%;
 	}
 	h1.submit{
+		font-size: 2rem;
 		text-align: center;
 	}
 	.trust_item{
