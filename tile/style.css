@@ -199,7 +199,7 @@ section{
 	max-height: 99%;
 }
 h4{
-	margin:7px;
+	margin:8px;
 }
 ul{
 	margin:0 auto;
@@ -207,15 +207,37 @@ ul{
 	text-align: left;
 }
 li{
-	margin: 5px 0;
+	margin: 11px 0;
+	font-size: 0.9rem;
 }
 li:nth-child(even){
 	background: #F9F9F9;
 }
 .item > .btn{
 	margin-top: 10px;
-	padding: 6px 12px;
+	padding: 6px 13px;
 }
 .examples {
 	background:#F0F0F0; 
+}
+.midd{
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: space-around;
+}
+.comments{
+	width: 99%;
+	min-height: 65%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.white{
+	background: #fff;
+	padding: 25px;
+}
+.comments > .item:hover {
+	transition: ease 0.5s;
+	transform: scale(1.1);
 }
