@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Third</title>
+	<link rel="stylesheet" href="boot.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<style>
+		.el {
+			margin:27px auto;
+			width: 90%;
+			border: 2px solid lightgrey;
+			box-shadow: 1px 1px 2px grey;
+			border-radius: 5px;
+			min-height: 429px;
+			display: flex;
+			justify-content: space-around;
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+		.slide-enter{
+			opacity: 0;
+		}
+		.slide-enter-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-active{
+			transition: opacity 0.4s;
+		}
+		.slide-leave-to{
+			opacity: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="el">
+		<div class="first">1</div>
+		<div class="second">2</div>
+		<div class="third">3</div>
+	</div>
+	<script src="vue.js"></script>
+	<script>
+	
+
+	let app = new Vue({
+		el: '.el',
+		data: {
+			
+		},
+		computed:{
+			
+		}
+	})
+
+	
+	</script>
+</body>
+</html>
