@@ -32,7 +32,7 @@ nav{
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 75px;
+	min-height: 85px;
 	align-items: center;
 	padding: 15px;
 }
@@ -46,7 +46,7 @@ a .label{
 	text-align: center;
 }
 .label {
-	width: auto;
+	width: 220px;
 	text-align: center;
 }
 a:link{
@@ -59,6 +59,7 @@ a:link{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	flex-grow: 1;
 }
 .btns a {
 	border-bottom: 0px solid #fff;
