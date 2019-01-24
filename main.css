@@ -1,0 +1,40 @@
+.wrap{
+			margin: 20px auto;
+			width: 77%;
+			box-shadow: 0 0 10px grey;
+		}
+		a.list-group-item:hover {
+			background: #2CA7FC;
+			font-size: 105%;
+			color: white !important;
+			transition: all 0.3s;color:black;
+		}
+		.codes{
+			font-size: 125%;
+			color: grey;
+		}
+		a.list-group-item:hover .codes {
+			font-size: 135%;
+			color:black;
+		}
+		a.backToSchool {
+			display: block;
+			position: fixed;
+			top:45px;
+			left:45px;
+			width: 45px;
+			height: 45px;
+			background: #e5e5e5;
+			line-height: 45px;
+			text-align: center;
+			border-radius: 6px;
+			transition: ease 0.5s;
+		}
+		a.backToSchool:hover {
+			color: white !important;
+			background: black;
+			box-shadow: 0 0 5px black;
+			transition: ease 0.5s;
+			cursor: pointer;
+			border-radius: 3px;
+		}
