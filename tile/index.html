@@ -8,10 +8,12 @@
 	<meta name="robots" content="index,follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 	<link rel="stylesheet" href="src/lib/anim.min.css">
 	<link rel="stylesheet" href="src/lib/magnificPOPUP/magnific-popup.css">
 	<link rel="stylesheet" href="src/lib/fotorama.css">
+	<link rel="icon" href="src/png/fav.png" type="icon/png">
 </head>
 <body>
 	<header>
@@ -24,7 +26,7 @@
 						<a href="#serv" class="go_to">Услуги</a>
 						<a href="#examples" class="go_to">Работы</a>
 						<a href="#trust" class="go_to">Цены</a>
-						<a href="#">Контакты</a>
+						<a href="#cont" class="go_to">Контакты</a>
 					</div>
 
 					<div class="numbers">
@@ -51,8 +53,8 @@
 
 				<div class="item wow fadeInLeft">
 					<div class="item_pic tile">
-						<a class="image-popup-vertical-fit" href="src/jpg/IMG_20170916_151502.jpg" title="УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ.">
-							<img src="src/jpg/IMG_20170909_112816.jpg" width="auto" height="250">
+						<a class="image-popup-vertical-fit" href="src/jpg/444.jpg" title="УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ.">
+							<img src="src/jpg/444.jpg" width="auto" height="237">
 						</a>
 					</div>
 					<h4>УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ</h4>
@@ -71,8 +73,8 @@
 
 				<div class="item wow fadeInUp">
 					<div class="item_pic bath">
-						<a class="image-popup-vertical-fit" href="src/jpg/IMG_20170916_151502.jpg" title="УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ.">
-							<img src="src/jpg/IMG_20170916_151502.jpg" width="auto" height="250">
+						<a class="image-popup-vertical-fit" href="src/jpg/323.jpg" title="РЕМОНТ ВАННОЙ ПОД КЛЮЧ.">
+							<img src="src/jpg/323.jpg" width="auto" height="236">
 						</a>
 					</div>
 					<h4>РЕМОНТ ВАННОЙ ПОД КЛЮЧ</h4>
@@ -95,8 +97,8 @@
 				
 				<div class="item wow fadeInRight">
 					<div class="item_pic tech">
-						<a class="image-popup-vertical-fit" href="src/jpg/IMG_20170916_151502.jpg" title="УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ.">
-							<img src="src/jpg/IMG_20170909_112816.jpg" width="auto" height="250">
+						<a class="image-popup-vertical-fit" href="src/jpg/888.jpg" title="САНТЕХНИЧЕСКИЕ РАБОТЫ.">
+							<img src="src/jpg/888.jpg" width="auto" height="240">
 						</a>
 					</div>
 					<h4>САНТЕХНИЧЕСКИЕ РАБОТЫ</h4>
@@ -241,12 +243,28 @@
 			<div class="forcall">
 				<h1 class="submit">Расчет стоимости работ бесплатно</h1>
 				<p class="subm">Выезд для замера и расчета бесплатный и ничему Вас не обязывает. Позвоните или оставьте заявку, и я Вам перезвоню в удобное время.</p>
-				<form>
-					<input required type="text" placeholder="Ваше Имя"><input required type="number" placeholder="Ваш Телефон"><input id="btnSend" type="submit" value="Отправить заявку">
+				<form id="form">
+					<input required type="text" placeholder="Ваше Имя" id="name"><input required type="number" placeholder="Ваш Телефон" id="phone"><input id="btnSend" type="submit" value="Отправить заявку">
 				</form>
+				<div class="done" id="done">
+					<h1>спасибо за заявку, совсем скоро свяжусь с Вами!</h1>
+				</div>
 			</div>
 		</div>
 	</section>
+	<footer id="cont">
+		<div class="map_">
+			<a class="phone" href="tel: +79034065917">мобильный <u>+7 903 406 59 17</u></a>
+			<a class="phone" href="https://msng.link/wa/79034065917">whatsApp <u>+7 903 406 59 17</u></a>
+			<div class="forSocial">
+				<iframe src="//widget.instagramm.ru/?imageW=6&imageH=3&thumbnail_size=84&type=0&typetext=kladka_plitki_rostov&head_show=1&profile_show=0&shadow_show=1&bg=255,255,255,1&opacity=true&head_bg=ff7300&subscribe_bg=ff7300&border_color=c3c3c3&head_title=%25D0%25AF%2520%25D0%25B2%2520Instagram" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:570px;height:346px;"></iframe>
+			</div>
+			<div class="map">
+				<iframe class="mapF" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a3e12dac4b607c9d801044add90891625178e84feb2229ed65180feb5a78357&amp;source=constructor" width="700" height="432" frameborder="0"></iframe>
+			</div>
+			<div class="pull"><span>dev by <a href="https://kirilinsky.ru" target="_blank">kirilisnky</a> @ 2019</span></div>
+		</div>
+	</footer>
 
 
 
@@ -305,6 +323,45 @@
 
 
 		 new WOW().init();
+
+
+		 let name = document.getElementById('name');
+		 let phone = document.getElementById('phone');
+		 let params = new FormData();
+
+		 	
+
+		 	
+		 document.querySelector('#btnSend').addEventListener('click', function() {
+
+		 		params.append('name', name.value);
+		 		params.append('score', phone.value);
+		 		ajaxPost(params);
+
+		 });
+
+
+
+		 function ajaxPost(paramss) {
+		 	var request = new XMLHttpRequest();
+
+		 	request.onreadystatechange = function() {
+		 		if(request.readyState == 4) {
+		 			document.querySelector('#form').style.display = 'none';
+		 			document.querySelector('#done').style.display = 'block';
+		 			setTimeout((function(){
+		 				document.querySelector('#form').style.display = 'flex';
+		 				document.querySelector('#done').style.display = 'none';
+		 				name.value = '';
+		 				phone.value ='';
+		 		}),3500);
+		 		}
+		 	}
+
+		 	request.open('POST', '/ip.php');
+		 	request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		 	request.send(paramss);
+		 }
 	</script>
 </body>
 </html>
