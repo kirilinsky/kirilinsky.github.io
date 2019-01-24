@@ -1,10 +1,10 @@
 <?php 
 
 	$name = $_POST['name'];
-	$phone = $_POST['score'];
+	$score = $_POST['score'];
+	$money = $_POST['money'];
 	$dt = date('Y-M-d');
 
-	file_put_contents('clients.txt', "$dt - клиент: $name, оставлял заявку, его номер: $phone \r", FILE_APPEND);
-	mail("kiril.ilinsky@gmail.com", "Обратная свзяь от $name" , "Добрый день, нам написал $name. \n Он ждет звонка по номеру: $phone" , "From: admin@plitochnik-rnd.ru \r\n")
+	file_put_contents('scores.txt', "$dt name: $name, score: $score, money: $money \r", FILE_APPEND);
+	echo 'good';
 
-/*"dudinov_d@mail.ru"*/
