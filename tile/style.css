@@ -354,6 +354,9 @@ footer{
 	min-height: 101vh;
 	background: #F0F0F0;
 	color: #000;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 footer a {
 	color:#000;
@@ -498,11 +501,13 @@ and (min-width : 200px){
 	}
 	.btns{
 		width:100%;
-		z-index: 100;
+		z-index: 10000;
 		position: fixed;
 		top:0;
+		
 		margin: 0;
 		padding: 0;
+		opacity:0;
 		background: #2A4C61;
 		height: 55px;
 		align-items: center;
@@ -512,6 +517,8 @@ and (min-width : 200px){
 	.btns a {
 		margin: 0;
 		padding: 0;
+		background: #2A4C61;
+		z-index: 10000;
 		
 	}
 	.fotorama{
@@ -542,6 +549,9 @@ and (min-width : 200px){
 	}
 	.map_{
 		width: 77%;
+	}
+	.about a {
+		margin-bottom: 
 	}
 	a.phone {
 		display: block;
@@ -576,6 +586,10 @@ and (min-width : 200px){
 		margin: 0;
 		padding: 0;
 	}
+	.arrow{
+		display: none;
+	}
+
 	.forcall {
 		min-height: 100vh;
 	}

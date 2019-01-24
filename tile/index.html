@@ -329,11 +329,11 @@
 
 		 	
 
-		 	
-		 document.querySelector('#btnSend').addEventListener('click', function() {
-
+			
+		document.querySelector('#btnSend').addEventListener('click', function(e) {
+				e.preventDefault();
 		 		params.append('name', name.value);
-		 		params.append('score', phone.value);
+		 		params.append('phone', phone.value);
 		 		ajaxPost(params);
 
 		 });

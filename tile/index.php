@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Мастер Плиточник в Ростове-на-Дону</title>
+	<meta name="description" content="Профессиональная кладка керамической плитки, керамогранита, мозаики в г. Ростов-на-Дону с гарантией до 5 лет">
+	<meta name="copyright" lang="ru" content="copy">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<link rel="stylesheet" href="src/lib/anim.min.css">
+	<link rel="stylesheet" href="src/lib/magnificPOPUP/magnific-popup.css">
+	<link rel="stylesheet" href="src/lib/fotorama.css">
+	<link rel="icon" href="src/png/fav.png" type="icon/png">
+</head>
+<body>
+	<header>
+		<div class="blur">
+			<div class="wrap">
+				<nav class="wow fadeIn">
+					<a href="/"><div class="label">Ваш Частный Мастер</div></a>
+
+					<div class="btns wow">
+						<a href="#serv" class="go_to">Услуги</a>
+						<a href="#examples" class="go_to">Работы</a>
+						<a href="#trust" class="go_to">Цены</a>
+						<a href="#cont" class="go_to">Контакты</a>
+					</div>
+
+					<div class="numbers">
+						<a href="tel: +79034065917">+7 903 406 59 17</a>
+						<span>Ежедневно <u>с 9.00 до 21.00</u></span>
+					</div>
+				</nav>
+				<div class="about wow ">
+					<h1>Профессиональная кладка керамической плитки, керамогранита, мозаики в г. Ростов-на-Дону с гарантией до 5 лет</h1>
+					<a href="#call" class="go_to btn callback">Заказать замер</a>
+				</div>
+				<div></div>
+				<a href="#serv" class="go_to"><div class="arrow"></div></a>
+			</div>
+		</div>
+	</header>
+	<section class="service wow fadeIn"  id="serv">
+		<div class="wrap center">
+			<div class="main">
+				<h2>Оказываемые услуги</h2>
+				<p>Все работы я выполняю самостоятельно и в короткие сроки, с соблюдением всех строительных норм и правил. Имею высшее строительное образование и опыт работы более 10 лет.</p>
+			</div>
+			<div class="services">
+
+				<div class="item wow fadeInLeft">
+					<div class="item_pic tile">
+						<a class="image-popup-vertical-fit" href="src/jpg/444.jpg" title="УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ.">
+							<img src="src/jpg/444.jpg" width="auto" height="237">
+						</a>
+					</div>
+					<h4>УКЛАДКА КЕРАМИЧЕСКОЙ ПЛИТКИ</h4>
+					<div class="item_desc">
+						<ul>
+							<li>работаю со всеми форматами и размерами</li>
+							<li>использую профессиональное оборудование 
+						мировых брендов Battipav, Makita.</li>
+							<li>выбираю только качественные материалы.</li>
+							<li>высокоточное измерительное оборудование.</li>
+						</ul>
+						<b>Все это позволяет достичь безупречного результата в работе!</b>
+					</div>
+					<a href="#call" class="go_to btn">Рассчитать стоимость</a>
+				</div>
+
+				<div class="item wow fadeInUp">
+					<div class="item_pic bath">
+						<a class="image-popup-vertical-fit" href="src/jpg/323.jpg" title="РЕМОНТ ВАННОЙ ПОД КЛЮЧ.">
+							<img src="src/jpg/323.jpg" width="auto" height="236">
+						</a>
+					</div>
+					<h4>РЕМОНТ ВАННОЙ ПОД КЛЮЧ</h4>
+					<div class="item_desc">
+						<ul>
+							<li>подбор материалов, доставка, подъем. дизайн в подарок!</li>
+							<li>штукатурка стен и стяжка пола в стройвариантах. </li>
+							<li>работы по монтажу гипсокартонных конструкций.</li>
+							<li>установка скрытых люков</li>
+							<li>монтаж ванн, душевых кабин, сантехники </li>
+							<li>электрика</li>
+							<li>натяжные потолки</li>
+						</ul>
+						<b>Вы экономите свое время и деньги, т.к. при комплексных работах 
+				предоставляется скидка до 5% на все работы!
+				</b>
+					</div>
+					<a href="#call" class="go_to btn">Рассчитать стоимость</a>
+				</div>
+				
+				<div class="item wow fadeInRight">
+					<div class="item_pic tech">
+						<a class="image-popup-vertical-fit" href="src/jpg/888.jpg" title="САНТЕХНИЧЕСКИЕ РАБОТЫ.">
+							<img src="src/jpg/888.jpg" width="auto" height="240">
+						</a>
+					</div>
+					<h4>САНТЕХНИЧЕСКИЕ РАБОТЫ</h4>
+					<div class="item_desc">
+						<ul>
+							<li>разводка сантехники в стройвариантах</li>
+							<li>установка теплых полов любых конструкций с учетом особенностей дома.</li>
+							<li>монтаж бойлеров, фильтров грубой и мелкой отчистки.</li>
+							<li>закупка только качественных материалов и фурнитуры.</li>
+						</ul>
+						<b>Установленные по всем нормам сантехнические коммуникации будут служить Вам многие десятилетия не принося неудобств с их обслуживанием!</b>
+					</div>
+					<a href="#call" class="go_to btn">Рассчитать стоимость</a>
+				</div> 
+				
+			</div>
+		</div>
+	</section>
+	<section class="examples wow fadeIn"  id="examples">
+		<div class="wrap center">
+			<div class="main">
+							<h2>МОИ РАБОТЫ</h2>
+							<p>Все работы выполняются с професиональной педантичностью и любовью к своему делу</p>
+			</div>		
+			<div class="fotorama" data-width="auto"
+     data-height="700" data-arrows="true"
+     data-click="true"
+     data-swipe="true" data-nav="thumbs" data-autoplay="true">
+			  <img src="src/jpg/IMG_20170909_112816.jpg">
+			  <img src="src/jpg/IMG_20170916_151502.jpg">
+			  <img src="src/jpg/IMG_20171101_124147.jpg">
+			  <img src="src/jpg/IMG_20170928_135132.jpg">
+			  <img src="src/jpg/IMG_20181001_154954.jpg">
+			  <img src="src/jpg/IMG_20181109_090246.jpg">
+			  <img src="src/jpg/IMG_20181206_122318.jpg">
+			  <img src="src/jpg/IMG_20181227_120733.jpg">
+			  <img src="src/jpg/IMG_20181227_141251.jpg">
+			</div>
+
+		</div>
+	</section>
+
+	<section class="wow fadeIn feed" id="feedback">
+		<div class="wrap midd">
+			<div class="main">
+							<h2>Отзывы Клиентов</h2>
+			</div>
+			<div class="comments">
+				<div class="item wow fadeInLeft">
+					<div class="item_pic tile">
+							<img src="src/jpg/pep1.jpg" width="auto" height="250">
+					</div>
+					<br>
+					<h4>Евгений Иванченко  </h4>
+					<div class="item_desc">
+						<br>
+						<br>
+						<b class="white">Очень хороший сервис у мастера. Все подсказал, как лучше сделать, ванную за неделю выложил. 
+Сантехнику поставил.  Буду рекомендовать друзьям.
+
+						</b>
+						<br>
+					</div>
+				</div>
+
+				<div class="item wow fadeInUp">
+					<div class="item_pic tile">
+							<img src="src/jpg/pep3.jpg" width="auto" height="250">
+					</div>
+					<br>
+					<h4>Лидия Сергеевна К.  </h4>
+					<div class="item_desc">
+						<br>
+						<br>
+						<b class="white">Столкнулись с проблемой выбора хорошего плиточника. У нас формат плитки был большой и керамогранит. Хотелось чтобы все было идеально.  Друзья дали телефон Дмитрия.  Это действительно мастер своего дела.  Ванная получилась даже лучше, чем мы представляли. 
+Спасибо Вам огромное, Дмитрий! 
+
+						</b>
+						<br>
+					</div>
+				</div>
+				
+				<div class="item wow fadeInRight">
+					<div class="item_pic tile">
+							<img src="src/jpg/pep2.jpg" width="auto" height="250">
+					</div>
+					<br>
+					<h4>Ирина Земина  </h4>
+					<div class="item_desc">
+						<br>
+						<br>
+						<b class="white">Спасибо Дмитрию за быструю и качественную работу.  Все уложено ровно, плиточка к плиточке. 
+						Сантехнику переделал, помог с выбором материалов.  Очень довольны, что обратились именно к нему. Всем рекомендуем!!
+						</b>
+						<br>
+					</div>
+				</div> 
+				
+			</div>
+		</div>
+	</section>
+	<section class="trust wow fadeIn" id="trust">
+		<div class="wrap midd">
+			<div class="main">
+							<h2>ШЕСТЬ ПРИЧИН, ПОЧЕМУ КЛИЕНТЫ МНЕ ДОВЕРЯЮТ!</h2>
+			</div>
+			<div class="trust_box">
+				<div class="trust_item">
+					<div class="circle">1</div>
+					<h4>Фиксированная цена без изменений сметы.</h4>
+					<p>Со всеми клиентами я обговариваю смету, и цена остается такой, какую мы согласовали.</p>
+				</div>
+				<div class="trust_item">
+					<div class="circle">2</div>
+					<h4>Высокие стандарты работы.</h4>
+					<p>Каждой плитке уделяется особое внимание. Все горизонтали и вертикали контролируются лазером. Клей наносится на ДВЕ плоскости – стену и плитку!!! (это делают не многие).</p>
+				</div>
+				<div class="trust_item">
+					<div class="circle">3</div>
+					<h4>Передовые технологии обработки плитки.</h4>
+					<p>Станок с водяной обработкой – без пыли с идеальным срезом. Заточка плитки под 45 градусов и последующая обработка абразивами – результат впечатляет!!</p>
+				</div>
+				<div class="trust_item">
+					<div class="circle">4</div>
+					<h4>Плитка в одной плоскости.</h4>
+					<p>В работе используется система СВП – гарантирующая единую плоскость плитки, без выступов  углов.</p>
+				</div>
+				<div class="trust_item">
+					<div class="circle">5</div>
+					<h4>Идеальные отверстия.</h4>
+					<p>Все отверстия в плитке вырезаются алмазными коронками. Геометрия вымеряется лазером. Нет скосов и несовпадений. </p>
+				</div>
+				<div class="trust_item">
+					<div class="circle">6</div>
+					<h4>Гарантия на работы. </h4>
+					<p>На всю свою работу я даю гарантию до 5 лет (!!!), при использовании рекомендуемых мной материалов. У Вас не отвалится плитка  и не протечет ванная. Все делается как для себя!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="call wow fadeIn" id="call">
+		<div class="blur">
+			<div class="forcall">
+				<h1 class="submit">Расчет стоимости работ бесплатно</h1>
+				<p class="subm">Выезд для замера и расчета бесплатный и ничему Вас не обязывает. Позвоните или оставьте заявку, и я Вам перезвоню в удобное время.</p>
+				<form id="form">
+					<input required type="text" placeholder="Ваше Имя" id="name"><input required type="number" placeholder="Ваш Телефон" id="phone"><input id="btnSend" type="submit" value="Отправить заявку">
+				</form>
+				<div class="done" id="done">
+					<h1>спасибо за заявку, совсем скоро свяжусь с Вами!</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="cont">
+		<div class="map_">
+			<a class="phone" href="tel: +79034065917">мобильный <u>+7 903 406 59 17</u></a>
+			<a class="phone" href="https://msng.link/wa/79094006721">whatsApp <u>+7 909 400 67 21</u></a>
+			<a class="phone" href="https://www.instagram.com/kladka_plitki_rostov" target="_blank">Еще больше фото в Instagram</a>
+			<div class="map">
+				<iframe class="mapF" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a3e12dac4b607c9d801044add90891625178e84feb2229ed65180feb5a78357&amp;source=constructor" width="700" height="432" frameborder="0"></iframe>
+			</div>
+			<div class="pull"><span>dev by <a href="https://kirilinsky.ru" target="_blank">kirilisnky</a> @ 2019</span></div>
+		</div>
+	</footer>
+
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="src/lib/wow.min.js"></script>
+	<script src="src/lib/magnificPOPUP/jquery.magnific-popup.min.js"></script>
+	<script src="src/lib/fotorama.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('.image-popup-vertical-fit').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				mainClass: 'mfp-img-mobile',
+				image: {
+					verticalFit: true
+				}
+				
+			});
+
+			$('.image-popup-fit-width').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				image: {
+					verticalFit: false
+				}
+			});
+
+			$('.image-popup-no-margins').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				closeBtnInside: false,
+				fixedContentPos: true,
+				mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+				image: {
+					verticalFit: true
+				},
+				zoom: {
+					enabled: true,
+					duration: 300 // don't foget to change the duration also in CSS
+				}
+			});
+
+		});
+		$(document).ready(function(){
+		    $('.go_to').click( function(){ 
+			var scroll_el = $(this).attr('href'); 
+		        if ($(scroll_el).length != 0) { 
+			    $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+			    	 scroll_el
+		        }
+			    return false; 
+		    });
+		});
+
+
+
+		 new WOW().init();
+
+
+		 let name = document.getElementById('name');
+		 let phone = document.getElementById('phone');
+		 let params = new FormData();
+
+		 	
+
+    	document.querySelector('#btnSend').addEventListener('click', function(e) {
+				e.preventDefault();
+		 		params.append('name', name.value);
+		 		params.append('phone', phone.value);
+		 		ajaxPost(params);
+
+		 });
+
+
+
+		 function ajaxPost(paramss) {
+		 	var request = new XMLHttpRequest();
+
+		 	request.onreadystatechange = function() {
+		 		if(request.readyState == 4) {
+		 			document.querySelector('#form').style.display = 'none';
+		 			document.querySelector('#done').style.display = 'block';
+		 			setTimeout((function(){
+		 				document.querySelector('#form').style.display = 'flex';
+		 				document.querySelector('#done').style.display = 'none';
+		 				name.value = '';
+		 				phone.value ='';
+		 		}),3500);
+		 		}
+		 	}
+
+		 	request.open('POST', '/ip.php');
+		 	request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+		 	request.send(paramss);
+		 }
+	</script>
+</body>
+</html>
