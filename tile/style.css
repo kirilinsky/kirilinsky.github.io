@@ -11,6 +11,9 @@ header {
 	background: url(src/jpg/222.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
+.fotorama{
+	overflow:hidden;
+}
 .call{
 	width: 100%;
 	min-height: 100vh;
