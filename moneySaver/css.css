@@ -1,0 +1,108 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	width: 70%;
+	height: 61vh;
+	margin:0 auto;
+	display: flex;
+	justify-content: space-around;
+	padding: 35px;
+	transition: ease 0.5s;
+}
+.card:hover{
+	transform: scale(1.12);
+	box-shadow: 0 0 10px grey;
+	transition: ease 0.5s;
+}
+table{
+	text-align: center;
+}
+.table-header{
+	background: #ececec !important;
+	font-weight: bold;
+}
+.forFooter{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.aside{
+	height: 40vh;
+}
+.ct-chart2{
+	width: 90% !important;
+    height: 70% !important;
+}
+.w100{
+	width: 100%;
+	text-align: center;
+}
+.leftSide,.rightSide {
+	width: 48%;
+	height: 99%;
+	margin:0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.ct-chart {
+	width: 65% !important; 
+	height:auto !important;
+}
+h1.m--1{
+	display: flex;
+}
+.coin{
+	display: block;
+	background: url(123.png) no-repeat 0 2px;
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+	margin:2px 5px 0;
+}
+.form{
+	width:27.7%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.form-in{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-around;
+	height: 50%;
+	width: 100%;
+	padding: 3px;
+}
+input{
+	margin: 4px;
+	border-bottom: solid 1px #E74C3C !important;
+}
+input[type="date"]{
+	border-radius: 5px;
+	border:1px solid #E74C3C;
+	padding: 3px;
+	color:#758ABB;
+	background: transparent;
+}
+.form-status{
+	width: 100%;
+	flex-grow: 1;
+	margin:20px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+img#stat{
+	width: 50px;
+	height: 50px;
+}

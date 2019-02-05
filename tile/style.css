@@ -521,8 +521,10 @@ and (min-width : 200px){
 		z-index: 10000;
 		
 	}
-	.fotorama{
-		width: 89%;
+	.ht{
+		width: 85%;
+		height: 50vh;
+		margin:0 auto;
 	}
 	.numbers{
 		width: 95%;

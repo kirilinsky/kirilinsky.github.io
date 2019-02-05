@@ -122,19 +122,22 @@
 			<div class="main">
 							<h2>МОИ РАБОТЫ</h2>
 							<p>Все работы выполняются с професиональной педантичностью и любовью к своему делу</p>
-			</div>		
-			<div class="fotorama" data-width="auto"
-     data-height="700">
-			  <img src="src/jpg/IMG_20170909_112816.jpg">
-			  <img src="src/jpg/IMG_20170916_151502.jpg">
-			  <img src="src/jpg/IMG_20171101_124147.jpg">
-			  <img src="src/jpg/IMG_20170928_135132.jpg">
-			  <img src="src/jpg/IMG_20181001_154954.jpg">
-			  <img src="src/jpg/IMG_20181109_090246.jpg">
-			  <img src="src/jpg/IMG_20181206_122318.jpg">
-			  <img src="src/jpg/IMG_20181227_120733.jpg">
-			  <img src="src/jpg/IMG_20181227_141251.jpg">
-			</div>
+			</div>	
+			<div class="ht">
+				<div class="fotorama" data-width="200px"
+				     data-height="25px">
+				  <img src="src/jpg/IMG_20170909_112816.jpg">
+				  <img src="src/jpg/IMG_20170916_151502.jpg">
+				  <img src="src/jpg/IMG_20171101_124147.jpg">
+				  <img src="src/jpg/IMG_20170928_135132.jpg">
+				  <img src="src/jpg/IMG_20181001_154954.jpg">
+				  <img src="src/jpg/IMG_20181109_090246.jpg">
+				  <img src="src/jpg/IMG_20181206_122318.jpg">
+				  <img src="src/jpg/IMG_20181227_120733.jpg">
+				  <img src="src/jpg/IMG_20181227_141251.jpg">
+				</div>
+			</div>	
+			
 
 		</div>
 	</section>
@@ -266,7 +269,7 @@
 
 
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	<script src="src/lib/wow.min.js"></script>
 	<script src="src/lib/magnificPOPUP/jquery.magnific-popup.min.js"></script>
 	<script src="src/lib/fotorama.js"></script>
@@ -326,18 +329,21 @@
 		 let name = document.getElementById('name');
 		 let phone = document.getElementById('phone');
 		 let params = new FormData();
+ 		 let btn = document.querySelector('#btnSend');
 
-		 	
+		 btn.addEventListener('click', checkIt);
 
-			
-		document.querySelector('#btnSend').addEventListener('click', function(e) {
-				e.preventDefault();
+		 function checkIt(){
+		 	if(name.value == ''){
+		 		alert('Введите имя');
+		 	} else if(phone.value == ''){
+		 		alert('Веедите номер телефона');
+		 	} else {
 		 		params.append('name', name.value);
-		 		params.append('phone', phone.value);
-		 		ajaxPost(params);
-
-		 });
-
+		 	    params.append('phone', phone.value);
+		 	    ajaxPost(params);
+		 	}
+		 }
 
 
 		 function ajaxPost(paramss) {
