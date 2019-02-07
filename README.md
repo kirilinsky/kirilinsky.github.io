@@ -9,7 +9,6 @@
 >thats me
 <p align="center"><a href="http://inhabitable.ru" target="_blank">
  <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
-
 ---
 # some of my projects:
 <a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
@@ -23,8 +22,6 @@
 <a href="https://kirilinsky.github.io/space/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/save.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/moneysaver/" target="_blank"> moneysaver</a>
 ## another yet...
-
-
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="bootstrap.min.css">
@@ -50,7 +47,6 @@
 		    <p class="mb-1">My Vue Trainig little Projects</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small> <i class="fab fa-vuejs"></i>
 		  </a>
-			
 			<a href="https://kirilinsky.ru/ajax/index.php" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Testing via AJAX/MySQL</h5>
@@ -59,7 +55,6 @@
 		    <p class="mb-1">Simple app to adding small comments to SQL database</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small><i class="fas fa-database"></i> <i class="fab fa-php"></i>
 		  </a>
-			
 			<a href="https://kirilinsky.github.io/clicker/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Monster'A!</h5>
@@ -68,7 +63,6 @@
 		    <p class="mb-1">Dont forget water your monster'a!</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
 		  </a>
-			
 			<a href="https://kirilinsky.github.io/faq/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">FAQ page.</h5>
@@ -77,7 +71,6 @@
 		    <p class="mb-1">FAQ page, dont completed yet...</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> </small>
 		  </a>
-			
 		  <a href="https://kirilinsky.github.io/continue/adaptivemenu/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Adaptive Menu</h5>
@@ -86,7 +79,6 @@
 		    <p class="mb-1">Lesson for a little bit responsive. Menu with hover effect.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/drop/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Adaptive Dropdown list</h5>
@@ -95,7 +87,6 @@
 		    <p class="mb-1">Lesson for a little bit responsive. Menu with drowdown hover effect.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/animation/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Animated Preloader</h5>
@@ -104,7 +95,6 @@
 		    <p class="mb-1">Lesson with keyframes.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/anybody/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">FlagApp for vk.vom</h5>
@@ -113,7 +103,6 @@
 		    <p class="mb-1">-not ported-</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/binary/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Binary</h5>
@@ -122,7 +111,6 @@
 		    <p class="mb-1">Lesson with binary For 'console.log()'.</p>
 		    <small class="codes"><i class="fab fa-js"> </i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/boots/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Bootstrap Training</h5>
@@ -131,7 +119,6 @@
 		    <p class="mb-1">Lesson with bootstrap 4.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fas fa-grip-vertical" title="bootstrap"></i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/btn/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Simple Button</h5>
@@ -140,7 +127,6 @@
 		    <p class="mb-1">Lesson with css3.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> </small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/clickerVue/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Clicker game with vue.js framework</h5>
@@ -149,8 +135,6 @@
 		    <p class="mb-1">Lesson with keyframes.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> <i class="fab fa-vuejs"></i></small>
 		  </a>
-
-
 		  <a href="https://kirilinsky.github.io/continue/closure/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Closure</h5>
@@ -159,7 +143,6 @@
 		    <p class="mb-1">Lesson with closure. For 'console.log()'.</p>
 		    <small class="codes"><i class="fab fa-js"> </i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/jade_stylus_template/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Jade/Stylus</h5>
@@ -168,7 +151,6 @@
 		    <p class="mb-1">Lesson with atylus/jade.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small>
 		  </a>
-			
 		 <a href="https://kirilinsky.github.io/continue/markt/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">One of my first Layouts</h5>
@@ -177,7 +159,6 @@
 		    <p class="mb-1">I know, its awful.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i></small>
 		  </a>
-			
 			 <a href="https://kirilinsky.github.io/continue/metrics/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Jade/Stylus</h5>
@@ -186,7 +167,6 @@
 		    <p class="mb-1">Lesson with js - exchange value.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/range/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Range lesson</h5>
@@ -195,7 +175,6 @@
 		    <p class="mb-1">Lesson with js, changeble range.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/tra5/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Simple layout from PSD</h5>
@@ -204,7 +183,6 @@
 		    <p class="mb-1">Lesson with layout.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i></small>
 		  </a>
-
 		   <a href="https://kirilinsky.github.io/continue/train/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Another Yet - Simple layout from PSD</h5>
@@ -213,7 +191,6 @@
 		    <p class="mb-1">Lesson with layout.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i></small>
 		  </a>
-
 		  <a href="https://kirilinsky.github.io/continue/skill/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">Skill-o-meter.</h5>
@@ -222,9 +199,6 @@
 		    <p class="mb-1">Joke.</p>
 		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i></small>
 		  </a>
-
-
-
 		</div>
 	</div>
 </body>
