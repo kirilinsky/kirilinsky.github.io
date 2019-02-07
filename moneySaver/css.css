@@ -4,105 +4,94 @@ body{
 }
 .wrap{
 	width: 70%;
-	height: 61vh;
-	margin:0 auto;
+	height: auto;
+	margin:75px auto 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: minmax(210px, max-content) auto auto auto;
+	grid-template-areas: "statuS statuS statuS"
+						 "graphFullOne graphFullOne graphFullOne"
+						 "minMax perYear perYear"
+						 "graphFullTwo graphFullTwo graphFullTwo";
+	grid-gap: 50px;
+}
+.status-bar{
+	grid-area: statuS;
 	display: flex;
 	justify-content: space-around;
-	padding: 35px;
-	transition: ease 0.5s;
+	align-items: flex-start;
+	height: auto;
+	overflow: hidden;
+	transition: height ease-in-out 0.7s;
 }
-.card:hover{
-	transform: scale(1.12);
-	box-shadow: 0 0 10px grey;
-	transition: ease 0.5s;
-}
-table{
-	text-align: center;
-}
-.table-header{
-	background: #ececec !important;
-	font-weight: bold;
-}
-.forFooter{
+.cell{
+	width: 30%;
+	min-height: 200px;
 	display: flex;
-	width: 100%;
-	height: 100%;
 	justify-content: space-around;
-	align-items: center;
-}
-
-.aside{
-	height: 40vh;
-}
-.ct-chart2{
-	width: 90% !important;
-    height: 70% !important;
-}
-.w100{
-	width: 100%;
-	text-align: center;
-}
-.leftSide,.rightSide {
-	width: 48%;
-	height: 99%;
-	margin:0 auto;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
-	align-items: center;
-}
-.ct-chart {
-	width: 65% !important; 
-	height:auto !important;
-}
-h1.m--1{
-	display: flex;
-}
-.coin{
-	display: block;
-	background: url(123.png) no-repeat 0 2px;
-	background-size: cover;
-	width: 40px;
-	height: 40px;
-	margin:2px 5px 0;
-}
-.form{
-	width:27.7%;
-	height: 100%;
-	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	transition: height ease-in-out 0.7s;
 }
-.form-in{
-	display: flex;
+.cell p {
+	text-align: center;
+	font-size: 19.5px;
+}
+.add-form{
+	display: none;
+	min-height: 0px;
+	border-left: 1px solid lightgrey;
 	flex-flow: column nowrap;
-	align-items: center;
 	justify-content: space-around;
-	height: 50%;
-	width: 100%;
-	padding: 3px;
+	align-items: center;
+	padding: 2px 0;
 }
 input{
-	margin: 4px;
-	border-bottom: solid 1px #E74C3C !important;
+	padding: 15px 0 !important;
 }
-input[type="date"]{
-	border-radius: 5px;
-	border:1px solid #E74C3C;
-	padding: 3px;
-	color:#758ABB;
-	background: transparent;
+.card{
+	color:#fff;
+	font-size: 18px;
+	text-align:center;
+	letter-spacing: 1.4px;
+	font-variant: small-caps;
+	user-select: none;
 }
-.form-status{
-	width: 100%;
-	flex-grow: 1;
-	margin:20px 0 0 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+.graph-full{
+	grid-area: graphFullOne;
+	padding: 25px 0;
 }
-img#stat{
-	width: 50px;
-	height: 50px;
+.min-max{
+	grid-area: minMax;
+}
+.min-max .card {
+	width: 90%;
+}
+.min-max p {
+	font-size: 21px;
+}
+.graph-full-2{
+	grid-area: graphFullTwo;
+	padding: 25px 0;
+}
+.per-year{
+	grid-area: perYear;
+}
+
+.cells{
+	background: #f8f8f9;
+	box-shadow: 0 0 9px grey;
+}
+#addBtn {
+	transition: ease-in 0.5s;
+}
+#addBtn:hover{
+	cursor: pointer;
+	background: #e3e3e3;
+	color:#E74C3C;
+	box-shadow: 0 0 7px #E74C3C;
+	transition: ease-in 0.3s;
+}
+#addBtn:active {
+	transition: ease-in 0.5s;
+	transform: scale(0.89);
 }

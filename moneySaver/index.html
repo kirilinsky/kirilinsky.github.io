@@ -5,246 +5,174 @@
 	<meta name="copyright" lang="ru" content="copy">
 	<meta name="robots" content="index,follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>moneySaver View</title>
+	<title>moneySaver View s</title>
 	<link rel="stylesheet" href="css.css">
 	<link rel="stylesheet" href="chartist.min.css">
 	<link rel="stylesheet" href="surface_styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css">
+	<link rel="stylesheet" href="animate.css">
+
+
+
 </head>
 <body>
 	<header class="container bg--alizarin">
-	  <h1 class="m--1 g--4"><span class="coin"></span>MoneySaver</h1>
+	  <h1 class="m--1 g--4">MoneySaver</h1>
 	</header>
 	<div class="wrap">
-		<div class="ct-chart ct-perfect-fourth card"></div>
-		<div class="form">
-			<div class="form-in card fade-in-from-right anim-delay--10">
-				<input type="text" required placeholder="money">
-				<input type="date" id="date"> 
-				<br>
-				<button class="btn--float btn--red">+</button>
-			</div>
-			<div class="form-status card fade-in-from-right anim-delay--15">
-				<div class="card bg--alizarin">
-					<div class="color--paper">database connection</div>
-				</div>
-				<img src="close-x-cross-multiply-delete-cancel-modal-error-no-512.png" alt="status" id="stat">
-			</div>
-			
-		</div>
-	</div>
-
-	<div class="wrap aside">
-		<div class="card leftSide fade-in-from-bottom anim-delay--25">
-			<div class="card w100 bg--alizarin">
-				<div class="color--paper">top donation</div>
-			</div>
-			<table class="g--10 card">
-			  <tr class="table-header">
-			    <td>Value</td>
-			    <td>Date</td>
-			  </tr>
-			  <tr>
-			    <td>1521</td>
-			    <td>12</td>
-			  </tr>
-			  <tr>
-			    <td>951</td>
-			    <td>13</td>
-			  </tr>
-			</table>
-		</div>
-		<div class="card rightSide fade-in-from-bottom anim-delay--20">
-			<div class="ct-chart2 ct-perfect-fourth"></div>
-			<div class="card w100 bg--alizarin">
-				<div class="color--paper">donation per year</div>
-			</div>
-		</div>
-	</div>
-
-
-	<script src="chartist.min.js"></script>
-	<script src="treehold.js"></script>
-	<script>
-
-
 		
-		var chart = new Chartist.Line('.ct-chart', {
-		  labels: ['01-12-2018','12-12-2018', '14-01-2019', '23-01-2019' ],
-		  series: [
-		    [1, 500, 1168, 2168]
-		  ]
-		}, {
-  plugins: [
-    Chartist.plugins.ctPointLabels({
-      textAnchor: 'middle'
-    })
-  ]
-}, {
-		  low: 0
+		<div class="cells status-bar">
+			<div class="cell">
+				<div class="card bg--alizarin"><i class="fas fa-database"></i> database connection</div>
+				<p style="color: Dodgerblue;"><i class="fas fa-sync fa-spin"></i></p>
+			</div>
+			<div class="cell">
+				<div class="card bg--alizarin"><i class="far fa-money-bill-alt"></i> total saved</div>
+				<p style="color: Dodgerblue;"><i style="color: green;" class="fas fa-caret-up"></i> 2.500</p>
+			</div>
+			<div class="cell forHide">
+				<div class="card bg--alizarin" id="addBtn"><i class="far fa-plus-square"></i> add money</div>
+				<div class="card" style="background: #f8f8f9;box-shadow: none;"></div>
+			</div>
+			<div class="cell add-form">
+				<input type="text" placeholder="value">
+				<input type="text" placeholder="dd-mm-yyyy">
+				<button class="btn"><i class="far fa-plus-square"></i> add</button>
+			</div>
+		</div>
+
+		<div class="cells graph-full" id="graph1">
+			  <ve-line :data="chartData" :settings="chartSettings"></ve-line>
+		</div>		
+
+		<div class="cells min-max" id="funnel">
+			<ve-funnel :data="chartData"  :settings="chartSettings"></ve-funnel>
+		</div>
+
+		<div class="cells per-year" id="ring1">
+			<ve-pie :data="chartData"></ve-pie>
+		</div>
+
+		<div class="cells graph-full-2" id="hist1">
+			<ve-histogram :data="chartData" :settings="chartSettings"></ve-histogram>
+		</div>
+
+	</div>
+	<footer class="container bg--alizarin fade-out-from-top">
+	  <div class="g--10 m--1">
+	    <a href="https://kirilinsky.ru"><i class="fas fa-home"></i> homepage</a>
+	    <a href="https://kirilinsky.github.io"><i class="fab fa-github"></i> github</a>
+	  </div>
+	</footer>
+
+
+
+	<script src="//cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/v-charts/lib/index.min.js"></script>
+	<script>
+		new Vue({
+			el: "#graph1",
+			data () {
+			  this.chartSettings = {
+			    metrics: ['Total'],
+			    dimension: ['date']
+			  }
+			  return {
+			    chartData: {
+			      columns: ['date', 'cost'],
+			      rows: [
+			        { 'Total': 0, 'date': '01/01'},
+			        { 'Total': 223, 'date': '01/02'},
+			        { 'Total': 2123, 'date': '01/03'},
+			        { 'Total': 4123, 'date': '01/04'},
+			        { 'Total': 3123, 'date': '01/05'},
+			        { 'Total': 7123, 'date': '01/06'}
+			      ]
+			    }
+			  }
+			}
 		});
-
-		// Let's put a sequence number aside so we can use it in the event callbacks
-		var seq = 0,
-		  delays = 90,
-		  durations = 300;
-
-		// Once the chart is fully created we reset the sequence
-		chart.on('created', function() {
-		  seq = 0;
-		});
-
-		// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
-		chart.on('draw', function(data) {
-		  seq++;
-
-		  if(data.type === 'line') {
-		    // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
-		    data.element.animate({
-		      opacity: {
-		        // The delay when we like to start the animation
-		        begin: seq * delays + 1000,
-		        // Duration of the animation
-		        dur: durations,
-		        // The value where the animation should start
-		        from: 0,
-		        // The value where it should end
-		        to: 1
+		new Vue({
+		  el: '#funnel',
+		  data () {
+		        this.chartSettings = {
+		          dimension: 'status',
+		          metrics: 'value'
+		        }
+		        return {
+		          chartData: {
+		            columns: ['status','value','date'],
+		            rows: [
+		              {'status': 'max', 'value': 300},
+		              {'status': 'avg', 'value': 200},
+		              {'status': 'min', 'value': 100}
+		            ]
+		          }
+		        }
 		      }
-		    });
-		  } else if(data.type === 'label' && data.axis === 'x') {
-		    data.element.animate({
-		      y: {
-		        begin: seq * delays,
-		        dur: durations,
-		        from: data.y + 100,
-		        to: data.y,
-		        // We can specify an easing function from Chartist.Svg.Easing
-		        easing: 'easeOutQuart'
-		      }
-		    });
-		  } else if(data.type === 'label' && data.axis === 'y') {
-		    data.element.animate({
-		      x: {
-		        begin: seq * delays,
-		        dur: durations,
-		        from: data.x - 100,
-		        to: data.x,
-		        easing: 'easeOutQuart'
-		      }
-		    });
-		  } else if(data.type === 'point') {
-		    data.element.animate({
-		      x1: {
-		        begin: seq * delays,
-		        dur: durations,
-		        from: data.x - 10,
-		        to: data.x,
-		        easing: 'easeOutQuart'
-		      },
-		      x2: {
-		        begin: seq * delays,
-		        dur: durations,
-		        from: data.x - 10,
-		        to: data.x,
-		        easing: 'easeOutQuart'
-		      },
-		      opacity: {
-		        begin: seq * delays,
-		        dur: durations,
-		        from: 0,
-		        to: 1,
-		        easing: 'easeOutQuart'
-		      }
-		    });
-		  } else if(data.type === 'grid') {
-		    // Using data.axis we get x or y which we can use to construct our animation definition objects
-		    var pos1Animation = {
-		      begin: seq * delays,
-		      dur: durations,
-		      from: data[data.axis.units.pos + '1'] - 30,
-		      to: data[data.axis.units.pos + '1'],
-		      easing: 'easeOutQuart'
-		    };
+		  });
 
-		    var pos2Animation = {
-		      begin: seq * delays,
-		      dur: durations,
-		      from: data[data.axis.units.pos + '2'] - 100,
-		      to: data[data.axis.units.pos + '2'],
-		      easing: 'easeOutQuart'
-		    };
-
-		    var animations = {};
-		    animations[data.axis.units.pos + '1'] = pos1Animation;
-		    animations[data.axis.units.pos + '2'] = pos2Animation;
-		    animations['opacity'] = {
-		      begin: seq * delays,
-		      dur: durations,
-		      from: 0,
-		      to: 1,
-		      easing: 'easeOutQuart'
-		    };
-
-		    data.element.animate(animations);
-		  }
+		new Vue({
+			el:'#ring1',
+			data () {
+			      this.chartSettings = {
+			        dimension: 'cost',
+			        metrics: 'cost'
+			      }
+			      return {
+			        chartData: {
+			          columns: ['date', 'cost'],
+			          rows: [
+			            { 'date': '2019', 'cost': 5203},
+			            { 'date': '2018', 'cost': 223},
+			            { 'date': '2017', 'cost': 123}
+			          ]
+			        }
+			      }
+			    }
 		});
 
-		// For the sake of the example we update the chart every time it's created with a delay of 10 seconds
-		chart.on('created', function() {
-		  if(window.__exampleAnimateTimeout) {
-		    clearTimeout(window.__exampleAnimateTimeout);
-		    window.__exampleAnimateTimeout = null;
-		  }
-		  window.__exampleAnimateTimeout = setTimeout(chart.update.bind(chart), 12000);
+		new Vue({
+			el:'#hist1',
+			data () {
+			      this.chartSettings = {
+			        metrics: ['cost', 'total'],
+			        showLine: ['total']
+			      }
+			      return {
+			        chartData: {
+			          columns: ['date', 'cost', 'total'],
+			          rows: [
+			            { 'date': '01/01', 'cost': 1523, 'total': 1523},
+			            { 'date': '01/02', 'cost': 1223, 'total': 1921},
+			            { 'date': '01/03', 'cost': 2123, 'total': 5523},
+			            { 'date': '01/04', 'cost': 4123, 'total': 6523}
+			          ]
+			        }
+			      }
+			    }
 		});
-		var data = {
-		  series: [500, 1668],
-		  labels: [2018, 2019]
-		};
 
-		var chart = new Chartist.Pie('.ct-chart2', data, {
-		  donut: true,
-		  showLabel: true
-		});
 
-		chart.on('draw', function(data) {
-		  if(data.type === 'slice') {
-		    // Get the total path length in order to use for dash array animation
-		    var pathLength = data.element._node.getTotalLength();
+		let addBtn = document.getElementById('addBtn');
+		let addForm = document.querySelector('.add-form');
+		let forHide = document.querySelector('.forHide');
 
-		    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-		    data.element.attr({
-		      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-		    });
+		addBtn.addEventListener('click', showForm);
+		function showForm(){
+			forHide.classList.add('animated', 'slideOutUp');
+			setTimeout((function(){
+				forHide.style.display = 'none';	
+				addForm.classList.add('animated','slideInDown');
+				addForm.style.display = 'flex';
+				addForm.style.minHeight = '450px'
+			}), 500)
+		}
+			
+		
 
-		    // Create animation definition while also assigning an ID to the animation for later sync usage
-		    var animationDefinition = {
-		      'stroke-dashoffset': {
-		        id: 'anim' + data.index,
-		        dur: 2000,
-		        from: -pathLength + 'px',
-		        to:  '0px',
-		        easing: Chartist.Svg.Easing.easeOutQuint,
-		        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-		        fill: 'freeze'
-		      }
-		    };
-
-		    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-		    if(data.index !== 0) {
-		      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-		    }
-
-		    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-		    data.element.attr({
-		      'stroke-dashoffset': -pathLength + 'px'
-		    });
-
-		    // We can't use guided mode as the animations need to rely on setting begin manually
-		    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-		    data.element.animate(animationDefinition, false);
-		  }
-		});
 
 	</script>
 
