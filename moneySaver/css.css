@@ -22,7 +22,7 @@ body{
 	align-items: flex-start;
 	height: auto;
 	overflow: hidden;
-	transition: height ease-in-out 0.7s;
+	transition: height ease 2s;
 }
 .cell{
 	width: 30%;
@@ -30,7 +30,7 @@ body{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	transition: height ease-in-out 0.7s;
+	transition: height ease 2s;
 }
 .cell p {
 	text-align: center;
@@ -38,7 +38,8 @@ body{
 }
 .add-form{
 	display: none;
-	min-height: 0px;
+	height: 0px;
+	margin:5px 0;
 	border-left: 1px solid lightgrey;
 	flex-flow: column nowrap;
 	justify-content: space-around;
@@ -91,7 +92,13 @@ input{
 	box-shadow: 0 0 7px #E74C3C;
 	transition: ease-in 0.3s;
 }
-#addBtn:active {
+#send:hover {
+	background:#E74C3C;
+	color:#fff; 
+	transition: ease-in 0.3s;
+	border-radius: 2px;
+}
+#send:active, #addBtn:active {
 	transition: ease-in 0.5s;
-	transform: scale(0.89);
+	transform: scale(0.79);
 }

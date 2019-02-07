@@ -25,20 +25,20 @@
 		<div class="cells status-bar">
 			<div class="cell">
 				<div class="card bg--alizarin"><i class="fas fa-database"></i> database connection</div>
-				<p style="color: Dodgerblue;"><i class="fas fa-sync fa-spin"></i></p>
+				<p style="color: Dodgerblue;" id="databaseStatus"><i class="fas fa-sync fa-spin"></i></p>
 			</div>
 			<div class="cell">
 				<div class="card bg--alizarin"><i class="far fa-money-bill-alt"></i> total saved</div>
 				<p style="color: Dodgerblue;"><i style="color: green;" class="fas fa-caret-up"></i> 2.500</p>
 			</div>
-			<div class="cell forHide">
-				<div class="card bg--alizarin" id="addBtn"><i class="far fa-plus-square"></i> add money</div>
+			<div class="cell forHide animated">
+				<div class="card bg--alizarin animated" id="addBtn"><i class="far fa-plus-square"></i> add money</div>
 				<div class="card" style="background: #f8f8f9;box-shadow: none;"></div>
 			</div>
-			<div class="cell add-form">
+			<div class="cell add-form animated">
 				<input type="text" placeholder="value">
 				<input type="text" placeholder="dd-mm-yyyy">
-				<button class="btn"><i class="far fa-plus-square"></i> add</button>
+				<button class="btn" id="send"><i class="far fa-plus-square"></i> add</button>
 			</div>
 		</div>
 
@@ -159,22 +159,54 @@
 		let addBtn = document.getElementById('addBtn');
 		let addForm = document.querySelector('.add-form');
 		let forHide = document.querySelector('.forHide');
+		let sendBtn = document.getElementById('send');
+		let databaseStatus = document.getElementById('databaseStatus');
 
 		addBtn.addEventListener('click', showForm);
 		function showForm(){
-			forHide.classList.add('animated', 'slideOutUp');
+			forHide.classList.toggle('slideOutUp');
 			setTimeout((function(){
 				forHide.style.display = 'none';	
-				addForm.classList.add('animated','slideInDown');
+				forHide.classList.toggle('slideOutUp');
+				addForm.classList.toggle('slideInDown');
 				addForm.style.display = 'flex';
-				addForm.style.minHeight = '450px'
-			}), 500)
+				addForm.style.height = '445px';
+				
+			}), 750)
 		}
+
+		sendBtn.addEventListener('click', sendAndHide);
+		function sendAndHide(){
+			addForm.classList.toggle('slideInDown');
+			addForm.classList.toggle('slideOutUp');
+			setTimeout((function(){
+				addBtn.innerHTML = `<i class="fas fa-check"></i> success`;
+				forHide.classList.toggle('slideInDown');
+				forHide.style.display = 'flex';
+				addForm.style.display = 'none';	
+				addForm.style.height = '0';
+				forHide.style.display = 'flex';
+				//forHide.classList.toggle('slideOutUp');
+			}), 750);
+			setTimeout((function(){
+				addBtn.innerHTML = `<i class="fas fa-redo-alt"></i> refresh`;
+				addBtn.removeEventListener('click', showForm);
+				addBtn.addEventListener('click', function(){
+					document.location.reload(true);
+				});
+			}), 2500);
+		}
+
+		setTimeout((function(){
+			databaseStatus.innerHTML = `<i style="color:green;" class="far fa-check-circle"></i>`;
+			databaseStatus.classList.add('animated','shake');
+		}), 2000);
 			
 		
 
 
 	</script>
+		
 
 </body>
 
