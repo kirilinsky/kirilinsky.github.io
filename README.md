@@ -34,6 +34,14 @@
 <body>
 	<div class="wrap">
 		<div class="list-group">
+			<a href="https://kirilinsky.github.io/moneySaver/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">[Mn]</h5>
+		      <small>07/02/19</small>
+		    </div>
+		    <p class="mb-1">My Vue Trainig </p>
+		    <small class="codes"><i class="fab fa-html5"></i>  <i class="fab fa-css3-alt"></i> <i class="fab fa-js"> </i> </small> <i class="fab fa-vuejs"></i>
+		  </a>
 			<a href="https://kirilinsky.github.io/vue_train/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
 		    <div class="d-flex w-100 justify-content-between">
 		      <h5 class="mb-1">[Vue Training]</h5>
