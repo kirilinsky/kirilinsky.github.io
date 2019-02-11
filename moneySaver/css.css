@@ -3,12 +3,12 @@ body{
 	padding: 0;
 }
 .wrap{
-	width: 70%;
+	width: 80%;
 	height: auto;
 	margin:75px auto 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: minmax(210px, max-content) auto auto auto;
+	grid-template-rows: minmax(220px, max-content) auto auto auto;
 	grid-template-areas: "statuS statuS statuS"
 						 "graphFullOne graphFullOne graphFullOne"
 						 "minMax perYear perYear"
@@ -44,10 +44,10 @@ body{
 	flex-flow: column nowrap;
 	justify-content: space-around;
 	align-items: center;
-	padding: 2px 0;
+	padding: 3px 0;
 }
 input{
-	padding: 15px 0 !important;
+	padding: 23px 0 !important;
 }
 .card{
 	color:#fff;
