@@ -13,25 +13,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
 </head>
 <body>
-	<header class="container--baseline bg--gun-metal fade-in-from-top">
-	  	<h1 class="m--1 g--4 g-s--10 m-s--0">Конструктор одежды</h1>
-		<nav class="g--3 nav--horizontal">
-		  	<input type="checkbox" id="nav--horizontal-responsive">
-		  	<label for="nav--horizontal-responsive"><i class="fas fa-bars"></i></label>
-		  	<nav class="nav--horizontal g--3">
-		    <ul>
-		      <li><span class="tooltip" data-text="whatsApp"><a href="http://www.google.com"><i class="fab fa-whatsapp"></i></a></span></li>
-		      <li><span class="tooltip" data-text="viber"><a href="http://www.google.com"><i class="fab fa-viber"></i></a></span></li>
-		      <li><span class="tooltip" data-text="telegram"><a href="http://www.google.com"><i class="fab fa-telegram-plane"></i></a></span></li>
-		      <li class="dropdown"><a href="tel:+79165755273">Олеся</a>
-		      	<ul>
-		      		<li><a href="tel:+79165755273"><i class="fas fa-phone"></i> 8-916-575-52-73</a></li>
-		      		<li><a href="mailto: modanew@bk.ru"><i class="far fa-envelope"></i> modanew@bk.ru</a></li>
-		      	</ul>
-		      </li>
-		    </ul>
-		  </nav>
-		</nav> 
+	<header class="bg--pumpkin fade-in-from-top">
+	  	<h1>Конструктор одежды</h1>
+	  	<nav>
+	  		      <span class="tooltip" data-text="whatsApp"><a href="http://www.google.com"><i class="fab fa-whatsapp"></i></a></span>
+	  		      <span class="tooltip" data-text="viber"><a href="http://www.google.com"><i class="fab fa-viber"></i></a></span>
+	  		      <span class="tooltip" data-text="telegram"><a href="http://www.google.com"><i class="fab fa-telegram-plane"></i></a></span>
+	  		      <a href="tel:+79165755273"><i class="far fa-user"></i> Олеся</a>
+	  			  <a href="tel:+79165755273"><i class="fas fa-phone"></i> 8-916-575-52-73</a>
+	  		      <a href="mailto: modanew@bk.ru"><i class="far fa-envelope"></i> modanew@bk.ru</a>
+	  	</nav>
+		      
 	</header>
 	<div class="wrap">
 		<div class="cell lightbox fade-in-from-left anim-delay--5">
@@ -42,11 +34,11 @@
 			<h2>Построение лекал одежды на заказ</h2>
 			<ul>
 				<li><i class="fas fa-angle-right"></i> Построение базового размера</li>
-				<li><i class="fas fa-angle-right"></i> Градация лекал с 40 по 72 размеры</li>
+				<li><i class="fas fa-angle-right"></i> Градация лекал с <u>40</u> по <u>72</u> размеры</li>
 				<li><i class="fas fa-angle-right"></i> Раскладка лекал по ткани</li>
 				<li><i class="fas fa-angle-right"></i> Технический эскиз в Corel</li>
 				<li><i class="fas fa-angle-right"></i> Техническое описание на модель <br>
-					<span class="subtitle">расход ткани и приклада, описание,<br> спецификация деталей, эскиз. <br> Отправляю в формате <u>pdf, plo, dxf</u></span>
+					<span class="subtitle">расход ткани и приклада, описание,<br> спецификация деталей, эскиз. <br><br><br> <span class="card  color--clouds bg--carrot">Отправляю в формате <u>pdf, plo, dxf</u></span></span>
 				</li>
 			</ul>
 		</div>
@@ -66,15 +58,64 @@
 			</div>
 		</div>
 		<div class="cell form fade-in-from-right anim-delay--15">
-			<p class="card bg--clouds">
+			 <p class="card bg--carrot color--clouds">
 				Оставь завявку и получи комплект лекал платья футляр в подарок
 			</p>
-			<label>имя</label>
-			<input type="text" required placeholder="имя">
-			<label>номер</label>
-			<input type="text" required placeholder="номер">
-			<button class="btn--raised btn--primry">отправить</button>
+			<label for="name">Ваше Имя</label>
+			<input type="text" id="name">
+			<label for="number">Ваш Номер</label>	
+			<input type="text" id="number">
+			<label for="email">Ваша почта</label>	
+			<input type="email" id="email">
+			<span class="subtitle"  style="font-size: 12px;">нажимая кнопку отправить <br> вы принимаете <br>
+			<a style="font-size: 12px;" href="rights.html">согласие на обработку данных</a></span>
+			 
+			 <br><br>
+			<button class="btn--raised btn--primry bg--carrot" id="send">отправить</button>
+
 		</div>
 	</div>
+
+	<script>
+		let name = document.getElementById('name');
+		let number = document.getElementById('number');
+		let email = document.getElementById('email');
+		let params = new FormData();
+		let btn = document.querySelector('#send');
+		btn.addEventListener('click', startAjax);
+		function startAjax(){
+			if(name.value == ''){
+				alert('Введите имя!');
+			}
+			else if(number.value == ''){
+				alert('Введите номер!');
+			}
+			else if(email.value == ''){
+				alert('Введите почту!');
+			} else {
+				params.append('name', name.value);
+				params.append('number', number.value);
+				params.append('email', email.value);
+				ajaxPost(params);
+			}
+		}
+
+		function ajaxPost(paramss) {
+			var request = new XMLHttpRequest();
+
+			request.onreadystatechange = function() {
+				if(request.readyState == 4) {
+					document.querySelector('.form').innerHTML = `
+						<p class="card">Cпасибо за заявку,<br>свяжусь с Вами в ближайшее время!</p>
+						<button class="btn--float bg--clouds" onclick="document.location.reload(true);"><i class="fas fa-redo-alt"></i></button>
+					`;
+				}
+			}
+
+			request.open('POST', '/send-ajax.php');
+			request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+			request.send(paramss);
+		}
+	</script>
 </body>
 </html>

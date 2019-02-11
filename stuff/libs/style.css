@@ -6,30 +6,30 @@ body{
 }
 header{
 	display: flex;
-	justify-content: space-around;
+	width: 100%;
+	justify-content: center;
 	align-items: center !important;
-	
+	flex-direction: row;
+}
+header>h1{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 nav{
-	border-radius: 3px;
-}
-li{
-	text-align: center;
-}
-li.dropdown{
-	padding:0 190px 0 0;
-}
-li.dropdown > a {
+	display: flex;
+	width: 70%;
 	height: 100%;
-	margin:0 auto;
+	justify-content: flex-end;
+	align-items: center;
+	color:white;
 }
 a{
-	font-size: 25px;
-	color:#5C7987 !important;
-	padding: 2px;
-
+	font-size: 26px;
+	margin:0 15px;
 }
-
 .wrap{
 	width: 75%;
 	min-height:100vh;
@@ -41,7 +41,6 @@ a{
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 25px;
-	background: #00000055;
 }
 ul {
 	z-index: 1000 !important;
@@ -85,6 +84,9 @@ img:hover{
 .form {
 	grid-area: form;
 }
+.form p {
+	font-size: 20px;
+}
 .labels{
 	display: flex;
 	width: 95%;
@@ -97,13 +99,43 @@ img:hover{
 	width:155px;
 	height: 155px;
 }
+.rights{
+	width: auto;
+	margin:0 auto;
+}
+pre {
+	margin:25px auto;
+	background-color: #fff;
+	padding: 25px 10px;
+}
 @media (max-width: 910px){
+	header{
+		flex-direction: column;
+		height: auto;
+		margin: 0 0 10px 0;
+		padding: 10px;
+		position: fixed;
+		z-index: 999;
+	}
+	nav{
+		order: -1;
+		width: 99%;
+		margin:5px;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+	}
+	nav a {
+		font-size:20px !important;
+		margin:9px 5px; 
+	}
 	h1{
 		text-align: center;
+		font-size: 30px;
 	}
 	.wrap{
 		width: 93.3%;
-		margin:200px auto 35px;
+		margin:150px auto 35px;
 		grid-template-areas: 'textOne'
 							 'photo'
 							 'textTwo'
