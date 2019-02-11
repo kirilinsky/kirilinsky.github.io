@@ -10,6 +10,7 @@ header{
 	justify-content: center;
 	align-items: center !important;
 	flex-direction: row;
+	box-shadow: 0 0 1px #E57D22;
 }
 header>h1{
 	height: 100%;
@@ -107,6 +108,17 @@ pre {
 	margin:25px auto;
 	background-color: #fff;
 	padding: 25px 10px;
+}
+footer{
+	background: #E57D22;
+	width: 100%;
+	margin-top: 15px;
+	height: 45px;
+	box-shadow: 0 0 1px #E57D22;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
 }
 @media (max-width: 910px){
 	header{
