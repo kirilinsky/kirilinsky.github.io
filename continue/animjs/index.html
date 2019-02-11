@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Anime JS</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.ball{
+				width: 66px;
+				height: 66px;
+				border-radius: 33px;
+				background: grey;
+				box-shadow: 0 0 5px black;
+				margin:146px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ball"></div>
+		<hr>
+		
+		<script src="anime.min.js"></script>
+		<script>
+			
+			let bouncingBall = anime({
+				targets: '.ball',
+				translateY: '15vh',
+				duration:510,
+				loop:true,
+				direction:'alternate',
+				easing:'easeInCubic',
+				scaleX: {
+				    value: 1.41,
+				    duration: 250,
+				    delay: 500
+				  }
+			});
+
+		</script>
+	</body>
+	</html>	
