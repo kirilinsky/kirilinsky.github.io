@@ -119,23 +119,23 @@ pre {
 	}
 	nav{
 		order: -1;
-		width: 99%;
-		margin:5px;
+		width: 100%;
+		margin:5px 0;
 		justify-content: space-around;
 		flex-wrap: wrap;
 
 	}
 	nav a {
-		font-size:20px !important;
-		margin:9px 5px; 
+		font-size:19px !important;
+		margin:10px 4px; 
 	}
 	h1{
 		text-align: center;
-		font-size: 30px;
+		font-size: 31px;
 	}
 	.wrap{
-		width: 93.3%;
-		margin:150px auto 35px;
+		width: 92.3%;
+		margin:175px auto 35px;
 		grid-template-areas: 'textOne'
 							 'photo'
 							 'textTwo'
