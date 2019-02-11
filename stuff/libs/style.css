@@ -8,6 +8,7 @@ header{
 }
 nav{
 	border-radius: 3px;
+
 }
 li{
 	text-align: center;
@@ -38,7 +39,9 @@ a{
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 25px;
 }
-
+ul {
+	z-index: 1000 !important;
+}
 /* grid layout */
 .cell{
 	background: #fff;
@@ -96,7 +99,7 @@ img:hover{
 	}
 	.wrap{
 		width: 93.3%;
-		margin:30px auto;
+		margin:200px auto 35px;
 		grid-template-areas: 'textOne'
 							 'photo'
 							 'textTwo'
@@ -108,4 +111,7 @@ img:hover{
 	.cell{
 		padding: 20px 5px;
 	}
+	img{
+	max-width: 95%;
+	filter: grayscale(0);
 }
