@@ -111,7 +111,7 @@
 			request.onreadystatechange = function() {
 				if(request.readyState == 4) {
 					document.querySelector('.form').innerHTML = `
-						<p class="card">Cпасибо за заявку,<br>свяжусь с Вами в ближайшее время!</p>
+						<p class="card fade-in-from-bottom anim-delay--5">Cпасибо за заявку,<br>свяжусь с Вами в ближайшее время!</p>
 						<button class="btn--float bg--clouds" onclick="document.location.reload(true);"><i class="fas fa-redo-alt"></i></button>
 					`;
 				}
