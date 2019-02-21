@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Расчет</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<meta name="description" content="desc">
+	<meta name="copyright" lang="ru" content="copy">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<div class="container">
+		<div class="el">
+			<nav class="navbar navbar-light bg-info d-flex flex-row fixed-top">
+			  <span class="navbar-brand mb-0 h1 text-light">расчет</span>
+			  <button type="button" class="btn btn-light" data-toggle="modal" data-target=".bd-example-modal-sm" v-if="optionsValue > 0">
+			    выбрано опций <span class="badge badge-success">{{	optionsValue }}</span>
+			  </button>
+			</nav>
+			<main class="jumbotron text-center" v-if="!getStarted" id="main">
+				<br>
+				<img src="src/prlx.png" class="h-75 w-50 img-thumbnail img-fluid mx-auto d-block" alt="Одностраничный сайт">
+				  <h1 class="display-4">Привет!</h1>
+				  <p class="lead">С помощью этого сервиса Вы сможете расчитать примерную стоимость разработки Вашего проекта.</p>
+				  <p>Выбирайте нужные Вам параметры.</p>
+				  <p class="lead">
+				    <a class="btn btn-primary btn-lg go_to" href="#type1" @click.once="getStarted = true">Начать</a>
+				  </p>
+			</main>
+			<section v-if="getStarted">
+				<div class="wrap" id="type1">
+					<transition  name="slide">
+						<div class="card" style="width: 20rem;" v-if="options.type == 'none'">
+						  <img src="src/1.png" class="card-img-top" alt="landing">
+						  <div class="card-body">
+						    <h5 class="card-title">Одностраничый Landing</h5>
+						    <p class="card-text"> - сайт, который может быть как страницей подписки на новостную рассылку, так и страницей продажи небольшого количества услуг или товаров.</p>
+						    <a href="#land-ancor" class="btn btn-primary go_to" @click.once="setType('landing')">Выбрать</a>
+						  </div>
+						</div>
+					</transition>
+					<transition  name="slide">			
+						<div class="card" style="width: 20rem;" v-if="options.type == 'none'">
+						  <img src="src/2.jpg" class="card-img-top" alt="multipage">
+						  <div class="card-body">
+						    <h5 class="card-title">Многостраничый Сайт</h5>
+						    <p class="card-text"> - на таком сайте можно предоставить больше информации, а также разместить каталог с детальным описанием товаров и услуг.</p>
+						    <a href="#multipage-ancor" class="btn btn-primary go_to"  @click.once="setType('multipage')">Выбрать</a>
+						  </div>
+						</div>
+					</transition>
+				</div>
+			</section>
+
+
+
+			<div class="jumbotron" v-if="options.type == 'landing'" id="land-ancor">
+				<img  src="src/landPrlx.jpg" class=" img-thumbnail h-75 w-50 img-fluid rounded mx-auto d-block" alt="Одностраничный сайт">
+				<br><br>
+				<h2 class="text-center">Landing Page Одностраничный сайт</h2>
+				<div class="line"></div>
+				<div class="settings">
+					<h5>Выберите необходимые настройки</h5>
+					<br>
+					<table class="table table-hover table-sm">
+					  <thead>
+					    <tr>
+					      <th scope="col">Кол-во страниц</th>
+					      <th scope="row"><input type="range" min="1" max="9"  v-model="options.sections" @change.lazy="setSections(options.sections)"></th>
+					    </tr>
+					  </thead>
+					  <tbody class="table-striped">
+					    <tr>
+					      <th scope="col">Выбрано страниц</th>
+					      <td><input type="number" max="9" class="form-control" v-model="options.sections"></td>
+					    </tr>
+					    
+					    <tr>
+					    	<th>Стоимость</th>
+					    	<td>
+
+					    		<div class="input-group input-group-sm">
+					    		  <div class="input-group-prepend">
+					    		    <span class="input-group-text  bg-secondary text-light" id="inputGroup-sizing-sm">250.₽ x {{options.sections}}</span>
+					    		  </div>
+					    		  <input type="text" id="disabledInput"  readonly class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" :value="250*options.sections + '.₽'">
+					    		</div>
+					    	</td>
+					    </tr>
+					 	<tr class="table-borderless">
+					 		<td colspan="2">
+					 			  <transition  name="slide">
+					 					<div class="alert alert-danger" v-if="options.sections >= 9">если вы хотите использовать более девяти секций, рекомендую выбрать - <span class="badge badge-danger hover" @click="changeToMultipage"> Мультистраничный сайт</span></div>
+					 				</transition>
+					 		</td>
+					 	</tr>
+					    <tr>
+					      <th scope="col">Адаптивная верстка</th>
+					      <td>
+					      	<div class="input-group">
+					      	  <div class="input-group-prepend">
+					      	    <div class="input-group-text">
+					      	      <div class="custom-control custom-checkbox">
+					      	        <input type="checkbox" disabled class="custom-control-input" id="adaptive" v-model="options.adaptive" :checked="options.type == 'landing' ? 'checked' : ''">
+					      	        <label class="custom-control-label" for="adaptive" :title="options.adaptive ? 'убрать': 'выбрать'">{{ options.adaptive ? '':'выбрать' }}</label>
+					      	      </div>
+					      	    </div>
+					      	  </div>
+					      	  <input v-if="options.adaptive" type="text" readonly class="form-control alert-success text-success" id="disabledInput" value="0.₽">
+					      	</div>
+					      </td>
+					    </tr>
+					    <tr>
+					    	<th>Форма обратной связи</th>
+					    	<td>
+					    		<div class="input-group">
+					    		  <div class="input-group-prepend">
+					    		    <div class="input-group-text">
+					    		      <div class="custom-control custom-checkbox">
+					    		        <input type="checkbox" class="custom-control-input" id="feedback" v-model="options.feedback">
+					    		        <label class="custom-control-label" for="feedback" :title="options.feedback ? 'убрать': 'выбрать'">{{ options.feedback ? '':'выбрать' }}</label>
+					    		      </div>
+					    		    </div>
+					    		  </div>
+					    		  <input v-if="options.feedback" type="text" readonly class="form-control" id="disabledInput" value="500.₽">
+					    		</div>
+					    	</td>
+					    </tr>
+					    <tr v-if="options.feedback">
+					    	<th>Введите почту для корреспонденции</th>
+					    	<td><input class="form-control form-control-sm" :class="options.email != '' ? (flags[0].error ? 'is-invalid':'is-valid') : ''" type="email" @input="inInput($event.target.value, 0)" :value="options.email"></td>
+					    </tr>
+					    <tr>
+					    	<th>Помощь с Доменом и/или Хостингом</th>
+					    	<td>
+					    		<div class="input-group">
+					    		  <div class="input-group-prepend">
+					    		    <div class="input-group-text">
+					    		      <div class="custom-control custom-checkbox">
+					    		        <input type="checkbox" class="custom-control-input" id="needHelp" v-model="options.needHelp">
+					    		        <label class="custom-control-label" for="needHelp" :title="options.needHelp ? 'убрать': 'выбрать'">{{ options.needHelp ? '':'выбрать' }}</label>
+					    		      </div>
+					    		    </div>
+					    		  </div>
+					    		  <input v-if="options.needHelp" type="text" readonly class="form-control alert-success text-success" id="disabledInput" value="0.₽">
+					    		</div>
+					    	</td>
+					    </tr>
+					    
+					    <tr>
+					    	<th>Ваша почта</th>
+					    	<td><input class="form-control form-control-sm" :class="options.emailUser != '' ? (flags[1].error ? 'is-invalid':'is-valid') : ''" type="email" @input="inInput($event.target.value, 1)"  id="forMail"></td>
+					    </tr>
+					    <tr>
+					        <th>Краткое описание сайта</th>
+					        <td>
+					    		<textarea class="form-control" aria-label="With textarea" v-model="options.description" max="150"></textarea>
+					        </td>
+					    </tr>
+					    <tr>
+					    	<td  class="text-right">
+					    		<button class="btn btn-danger" @click="setDefaults()">↺ сбросить</button>
+					    	</td>
+					    	<td class="text-left">
+					    		<button class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm">расчет</button>
+					    	</td>
+					    </tr>
+					   </tbody>
+					</table>
+					  
+				</div>
+			</div>
+			<div class="jumbotron" v-if="options.type == 'multipage'" >
+				<img src="src/multipage.jpg" class="img-thumbnail h-75 w-50 img-fluid rounded mx-auto d-block" alt="Мультистраничный сайт"   id="multipage-ancor">
+				<br><br>
+				<h2 class="text-center">Многостраничный сайт</h2>
+				<hr>
+				<div class="settings">
+					<h5>Выберите необходимые настройки</h5>
+					<br>
+					<table class="table table-hover table-sm">
+					  <thead>
+					    <tr>
+					      <th scope="col">Кол-во страниц</th>
+					      <th scope="row"><input type="range" min="1" max="9"  v-model="options.pages" @change.lazy="setPages(options.pages)"></th>
+					    </tr>
+					  </thead>
+					  <tbody class="table-striped">
+					    <tr>
+					      <th scope="col">Выбрано страниц</th>
+					      <td><input type="number" max="9" class="form-control" v-model="options.pages"></td>
+					    </tr>
+					    
+					    <tr>
+					    	<th>Стоимость</th>
+					    	<td>
+
+					    		<div class="input-group input-group-sm">
+					    		  <div class="input-group-prepend">
+					    		    <span class="input-group-text  bg-secondary text-light" id="inputGroup-sizing-sm">500.₽ x {{options.pages}}</span>
+					    		  </div>
+					    		  <input type="text" id="disabledInput"  readonly class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" :value="500*options.pages + '.₽'">
+					    		</div>
+					    	</td>
+					    </tr>
+					 
+					    <tr>
+					      <th scope="col">Адаптивная верстка</th>
+					      <td>
+					      	<div class="input-group">
+					      	  <div class="input-group-prepend">
+					      	    <div class="input-group-text">
+					      	    	<div class="custom-control custom-checkbox">
+					      	    	  <input type="checkbox" class="custom-control-input" id="adaptivem" v-model="options.adaptive">
+					      	    	  <label class="custom-control-label" for="adaptivem" :title="options.adaptive ? 'убрать': 'выбрать'">{{ options.adaptive ? '':'выбрать' }}</label>
+					      	    	</div>
+					      	    </div>
+					      	  </div>
+					      	  <input v-if="options.adaptive" type="text" readonly class="form-control" id="disabledInput" :value="(options.pages*100)+'.₽'">
+					      	</div>
+					      </td>
+					    </tr>
+					    <tr>
+					    	<th>Форма обратной связи</th>
+					    	<td>
+					    		<div class="input-group">
+					    		  <div class="input-group-prepend">
+					    		    <div class="input-group-text">
+					    		      <div class="custom-control custom-checkbox">
+					    		        <input type="checkbox" class="custom-control-input" id="feedbackm" v-model="options.feedback">
+					    		        <label class="custom-control-label" for="feedbackm" :title="options.feedback ? 'убрать': 'выбрать'">{{ options.feedback ? '':'выбрать' }}</label>
+					    		      </div>
+					    		    </div>
+					    		  </div>
+					    		  <input v-if="options.feedback" type="text" readonly class="form-control" id="disabledInput" value="500.₽">
+					    		</div>
+					    	</td>
+					    </tr>
+					    <tr v-if="options.feedback">
+					    	<th>Введите почту для <u title="Адрес для заявок с сайта">корреспонденции</u></th>
+					    	<td><input class="form-control form-control-sm" :class="options.email != '' ? (flags[0].error ? 'is-invalid':'is-valid') : ''" type="email" @input="inInput($event.target.value, 0)" :value="options.email"></td>
+					    </tr>
+					    <tr>
+					    	<th>Помощь с Доменом и/или Хостингом</th>
+					    	<td>
+					    		<div class="input-group">
+					    		  <div class="input-group-prepend">
+					    		    <div class="input-group-text">
+					    		      <div class="custom-control custom-checkbox">
+					    		        <input type="checkbox" class="custom-control-input" id="needHelpm" v-model="options.needHelp">
+					    		        <label class="custom-control-label" for="needHelpm" :title="options.needHelp ? 'убрать': 'выбрать'">{{ options.needHelp ? '':'выбрать' }}</label>
+					    		      </div>
+					    		    </div>
+					    		  </div>
+					    		  <input v-if="options.needHelp" type="text" readonly class="form-control alert-success text-success" id="disabledInput" value="0.₽">
+					    		</div>
+					    	</td>
+					    </tr>
+					    <tr>
+					    	<td colspan="2">
+					    		  <transition  name="slide">
+					    				<div class="alert alert-danger" v-if="options.pages <= 1">если вы хотите использовать не более одной страницы, рекомендую выбрать <span class="badge badge-danger hover" @click="changeToLanding">landing-page</span> сайт</div>
+					    			</transition>
+					    	</td>
+					    </tr>
+					    <tr>
+					    	<th>Ваша почта</th>
+					    	<td><input class="form-control form-control-sm" :class="options.emailUser != '' ? (flags[1].error ? 'is-invalid':'is-valid') : ''" type="email" @input="inInput($event.target.value, 1)" id="forMail2"></td>
+					    </tr>
+					    <tr>
+					        <th>Краткое описание сайта</th>
+					        <td>
+					    		<textarea class="form-control" aria-label="With textarea" v-model="options.description" max="150"></textarea>
+					        </td>
+					    </tr>
+					    <tr>
+					    	<td class="text-right">
+					    		<button class="btn btn-danger" @click="setDefaults()">↺ сбросить</button>
+					    	</td>
+					    	<td class="text-left">
+					    		<button class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm">расчет</button>
+					    	</td>
+					    </tr>
+					   </tbody>
+					</table>
+					
+					  
+				</div>
+			</div>
+
+
+
+			<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modal">
+			  <div class="modal-dialog modal-sm">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			         <h6 class="modal-title" id="exampleModalLongTitle">Итоговый расчет</h6>
+			         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			            <span aria-hidden="true">&times;</span>
+			         </button>
+			       </div>
+			       <div class="modal-body">
+			             <table class="table table-sm" id="tableHTML">
+			               <thead>
+			                 <tr>
+			                 	<th colspan="3" class="text-center text-light bg-secondary">{{ options.type == 'multipage'? 'Многостраничный сайт':'Посадочная страница' }}</th>
+			                 </tr>
+			                 <tr>
+			                   <th scope="col">Опция</th>
+							   <th scope="col" colspan="2"  class="text-right">Значение</th>
+			                 </tr>
+			                </thead>
+			                <tbody>
+			                 <tr>
+			                 	<td>{{ options.type == 'multipage'? 'Страниц ('+ options.pages +')':'Секции ('+ options.sections +')' }}</td>
+			                 	<td colspan="2" class="text-right">{{ options.type == 'multipage'? 500*options.pages : 250*options.sections }}.₽</td>
+			                 </tr>
+			                 <tr v-if="(options.type == 'landing')||(options.adaptive)">
+			                 	<td>Адаптивная верстка</td>
+			                 	<td colspan="2" class="text-right" :class="options.type == 'landing' ? 'text-success': ''">{{ options.type == 'multipage'? (options.pages*100)+'.₽':'0.₽' }}</td>
+			                 </tr>
+			                 <tr v-if="options.feedback">
+			                 	<td>Форма обратной связи</td>
+			                 	<td colspan="2" class="text-right">500.₽</td>
+			                 </tr>
+			                 <tr v-if="options.feedback">
+			                 	<td >Указанный адрес</td>
+			                 	<td class="text-right" colspan="2"><i>{{ options.email == ''? 'не указан':options.email }}</i></td>
+			                 </tr>
+			                 <tr >
+			                 	<td>Помощь с доменом/хостингом</td>
+			                 	<td colspan="2" class="text-right"><i>{{ options.needHelp ? 'нужна':'нет' }}</i></td>
+			                 </tr>
+			                 <tr rowspan="2" v-if="options.description != ''">
+			                 	<td>Краткое описание</td>
+			                 	<td colspan="2" class="font-weight-light text-right"><i>{{ options.description }}</i></td>
+			                 </tr>
+			                 <tr>
+			                 	<td>Ваша почта</td>
+			                 	<td colspan="2" class="text-right" :class="(options.emailUser == '' || flags[1].error) ? 'text-danger': 'text-success'">{{ options.emailUser == '' ? 'Введите почту!' : options.emailUser }}</td>
+			                 </tr>
+			                 <tr>
+			                 	<th>Итого:{{ amount }}</th>
+			                 	<th colspan="2" class="text-right" id="totalPrice">{{ options.amount }}.₽</th>
+			                 </tr>
+			               </tbody>
+			             </table>
+			             <table class="table table-sm">
+			               <thead>
+							<tr>
+								<th><button class="btn btn-danger" @click="setDefaults()">↺</button></th>
+								<th><button class="btn btn-info" @click="tryXls()">скачать</button></th>
+								<th><button class="btn btn-success" id="sendBtn" @click="trySend(options.type)">отправить</button></th>
+							</tr>
+							</thead>
+						</table>			              
+			       </div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="modalPost">
+			  <div class="modal-dialog modal-sm">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			         <h6 class="modal-title" id="exampleModalLongTitle">Введите почту!</h6>
+			         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			            <span aria-hidden="true">&times;</span>
+			         </button>
+			       </div>
+			       <div class="modal-body">
+			            {{ checkMail }}
+			       </div>
+			    </div>
+			  </div>
+			</div>
+
+			<section style="display: none;">
+				<table border="0" cellpadding="0" cellspacing="0" id="tabHTML">
+					<thead>
+						<tr>
+							<th>Опция</th>
+							<th>Цена</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{ options.type == 'multipage'? 'Страниц ('+ options.pages +')':'Секции ('+ options.sections +')' }}</td>
+							<td>{{ options.type == 'multipage'? 500*options.pages : 250*options.sections }}.₽</td>
+						</tr>
+						<tr v-if="(options.type == 'landing')||(options.adaptive)">
+							<td>Адаптивная верстка</td>
+							<td>{{ options.type == 'multipage'? (options.pages*100)+'.₽':'0.₽' }}</td>
+						</tr>
+						<tr v-if="options.feedback">
+							<td>Форма обратной свзяи</td>
+							<td>500.₽</td>
+
+						</tr>
+						<tr v-if="options.feedback">
+							<td>Указанный адрес</td>
+							<td>{{ options.email == ''? 'не указан':options.email }}</td>
+						</tr>
+						<tr v-if="options.needHelp">
+							<td>Помощь с доменом/хостингом</td>
+							<td>{{ options.needHelp?'нужна':'нет' }}</td>
+						</tr>
+						<tr>
+							<td>Ваша почта</td>
+							<td>{{ options.emailUser == '' ? 'Почта не указана' : options.emailUser }}</td>
+						</tr>
+						<tr v-if="options.description != ''">
+							<td>Краткое описание</td>
+							<td>{{ options.description }}</td>
+						</tr>
+						<tr>
+							<th>Итого</th>
+							<th>{{ options.amount }}</th>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</section>
+
+
+		</div>
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="vue.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jszip.min.js"></script>
+	<script type="text/javascript" src="FileSaver.js"></script>
+	<script type="text/javascript" src="excel-gen.js"></script>
+	<script>
+		let el = new Vue({
+			el: ".el",
+			data: {
+				options:{
+					type:'none',
+					pages:0,
+					sections:0,
+					adaptive:false,
+					feedback:false,
+					needHelp:false,
+					description:'',
+					email:'',
+					emailUser:'',
+					amount:''
+				},
+				flags: [],
+				getStarted: false,
+				pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			},
+			computed:{
+				optionsValue(){
+					let x = 0;
+					for (let key in this.options)
+					  {
+					   if((this.options[key] != 'none') && (this.options[key] != 0) && (this.options[key] != false) && (this.options[key] != '')){
+					   	x++;
+					   }
+					  }
+					  return x
+				},
+				amount(){
+					let x = 0;
+					if(this.options.type == 'landing'){
+						x += (this.options.sections * 250);
+					}
+					if(this.options.type == 'multipage'){
+						x += (this.options.pages * 500);
+						if(this.options.adaptive)	{
+							x += (this.options.pages * 100);
+						}
+					}
+					if(this.options.feedback){
+						x += 500;
+					}
+					this.options.amount = String(x);
+				},
+				checkMail(){
+					if(this.flags[1].error && this.options.emailUser != ''){
+						return 'Введите корректную почту, пожалуйста'
+					}
+					if(this.options.emailUser == ''){
+					 	return 'Введите почту, пожалуйста'
+					}
+				}
+			},
+			beforeMount(){
+				for(let x = 0;x < 2; x++) {
+					this.flags.push({
+						error: true
+					})
+				}
+			},
+			methods:{
+				setDefaults(){
+					this.options.type = 'none';
+					this.options.adaptive = false;
+					this.options.feedback = false;
+					this.options.needHelp = false;
+					this.options.description = '';
+					this.options.email = '';
+					this.options.emailUser = '';
+					this.options.pages = 0;
+					this.options.sections = 0;
+					this.getStarted = false;
+					$('#modal').modal('hide');
+				},
+				changeToLanding(){
+					this.setDefaults();
+					this.options.type = 'landing';
+					this.options.sections = 1;
+				},
+				changeToMultipage(){
+					this.setDefaults();
+					this.setType('multipage');
+					this.options.pages = 2;
+				},
+				setType(str){
+					document.querySelector('section').style.minHeight = 'auto';
+					this.options.type = str;
+					event.target.innerHTML = "Выбрано";
+					event.target.classList.add('btn-success');
+					if(str == 'landing'){
+						this.options.sections = 1;
+						this.options.adaptive = true;
+					} else if(str == 'multipage') {
+						this.options.pages = 2;
+					}
+				},
+				setSections(str){
+					this.options.sections = str;
+					this.options.adaptive = true;
+				},
+				setPages(str){
+					this.options.pages = str;
+				},
+				inInput(value, index, referrer){
+					let control = this.flags[index];
+					if(index == 0){
+						this.options.email = value;	
+					} else {
+						this.options.emailUser = value;
+					}
+					control.error = !this.pattern.test(value);
+				},
+				trySend(type){
+					let dest = '';
+					if(type == 'landing'){
+						dest = 'forMail';
+					} else{
+						dest = 'forMail2';
+					}
+					if((this.flags[1].error && !this.options.feedback) || (this.flags[0].error && this.flags[1].error)){
+						$('#modal').modal('hide');
+						setTimeout((function(){$('#modalPost').modal('toggle')}), 400);
+						setTimeout((function(){
+							$('#modalPost').modal('toggle');
+							$('#'+dest).focus();		
+						}), 2000);
+					}
+					else{
+						let params = new FormData();
+						params.append('type', (this.options.type == 'landing' ? 'Одностраничный сайт': 'Мультистраничный сайт'));
+		 	    		params.append('values', (this.options.type == 'landing' ? this.options.sections : this.options.pages));
+		 	    		params.append('adaptive', (this.options.adaptive == true ? 'да' : 'нет'));
+		 	    		params.append('feedback', (this.options.feedback == true ? 'да' : 'нет'));
+		 	    		params.append('mailFeedback', (this.options.email == 'true' ? this.options.email : 'не указан'));
+		 	    		params.append('needHelp', (this.options.needHelp == true ? 'да' : 'нет'));
+		 	    		params.append('description', (this.options.description == 'true' ? this.options.description : 'не указано'));
+		 	    		params.append('amount', this.options.amount);
+		 	    		params.append('email', this.options.emailUser);
+		 	    		ajaxPost(params);
+					}
+				},
+				tryXls(){
+					let dest = '';
+					if(this.options.type == 'landing'){
+						dest = 'forMail';
+					} else{
+						dest = 'forMail2';
+					}
+					if(this.options.emailUser != ''){
+						excel = new ExcelGen({
+						       "src_id": "tabHTML",
+						       "show_header": true,
+						       "type": "table",
+						       "author": "Автоматический расчет стоимости",
+						       "file_name": "Ваша смета "+ (this.options.type == 'landing' ? 'лендинга' : 'мультистраничнго сайта для ') + this.options.emailUser+".xlsx",
+						       "column_formats":["1","1"]
+						   });
+						   excel.generate();
+						} else {
+							$('#modal').modal('hide');
+							setTimeout((function(){$('#modalPost').modal('toggle')}), 400);
+							setTimeout((function(){
+								$('#modalPost').modal('toggle');
+								$('#'+dest).focus();		
+							}), 2000);
+						}
+					
+				}
+			}
+		});
+
+
+		function ajaxPost(paramss) {
+			var request = new XMLHttpRequest();
+			request.onreadystatechange = function() {
+				if(request.readyState == 4) {
+					document.querySelector('#sendBtn').outerHTML = `
+					<div class="spinner-grow" id="sendBtn" role="status">
+					  <span class="sr-only">Loading...</span>
+					</div>
+					`;
+					
+					setTimeout((function(){
+
+						document.querySelector('#sendBtn').outerHTML = 
+						`
+							<button class="btn btn-warning" id="sendBtn" @click="trySend(options.type)">отправлено</button>
+						`;
+						
+
+					}),2000);
+					setTimeout((function(){
+						document.querySelector('#sendBtn').outerHTML = 
+												`
+													<button class="btn btn-success" id="sendBtn" @click="trySend(options.type)">отправить</button>
+												`;
+					}),3800);
+
+				}
+			}
+
+			request.open('POST', '/ip.php');
+			request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+			request.send(paramss);
+		}
+
+		
+
+	</script>
+</body>
+</html>
