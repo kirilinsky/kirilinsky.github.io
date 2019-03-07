@@ -646,12 +646,15 @@
 				}
 			}
 
-			request.open('POST', '/ip.php');
+			request.open('POST', 'ip.php');
 			request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 			request.send(paramss);
 		}
 
-		
+		let btn = document.getElementById('send');
+		btn.addEventListener('click', function(e){
+			
+		});
 
 	</script>
 </body>

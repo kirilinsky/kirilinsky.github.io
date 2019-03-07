@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Промо-страница | Скоро открытие!</title>
+	<meta name="description" content="Скоро открытие вашего сайта">
+	<meta name="copyright" lang="ru" content="copy">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="fav.png" type= "image/png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+	<main>
+		<section class="top">
+			<h1 class="top__header">Скоро открытие!</h1>
+			<p class="top__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький свою. Переписали свой, вершину, рыбного строчка решила последний, первую меня то семантика, безопасную ipsum!</p>
+		</section>
+		<div class="line"></div>
+		<section class="bottom">
+			<div class="bottom__blocks" id="timer">
+				<div class="bottom__block">
+					<h1 class="bottom__block-timer days"></h1>
+					<p class="bottom__block-description">дней</p>
+				</div>
+				<div class="bottom__block">
+					<h1 class="bottom__block-timer hours"></h1>
+					<p class="bottom__block-description">часов</p>
+				</div>
+				<div class="bottom__block">
+					<h1 class="bottom__block-timer minutes"></h1>
+					<p class="bottom__block-description">минут</p>
+				</div>
+				<div class="bottom__block">
+					<h1 class="bottom__block-timer seconds"></h1>
+					<p class="bottom__block-description">секунд</p>
+				</div>
+			</div>
+			<div class="button">Скоро </div>
+			<div class="social">
+					<a href="#"><i class="fab fa-vk"></i></a>
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-telegram-plane"></i></a>
+			</div>
+		</section>
+		<footer>
+			<span>© 2017 Ultra Coming Soon . All Rights Reserved | Design by <a href="https://w3layouts.com">W3layouts</a> Dev by <a href="https://kirilinsky.ru">kirilinsky</a></span>
+		</footer>
+	</main>
+
+	<script>
+		function getTimeRemaining(endtime) {
+		  var t = Date.parse(endtime) - Date.parse(new Date());
+		  var seconds = Math.floor((t / 1000) % 60);
+		  var minutes = Math.floor((t / 1000 / 60) % 60);
+		  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		  return {
+		    'total': t,
+		    'days': days,
+		    'hours': hours,
+		    'minutes': minutes,
+		    'seconds': seconds
+		  };
+		}
+		 
+		function initializeClock(endtime) {
+		  var daysSpan = document.querySelector('.days');
+		  var hoursSpan = document.querySelector('.hours');
+		  var minutesSpan = document.querySelector('.minutes');
+		  var secondsSpan = document.querySelector('.seconds');
+		 
+		  function updateClock() {
+		    var t = getTimeRemaining(endtime);
+		 
+		    daysSpan.innerHTML = t.days;
+		    hoursSpan.innerHTML = t.hours;
+		    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+		 
+		    if (t.total <= 0) {
+		      clearInterval(timeinterval);
+		    }
+		  }
+		 
+		  updateClock();
+		  var timeinterval = setInterval(updateClock, 1000);
+		}
+		 
+		var deadline = new Date(Date.parse(new Date()) + 57 * 22 * 60 * 60 * 1000); // for endless timer
+		initializeClock(deadline);
+	</script>
+</body>
+</html>

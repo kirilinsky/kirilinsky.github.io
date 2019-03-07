@@ -11,7 +11,7 @@ body{
 	grid-template-rows: minmax(220px, max-content) auto auto auto;
 	grid-template-areas: "statuS statuS statuS"
 						 "graphFullOne graphFullOne graphFullOne"
-						 "minMax perYear perYear"
+						 "minMax minMax perYear"
 						 "graphFullTwo graphFullTwo graphFullTwo";
 	grid-gap: 50px;
 }
@@ -39,8 +39,7 @@ body{
 .add-form{
 	display: none;
 	height: 0px;
-	margin:5px 0;
-	border-left: 1px solid lightgrey;
+	margin:5px 6px;
 	flex-flow: column nowrap;
 	justify-content: space-around;
 	align-items: center;
@@ -63,6 +62,7 @@ input{
 }
 .min-max{
 	grid-area: minMax;
+	padding: 1px 15%;
 }
 .min-max .card {
 	width: 90%;
@@ -72,7 +72,7 @@ input{
 }
 .graph-full-2{
 	grid-area: graphFullTwo;
-	padding: 25px 0;
+	padding: 45px 0;
 }
 .per-year{
 	grid-area: perYear;
@@ -101,4 +101,69 @@ input{
 #send:active, #addBtn:active {
 	transition: ease-in 0.5s;
 	transform: scale(0.79);
+}
+
+/* mobile media */
+
+@media only screen 
+and (max-width : 680px)
+and (min-width : 200px){
+	.wrap{
+		width: 90%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas: "statuS statuS statuS"
+						 "graphFullOne graphFullOne graphFullOne"
+						 "minMax minMax minMax"
+						 "perYear perYear perYear"
+						 "graphFullTwo graphFullTwo graphFullTwo";
+	}
+	.cells {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.cell{
+		width: 90%;
+	}
+	.forHide,.add-form{
+		order: -1;
+	}
+}	
+
+/* tablet media */
+@media only screen 
+and (max-width : 1010px)
+and (min-width : 681px){
+	.cell > .card{
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.wrap{
+		width: 89%;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas: "statuS statuS statuS"
+						 "graphFullOne graphFullOne graphFullOne"
+						 "minMax minMax minMax"
+						 "perYear perYear perYear"
+						 "graphFullTwo graphFullTwo graphFullTwo";
+	}
+	.min-max{
+		    padding: 5px 20%;
+	}
+}
+
+/* input date customization */
+[type="date"] {
+  padding: 2px !important;
+  border: none;
+  border-bottom: solid 3px #1abc9c;
+  background:#F8F8F9 url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }

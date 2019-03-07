@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Услуги Мастера на Час в Москве. Самые низкие цены! Выезд в день звонка. Стаж 12 лет. Мастер- Александр Чернов.">
-    <meta name="theme-color" content="#0068BA">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Мастер на Час</title>
+	<title>HTML Template</title>
 
-	
+	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
-	
+	<!-- Bootstrap -->
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
-	
+	<!-- Owl Carousel -->
 	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
 	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
 
-	
+	<!-- Magnific Popup -->
 	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
 
 	<!-- Font Awesome Icon -->
@@ -28,8 +27,6 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
-
-	<link rel="icon" href="img/fav.png" type= "image/png">		
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,11 +68,18 @@
 
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a href="#home">Главная</a></li>
-					<li><a href="#team">Обо мне</a></li>					
-					<li><a href="#about"><i class="fa-li fa fa-spinner fa-spin"></i></a></li>
-					<li><a href="#service">Услуги и Цены</a></li>
-					<li><a href="#contact">Контакты</a></li>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#service">Services</a></li>
+					<li><a href="#pricing">Prices</a></li>
+					<li><a href="#team">Team</a></li>
+					<li class="has-dropdown"><a href="#blog">Blog</a>
+						<ul class="dropdown">
+							<li><a href="blog-single.html">blog post</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -91,11 +95,11 @@
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">Мастер на Час</h1>
-							<p class="white-text">Широкий спектр услуг по крупному и мелкому ремонту в Москве. 
+							<h1 class="white-text">We Are Creative Agency</h1>
+							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
 							</p>
-							<a href="#call"><button class="white-btn">Заказать звонок</button></a>
-							<a href="#team"><button class="main-btn">Узнать больше</button></a>
+							<button class="white-btn">Get Started!</button>
+							<button class="main-btn">Learn more</button>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -108,64 +112,6 @@
 	</header>
 	<!-- /Header -->
 
-	<!-- Team -->
-	<div id="team" class="section md-padding">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Обо мне</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- team -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/author.jpg" alt="мастер">
-							<div class="overlay">
-								<div class="team-social">
-									<a href="https://msng.link/tg/baleikinaolesya"><i class="fa fa-telegram"></i></a>
-									<a href="https://msng.link/wa/79108251951"><i class="fa fa-whatsapp"></i></a>
-									<a href="https://www.instagram.com/jarjk/"><i class="fa fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Александр Чернов</h3>
-							<span>Мастер</span>
-						</div>
-					</div>
-				</div>
-				<!-- /team -->
-
-				<!-- team -->
-				<div class="col-sm-8">
-					<div class="team">
-						<div class="team-content">
-							<h3>Обо мне</h3>
-							<p>Меня зовут Александр Чернов, я работаю в сфере промышленного и гражданского строительства вот уже более 12-ти лет. За это время я приобрел большой опыт и обширный набор навыков, научился понимать и выбирать инструмент и материалы, а также смог максимально оптимизировать процесс ремонта, чтобы делать не только качественно, но и быстро.</p>
-						</div>
-						
-					</div>
-					
-				</div>
-				<!-- /team -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-	<!-- /Team -->
-
 	<!-- About -->
 	<div id="about" class="section md-padding">
 
@@ -177,16 +123,17 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Почему я</h2>
+					<h2 class="title">Welcome to Website</h2>
 				</div>
 				<!-- /Section header -->
 
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-star" aria-hidden="true"></i>
-						<h3>Качество</h3>
-						<p>Мой общий стаж - более 12 лет. Все работы делаю максимально аккуратно.</p>
+						<i class="fa fa-cogs"></i>
+						<h3>Fully Customizible</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -194,9 +141,10 @@
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-clock-o" aria-hidden="true"></i>
-						<h3>Скорость</h3>
-						<p>Выезд в день обращения. Возможен срочный выезд в течение часа.</p>
+						<i class="fa fa-magic"></i>
+						<h3>Awesome Features</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -204,9 +152,10 @@
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-handshake-o" aria-hidden="true"></i>
-						<h3>Честность</h3>
-						<p>Стоимость фиксируется перед началом работ, без последующих накруток</p>
+						<i class="fa fa-mobile"></i>
+						<h3>Fully Responsive</h3>
+						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.</p>
+						<a href="#">Read more</a>
 					</div>
 				</div>
 				<!-- /about -->
@@ -221,60 +170,119 @@
 	<!-- /About -->
 
 
-	<!-- Testimonial -->
-		<div id="testimonial" class="section md-padding">
+	<!-- Portfolio -->
+	<div id="portfolio" class="section md-padding bg-grey">
 
-			<!-- Background Image -->
-			<div class="bg-img" style="background-image: url('./img/background3.jpg');">
-				<div class="overlay"></div>
-			</div>
-			<!-- /Background Image -->
+		<!-- Container -->
+		<div class="container">
 
-			<!-- Container -->
-			<div class="container">
+			<!-- Row -->
+			<div class="row">
 
-				<!-- Row -->
-				<div class="row">
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Featured Works</h2>
+				</div>
+				<!-- /Section header -->
 
-					<!-- Testimonial slider -->
-					<div class="col-md-10 col-md-offset-1">
-						<div id="testimonial-slider" class="owl-carousel owl-theme">
-
-							<!-- testimonial -->
-							<div class="testimonial">
-								<div class="testimonial-meta">
-									<img src="./img/perso1.jpg" alt="">
-									<h3 class="white-text">Инструмент</h3>
-									<span>надежность</span>
-								</div>
-								<p class="white-text">Я работаю только с проверенными иснтрументами и материалами, все для наилучшего качества работы.</p>
-							</div>
-							<!-- /testimonial -->
-
-							<!-- testimonial -->
-							<div class="testimonial">
-								<div class="testimonial-meta">
-									<img src="./img/perso2.jpg" alt="">
-									<h3 class="white-text">Проект</h3>
-									<span>точность</span>
-								</div>
-								<p class="white-text">Перед началом работ мы можем составить проект, чтобы оговорить все особенности сразу.</p>
-							</div>
-							<!-- /testimonial -->
-
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work1.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work1.jpg"><i class="fa fa-search"></i></a>
 						</div>
 					</div>
-					<!-- /Testimonial slider -->
-
 				</div>
-				<!-- /Row -->
+				<!-- /Work -->
+
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work2.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work2.jpg"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Work -->
+
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work3.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work3.jpg"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Work -->
+
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work4.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work4.jpg"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Work -->
+
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work5.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work5.jpg"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Work -->
+
+				<!-- Work -->
+				<div class="col-md-4 col-xs-6 work">
+					<img class="img-responsive" src="./img/work6.jpg" alt="">
+					<div class="overlay"></div>
+					<div class="work-content">
+						<span>Category</span>
+						<h3>Lorem ipsum dolor</h3>
+						<div class="work-link">
+							<a href="#"><i class="fa fa-external-link"></i></a>
+							<a class="lightbox" href="./img/work6.jpg"><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Work -->
 
 			</div>
-			<!-- /Container -->
+			<!-- /Row -->
 
 		</div>
-		<!-- /Testimonial -->
+		<!-- /Container -->
 
+	</div>
+	<!-- /Portfolio -->
 
 	<!-- Service -->
 	<div id="service" class="section md-padding">
@@ -284,22 +292,29 @@
 
 			<!-- Row -->
 			<div class="row">
-				<div class="section-header text-center">
-					<h2 class="title">Услуги и цены</h2>
-				</div>
 
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				          Мелкий Ремонт
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="panel-body">
-				        <div class="table">
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">What we offer</h2>
+				</div>
+				<!-- /Section header -->
+
+				
+
+			</div>
+			<!-- /Row -->
+			<div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+			                Мелкий Ремонт
+			              </a>
+			            </h4>
+			    </div>
+			    <div id="collapseOne" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <div class="table">
 				          <table class="table text-center table-striped table-hover">
 				            <thead>
 				            	<tr class="active">
@@ -375,20 +390,20 @@
 				            </tbody>
 				          </table>
 				        </div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingTwo">
-				      <h4 class="panel-title">
-				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				          Электрика
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-				      <div class="panel-body">
-				        <div class="table">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+			                Электрика
+			              </a>
+			            </h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <div class="table">
 				        	<table class="table text-center table-striped table-hover">
 				        		<thead>
 				        			<tr class="active">
@@ -575,20 +590,20 @@
 				        		</tbody>
 				        	</table>
 				        </div>
-				      </div>
-				    </div>
-				  </div>
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingThree">
-				      <h4 class="panel-title">
-				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				          Сантехника
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-				      <div class="panel-body">
-				         <div class="table">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+			                Сантехника
+			              </a>
+			            </h4>
+			    </div>
+			    <div id="collapseThree" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <div class="table">
 				        	<table class="table text-center table-striped table-hover">
 				        			 <thead>
 				        				            	<tr class="active">
@@ -717,21 +732,20 @@
 				        		</tbody>
 				        	</table>
 				         </div>
-				      </div>
-				    </div>
-
-				  </div>
-				  <div class="panel panel-default">
-				      <div class="panel-heading" role="tab" id="headingOne">
-				        <h4 class="panel-title">
-				          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-				            Сборка мебели
-				          </a>
-				        </h4>
-				      </div>
-				      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-				        <div class="panel-body">
-				           <div class="table">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+			                Сборка мебели
+			              </a>
+			            </h4>
+			    </div>
+			    <div id="collapseFour" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <div class="table">
 				        		<table class="table text-center table-striped table-hover">
 				        				            <thead>
 				        				            	<tr class="active">
@@ -844,20 +858,20 @@
 				        				            </tbody>
 				        		</table>
 				        	</div>
-				        </div>
-				      </div>
-				</div>
-				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-				          Плотницкие работы
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-				      	<div class="panel-body">
-				           <div class="table">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-default">
+			    <div class="panel-heading">
+			      <h4 class="panel-title">
+			              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+			                Плотницкие работы
+			              </a>
+			            </h4>
+			    </div>
+			    <div id="collapseFive" class="panel-collapse collapse">
+			      <div class="panel-body">
+			        <div class="table">
 				        				          <table class="table text-center table-striped table-hover">
 				        				            <thead>
 				        				            	<tr class="active">
@@ -1009,13 +1023,12 @@
 				        				            </tbody>
 				        				          </table>
 				        				        </div>
-				        </div>
-				    </div>
-				  
-
-			<br><br>
+			      </div>
+			    </div>
+			  </div>
 			</div>
-			<!-- /Row -->
+			<br><br>
+
 
 		</div>
 		<!-- /Container -->
@@ -1036,24 +1049,24 @@
 				<!-- why choose us content -->
 				<div class="col-md-6">
 					<div class="section-header">
-						<h2 class="title">Мастер на час - как это?</h2>
+						<h2 class="title">Why Choose Us</h2>
 					</div>
-					<p>Стоимость согласуем до начала работ, цены максимально прозрачные.</p>
+					<p>Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.</p>
 					<div class="feature">
 						<i class="fa fa-check"></i>
-						<p>Без перерывов и выходных.</p>
-					</div>
-					<div class="feature">
-						<i class="fa fa-check"></i>
-						<p>Чистота и порядок.</p>
+						<p>Quis varius quam quisque id diam vel quam elementum.</p>
 					</div>
 					<div class="feature">
 						<i class="fa fa-check"></i>
-						<p>Год гарантии на все выполненные услуги.</p>
+						<p>Mauris augue neque gravida in fermentum.</p>
 					</div>
 					<div class="feature">
 						<i class="fa fa-check"></i>
-						<p>Приеду в любое удобное для Вас время.</p>
+						<p>Orci phasellus egestas tellus rutrum.</p>
+					</div>
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
 					</div>
 				</div>
 				<!-- /why choose us content -->
@@ -1061,10 +1074,10 @@
 				<!-- About slider -->
 				<div class="col-md-6">
 					<div id="about-slider" class="owl-carousel owl-theme">
-						<img class="img-responsive" src="./img/about1.jpg" alt="пример">
-						<img class="img-responsive" src="./img/about2.jpg" alt="пример">
-						<img class="img-responsive" src="./img/about3.jpg" alt="пример">
-						<img class="img-responsive" src="./img/about2.jpg" alt="пример">
+						<img class="img-responsive" src="./img/about1.jpg" alt="">
+						<img class="img-responsive" src="./img/about2.jpg" alt="">
+						<img class="img-responsive" src="./img/about1.jpg" alt="">
+						<img class="img-responsive" src="./img/about2.jpg" alt="">
 					</div>
 				</div>
 				<!-- /About slider -->
@@ -1095,31 +1108,41 @@
 			<div class="row">
 
 				<!-- number -->
-				<div class="col-sm-4 col-xs-4">
+				<div class="col-sm-3 col-xs-6">
 					<div class="number">
-						<i class="fa fa-users" aria-hidden="true"></i>
-						<h3 class="white-text"><span class="counter">147</span></h3>
-						<span class="white-text">Довольных клиентов</span>
+						<i class="fa fa-users"></i>
+						<h3 class="white-text"><span class="counter">451</span></h3>
+						<span class="white-text">Happy clients</span>
 					</div>
 				</div>
 				<!-- /number -->
 
 				<!-- number -->
-				<div class="col-sm-4 col-xs-4">
+				<div class="col-sm-3 col-xs-6">
 					<div class="number">
-						<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+						<i class="fa fa-trophy"></i>
 						<h3 class="white-text"><span class="counter">12</span></h3>
-						<span class="white-text">Лет стажа</span>
+						<span class="white-text">Awards won</span>
 					</div>
 				</div>
 				<!-- /number -->
 
 				<!-- number -->
-				<div class="col-sm-4 col-xs-4">
+				<div class="col-sm-3 col-xs-6">
 					<div class="number">
-						<i class="fa fa-check-circle" aria-hidden="true"></i>
-						<h3 class="white-text"><span class="counter">67</span></h3>
-						<span class="white-text">Законченных проектов</span>
+						<i class="fa fa-coffee"></i>
+						<h3 class="white-text"><span class="counter">154</span>K</h3>
+						<span class="white-text">Cups of Coffee</span>
+					</div>
+				</div>
+				<!-- /number -->
+
+				<!-- number -->
+				<div class="col-sm-3 col-xs-6">
+					<div class="number">
+						<i class="fa fa-file"></i>
+						<h3 class="white-text"><span class="counter">45</span></h3>
+						<span class="white-text">Projects completed</span>
 					</div>
 				</div>
 				<!-- /number -->
@@ -1133,6 +1156,337 @@
 	</div>
 	<!-- /Numbers -->
 
+	<!-- Pricing -->
+	<div id="pricing" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Pricing Table</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- pricing -->
+				<div class="col-sm-4">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title">Basic plan</span>
+							<div class="price">
+								<h3>$9<span class="duration">/ month</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p>1GB Disk Space</p>
+							</li>
+							<li>
+								<p>100 Email Account</p>
+							</li>
+							<li>
+								<p>24/24 Support</p>
+							</li>
+						</ul>
+						<div class="price-btn">
+							<button class="outline-btn">Purchase now</button>
+						</div>
+					</div>
+				</div>
+				<!-- /pricing -->
+
+				<!-- pricing -->
+				<div class="col-sm-4">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title">Silver plan</span>
+							<div class="price">
+								<h3>$19<span class="duration">/ month</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p>1GB Disk Space</p>
+							</li>
+							<li>
+								<p>100 Email Account</p>
+							</li>
+							<li>
+								<p>24/24 Support</p>
+							</li>
+						</ul>
+						<div class="price-btn">
+							<button class="outline-btn">Purchase now</button>
+						</div>
+					</div>
+				</div>
+				<!-- /pricing -->
+
+				<!-- pricing -->
+				<div class="col-sm-4">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title">Gold plan</span>
+							<div class="price">
+								<h3>$39<span class="duration">/ month</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p>1GB Disk Space</p>
+							</li>
+							<li>
+								<p>100 Email Account</p>
+							</li>
+							<li>
+								<p>24/24 Support</p>
+							</li>
+						</ul>
+						<div class="price-btn">
+							<button class="outline-btn">Purchase now</button>
+						</div>
+					</div>
+				</div>
+				<!-- /pricing -->
+
+			</div>
+			<!-- Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Pricing -->
+
+
+	<!-- Testimonial -->
+	<div id="testimonial" class="section md-padding">
+
+		<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('./img/background3.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Testimonial slider -->
+				<div class="col-md-10 col-md-offset-1">
+					<div id="testimonial-slider" class="owl-carousel owl-theme">
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="./img/perso1.jpg" alt="">
+								<h3 class="white-text">John Doe</h3>
+								<span>Web Designer</span>
+							</div>
+							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+						</div>
+						<!-- /testimonial -->
+
+						<!-- testimonial -->
+						<div class="testimonial">
+							<div class="testimonial-meta">
+								<img src="./img/perso2.jpg" alt="">
+								<h3 class="white-text">John Doe</h3>
+								<span>Web Designer</span>
+							</div>
+							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+						</div>
+						<!-- /testimonial -->
+
+					</div>
+				</div>
+				<!-- /Testimonial slider -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Testimonial -->
+
+	<!-- Team -->
+	<div id="team" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Our Team</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="./img/team1.jpg" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="./img/team2.jpg" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+				<!-- team -->
+				<div class="col-sm-4">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="./img/team3.jpg" alt="">
+							<div class="overlay">
+								<div class="team-social">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>John Doe</h3>
+							<span>Web Designer</span>
+						</div>
+					</div>
+				</div>
+				<!-- /team -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Team -->
+
+	<!-- Blog -->
+	<div id="blog" class="section md-padding bg-grey">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+					<h2 class="title">Recents news</h2>
+				</div>
+				<!-- /Section header -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="blog">
+						<div class="blog-img">
+							<img class="img-responsive" src="./img/blog1.jpg" alt="">
+						</div>
+						<div class="blog-content">
+							<ul class="blog-meta">
+								<li><i class="fa fa-user"></i>John doe</li>
+								<li><i class="fa fa-clock-o"></i>18 Oct</li>
+								<li><i class="fa fa-comments"></i>57</li>
+							</ul>
+							<h3>Molestie at elementum eu facilisis sed odio</h3>
+							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+							<a href="blog-single.html">Read more</a>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="blog">
+						<div class="blog-img">
+							<img class="img-responsive" src="./img/blog2.jpg" alt="">
+						</div>
+						<div class="blog-content">
+							<ul class="blog-meta">
+								<li><i class="fa fa-user"></i>John doe</li>
+								<li><i class="fa fa-clock-o"></i>18 Oct</li>
+								<li><i class="fa fa-comments"></i>57</li>
+							</ul>
+							<h3>Molestie at elementum eu facilisis sed odio</h3>
+							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+							<a href="blog-single.html">Read more</a>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+
+				<!-- blog -->
+				<div class="col-md-4">
+					<div class="blog">
+						<div class="blog-img">
+							<img class="img-responsive"  src="./img/blog3.jpg" alt="">
+						</div>
+						<div class="blog-content">
+							<ul class="blog-meta">
+								<li><i class="fa fa-user"></i>John doe</li>
+								<li><i class="fa fa-clock-o"></i>18 Oct</li>
+								<li><i class="fa fa-comments"></i>57</li>
+							</ul>
+							<h3>Molestie at elementum eu facilisis sed odio</h3>
+							<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+							<a href="blog-single.html">Read more</a>
+						</div>
+					</div>
+				</div>
+				<!-- /blog -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Blog -->
+
 	<!-- Contact -->
 	<div id="contact" class="section md-padding">
 
@@ -1144,37 +1498,48 @@
 
 				<!-- Section-header -->
 				<div class="section-header text-center">
-					<h2 class="title">Контакты</h2>
+					<h2 class="title">Get in touch</h2>
 				</div>
 				<!-- /Section-header -->
 
 				<!-- contact -->
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="contact">
 						<i class="fa fa-phone"></i>
-						<h3>Телефон</h3>
-						<a href="tel:+79108251951"><p>8-910-825-19-51</p></a>
+						<h3>Phone</h3>
+						<p>512-421-3940</p>
 					</div>
 				</div>
 				<!-- /contact -->
 
 				<!-- contact -->
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="contact">
 						<i class="fa fa-envelope"></i>
-						<h3>Почта</h3>
-						<a href="mailto: chernov_san@mail.ru"><p>chernov_san@mail.ru</p></a>
+						<h3>Email</h3>
+						<p>email@support.com</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-map-marker"></i>
+						<h3>Address</h3>
+						<p>1739 Bubby Drive</p>
 					</div>
 				</div>
 				<!-- /contact -->
 
 				<!-- contact form -->
-				<div class="col-md-8 col-md-offset-2" id="call">
-					<form class="contact-form" id="send-form">
-						<input type="number" class="input" placeholder="Номер" required id="number" name="number">
-						<input type="email" class="input" placeholder="Почта" required id="email" name="email">
-						<input type="text" class="input" placeholder="Имя" required id="name" name="name">
-						<button class="main-btn" id="send" name="send">Заказать звонок</button>
+				<div class="col-md-8 col-md-offset-2">
+					<form class="contact-form">
+						<input type="text" class="input" placeholder="Name">
+						<input type="email" class="input" placeholder="Email">
+						<input type="text" class="input" placeholder="Subject">
+						<textarea class="input" placeholder="Message"></textarea>
+						<button class="main-btn">Send message</button>
 					</form>
 				</div>
 				<!-- /contact form -->
@@ -1208,15 +1573,18 @@
 
 					<!-- footer follow -->
 					<ul class="footer-follow">
-						<li><a href="https://msng.link/tg/111"><i class="fa fa-telegram"></i></a></li>
-						<li><a href="https://msng.link/wa/79108251951"><i class="fa fa-whatsapp"></i></a></li>
-						<li><a href="https://www.instagram.com/jarjk/"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 					</ul>
 					<!-- /footer follow -->
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">
-						<p>Мастер на Час © 2019. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a> DEVELOPED BY <a href="https://kirilinsky.ru">KIRILINSKY</a></p>
+						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
 					</div>
 					<!-- /footer copyright -->
 
@@ -1252,25 +1620,6 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script>
-		$('#send-form').submit(function(e){
-		    e.preventDefault();
-		    $.ajax({
-		      url: "sendForm.php",
-		      type: "POST",
-		      data: $('#send-form').serialize(),
-		      success: function(response) {
-		        $('#send').innerHTML = 'Отправлено';
-		        $('#send').classList.toggle('btn-success');
-		        $('#send').disabled = true;
-		      },
-		      error: function(response) {
-		        $('#send').innerHTML = 'Ошибка';
-		        $('#send').classList.toggle('btn-danger');
-		     }
-		    });
-		});
-	</script>
 
 </body>
 

@@ -28,11 +28,11 @@
 			</div>
 			<div class="cell forHide animated">
 				<div class="card bg--alizarin animated" id="addBtn"><i class="far fa-plus-square"></i> add money</div>
-				<div class="card" style="background: #f8f8f9;box-shadow: none;"></div>
+				<p style="color: transparent;user-select: none;">hidden</p>
 			</div>
 			<div class="cell add-form animated">
 				<input type="text" placeholder="value">
-				<input type="text" placeholder="dd-mm-yyyy">
+				<input type="date" placeholder="dd-mm-yyyy">
 				<button class="btn" id="send"><i class="far fa-plus-square"></i> add</button>
 			</div>
 		</div>
@@ -189,7 +189,7 @@
 				addBtn.addEventListener('click', function(){
 					document.location.reload(true);
 				});
-			}), 2500);
+			}), 2900);
 		}
 
 		setTimeout((function(){

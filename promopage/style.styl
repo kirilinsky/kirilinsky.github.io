@@ -1,0 +1,111 @@
+mColor = #fff
+mp(m)
+	margin: m
+	padding: m
+flex(a,b,c,d)
+	display: flex
+	flex-direction: a
+	flex-wrap: b
+	justify-content: c
+	align-items: d
+sizelettering(a,b)
+	font-size: a
+	letter-spacing: b
+	
+
+
+html
+	font-size:100%
+	color: mColor
+body
+	mp(0)
+main
+	width: 100%
+	min-height: 100vh
+	background: #e5e5e5 url('images/b1.jpg') no-repeat
+	background-size: cover
+	flex(column,nowrap,space-around,center)
+	section
+		width: 60%;
+		text-align: center
+		flex(column,nowrap,space-around,center)
+		&.top
+			h1.top__header
+				sizelettering(4.4rem,10px)
+			p.top__description
+				sizelettering(1.1rem,2px)
+				text-transform: uppercase
+				line-height: 1.7rem
+		&.bottom
+			.bottom__blocks
+				width: 80%;
+				margin: 0 auto;
+				flex(row,wrap,space-around,center)
+				.bottom__block
+					width: 20%
+					flex(column,wrap,space-around,center)
+					font-style:italic
+					margin: 20px;
+					h1.bottom__block-timer
+						font-size: 4.9rem
+						mp(0)
+						opacity: 0.9
+						font-family: sans-serif
+					p.bottom__block-description
+						margin: 0
+						padding: 5px 0
+						sizelettering(1.1rem,10px)
+			.button
+				margin: 25px auto;
+				text-transform: uppercase
+				sizelettering(1.7rem,2px)
+				padding: 10px 25px
+				border:1px solid #ccc
+				background:#cccccc96 
+				transition:ease-in 0.3s all
+				&:hover	
+					color: #020202
+					transition:ease-in 0.3s all
+					border: 1 px solid mColor
+					background:mColor
+					cursor:pointer	
+			.social
+				flex(row,nowrap,center,center)				
+				a
+					width: 30px
+					margin: 20px 3px;
+					height: 30px
+					font-size:1vm
+					border: 1px solid mColor
+					flex(row,wrap,center,center)
+					border-radius:15px
+					color: mColor
+					text-decoration: none
+					transition:ease-in 0.3s all
+					&:hover
+						transition:ease-in 0.3s all
+						&:nth-child(1)
+							color:#5282B9
+						&:nth-child(2)
+							color:#CEF2FF
+						&:nth-child(3)
+							color:#BE7BC6
+						&:nth-child(4)
+							color:#CEF2FF			
+	.line
+		width: 60%
+		height: 1px
+		background: mColor
+		box-shadow: 0 0 1px mColor
+	footer
+		margin-top:25px
+		width: 60%
+		text-align:center
+		line-height:1.8rem
+		transition:ease-in 0.3s all
+		a
+			color:orange
+			&:hover
+				color:#FFF75F
+				transition:ease-in 0.3s all
+						
