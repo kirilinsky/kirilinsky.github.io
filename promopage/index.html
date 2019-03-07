@@ -50,7 +50,66 @@
 		</footer>
 	</main>
 
+	<div class="wrap">
+		<div class="modal">
+			<div class="modal__header">
+				<span>отслеживать открытие</span>
+				<div class="close_button"><i class="far fa-window-close"></i></div>
+			</div>
+			<div class="modal__body">
+				<form action="#">
+					<input type="email" placeholder="ваша почта" required id="email" name="email">
+					<label for="email">Введите вашу почту <br>чтобы не пропустить открытие</label>
+					<input type="submit" value="подписаться"> 
+				</form>
+			</div>
+		</div>
+	</div>
 	<script>
+		let modal = document.querySelector('.modal'),
+			wrap = document.querySelector('.wrap'),
+			main = document.querySelector('main'),
+			modalTrigger = document.querySelector('.button'),
+			closeBtn = document.querySelector('.close_button'),
+			sendBtn = document.querySelector("input[type='submit']");
+		function showModal(){
+			wrap.style.zIndex = '100';
+			main.style.filter = 'blur(1px) grayscale(20%)';
+			modal.style.zIndex = '200';
+			modal.style.opacity = '1';
+			modal.addEventListener('click', stopP);
+			modalTrigger.removeEventListener('click',showModal);
+			wrap.addEventListener('click', hideModal);
+			document.onkeydown = function(evt) {
+			    evt = evt || window.event;
+			    var isEscape = false;
+			    if ("key" in evt) {
+			        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+			    } else {
+			        isEscape = (evt.keyCode === 27);
+			    }
+			    if (isEscape) {
+			        hideModal();
+			    }
+			};
+		}
+		function stopP(event){
+			event.stopPropagation();
+		}
+		function hideModal(event){
+			wrap.style.zIndex ='-200';
+			main.style.filter = 'none';
+			modal.style.zIndex = '-100';
+			modal.style.marinTop = '-1000px';
+			setTimeout((function(){
+				modal.style.opacity = '0';
+			}),350);
+			modalTrigger.addEventListener('click', showModal);
+		}
+		modalTrigger.addEventListener('click', showModal);
+		closeBtn.addEventListener('click', hideModal);
+
+
 		function getTimeRemaining(endtime) {
 		  var t = Date.parse(endtime) - Date.parse(new Date());
 		  var seconds = Math.floor((t / 1000) % 60);
