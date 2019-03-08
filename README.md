@@ -7,7 +7,7 @@
 >well, 
 >
 >thats me
-<p align="center"><a href="http://inhabitable.ru" target="_blank">
+<p align="center"><a href="http://kirilinsky.ru/moneySaver" target="_blank">
  <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
 ---
 # some of my projects:
@@ -20,7 +20,7 @@
 <a href="https://kirilinsky.github.io/menu/" target="_blank" ><img src="https://kirilinsky.github.io/gif_git/menu.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/metal/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/metal.gif" width="288"></a>
 <a href="https://kirilinsky.github.io/space/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/save.gif" width="288"></a>
-<a href="https://kirilinsky.github.io/moneysaver/" target="_blank"> moneysaver</a>
+<a href="https://kirilinsky.github.io/promopage/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/promo.gif" width="288"></a>
 ## another yet...
 <head>
 	<meta charset="UTF-8">
