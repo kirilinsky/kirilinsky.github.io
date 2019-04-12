@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 17px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.wrap section {
+  width: 75%;
+  min-height: 150px;
+}
+.wrap section.new {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap section.new label {
+  user-select: none;
+}
+.wrap section.new .line {
+  width: 75%;
+  height: 1px;
+  background: #d4d4d4;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+.wrap section.new input,
+.wrap section.new textarea {
+  width: 75%;
+  margin: 1.4rem;
+  padding: 0.4rem 1.2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: #e8e8e8;
+  border: none;
+  resize: none;
+  color: #3c3c3c;
+  letter-spacing: 0.11rem;
+  transition: 0.3s ease-out;
+}
+.wrap section.new input:focus,
+.wrap section.new textarea:focus {
+  outline: none;
+}
+.wrap section.new input:hover,
+.wrap section.new textarea:hover {
+  box-shadow: 0 0 5px 1px #808080;
+  transition: 0.3s ease-out;
+}
+.wrap section.new input::selection,
+.wrap section.new textarea::selection {
+  color: #fff;
+  background: #a804ac;
+}
+.wrap section.new button {
+  margin: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  transition: 0.4s ease-out;
+}
+.wrap section.new button:focus {
+  outline: none;
+}
+.wrap section.new button:hover,
+.wrap section.new button:active {
+  background: #039e4d;
+  color: #fff;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  box-shadow: 0 0 2px #039e4d;
+}

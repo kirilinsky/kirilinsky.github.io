@@ -1,2 +1,67 @@
+flex(a,b,c,d)
+    display: flex
+    flex-direction: a
+    flex-wrap: b
+    justify-content: c
+    align-items: d
+mp(m,p)
+	margin: m
+	padding: p
+*
+    box-sizing: border-box
 html    
     font-size 17px
+body
+    mp(0,0)
+    font-family sans-serif  
+.wrap
+    flex(column,nowrap,space-around,center)
+    width 100% 
+    min-height 100vh
+    section
+        width 75%
+        min-height 150px
+        &.new
+            flex(column,nowrap,space-around,center)
+            label
+                user-select none
+            .line
+                width 75%
+                height 1px
+                background: #d4d4d4
+                mp(1.5rem 0, 0)
+            input,textarea
+                width 75%
+                mp(1.4rem,0.4rem 1.2rem)
+                text-align center
+                border-radius 0.5rem
+                background #e8e8e8
+                border none
+                resize none
+                color:#3c3c3c
+                letter-spacing 0.11rem
+                transition 0.3s ease-out
+                &:focus
+                    outline none
+                &:hover
+                    box-shadow 0 0 5px 1px grey 
+                    transition 0.3s ease-out
+                &::selection
+                    color:#ffffff
+                    background:#a804ac
+            button
+                mp(0.6rem,0.8rem 1.6rem)
+                border-radius 0.5rem
+                border none
+                transition 0.4s ease-out
+                &:focus
+                    outline none
+                &:hover,&:active
+                    background #039e4d
+                    color #fff
+                    transition 0.4s ease-out
+                    cursor pointer
+                    box-shadow 0 0 2px #039e4d
+
+    
+
