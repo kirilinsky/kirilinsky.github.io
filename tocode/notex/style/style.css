@@ -31,12 +31,17 @@ body {
 }
 .wrap section.new label {
   user-select: none;
+  align-self: flex-end;
+  margin-right: 15%;
+}
+.wrap section.new label:hover {
+  cursor: pointer;
 }
 .wrap section.new .line {
   width: 75%;
   height: 1px;
   background: #d4d4d4;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: 0;
 }
 .wrap section.new input,
@@ -59,7 +64,7 @@ body {
 }
 .wrap section.new input:hover,
 .wrap section.new textarea:hover {
-  box-shadow: 0 0 5px 1px #808080;
+  box-shadow: inset 0 0 2px 2px #808080;
   transition: 0.3s ease-out;
 }
 .wrap section.new input::selection,
@@ -68,9 +73,9 @@ body {
   background: #a804ac;
 }
 .wrap section.new button {
-  margin: 0.6rem;
+  margin: 1.1rem;
   padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: none;
   transition: 0.4s ease-out;
 }

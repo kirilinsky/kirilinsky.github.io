@@ -25,11 +25,15 @@ body
             flex(column,nowrap,space-around,center)
             label
                 user-select none
+                align-self: flex-end
+                margin-right 15%
+                &:hover
+                    cursor pointer
             .line
                 width 75%
                 height 1px
                 background: #d4d4d4
-                mp(1.5rem 0, 0)
+                mp(2rem 0, 0)
             input,textarea
                 width 75%
                 mp(1.4rem,0.4rem 1.2rem)
@@ -44,14 +48,14 @@ body
                 &:focus
                     outline none
                 &:hover
-                    box-shadow 0 0 5px 1px grey 
+                    box-shadow inset 0 0 2px 2px grey 
                     transition 0.3s ease-out
                 &::selection
                     color:#ffffff
                     background:#a804ac
             button
-                mp(0.6rem,0.8rem 1.6rem)
-                border-radius 0.5rem
+                mp(1.1rem,0.8rem 1.6rem)
+                border-radius 1rem
                 border none
                 transition 0.4s ease-out
                 &:focus
