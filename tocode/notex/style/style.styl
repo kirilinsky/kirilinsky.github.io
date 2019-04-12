@@ -10,19 +10,38 @@ mp(m,p)
 *
     box-sizing: border-box
 html    
-    font-size 17px
+    font-size 16px
 body
     mp(0,0)
     font-family sans-serif  
 .wrap
     flex(column,nowrap,space-around,center)
     width 100% 
-    min-height 100vh
+    min-height 10vh
     section
         width 75%
-        min-height 150px
+        min-height 0.75rem
+        border 1px solid #43444230
+        margin 0.5rem 0
+        border-radius: 0.5rem
         &.new
-            flex(column,nowrap,space-around,center)
+            flex(column,nowrap,flex-start,center)
+            position relative
+            height 650px
+            overflow hidden
+            transition 1s height linear
+            .hide
+                position absolute
+                top 1.55rem
+                left 1rem
+                width 0.8rem
+                height 0.8rem
+                border-radius 0.4rem
+                border 1px solid #434442
+                background linear-gradient(#D6E2CF,#79AE1F,#ACD764,#D5FA92)
+                &:hover,&:active
+                    box-shadow inset 0 0 3px #434442
+                    cursor pointer
             label
                 user-select none
                 align-self: flex-end
@@ -34,9 +53,66 @@ body
                 height 1px
                 background: #d4d4d4
                 mp(2rem 0, 0)
+            .alert
+                width 55%
+                text-align: center
+                background: #e73d4145
+                border-radius: 1rem
+                border 2px solid#e73d4194
+                mp(1.2rem,0)
+                color:#5c5c5c
+                h2
+                    font-variant: small-caps
+                    margin-bottom 0
+                    i
+                        font-size 0.85rem
+                p
+                    margin-top 0.22rem
             input,textarea
                 width 75%
                 mp(1.4rem,0.4rem 1.2rem)
+                text-align center
+                border-radius 0.5rem
+                background #e8e8e8
+                border none
+                resize none
+                color:#3c3c3c
+                letter-spacing 0.11rem
+                transition 0.3s ease-out
+                &:focus
+                    outline none
+                &:hover
+                    box-shadow inset 0 0 2px 2px grey
+                    transition 0.3s ease-out
+                &::selection
+                    color:#ffffff
+                    background:#a804ac
+            button
+                mp(1.1rem,0.8rem 1.6rem)
+                border-radius 1rem
+                border none
+                transition 0.4s ease-out
+                &:focus
+                    outline none
+                    box-shadow 0 1px 3px orange
+                &:hover,&:active
+                    background #039e4d
+                    color #fff
+                    transition 0.4s ease-out
+                    cursor pointer
+                    box-shadow 0 0 2px #039e4d
+    .nav
+        flex(row,nowrap,space-around,center)
+        h3
+            width 25%
+            text-align: center
+        div
+            position relative
+            width 55%
+            min-height: 2.2rem
+            input
+                width 99%
+                mp(0 auto,0.45rem 1.45rem)
                 text-align center
                 border-radius 0.5rem
                 background #e8e8e8
@@ -53,19 +129,82 @@ body
                 &::selection
                     color:#ffffff
                     background:#a804ac
-            button
-                mp(1.1rem,0.8rem 1.6rem)
-                border-radius 1rem
-                border none
-                transition 0.4s ease-out
-                &:focus
-                    outline none
+            span
+                position absolute
+                top 20%
+                left 0.5rem
+        .buttons
+            width 25%
+            flex(row,nowrap,center,center)
+            i
+                margin 0 0.5rem
+                font-size 1.5rem
                 &:hover,&:active
-                    background #039e4d
-                    color #fff
-                    transition 0.4s ease-out
                     cursor pointer
-                    box-shadow 0 0 2px #039e4d
+                    transition: 0.3s
+                    color: #039e4d
+    .notes
+        flex(row,wrap,center,center)
+        .note
+            width 45%
+            background: #638f9a85
+            border-radius: 0.5rem
+            border 1px solid #638f9a45
+            box-shadow: 0 0 5px #638f9a
+            mp(0.75rem, 0.75rem)
+            position relative
+            overflow hidden
+            &__header
+                font-size 1.45rem
+            &__body
+                mp(0.7rem 0,0.5rem 0.2rem)
+                color: #16101b
+            &__date
+                text-align: right
+                font-size 0.65rem
+                color #555555
+            &__burn
+                position absolute
+                top -0.25rem //75
+                right -0.25rem //75
+                mp(0.2rem,0.55rem)
+                border-radius: 0 0 0 50%
+                transition 0.3s all linear
+                &:hover
+                    cursor pointer
+                    color #fff
+                    background red
+                    transition 0.3s all linear
+        .fire
+            animation: fire 1s infinite ease
 
-    
+
+
+@keyframes fire {
+    0%{
+        box-shadow: 0 0 15px red
+    }
+     13%{
+        box-shadow: 0 0 10px orange
+    }
+
+     25%{
+        box-shadow: 0 0 25px red
+    }
+     37%{
+        box-shadow: 0 0 20px yellow
+    }
+     50%{
+        box-shadow: 0 0 10px red
+    }
+     66%{
+        box-shadow: 0 0 20px orange
+    }
+     80%{
+        box-shadow: 0 0 3px black
+    } 100%{
+        box-shadow: 0 0 5px red
+    }
+}
+
 
