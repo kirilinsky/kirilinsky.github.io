@@ -15,43 +15,35 @@
             <div class="hide" @click="hideOrShowNewBlock()" :title="showNewBlock?'hide':'show'"></div>
             <h1>add new noteX</h1>
             <div class="line"></div>
-            <div class="alert">
+            <div class="alert" v-show="errorsCheck && active">
                     <h2><i class="fas fa-exclamation-triangle"></i> alert </h2>
-                    <p>empty text</p>
+                    <p>emty text or title</p>
             </div>
             <label for="title">Title</label>
-            <input type="text" id="title" autocomplete="off">
+            <input type="text" id="title" autocomplete="off" v-model="title" @input="errorCheck">
             <label for="text">Text</label>
-            <textarea name="" id="text" cols="30" rows="10"></textarea>
-            <button class="btn">create new</button>
+            <textarea id="text" v-model="text" @input="errorCheck"></textarea>
+            <button class="btn" @click="addNote()">create new</button>
         </section>
         <section class="nav">
             <h3>Search notes</h3>
             <div><input type="text" class="search"><span><i class="fas fa-search"></i></span></div>
-            
             <div class="buttons">
-                <i class="fas fa-table"></i><i class="fas fa-bars"></i>
+                <i class="fas fa-table" @click="listLayout = false"></i>
+                <i class="fas fa-bars" @click="listLayout = true"></i>
             </div>
         </section>
         <section class="notes">
-            <div class="note">
-                <div class="note__header">Hello!</div>
-                <div class="note__body">im fuckin best procrastinator</div>   
-                <div class="note__date">26.03.2019 20:00</div>
-                <div class="note__burn"><i class="fas fa-fire"></i></div>
+            <div class="alert" v-show="notes.length == 0">
+                    <h2><i class="fas fa-exclamation-triangle"></i> No notes  </h2>
+                    <p>create first note</p>
             </div>
-            <div class="note">
-                <div class="note__header">Hello!</div>
-                <div class="note__body">im fuckin best procrastinator</div>   
-                <div class="note__date">26.03.2019 20:00</div>
-                <div class="note__burn"><i class="fas fa-fire"></i></div>
+            <div class="note" v-for="(item,index) in notes" :key="index"  :style="listLayout?'width:95%':'width:45%'">
+                <div class="note__header">{{ item.title }}</div>
+                <div class="note__body">{{ item.text }}</div>
+                <div class="note__date">{{ item.dt }}</div>
+                <div class="note__burn" @click="deleteNote(index)" title="fire"><i class="fas fa-fire"></i></div>
             </div>
-            <div class="note">
-                    <div class="note__header">Hello!</div>
-                    <div class="note__body">im fuckin best procrastinator</div>   
-                    <div class="note__date">26.03.2019 20:00</div>
-                    <div class="note__burn"><i class="fas fa-fire"></i></div>
-                </div>
         </section>
     </div>
     <script src="https://unpkg.com/vue"></script>
@@ -62,11 +54,41 @@
             data:{
                 title:'',
                 text:'',
-                showNewBlock:true
+                showNewBlock:true,
+                active:false,
+                notes:[
+                    {
+                        title:'Hello ',
+                        text:'Im fuckin best procrastinator',
+                        dt: Date(Date.now())
+                    },
+                    {
+                        title:'Hello ',
+                        text:'Im fuckin best ffff',
+                        dt: Date(Date.now())
+                    }
+                ],
+                listLayout: false
             },
             methods:{
                 hideOrShowNewBlock(){
                     this.showNewBlock = !this.showNewBlock
+                },
+                deleteNote(n){
+                    this.notes.splice(n,1)
+                },
+                addNote(){
+                    this.active = true
+                    if(!this.errorsCheck){
+                        this.notes.push({
+                            title: this.title,
+                            text:this.text,
+                            dt:Date(Date.now())
+                        })
+                        this.title = ''
+                        this.text = ''
+                        this.active = false
+                    }
                 }
             },
             computed:{
@@ -75,6 +97,13 @@
                         return 'height:650px'
                     } else {
                         return 'height:65px'
+                    }
+                },
+                errorsCheck(){
+                    if(this.title == '' || this.text == ''){
+                        return true
+                    } else {
+                        return false
                     }
                 }
             }

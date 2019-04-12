@@ -66,26 +66,6 @@ body {
   margin: 2rem 0;
   padding: 0;
 }
-.wrap section.new .alert {
-  width: 55%;
-  text-align: center;
-  background: rgba(231,61,65,0.271);
-  border-radius: 1rem;
-  border: 2px solid rgba(231,61,65,0.58);
-  margin: 1.2rem;
-  padding: 0;
-  color: #5c5c5c;
-}
-.wrap section.new .alert h2 {
-  font-variant: small-caps;
-  margin-bottom: 0;
-}
-.wrap section.new .alert h2 i {
-  font-size: 0.85rem;
-}
-.wrap section.new .alert p {
-  margin-top: 0.22rem;
-}
 .wrap section.new input,
 .wrap section.new textarea {
   width: 75%;
@@ -200,7 +180,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .wrap .notes .note {
@@ -209,10 +189,11 @@ body {
   border-radius: 0.5rem;
   border: 1px solid rgba(99,143,154,0.271);
   box-shadow: 0 0 5px #638f9a;
-  margin: 0.75rem;
+  margin: 0.75rem 0;
   padding: 0.75rem;
   position: relative;
   overflow: hidden;
+  transition: 0.5s;
 }
 .wrap .notes .note__header {
   font-size: 1.45rem;
@@ -244,6 +225,26 @@ body {
 }
 .wrap .notes .fire {
   animation: fire 1s infinite ease;
+}
+.alert {
+  width: 55%;
+  text-align: center;
+  background: rgba(231,61,65,0.271);
+  border-radius: 1rem;
+  border: 2px solid rgba(231,61,65,0.58);
+  margin: 1.2rem;
+  padding: 0;
+  color: #5c5c5c;
+}
+.alert h2 {
+  font-variant: small-caps;
+  margin-bottom: 0;
+}
+.alert h2 i {
+  font-size: 0.85rem;
+}
+.alert h2 p {
+  margin-top: 0.22rem;
 }
 @-moz-keyframes fire {
   0% {

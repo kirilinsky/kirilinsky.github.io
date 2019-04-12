@@ -53,21 +53,6 @@ body
                 height 1px
                 background: #d4d4d4
                 mp(2rem 0, 0)
-            .alert
-                width 55%
-                text-align: center
-                background: #e73d4145
-                border-radius: 1rem
-                border 2px solid#e73d4194
-                mp(1.2rem,0)
-                color:#5c5c5c
-                h2
-                    font-variant: small-caps
-                    margin-bottom 0
-                    i
-                        font-size 0.85rem
-                p
-                    margin-top 0.22rem
             input,textarea
                 width 75%
                 mp(1.4rem,0.4rem 1.2rem)
@@ -144,16 +129,17 @@ body
                     transition: 0.3s
                     color: #039e4d
     .notes
-        flex(row,wrap,center,center)
+        flex(row,wrap,space-around,center)
         .note
             width 45%
             background: #638f9a85
             border-radius: 0.5rem
             border 1px solid #638f9a45
             box-shadow: 0 0 5px #638f9a
-            mp(0.75rem, 0.75rem)
+            mp(0.75rem 0, 0.75rem)
             position relative
             overflow hidden
+            transition: 0.5s
             &__header
                 font-size 1.45rem
             &__body
@@ -178,6 +164,21 @@ body
         .fire
             animation: fire 1s infinite ease
 
+.alert
+    width 55%
+    text-align: center
+    background: #e73d4145
+    border-radius: 1rem
+    border 2px solid#e73d4194
+    mp(1.2rem,0)
+    color:#5c5c5c
+    h2
+        font-variant: small-caps
+        margin-bottom 0
+        i
+            font-size 0.85rem
+        p
+            margin-top 0.22rem
 
 
 @keyframes fire {
