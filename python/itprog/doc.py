@@ -1,3 +1,0 @@
-word = '.'
-number = 7
-
