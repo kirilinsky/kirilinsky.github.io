@@ -7,16 +7,18 @@ flex(a,b,c,d)
 mp(m,p)
 	margin: m
 	padding: p
+
+
 *
     box-sizing: border-box
-html    
+html
     font-size 16px
 body
     mp(0,0)
-    font-family sans-serif  
+    font-family sans-serif
 .wrap
     flex(column,nowrap,space-around,center)
-    width 100% 
+    width 100%
     min-height 10vh
     section
         width 75%
@@ -27,9 +29,10 @@ body
         &.new
             flex(column,nowrap,flex-start,center)
             position relative
-            height 650px
+            height: 645px
             overflow hidden
             transition 1s height linear
+            flex-grow: 1
             .hide
                 position absolute
                 top 1.55rem
@@ -40,7 +43,7 @@ body
                 border 1px solid #434442
                 background linear-gradient(#D6E2CF,#79AE1F,#ACD764,#D5FA92)
                 &:hover,&:active
-                    box-shadow inset 0 0 3px #434442
+                    box-shadow inset 0 0 3px #424442
                     cursor pointer
             label
                 user-select none
@@ -55,7 +58,7 @@ body
                 mp(2rem 0, 0)
             input,textarea
                 width 75%
-                mp(1.4rem,0.4rem 1.2rem)
+                mp(1.4rem,0.85rem 1.15rem)
                 text-align center
                 border-radius 0.5rem
                 background #e8e8e8
@@ -139,12 +142,15 @@ body
             mp(0.75rem 0, 0.75rem)
             position relative
             overflow hidden
-            transition: 0.5s
+            transition: 0.4s
+            min-height: 165px
+            flex(column,nowrap,space-between,default)
             &__header
                 font-size 1.45rem
             &__body
                 mp(0.7rem 0,0.5rem 0.2rem)
                 color: #16101b
+                flex-grow: 1
             &__date
                 text-align: right
                 font-size 0.65rem

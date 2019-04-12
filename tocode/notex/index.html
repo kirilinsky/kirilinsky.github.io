@@ -15,14 +15,14 @@
             <div class="hide" @click="hideOrShowNewBlock()" :title="showNewBlock?'hide':'show'"></div>
             <h1>add new noteX</h1>
             <div class="line"></div>
-            <div class="alert" v-show="errorsCheck && active">
-                    <h2><i class="fas fa-exclamation-triangle"></i> alert </h2>
-                    <p>emty text or title</p>
-            </div>
             <label for="title">Title</label>
-            <input type="text" id="title" autocomplete="off" v-model="title" @input="errorCheck">
+            <input type="text" id="title" autocomplete="off" v-model="note.title">
             <label for="text">Text</label>
-            <textarea id="text" v-model="text" @input="errorCheck"></textarea>
+            <textarea id="text" v-model="note.text"></textarea>
+            <div class="alert" v-if="errorsCheck && active">
+                    <h2><i class="fas fa-exclamation-triangle"></i> alert </h2>
+                    <p>empty text or title</p>
+            </div>
             <button class="btn" @click="addNote()">create new</button>
         </section>
         <section class="nav">
@@ -52,10 +52,13 @@
         let app = new Vue({
             el:'#app',
             data:{
-                title:'',
-                text:'',
+                note:{
+                    title:'',
+                    text:''
+                },
                 showNewBlock:true,
                 active:false,
+                current: newBlock.offsetHeight,
                 notes:[
                     {
                         title:'Hello ',
@@ -80,13 +83,14 @@
                 addNote(){
                     this.active = true
                     if(!this.errorsCheck){
+                        let {title,text} = this.note
                         this.notes.push({
-                            title: this.title,
-                            text:this.text,
+                            title,
+                            text,
                             dt:Date(Date.now())
                         })
-                        this.title = ''
-                        this.text = ''
+                        this.note.title = ''
+                        this.note.text = ''
                         this.active = false
                     }
                 }
@@ -94,13 +98,13 @@
             computed:{
                 heightNewBlock(){
                     if(this.showNewBlock){
-                        return 'height:650px'
+                        return `min-height:$645px`
                     } else {
                         return 'height:65px'
                     }
                 },
                 errorsCheck(){
-                    if(this.title == '' || this.text == ''){
+                    if(this.note.title == '' || this.note.text == ''){
                         return true
                     } else {
                         return false
