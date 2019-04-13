@@ -3,13 +3,18 @@
     <h2>
       <i class="fas fa-exclamation-triangle"></i> alert
     </h2>
-    <p>empty text or title</p>
+    <p>{{ notice }}</p>
   </div>
 </template>
 
 
 <script>
 export default {
-
+  props:{
+    notice:{
+      type:String,
+      required:true
+    }
+  }
 };
 </script>
