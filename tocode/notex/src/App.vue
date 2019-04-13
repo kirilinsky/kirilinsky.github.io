@@ -1,5 +1,6 @@
 <template>
   <div class="wrap" id="app">
+    <!-- newNote -->
     <section class="new" :style="heightNewBlock">
       <div class="hide" @click="hideOrShowNewBlock()" :title="showNewBlock?'hide':'show'"></div>
       <h1>add new noteX</h1>
@@ -14,6 +15,7 @@
       <alert v-if="errorsCheck && active" :notice="notice"></alert>
       <button class="btn" @click="addNote()">create new</button>
     </section>
+    <!-- end newNote -->
     <section class="nav">
       <h3>Search notes</h3>
       <div>
