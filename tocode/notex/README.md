@@ -1,29 +1,4 @@
-# vue-cli
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# ![N|Solid](https://imania.do.am/img/Fire-32.png) NoteX - write | read | `fire`
+ - created with:
+[![N|Solid](https://cdn-images-1.medium.com/max/1600/1*KuwZhTe46CLW4fhI6AwwAw.jpeg)](https://nodesource.com/products/nsolid)
+___
