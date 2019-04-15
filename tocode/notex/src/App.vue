@@ -9,9 +9,8 @@
       <input type="text" id="title" autocomplete="off" v-model="note.title">
       <label for="text">Text</label>
       <textarea id="text" v-model="note.text"></textarea>
-      <span class="emodji">{{ emodjiCheck(note.emodji) }}</span>
       <input type="range" min="1" max="3" v-model="note.emodji" step="1">
-      <label for="emodji">Your mood</label>
+      <label for="emodji">Your mood {{ emodjiCheck(note.emodji) }}</label>
       <alert v-if="errorsCheck && active" :notice="notice"></alert>
       <button class="btn" @click="addNote()">create new</button>
     </section>
