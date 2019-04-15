@@ -1,19 +1,12 @@
 <template>
   <div class="wrap" id="app">
     <!-- newNote -->
-    <section class="new" :style="heightNewBlock">
-      <div class="hide" @click="hideOrShowNewBlock()" :title="showNewBlock?'hide':'show'"></div>
-      <h1>add new noteX</h1>
-      <div class="line"></div>
-      <label for="title">Title</label>
-      <input type="text" id="title" autocomplete="off" v-model="note.title">
-      <label for="text">Text</label>
-      <textarea id="text" v-model="note.text"></textarea>
-      <input type="range" min="1" max="3" v-model="note.emodji" step="1">
-      <label for="emodji">Your mood {{ emodjiCheck(note.emodji) }}</label>
-      <alert v-if="errorsCheck && active" :notice="notice"></alert>
-      <button class="btn" @click="addNote()">create new</button>
-    </section>
+    <newNote 
+      :note="note"
+      @addNote="addNote"
+      @emodjiCheck=""
+      
+    ></newNote>
     <!-- end newNote -->
     <section class="nav">
       <h3>Search notes</h3>
@@ -54,10 +47,10 @@
 </template>
 
 <script>
-import alert from '@/components/Alert.vue'
+import newNote from '@/components/New.vue'
 export default {
   components:{
-    alert
+    newNote
   },
   data() {
     return {
@@ -66,9 +59,6 @@ export default {
         text: '',
         emodji:'2'
       },
-      showNewBlock: true,
-      active: false,
-      notice:'',
       notes: [
         {
           title: "Hello ",
@@ -107,7 +97,7 @@ export default {
         this.note.text = ""
         this.active = false
         this.note.emodji = "2"
-         this.notice = ''
+        this.notice = ''
       }
     },
     emodjiCheck(n){
@@ -134,27 +124,6 @@ export default {
         case '3':
           return 'happy'
           break
-      }
-    }
-  },
-  computed: {
-    heightNewBlock() {
-      if (this.showNewBlock) {
-        return 'height:700px';
-      } else {
-        return "height:65px";
-      }
-    },
-    errorsCheck() {
-      if (this.note.title == ""){
-        this.notice = 'empty title'
-        return true;
-      } if(this.note.text == "") {
-         this.notice = 'empty text'
-        return true;
-      } else {
-         this.notice = ''
-         return false;
       }
     }
   }
