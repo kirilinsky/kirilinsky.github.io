@@ -126,6 +126,22 @@ export default {
         }
       }
     }
+  },
+  computed:{
+    errorsCheck() {
+      if (this.note.title == ""){
+        //отдает ошибку о пустом заголовке
+        this.notice = 'empty title'
+        return true;
+      } if(this.note.text == "") {
+         //отдвет ошибку об отсутствии текста
+         this.notice = 'empty text'
+        return true;
+      } else {
+         this.notice = ''
+         return false;
+      }
+    }
   }
 };
 </script>

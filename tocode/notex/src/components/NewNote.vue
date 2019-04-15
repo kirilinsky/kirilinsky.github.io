@@ -32,6 +32,7 @@ export default {
   data(){
       return {
           showNewBlock: true,
+          //переменная active должна быть в родителе или в компоненте?это boolean триггер для компонента alert
           active: false,
           notice:''
       }
