@@ -4,8 +4,7 @@
     <newNote 
       :note="note"
       @addNote="addNote"
-      @emodjiCheck=""
-      
+      @emodjiCheck="emodjiCheck"
     ></newNote>
     <!-- end newNote -->
     <section class="nav">
@@ -30,14 +29,14 @@
       </div>
       <div
         class="note"
-        :class="classEmodjiCheck(item.emodji)"
+        :class="emodjiCheck(item.emodji,true)"
         v-for="(item,index) in notes"
         :key="index"
         :style="listLayout?'width:95%':'width:45%'"
       >
         <div class="note__header">{{ item.title }}</div>
         <div class="note__body">{{ item.text }}</div>
-        <div class="note__date"><span>{{ emodjiCheck(item.emodji) }}</span><span>{{ item.dt }}</span></div>
+        <div class="note__date"><span>{{ emodjiCheck(item.emodji,false) }}</span><span>{{ item.dt }}</span></div>
         <div class="note__burn" @click="deleteNote(index)" title="fire">
           <i class="fas fa-fire"></i>
         </div>
@@ -47,7 +46,7 @@
 </template>
 
 <script>
-import newNote from '@/components/New.vue'
+import newNote from '@/components/NewNote.vue'
 export default {
   components:{
     newNote
@@ -100,21 +99,9 @@ export default {
         this.notice = ''
       }
     },
-    emodjiCheck(n){
-      switch(n){
-        case '1':
-          return '😒 - sad'
-          break
-        case '2':
-          return '😐 - neutral'
-          break
-        case '3':
-          return '😃 - happy'
-          break
-      }
-    },
-    classEmodjiCheck(n){
-      switch(n){
+    emodjiCheck(n,needClass){
+      if(needClass){
+          switch(n){
         case '1':
           return 'sad'
           break
@@ -124,6 +111,19 @@ export default {
         case '3':
           return 'happy'
           break
+        }
+      }else{
+          switch(n){
+        case '1':
+          return '😒 - sad'
+          break
+        case '2':
+          return '😐 - neutral'
+          break
+        case '3':
+          return '😃 - happy'
+          break
+        }
       }
     }
   }
