@@ -11,7 +11,7 @@
       <!-- как заставить работать emodjiCheck? -->
       <label for="emodji">Your mood {{ emodjiCheck(note.emodji,false) }}</label>
       <!-- как запустится addNote если первым условием ему нужен компьютед errorsCheck, как его туда передать?  -->
-      <alert v-if="errorsCheck && active" :notice="notice"></alert>
+      <alert v-if="active && errorsCheck" :notice="notice"></alert>
       <button class="btn" @click="addNote()">create new</button>
     </section>
 </template>
@@ -27,13 +27,16 @@ export default {
       note:{
           type:Object,
           required:true
+      },
+      active:{
+        type:Boolean,
+        default:false
       }
   },
   data(){
       return {
           showNewBlock: true,
           //переменная active должна быть в родителе или в компоненте?это boolean триггер для компонента alert
-          active: false,
           notice:''
       }
   },
@@ -44,13 +47,35 @@ export default {
       addNote(){
           this.$emit('addNote', this.note)
       },
-      emodjiCheck(){
-          //как должен работать этот эмит, что должен отдавать?
-          this.$emit('emodjiCheck',this.note.emodji)
+      emodjiCheck(n,needClass){
+      if(needClass){
+          switch(n){
+        case '1':
+          return 'sad'
+          break
+        case '2':
+          return 'neutral'
+          break
+        case '3':
+          return 'happy'
+          break
+        }
+      }else{
+          switch(n){
+        case '1':
+          return '😒 - sad'
+          break
+        case '2':
+          return '😐 - neutral'
+          break
+        case '3':
+          return '😃 - happy'
+          break
+        }
       }
+    }
   },
   computed: {
-    //валидатор
     errorsCheck() {
       if (this.note.title == ""){
         //отдает ошибку о пустом заголовке
