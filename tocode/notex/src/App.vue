@@ -26,6 +26,7 @@ export default {
       note: {
         title: '',
         text: '',
+        edit:false,
         emodji:'2'
       },
       notes: [
@@ -33,12 +34,14 @@ export default {
           title: "Hello ",
           text: "Im fuckin best procrastinator",
           emodji:'1',
+          edit:false,
           dt: moment('2019-04-11 11:07').format('LLL')
         },
         {
           title: "B-b!",
           text: "See ya later",
           emodji:'3',
+          edit:false,
           dt: moment('2019-04-14 21:23').format('LLL')
         }
       ],
