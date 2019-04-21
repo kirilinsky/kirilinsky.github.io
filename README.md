@@ -9,8 +9,8 @@
 >thats me
 ---
 <p align="center"><a href="http://kirilinsky.ru/moneySaver" target="_blank">
-<a target="_blank" href="https://kirilinsky.ru/moneySaver">MoneySaver</a> - save your money</h1>
- <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
+<a target="_blank" href="https://kirilinsky.ru/moneySaver"><img src="https://www.owlguru.com/wp-content/uploads/2015/08/Finance-01.png">MoneySaver</a> - save your money</h1><br>
+<img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
 ---
 # some of my projects:
 <a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
