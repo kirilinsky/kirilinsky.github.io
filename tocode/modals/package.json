@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli",
+  "name": "modals",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "moment": "^2.24.0",
     "vue": "^2.6.6"
   },
   "devDependencies": {
