@@ -38,5 +38,11 @@
 			cursor: pointer;
 			border-radius: 3px;
 		}
+.center-f{
+	display:flex;
+	align-items:center;
+	width:95%;
+	justify-content: space-around;
+}
 
 
