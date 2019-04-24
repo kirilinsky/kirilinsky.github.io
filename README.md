@@ -7,8 +7,12 @@
 >well, 
 >
 >thats me
-<p align="center"><a href="http://kirilinsky.ru/moneySaver" target="_blank">
- <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
+
+---
+<p align="center"><h2><a target="_blank" href="https://kirilinsky.ru/moneySaver">MoneySaver</a> - save your money</h2></p>
+<p align="center"><a href="http://kirilinsky.ru/inhabitable" target="_blank">
+
+<img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
 ---
 # some of my projects:
 <a href="https://kirilinsky.github.io/free_psd/" target="_blank"><img src="https://kirilinsky.github.io/gif_git/psd.gif" width="288"></a>
