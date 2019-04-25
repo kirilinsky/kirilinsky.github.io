@@ -1,0 +1,39 @@
+.leaflet-control-draw-measure {
+    background-image: url(assets/measure-control.png);
+}
+.leaflet-container .leaflet-control-mouseposition {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 5px #bbb;
+    padding: 0 5px;
+    margin:0;
+    color: #333;
+    font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+#dgtu{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.objects{
+    width: 10%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;
+}
+.objects .card {
+    margin: 7.7%;
+}
+.card-title{
+    display: flex;
+    justify-content: space-between;
+}
+.card img {
+    max-height: 25px;
+    margin-right: 5px;
+}

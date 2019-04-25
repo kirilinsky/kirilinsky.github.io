@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Карта</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.3.2/leaflet.draw.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./custom.css">
+    <link rel='icon' href='./assets/park.png' type='icon/png'>
+</head>
+
+<body>
+
+    <div id="dgtu">
+        <div class="objects">
+            <div class="card px-5 py-1">
+                <a href="index.html" class="card-link">назад</a>
+            </div>
+            <div class="card" v-for="item in markers">
+                <div class="card-body" @click.self="item.showCard = !item.showCard">
+                    <div class="card-title"><img style="max-height: 30px;" :src="item.icon"
+                            :alt="item.icon">{{item.title}}</div>
+                    <div v-if="item.showCard">
+                        <p class="card-text text-muted">{{ item.descr }}</p>
+                        <span class="badge badge-pill badge-info p-1 mx-1" v-for="object in item.slot"
+                            v-if="item.slot">{{object}}</span>
+                        <a href="#" class="card-link d-block text-primary mt-1" v-if="item.showCard"
+                            @click="set(item.coords, item.name)">на карте</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.3.2/leaflet.draw.js"></script>
+    <script src="./measureControl.js"></script>
+    <script src="./mousePosition.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        //    icons
+        let LeafIcon = L.Icon.extend({
+            options: {
+                shadowUrl: './assets/shadow.png',
+                iconSize: [30, 30],
+                shadowSize: [54, 25],
+                iconAnchor: [30, 39],
+                shadowAnchor: [37, 30],
+                popupAnchor: [-10, -37]
+            }
+        });
+        let parkIcon = new LeafIcon({
+                iconUrl: './assets/park.png'
+            }),
+            busIcon = new LeafIcon({
+                iconUrl: './assets/bus.png'
+            }),
+            hostelIcon = new LeafIcon({
+                iconUrl: './assets/hostel.png'
+            }),
+            cafeIcon = new LeafIcon({
+                iconUrl: './assets/cafe.png'
+            });
+
+        // initial map
+        let mymap = L.map('dgtu', {
+            measureControl: true
+        }).setView([47.23889311700468, 39.71139978252677], 17);
+        L.control.mousePosition().addTo(mymap);
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; Dev by <a href="https://kirilinsky.ru">kirilinsky</a> via OpenStreetMap',
+            maxZoom: 19
+        }).addTo(mymap);
+
+        // markers
+        let markerPark = L.marker([47.239818353643365, 39.71058975540427], {
+                icon: parkIcon
+            }).addTo(mymap).bindPopup("<b>Парк ДГТУ</b><br>Студенческий парк.").openPopup(),
+            markerHostel = L.marker([47.23937766123031, 39.712740887034215], {
+                icon: hostelIcon
+            }).addTo(mymap).bindPopup("<b>Общежитие</b><br>Для студентов."),
+            markerBusStop = L.marker([47.236183704313945, 39.71219371639518], {
+                icon: busIcon
+            }).addTo(mymap).bindPopup("<b>Остановка</b><br>Площадь Гагарина."),
+            markerBusStopTwo = L.marker([47.23871869891873, 39.71315931164054], {
+                icon: busIcon
+            }).addTo(mymap).bindPopup("<b>Остановка</b><br>Пр-кт М.Нагибина."),
+            markerCafe = L.marker([47.240244474226415, 39.71281598888663], {
+                icon: cafeIcon
+            }).addTo(mymap).bindPopup("<b>Кафетерий</b><br>Общепит.");
+        // vue init
+
+        let vue = new Vue({
+            el: '.objects',
+            data: {
+                markers: [{
+                        name: 'markerPark',
+                        title: 'Парк ДГТУ',
+                        descr: 'Студенческий Парк',
+                        icon: './assets/park.png',
+                        showCard: false,
+                        coords: [47.239818353643365, 39.71058975540427]
+                    },
+                    {
+                        name: 'markerHostel',
+                        title: 'Общежитие',
+                        descr: 'Общежитие для студентов',
+                        icon: './assets/hostel.png',
+                        showCard: false,
+                        coords: [47.23937766123031, 39.712740887034215],
+                        slot: ['8:00 - 20:00']
+                    },
+                    {
+                        name: 'markerBusStop',
+                        title: 'Остновка',
+                        descr: 'Площадь Гагарина',
+                        icon: './assets/bus.png',
+                        showCard: false,
+                        coords: [47.236209, 39.712212],
+                        slot: [1, '2а', 65, '65а', 77, '92а', 92]
+                    },
+                    {
+                        name: 'markerBusStopTwo',
+                        title: 'Остновка',
+                        descr: 'Пр-кт М.Нагибина',
+                        icon: './assets/bus.png',
+                        showCard: false,
+                        coords: [47.23871869891873, 39.71315931164054],
+                        slot: [25, 76, 93]
+                    },
+                    {
+                        name: 'markerCafe',
+                        title: 'Кафетерий',
+                        descr: 'text text text',
+                        icon: './assets/cafe.png',
+                        showCard: false,
+                        coords: [47.240244474226415, 39.71281598888663],
+                        slot: ['8:00 - 20:00']
+                    }
+                ]
+            },
+            methods: {
+
+                set(arr, str) {
+                    mymap.setView(arr, 19);
+                }
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
