@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="modal">
+        <img class="img-modal">
+        <div class="right layer close" title="close">x</div>
+        <div class="left layer title">1</div>
+    </div>
+    <div class="wrap">
+        <header class="custom">
+            <img class="cell dark" data-src="./1.png" src="./1.png" alt="logo">
+            <div class="cell dark"></div>
+            <div class="cell dark"></div>
+        </header>
+        <div class="line"></div>
+        <main>
+            <aside>
+                <div class="cell top dark"></div>
+                <img class="cell bottom dark" src="./2.png" alt="logo2">
+            </aside>
+            <section>
+                <div class="content top light"></div>
+                <div class="content middle">
+                    <img src="./01.jpg" alt="1" class="cell light">
+                    <img src="./02.jpg" alt="2" class="cell light">
+                    <img src="./03.jpg" alt="3" class="cell light">
+                    <img src="./04.jpg" alt="4" class="cell light">
+                    <img src="./05.jpg" alt="5" class="cell light">
+                    <img src="./06.jpg" alt="6" class="cell light">
+                    <img src="./07.jpg" alt="7" class="cell light">
+                </div>
+                <div class="content bottom">
+                    <div class="cell light"></div>
+                    <div class="cell light"></div>
+                </div>
+            </section>
+        </main>
+        <div class="line"></div>
+        <footer>
+            <div class="cell dark"></div>
+            <div class="cell dark"></div>
+            <div class="cell">
+                <div class="container dark"></div>
+                <img class="container dark" src="./3.png" alt="footer">
+            </div>
+        </footer>
+    </div>
+    <script>
+        let modal = document.querySelector('.modal'),
+            imgModal= document.querySelector('.img-modal'),
+            wrap = document.querySelector('.wrap'),
+            imgs = document.querySelectorAll('img.cell'),
+            closeBtn = document.querySelector('.close'),
+            title = document.querySelector('.title')
+        for(let z = 0;z<imgs.length;z++){
+            imgs[z].addEventListener('click',function(){
+                wrap.style.filter = 'blur(5px) grayscale(15)'
+                title.innerHTML = z+1
+                wrap.style.zIndex = 5
+                modal.style.display = 'block'
+                imgModal.src = event.target.src
+            })
+        }
+        for(img of imgs){
+            img.addEventListener('click',showModal)
+        }
+        wrap.addEventListener('click',hideModal,true)
+        closeBtn.addEventListener('click',hideModal)
+        function showModal() {
+            wrap.style.filter = 'blur(5px) grayscale(15)'
+            title.innerHTML = parseInt(event.target.alt)
+            wrap.style.zIndex = 5
+            modal.style.display = 'block'
+            imgModal.src = event.target.src
+        }
+        function hideModal(){
+            modal.style.display = 'none'
+            wrap.style.filter = 'none'
+        }
+
+    </script>
+</body>
+</html>
