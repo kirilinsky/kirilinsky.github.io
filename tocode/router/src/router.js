@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import About from './views/About.vue'
 import Default from './views/Default.vue'
+import Unknow from './views/404.vue'
 
 Vue.use(Router)
 
@@ -21,6 +23,10 @@ export default new Router({
       path:'/default',
       name:'default',
       component:Default
+    }, {
+      path: '*',
+      name: 'unknow',
+      component: Unknow
     }
   ]
 })
