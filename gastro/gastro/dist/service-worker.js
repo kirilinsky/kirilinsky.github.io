@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a94ec3a743569853b64ef70f298cbf7b.js"
+  "/gastro/gastro/precache-manifest.7fdcbed6b57fb02f066521778fb97ed5.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gastro"});
