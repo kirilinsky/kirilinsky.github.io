@@ -1,0 +1,222 @@
+.grid
+  padding 10px !important
+  width 100%
+  height 92vh
+  display grid 
+  grid-template  25% 25% 25% / 1fr 1fr
+  grid-gap 15px
+  &__item
+    background #c8c8c8
+    display flex
+    flex-flow column nowrap
+    justify-content center
+    padding 15px
+    user-select none
+    &:hover
+      cursor pointer
+      box-shadow 0 0 7px grey
+      background #ccc
+      transition ease 0.3s
+    &-header
+      font-variant small-caps
+    img
+      max-width 85%
+      max-height 85%
+      margin 0 auto
+
+.cart
+  display flex
+  flex-direction column
+  align-items center
+  width 100%
+  min-height 150px
+  padding 7px
+  &__item
+    width 100%
+    min-height 115px
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    margin: 15px auto
+    padding: .75rem 1.15rem;
+    border-radius: .35rem;
+    &:hover
+      cursor pointer
+      box-shadow 0 0 7px grey
+      transition ease 0.3s
+    &-header
+        width 100%
+        height 50%
+        text-align: center
+        display: flex
+        justify-content space-between
+        align-items center
+        padding 3px
+    &-assets
+        width 100%
+        height 50%
+        display flex
+        justify-content: space-between
+        align-items: center
+        &-cell
+            max-width 33.3%
+            height 100%
+            padding 3px
+
+.menu
+  display flex
+  flex-direction column
+  align-items center
+  width 100%
+  min-height 200px
+  padding 7px
+  .selected
+      box-shadow: 0 0 7px #0d9950
+      .menu__item-footer
+        background #D5EDDA
+        color: #0bb059
+      .menu__item-header
+          font-weight bold
+          color: #104905
+
+  &__item
+    width 97%
+    height 190px
+    color: #383d4185
+    background-color: #e2e3e5
+    border-color: #d6d8db
+    margin: 15px auto
+    border-radius: .35rem;
+    display: flex
+    flex-direction: column
+    padding: 0
+    box-shadow: 0 2px 5px grey
+    &:hover
+        transition ease 0.3s
+        color: #383d41
+        box-shadow: 0 3px 7px grey
+    &:hover&.selected
+        box-shadow: 0 0 14px #0d9950
+    &-header
+        width 100%
+        height 40%
+        background: #f7f7f7
+        padding 9px
+        display: flex
+        align-items: center
+        justify-content space-between
+        .star
+            width 52px
+            height 52px
+            background #000
+            background url('../assets/star.png')
+            background-size cover
+            filter grayscale(0.5)
+            display flex
+            justify-content: center
+            align-items: center
+            &:hover
+                filter none
+                cursor: pointer 
+            .mark
+                margin-top 5px
+                background transparent
+                color brown
+                font 17.5px sans-serif
+                text-shadow: 0 0 4px brown
+        .label
+            flex-grow: 1
+            font-variant: small-caps
+            font-size 19px
+            letter-spacing: 2.2px
+    &-body
+        width 100%
+        height 45%
+        border 7px solid #f7f7f7
+        display: flex
+        align-items center
+        justify-content: flex-start
+        .menu-picture
+            margin 3px 7px
+            width 64px
+            border-radius: 3px
+    &-footer
+        border-top: 1px solid #3b3b3b25
+        height 15%
+        display: flex
+        padding: 9px
+        align-items: center
+        color: #69696978
+        font-size 13px
+        span
+            font-style: oblique
+   &__half
+       width 97%
+       height 65px
+       color: #383d4185
+       background-color: #E2E3E5
+       margin: 15px auto
+       border-radius: .35rem;
+       display: flex
+       align-items: center
+       justify-content: center
+       flex-direction: column
+       box-shadow: 0 2px 5px grey
+       transition ease 0.3s
+       h5
+        font-variant: small-caps
+       &:hover
+        transition ease 0.3s
+        cursor pointer
+        color: #646d75
+        background: #F7F7F7
+        box-shadow: 0 3px 7px grey, inset 0 0 2px #000
+     .delete:hover
+        box-shadow: 0 0 7px #fccaa9
+        background: #fc9a9c75
+        color: #810716
+
+
+.fridge
+    width 100%
+    min-height 90vh
+    background #00000120
+    display: flex
+    flex-direction: column
+    &__shelve
+        width 100%
+        height 150px
+        background: url('../assets/fridge2.png')
+        @media (min-width:675px)
+            background: #e8e8e8
+            border-bottom: 2px solid #3c000075
+            height 250px
+        background-size cover
+        display: flex
+        align-items flex-end
+        justify-content: space-around
+        padding 2px 30px
+        &-item
+            width 40%
+            height 85%
+            background #00000077
+            border 2px solid #ddf
+            border-radius: 5px
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            color:#ffd
+            transition ease 0.3s
+            &:hover
+                cursor pointer
+                box-shadow: 0 0 7px #fff
+                transition ease 0.3s
+
+.settings
+    display: flex
+    flex-direction: column
+    padding: 15px;
+    button
+        margin 15px
+
+
