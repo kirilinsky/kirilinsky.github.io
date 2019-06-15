@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    name: 'Kirill',
-    date: '10.04.2018'
+    name: 'Kirill Ilinsky',
+    date: '02.06.2019'
   },
   mutations: {
 

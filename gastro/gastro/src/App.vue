@@ -141,9 +141,9 @@
   <!-- end cart -->
 
   <!-- menu -->
-  <div class="menu" v-show="menu">
+  <div class="menu" v-show="menu" >
 
-    <div class="menu__item selected">
+    <div class="menu__item selected" @click="openWeek()">
       <div class="menu__item-header">
         <div class="star"><div class="mark">5.0</div></div>
         <div class="label">Italy Week</div>
@@ -222,10 +222,94 @@
 <!-- end fridge -->
   </div>
 <!-- end fridge -->
+
+<!-- settings -->
   <div class="settings" v-show="settings">
     <b-button variant="primary">Sign Out</b-button>
     <b-button variant="danger">Clear history</b-button>
   </div>
+ <!-- settings end -->
+
+
+  <!-- week-menu -->
+  <div class="week" v-show="week">
+
+    <div class="week__item">
+      <div class="week__item-header">
+        <div class="star"><div class="mark">4.1</div></div>
+        <div class="label">Italy Week</div>
+        <b-btn>⬜</b-btn>
+      </div>
+
+      <div class="week__item-body">
+        <div class="week__item-body-sidebar">
+          <img src="./assets/menu/1.jpg" alt="dish" class="dish-face">
+          <div class="rate">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+        </div>
+        <div class="week__item-body-content">
+          <div class="content-header">
+            Fettuchini Alfredo
+          </div>
+          <div class="content-badges">
+            <b-button variant="info" size="sm">
+              Sum <b-badge pill variant="light">11</b-badge>
+            </b-button>
+            <b-button variant="info" size="sm">
+              Time <b-badge pill variant="light">50</b-badge>
+            </b-button>
+          </div>
+          <div class="content-footer">last served 08/11/18</div>
+        </div>
+      </div>
+
+      <div class="week__item-body">
+        <div class="week__item-body-sidebar">
+          <img src="./assets/menu/3.jpg" alt="dish" class="dish-face">
+          <div class="rate">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+        </div>
+        <div class="week__item-body-content">
+          <div class="content-header">
+            Cannelloni
+          </div>
+          <div class="content-badges">
+            <b-button variant="info" size="sm">
+              Sum <b-badge pill variant="light">13</b-badge>
+            </b-button>
+            <b-button variant="info" size="sm">
+              Time <b-badge pill variant="light">115</b-badge>
+            </b-button>
+          </div>
+          <div class="content-footer">last served 21/01/05</div>
+        </div>
+      </div>
+
+      <div class="menu__half">
+        <span>➕</span>
+        <h5>add new</h5>
+      </div>
+      <div class="menu__half delete">
+        <span>✂</span>
+        <h5>delete all</h5>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
 
 <!-- end app -->
 </div>
@@ -252,11 +336,12 @@ export default {
   data(){
     return {
       name:null,
-      mainScreen:true,
+      mainScreen:false,
       cart:false,
       menu:false,
       fridge:false,
-      settings:false
+      settings:false,
+      week:true
     }
   },
   methods:{
@@ -266,6 +351,8 @@ export default {
         this.menu = false
         this.fridge = false
         this.settings = false
+        this.week = false
+
     },
     toggleCart(){
         this.mainScreen = false
@@ -274,6 +361,7 @@ export default {
     toggleMenu(){
         this.mainScreen = false
         this.menu = true
+        this.week = false
     },
     toggleFridge(){
         this.mainScreen = false
@@ -282,6 +370,10 @@ export default {
     toggleSettings(){
         this.mainScreen = false
         this.settings = true
+    },
+    openWeek(){
+      this.week = true
+      this.menu = false
     }
   },
   computed: {
@@ -300,6 +392,9 @@ export default {
       }
       else if(this.settings){
         return 'Settings'
+      }
+      else if(this.week){
+        return 'Week'
       }
     },
     getName(){
