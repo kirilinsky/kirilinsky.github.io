@@ -24,13 +24,13 @@ const requsetApi = (method, url) => {
         if(request.readyState !== 4) return
 
         let query = JSON.parse(request.responseText), type
-        //console.log(query.results)
+        console.log(query.results)
         query.results.forEach((item,i) => {
                 if (item.media_type == 'movie') type = 1
                 if (item.media_type == 'tv') type = 2
                 let poster, overview, name, loc_name,release,rate
-                rate = (item.vote_average != 0) ? `<button type="button" class="btn btn-outline-info pill btn-sm disabled">
-                                                    Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
+                rate = (item.vote_average != 0) ? `<button type="button" title="Voted ${item.vote_count} people" class="btn btn-outline-info pill btn-sm disabled">
+                                                    Rate <span title="Voted ${item.vote_count} people" class="badge badge-pill btn-info">${item.vote_average}</span>
                                                    </button>` : ''
                 poster = item.poster_path ? 'http://image.tmdb.org/t/p/w185' + item.poster_path : 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
                 overview= item.overview ? item.overview.substr(0, 245) + '...' : 'This film dont have description'
