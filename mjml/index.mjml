@@ -1,0 +1,87 @@
+<mjml>
+  <mj-body>
+    <mj-raw>
+      <!-- Company Header -->
+    </mj-raw>
+    <mj-section background-color="#f0f0f0">
+      <mj-column>
+        <mj-text letter-spacing="2px" font-size="20px" color="#D9AA00">Altaria - энергия Aлтая</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+      <!-- Image Header -->
+    </mj-raw>
+    <mj-section background-url="./lg.jpg" background-size="cover" background-repeat="no-repeat">
+      <mj-column width="600px">
+        <mj-text align="center" color="#123" font-size="40px" font-family="Helvetica Neue">Altaria на фестивале Gastreet</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+      <!-- Intro text -->
+    </mj-raw>
+    <mj-section background-color="#fafafa">
+      <mj-column width="400px">
+        <mj-text color="#525252"> В Красной Поляне с 27 по 31 мая в пятый раз прошел международный фестиваль рестораторов Gastreet. На главное гастрономическое событие Сочи приехали более 5 тыс. участников со всего мира.</mj-text>
+        <mj-button background-color="#F45E43" href="#">Узнать больше</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+      <!-- Side image -->
+    </mj-raw>
+    <mj-section background-color="white">
+      <mj-raw>
+        <!-- Left image -->
+      </mj-raw>
+      <mj-column>
+        <mj-image width="200px" src="./sm.jpg"></mj-image>
+      </mj-column>
+      <mj-raw>
+        <!-- right paragraph -->
+      </mj-raw>
+      <mj-column>
+        <mj-text font-style="italic" font-size="20px" font-family="Helvetica Neue" color="#626262">Масло спрей из Алтая, экологически чистый продукт</mj-text>
+        <mj-text color="#525252">Первозданная природа, безбрежные просторы, горы, реки и бережное отношение к традициям вдохновили нас на рождение новой линейки экологически чистого, натурального масла.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-raw>
+      <!-- Icons -->
+    </mj-raw>
+     <mj-section background-color="#fbfbfb">
+        <mj-column>
+          <mj-text color="#525252">АССОРТИМЕНТ</mj-text>
+        </mj-column>
+     </mj-section>
+    <mj-section background-color="#fbfbfb">
+      <mj-column>
+        <mj-image width="100px" src="./1.png"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image width="100px" src="./2.png"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image width="100px" src="./3.png"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image width="100px" src="./4.png"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-image width="100px" src="./5.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fbfbfb">
+      <mj-column>
+        <mj-text color="#525252">ПОДСОЛНЕЧНОЕ
+        </mj-text>
+      </mj-column>
+
+      <mj-column>
+        <mj-text color="#525252">ЛЬНЯНОЕ </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-text color="#525252">КЕДРОВОЕ</mj-text>
+      </mj-column>
+
+    </mj-section>
+  </mj-body>
+</mjml>

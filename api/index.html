@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Test API</title>
+    <link rel='icon' href='./fav.png' type='icon/png'>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Shows Searcher</a>
+        <form
+            class="form-inline"
+            id="search">
+            <input
+                class="form-control mr-sm-2"
+                id="input"
+                type="search"
+                placeholder="Search movie"
+                aria-label="Search"
+            >
+            <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+            >Search</button>
+        </form>
+    </nav>
+    <div class="jumbotron">
+        <p class="lead">simple application for testing rest-api colaboration.</p>
+        <hr class="my-1">
+
+    </div>
+    <div class="container">
+        <div class="row" id="movies"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>     
