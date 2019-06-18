@@ -53,7 +53,6 @@ const requsetApi = (method, url) => {
                             <div class="col-md-4 align-self-center p-1">
                                 <img src="${poster}" class="card-img-top p-1 shadow-sm" alt="${item.original_title}" style="border-radius:15px;">
                                 <p class="card-text"><small class="text-muted p-2">Release year <b>${release}</b></small></p>
-                                <h6>${i}</h6>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
