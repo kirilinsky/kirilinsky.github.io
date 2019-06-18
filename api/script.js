@@ -32,14 +32,14 @@ const requsetApi = (method, url) => {
                 item.overview ? overview = item.overview.substr(0, 245) + '...' : overview = 'This show dont have description'
 
                 let col = document.createElement('div')
-                col.classList.add('col-lg-6','col-md-12','animated','zoomIn')
+                col.classList.add('col-lg-6','col-md-12','animated','zoomIn','item')
                 col.innerHTML =
                 `
                     <div class="card mb-3" style="max-width: 550px;">
                         <div class="row no-gutters" style=";min-height:375px;">
-                            <div class="col-md-4 align-self-center">
-                                <img src="${poster}" class="card-img-top p-2" alt="${item.original_name}">
-                                <p class="card-text"><small class="text-muted p-3">Release year ${item.first_air_date.substr(0,4)}</small></p>
+                            <div class="col-md-4 align-self-center p-1">
+                                <img src="${poster}" class="card-img-top p-1 shadow-sm" alt="${item.original_name}" style="border-radius:15px;">
+                                <p class="card-text"><small class="text-muted p-2">Release year ${item.first_air_date.substr(0,4)}</small></p>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
