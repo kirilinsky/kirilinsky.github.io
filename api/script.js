@@ -39,16 +39,16 @@ const requsetApi = (method, url) => {
                         <div class="row no-gutters" style=";min-height:375px;">
                             <div class="col-md-4 align-self-center">
                                 <img src="${poster}" class="card-img-top p-2" alt="${item.original_name}">
+                                <p class="card-text"><small class="text-muted p-3">Release year ${item.first_air_date.substr(0,4)}</small></p>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h2 class = "card-title"> ${item.original_name}</h2>
                                     <p class="card-text"><small class="text-muted">- ${item.name} -</small></p>
                                     <p class = "card-text">${overview}</p>
-                                    <button type="button" class="btn btn-outline-info pill btn-sm">
+                                    <button type="button" class="btn btn-outline-info pill btn-sm disabled">
                                         Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
                                     </button>
-                                    <p class="card-text"><small class="text-muted">Release year ${item.first_air_date.substr(0,4)}</small></p>
                                 </div>
                             </div>
                         </div>
