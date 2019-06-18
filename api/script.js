@@ -26,7 +26,10 @@ const requsetApi = (method, url) => {
         query.results.forEach(item => {
                 if (item.media_type == 'movie') type = 1
                 if (item.media_type == 'tv') type = 2
-                let poster, overview, name, loc_name,release
+                let poster, overview, name, loc_name,release,rate
+                rate = (item.vote_average != 0) ? `<button type="button" class="btn btn-outline-info pill btn-sm disabled">
+                                                    Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
+                                                   </button>` : ''
                 poster = item.poster_path ? 'http://image.tmdb.org/t/p/w185' + item.poster_path : 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
                 overview= item.overview ? item.overview.substr(0, 245) + '...' : 'This film dont have description'
                 if(type == 1){
@@ -53,9 +56,7 @@ const requsetApi = (method, url) => {
                                     <h2 class ="card-title"> ${name}</h2>
                                     <p class="card-text"><small class="text-muted">${loc_name}</small></p>
                                     <p class="card-text animated fadeIn" onclick="event.target.innerHTML = '${item.overview}'">${overview}</p>
-                                    <button type="button" class="btn btn-outline-info pill btn-sm disabled">
-                                        Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
-                                    </button>
+                                    ${rate}
                                 </div>
                             </div>
                         </div>
