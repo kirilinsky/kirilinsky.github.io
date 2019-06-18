@@ -20,58 +20,37 @@ const requsetApi = (method, url) => {
     request.addEventListener('readystatechange',() => {
         if(request.readyState !== 4) return
 
-        let query = JSON.parse(request.responseText)
-        console.log(query.results)
+        let query = JSON.parse(request.responseText), type
+
         query.results.forEach(item => {
-            if (item.media_type == 'tv') {
-                let poster, overview,name
+                if (item.media_type == 'movie') type = 1
+                if (item.media_type == 'tv') type = 2
+                let poster, overview, name, loc_name,release
                 item.poster_path ? poster = 'http://image.tmdb.org/t/p/w185' + item.poster_path : poster = 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
-                item.overview ? overview = item.overview.substr(0, 245) + '...' : overview = 'This show dont have description'
-                item.original_name == item.name ? name = ' ' : name =item.name
-                let col = document.createElement('div')
-                col.classList.add('col-lg-6','col-md-12','animated','zoomIn','item')
-                col.innerHTML =
-                `
-                    <div class="card mb-3" style="max-width: 550px;">
-                        <div class="row no-gutters" style=";min-height:375px;">
-                            <div class="col-md-4 align-self-center p-1">
-                                <img src="${poster}" class="card-img-top p-1 shadow-sm" alt="${item.original_name}" style="border-radius:15px;">
-                                <p class="card-text"><small class="text-muted p-2">Release year ${item.first_air_date.substr(0,4)}</small></p>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h2 class = "card-title"> ${item.original_name}</h2>
-                                    <p class="card-text"><small class="text-muted">${name}</small></p>
-                                    <p class = "card-text">${overview}</p>
-                                    <button type="button" class="btn btn-outline-info pill btn-sm disabled">
-                                        Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `
-                movies.appendChild(col)
-            }
-            if (item.media_type == 'movie') {
-                let poster, overview, name
-                item.poster_path ? poster = 'http://image.tmdb.org/t/p/w185' + item.poster_path : poster = 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
-                item.overview ? overview = item.overview.substr(0, 245) + '...' : overview = 'This show dont have description'
-                item.original_title == item.title ? name = ' ' : name = item.title
+                item.overview ? overview = item.overview.substr(0, 245) + '...' : overview = 'This film dont have description'
+                if(type == 1){
+                    name = item.original_title
+                    item.original_title == item.title ? loc_name = ' ' : loc_name = item.title
+                    release = item.release_date.substr(0, 4)
+                } else {
+                    name = item.original_name
+                    item.original_name == item.name ? loc_name = ' ' : loc_name = item.name
+                    release = item.first_air_date.substr(0, 4)
+                }
                 let col = document.createElement('div')
                 col.classList.add('col-lg-6', 'col-md-12', 'animated', 'zoomIn', 'item')
                 col.innerHTML =
                     `
-                    <div class="card mb-3 bg-light" style="max-width: 550px;">
+                    <div class="card mb-4" style="max-width: 550px;">
                         <div class="row no-gutters" style=";min-height:375px;">
                             <div class="col-md-4 align-self-center p-1">
                                 <img src="${poster}" class="card-img-top p-1 shadow-sm" alt="${item.original_title}" style="border-radius:15px;">
-                                <p class="card-text"><small class="text-muted p-2">Release year ${item.release_date.substr(0,4)}</small></p>
+                                <p class="card-text"><small class="text-muted p-2">Release year ${release}</small></p>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h2 class = "card-title"> ${item.original_title}</h2>
-                                    <p class="card-text"><small class="text-muted">${name}</small></p>
+                                    <h2 class = "card-title"> ${name}</h2>
+                                    <p class="card-text"><small class="text-muted">${loc_name}</small></p>
                                     <p class = "card-text">${overview}</p>
                                     <button type="button" class="btn btn-outline-info pill btn-sm disabled">
                                         Rate <span class="badge badge-pill btn-info">${item.vote_average}</span>
@@ -82,7 +61,6 @@ const requsetApi = (method, url) => {
                     </div>
                 `
                 movies.appendChild(col)
-            }
         })
     })
 
