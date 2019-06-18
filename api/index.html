@@ -11,13 +11,16 @@
     <style>
         .card:hover{
             box-shadow: 0 0 5px grey;
-            transform: scale(1.011);
             transition: ease 0.4s;
+        }
+        nav > img {
+            height: 50px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light mb-4">
+        <img src="./fav.png" alt="searcher">
         <a class="navbar-brand">Shows Searcher</a>
         <form
             class="form-inline"
@@ -30,16 +33,12 @@
                 aria-label="Search"
             >
             <button
-                class="btn btn-outline-success my-2 my-sm-0"
+                class="btn btn-outline-success my-2 my-sm-0 animated infinite pulse slower"
                 type="submit"
+                id="btn"
             >Search</button>
         </form>
     </nav>
-    <div class="jumbotron">
-        <p class="lead">simple application for testing rest-api colaboration.</p>
-        <hr class="my-1">
-
-    </div>
     <div class="container">
         <div class="row" id="movies"></div>
     </div>

@@ -4,11 +4,13 @@ const search = document.querySelector('#search'),
     btn = document.querySelector('#btn')
 
 const apiSearch = e => {
+
     movies.innerHTML = ''
     e.preventDefault()
     let text = inp.value,
         uri = 'https://api.themoviedb.org/3/search/multi?api_key=662b74bb042962fe22b43d842c0dd622&language=ru&query=' + text
     requsetApi('GET', uri)
+    btn.classList.remove('pulse')
 }
 
 
@@ -17,13 +19,13 @@ const requsetApi = (method, url) => {
     request.open(method, url)
     request.send()
     inp.value = ''
-
+ 
     request.addEventListener('readystatechange',() => {
         if(request.readyState !== 4) return
 
         let query = JSON.parse(request.responseText), type
-        console.log(query.results);
-        query.results.forEach(item => {
+        //console.log(query.results)
+        query.results.forEach((item,i) => {
                 if (item.media_type == 'movie') type = 1
                 if (item.media_type == 'tv') type = 2
                 let poster, overview, name, loc_name,release,rate
@@ -35,27 +37,29 @@ const requsetApi = (method, url) => {
                 if(type == 1){
                     name = item.original_title
                     loc_name = item.original_title == item.title ? ' ' : item.title
-                    release = item.release_date.substr(0, 4)
+                    release = item.release_date? item.release_date.substr(0, 4): 'unknow'
                 } else {
                     name = item.original_name
                     loc_name = item.original_name == item.name ? ' ' : item.name
-                    release = item.first_air_date.substr(0, 4)
+                    release = item.first_air_date ? item.first_air_date.substr(0, 4) : 'unknow'
                 }
                 let col = document.createElement('div')
-                col.classList.add('col-lg-6', 'col-md-12', 'animated', 'zoomIn', 'item')
+                col.classList.add('col-lg-6', 'col-md-12', 'animated', 'fadeIn', 'item')
+                col.style.animationDelay = i < 10 ? `0.${i*3}s` : `1.${i*3}s`
                 col.innerHTML =
                     `
                     <div class="card mb-4" style="max-width: 556px;">
                         <div class="row no-gutters" style="min-height:377px;">
                             <div class="col-md-4 align-self-center p-1">
                                 <img src="${poster}" class="card-img-top p-1 shadow-sm" alt="${item.original_title}" style="border-radius:15px;">
-                                <p class="card-text"><small class="text-muted p-2">Release year ${release}</small></p>
+                                <p class="card-text"><small class="text-muted p-2">Release year <b>${release}</b></small></p>
+                                <h6>${i}</h6>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h2 class ="card-title"> ${name}</h2>
                                     <p class="card-text"><small class="text-muted">${loc_name}</small></p>
-                                    <p class="card-text animated fadeIn" onclick="event.target.innerHTML = '${item.overview}'">${overview}</p>
+                                    <p class="card-text animated fadeIn" title="Show full text" onclick="event.target.innerHTML = '${item.overview}'">${overview}</p>
                                     ${rate}
                                 </div>
                             </div>
