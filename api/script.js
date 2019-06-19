@@ -116,6 +116,5 @@ window.onscroll = function () {
         labelLogo.src = './fav.png'
         labelName.style.display = 'inline-block'
     }
-    console.log(scroll);
 }
 search.addEventListener('submit', startSearch)
