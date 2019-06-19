@@ -12,9 +12,9 @@ const apiSearch = e => {
     requsetApi('GET', uri)
     btn.classList.remove('pulse')
 }
-const cutText = (str,num) => {
+const cutText = (str,num,str2) => {
 
-    if (str.length > num) return str.substr(0,num) + '...'
+    if (str.length > num-3) return str.substr(0,num) + str2
     else return str
 }
 
@@ -39,7 +39,7 @@ const requsetApi = (method, url) => {
                                                         Rate <span title="Voted ${item.vote_count} people" class="badge badge-pill btn-info">${item.vote_average}</span>
                                                     </button>` : ''
                     poster = item.poster_path ? 'http://image.tmdb.org/t/p/w200' + item.poster_path : 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
-                    overview = item.overview ? cutText(item.overview,237) : 'This film dont have description'
+                    overview = item.overview ? cutText(item.overview,237,'...') : 'This film dont have description'
                     release = 'Release year '
                     if(type == 0){
                         name = item.name
@@ -48,22 +48,22 @@ const requsetApi = (method, url) => {
                         rate = ''
                         overview =`
                         <h6>Known by:</h6>
-                        <ul class="list-group list-group-flush">`
+                        <ul class="list-group list-group-flush" style="list-style-type:none">`
                         item.known_for.forEach(el=>{
                             film = el.title || el.name
-                            overview +=`<li class="list-group-item">${film}</li>`
+                            overview += `<li><a class="list-group-item d-flex justify-content-between align-items-center" href="https://www.themoviedb.org/${el.media_type}/${el.id}" target="_blank" rel="noopener">${film} <span class="badge badge-info badge-pill">${cutText(el.release_date || el.first_air_date, 4,'')}</span></a></li>`
                         }) 
                         overview+='</ul>'
                         poster = item.profile_path ? 'http://image.tmdb.org/t/p/w200' + item.profile_path : 'https://www.belr.com/wp-content/uploads/2017/06/avatar-placeholder-generic-1.jpg'
                     } if(type == 1){
                         poster = item.poster_path ? 'http://image.tmdb.org/t/p/w200' + item.poster_path : 'https://www.zone-mania.com/images/Default-Film-Affiche.png'
-                        name = cutText(item.original_title,27)
-                        loc_name = item.original_title == item.title ? ' ' : cutText(item.title, 32)
-                        release += item.release_date ? item.release_date.substr(0, 4): 'unknow'
+                        name = cutText(item.original_title, 27, '...')
+                        loc_name = item.original_title == item.title ? ' ' : cutText(item.title, 32, '...')
+                        release += item.release_date ? cutText(item.release_date, 4,''): 'unknow'
                     } if (type == 2) {
-                        name = cutText(item.original_name, 27)
-                        loc_name = item.original_name == item.name ? ' ' : cutText(item.name, 32)
-                        release += item.first_air_date ? item.first_air_date.substr(0, 4) : 'unknow'
+                        name = cutText(item.original_name, 27, '...')
+                        loc_name = item.original_name == item.name ? ' ' : cutText(item.name, 32, '...')
+                        release += item.first_air_date ? cutText(item.first_air_date, 4,'') : 'unknow'
                     }
                     let col = document.createElement('div')
                     col.classList.add('col-lg-6', 'col-md-12', 'animated', 'fadeIn', 'item')
@@ -78,7 +78,7 @@ const requsetApi = (method, url) => {
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h2 class ="card-title"> ${name}</h2>
+                                        <h2 class ="card-title"><a class="alert-link" href="https://www.themoviedb.org/${item.media_type}/${item.id}" target="_blank"> ${name}</a></h2>
                                         <p class="card-text"><small class="text-muted">${loc_name}</small></p>
                                         <p class="card-text animated fadeIn" title="Show full text" onclick="event.target.innerHTML = '${item.overview}'">${overview}</p>
                                         ${rate}
