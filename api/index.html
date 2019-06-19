@@ -13,10 +13,20 @@
             box-shadow: 0 0 5px grey;
             transition: ease 0.4s;
         }
+        .navbar {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around !important;
+            align-items: center;
+        }
         nav > img {
             height: 50px;
         }
+        nav > img:hover {
+            cursor: pointer;
+        }
         #movies {
+            margin-top: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,21 +35,22 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light mb-4">
-        <img src="./fav.png" alt="searcher">
-        <a class="navbar-brand">Search any: <b>Film, TV-show, Actor!</b></a>
+    <div id="ancor"></div>
+    <nav class="navbar navbar-light bg-info fixed-top">
+        <img src="./fav.png" alt="searcher" id="label" class="animated">
+        <a class="navbar-brand">Search any: <b>Film, Show, Actor!</b></a>
         <form
             class="form-inline"
             id="search">
             <input
-                class="form-control mr-sm-2"
+                class="form-control mr-2 w-50"
                 id="input"
                 type="search"
                 placeholder="Search movie"
                 aria-label="Search"
             >
             <button
-                class="btn btn-outline-success my-2 my-sm-0 animated infinite pulse slower"
+                class="btn btn-outline-dark my-2 my-sm-0 animated infinite pulse slower"
                 type="submit"
                 id="btn"
             >Search</button>

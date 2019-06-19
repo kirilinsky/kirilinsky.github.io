@@ -1,7 +1,10 @@
 const search = document.querySelector('#search'),
     inp = document.querySelector('#input'),
     movies = document.querySelector('#movies'),
-    btn = document.querySelector('#btn')
+    btn = document.querySelector('#btn'),
+    labelLogo = document.querySelector('#label'),
+    labelName = document.querySelector('.navbar-brand'),
+    ancor = document.querySelector('#ancor');
 
 const startSearch = e => {
     movies.innerHTML = ''
@@ -26,6 +29,7 @@ const startSearch = e => {
                     </div>
                 `
             }
+            labelName.innerHTML = `Search result for: <b>${inp.value}</b>`
             query.results.forEach((item, i) => {
                 if (item.media_type == 'person') type = 0
                 if (item.media_type == 'movie') type = 1
@@ -84,6 +88,7 @@ const startSearch = e => {
                         </div>
                     `
                 movies.appendChild(col)
+                inp.value = null
         })
     })
 }
@@ -93,4 +98,24 @@ function cutText(str,num,str2){
     else return str
 }
 
+
+window.onscroll = function () {
+    let scroll = window.pageYOffset || document.documentElement.scrollTop
+    if(scroll !== 0){
+        labelLogo.src = './up.png'
+        labelName.style.display = 'none'
+        labelLogo.addEventListener('click',()=>{
+            ancor.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+            setTimeout(()=>{document.documentElement.scrollTop = 0},400)
+        })
+        
+    } if (scroll === 0) {
+        labelLogo.src = './fav.png'
+        labelName.style.display = 'inline-block'
+    }
+    console.log(scroll);
+}
 search.addEventListener('submit', startSearch)
