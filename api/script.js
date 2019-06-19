@@ -8,9 +8,10 @@ const startSearch = e => {
     e.preventDefault()
     let text = inp.value,
         uri = 'https://api.themoviedb.org/3/search/multi?api_key=662b74bb042962fe22b43d842c0dd622&language=ru&query=' + text
-    movies.innerHTML = `<div class="spinner-border" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>`
+    movies.innerHTML = `<button class="btn btn-primary" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>`
     fetch(uri)
         .then(function(value){
             return value.json()
