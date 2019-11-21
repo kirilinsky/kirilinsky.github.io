@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b69dcce.chunk.css",
-    "main.js": "/static/js/main.e86dcc06.chunk.js",
-    "main.js.map": "/static/js/main.e86dcc06.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c69c57be.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c69c57be.js.map",
-    "static/js/2.06362f30.chunk.js": "/static/js/2.06362f30.chunk.js",
-    "static/js/2.06362f30.chunk.js.map": "/static/js/2.06362f30.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7727370c621aeddcdb8424aa8248af05.js": "/precache-manifest.7727370c621aeddcdb8424aa8248af05.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.2b69dcce.chunk.css.map": "/static/css/main.2b69dcce.chunk.css.map"
+    "main.css": "/omega/static/css/main.2b69dcce.chunk.css",
+    "main.js": "/omega/static/js/main.394463dc.chunk.js",
+    "main.js.map": "/omega/static/js/main.394463dc.chunk.js.map",
+    "runtime-main.js": "/omega/static/js/runtime-main.17db2230.js",
+    "runtime-main.js.map": "/omega/static/js/runtime-main.17db2230.js.map",
+    "static/js/2.06362f30.chunk.js": "/omega/static/js/2.06362f30.chunk.js",
+    "static/js/2.06362f30.chunk.js.map": "/omega/static/js/2.06362f30.chunk.js.map",
+    "index.html": "/omega/index.html",
+    "precache-manifest.f49ad11f3575199696952a948d47dcef.js": "/omega/precache-manifest.f49ad11f3575199696952a948d47dcef.js",
+    "service-worker.js": "/omega/service-worker.js",
+    "static/css/main.2b69dcce.chunk.css.map": "/omega/static/css/main.2b69dcce.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c69c57be.js",
+    "static/js/runtime-main.17db2230.js",
     "static/js/2.06362f30.chunk.js",
     "static/css/main.2b69dcce.chunk.css",
-    "static/js/main.e86dcc06.chunk.js"
+    "static/js/main.394463dc.chunk.js"
   ]
 }
