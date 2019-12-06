@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/omega/static/css/main.f2594931.chunk.css",
-    "main.js": "/omega/static/js/main.0eb29a88.chunk.js",
-    "main.js.map": "/omega/static/js/main.0eb29a88.chunk.js.map",
+    "main.css": "/omega/static/css/main.1b6617c3.chunk.css",
+    "main.js": "/omega/static/js/main.5f4a8a8d.chunk.js",
+    "main.js.map": "/omega/static/js/main.5f4a8a8d.chunk.js.map",
     "runtime-main.js": "/omega/static/js/runtime-main.17db2230.js",
     "runtime-main.js.map": "/omega/static/js/runtime-main.17db2230.js.map",
-    "static/js/2.511cc50d.chunk.js": "/omega/static/js/2.511cc50d.chunk.js",
-    "static/js/2.511cc50d.chunk.js.map": "/omega/static/js/2.511cc50d.chunk.js.map",
+    "static/css/2.ff29e5f6.chunk.css": "/omega/static/css/2.ff29e5f6.chunk.css",
+    "static/js/2.df6d3dd9.chunk.js": "/omega/static/js/2.df6d3dd9.chunk.js",
+    "static/js/2.df6d3dd9.chunk.js.map": "/omega/static/js/2.df6d3dd9.chunk.js.map",
     "index.html": "/omega/index.html",
-    "precache-manifest.4dc413847a7789b6558a7e6ee7e0f8a4.js": "/omega/precache-manifest.4dc413847a7789b6558a7e6ee7e0f8a4.js",
+    "precache-manifest.e5a538adbcce8ae370c5f1f658f922e8.js": "/omega/precache-manifest.e5a538adbcce8ae370c5f1f658f922e8.js",
     "service-worker.js": "/omega/service-worker.js",
-    "static/css/main.f2594931.chunk.css.map": "/omega/static/css/main.f2594931.chunk.css.map",
+    "static/css/2.ff29e5f6.chunk.css.map": "/omega/static/css/2.ff29e5f6.chunk.css.map",
+    "static/css/main.1b6617c3.chunk.css.map": "/omega/static/css/main.1b6617c3.chunk.css.map",
     "static/media/quad.jpg": "/omega/static/media/quad.6e695f14.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.17db2230.js",
-    "static/js/2.511cc50d.chunk.js",
-    "static/css/main.f2594931.chunk.css",
-    "static/js/main.0eb29a88.chunk.js"
+    "static/css/2.ff29e5f6.chunk.css",
+    "static/js/2.df6d3dd9.chunk.js",
+    "static/css/main.1b6617c3.chunk.css",
+    "static/js/main.5f4a8a8d.chunk.js"
   ]
 }
