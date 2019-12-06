@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/omega/static/css/main.2b69dcce.chunk.css",
-    "main.js": "/omega/static/js/main.394463dc.chunk.js",
-    "main.js.map": "/omega/static/js/main.394463dc.chunk.js.map",
+    "main.css": "/omega/static/css/main.9fdc8801.chunk.css",
+    "main.js": "/omega/static/js/main.b367d930.chunk.js",
+    "main.js.map": "/omega/static/js/main.b367d930.chunk.js.map",
     "runtime-main.js": "/omega/static/js/runtime-main.17db2230.js",
     "runtime-main.js.map": "/omega/static/js/runtime-main.17db2230.js.map",
     "static/js/2.06362f30.chunk.js": "/omega/static/js/2.06362f30.chunk.js",
     "static/js/2.06362f30.chunk.js.map": "/omega/static/js/2.06362f30.chunk.js.map",
     "index.html": "/omega/index.html",
-    "precache-manifest.f49ad11f3575199696952a948d47dcef.js": "/omega/precache-manifest.f49ad11f3575199696952a948d47dcef.js",
+    "precache-manifest.85d2da908ddd3cbba2a5ec0173bb6c86.js": "/omega/precache-manifest.85d2da908ddd3cbba2a5ec0173bb6c86.js",
     "service-worker.js": "/omega/service-worker.js",
-    "static/css/main.2b69dcce.chunk.css.map": "/omega/static/css/main.2b69dcce.chunk.css.map"
+    "static/css/main.9fdc8801.chunk.css.map": "/omega/static/css/main.9fdc8801.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.17db2230.js",
     "static/js/2.06362f30.chunk.js",
-    "static/css/main.2b69dcce.chunk.css",
-    "static/js/main.394463dc.chunk.js"
+    "static/css/main.9fdc8801.chunk.css",
+    "static/js/main.b367d930.chunk.js"
   ]
 }
