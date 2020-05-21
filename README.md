@@ -1,7 +1,6 @@
 
 <link rel="icon" type="icon/png" href="https://kirilinsky.github.io/favicon.png">
-<p align="center"><a href="https://kirilinsky.ru" target="_blank"><img style="padding:2px;border:1px dashed grey;border-radius:5px;" width="476" src="https://kirilinsky.github.io/gif_git/main.gif"></a></p>
-<p align="center"><a href="https://kirilinsky.ru" target="_blank">my own portfolio</a></p>
+
 <p align="center"><a href="https://github.com/kirilinsky/kirilinsky.github.io" target="_blank">this repository</a></p>
 
 >well, 
@@ -9,8 +8,6 @@
 >thats me
 
 ---
-<p align="center"><h2><a target="_blank" href="https://kirilinsky.ru/moneySaver">MoneySaver</a> - save your money</h2></p>
-<p align="center"><a href="http://kirilinsky.ru/inhabitable" target="_blank">
 
 <img src="https://kirilinsky.github.io/gif_git/inh.gif" width="300"><br> Inhabitable - first opus project</a></p>
 ---
