@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-	
+
 	<!-- title & meta -->
-	<title>Beauty Salon v 1.0.2</title>
+	<title>Belle Beauty Salon</title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Belle beauty salon: haircuts, coloring, styling, manicure and pedicure.">
 
 	<!-- Styles links -->
 
@@ -16,215 +17,240 @@
 <!-- 	<link rel="stylesheet" href="src/style/hint.min.css">
 <link rel="stylesheet" href="src/style/hover-min.css" media="all"> -->
 	<link rel="stylesheet" href="src/style/buttons.css">
-	<link rel="stylesheet" href="src/style/media.css">
 	<link rel="stylesheet" href="src/style/style.css">
+	<link rel="stylesheet" href="src/style/media.css">
 
 	<link rel="icon" href="src/images/png/fav.png" type="image/png">
 
-	
+
 
 </head>
 <body>
 	<div id="headerB"></div>
 	<header class="header">
 		<div class="header_wrap">
-			<a href="#headerB" class="go_to"><div class="header_logo" title="logo"></div></a>
-			<a href="#about" class="go_to"><div class="header_element">о нас</div></a>
-			<a href="#price" class="go_to"><div class="header_element">услуги</div></a>
-			<a href="#gallery" class="go_to"><div class="header_element">галерея</div></a>
-			<a href="#promo" class="go_to"><div class="header_element">акции</div></a>
-			<a href="#contacts" class="go_to"><div class="header_element">контакты</div></a>
+			<a href="#headerB" class="go_to"><div class="header_logo" title="Belle"></div></a>
+			<a href="#about" class="go_to"><div class="header_element">about</div></a>
+			<a href="#price" class="go_to"><div class="header_element">services</div></a>
+			<a href="#gallery" class="go_to"><div class="header_element">gallery</div></a>
+			<a href="#promo" class="go_to"><div class="header_element">offers</div></a>
+			<a href="#contacts" class="go_to"><div class="header_element">contacts</div></a>
 		</div>
 	</header>
 	<div class="container1">
 
 		<div class="wide">
 			<div class="name">
-				<h1>Cалон такой-то</h1>
+				<h1>Belle</h1>
+				<p class="name_tagline">beauty salon &middot; hair &middot; nails</p>
+				<a href="#contacts" class="go_to name_button">book a visit</a>
 			</div>
 		</div>
+
 		<div class="anc" id="about"></div>
 		<div class="blockLO wow fadeIn" data-wow-delay="0.5s">
-			О нас, любая компоновка
+			<div class="blockLO_content">
+				<div class="blockLO_header">about us</div>
+				<div class="blockLO_img" style="background-image: url(src/images/jpg/gal7.jpg);"></div>
+			</div>
+			<div class="blockLO_desc">
+				<div class="table_box">
+					<p class="lead">Belle is a cozy salon where every visit feels like a little time off. Our stylists and nail artists keep up with the latest trends and take time to find the look that suits you.</p>
+					<ul class="features">
+						<li><i class="fa fa-scissors"></i><span><b>Experienced masters</b>Every stylist has at least 5 years behind the chair.</span></li>
+						<li><i class="fa fa-leaf"></i><span><b>Professional products</b>We work only with certified salon brands.</span></li>
+						<li><i class="fa fa-coffee"></i><span><b>Relaxed atmosphere</b>Free coffee, tea and a quiet place to unwind.</span></li>
+						<li><i class="fa fa-calendar-check-o"></i><span><b>No waiting</b>Book online or by phone and come at your time.</span></li>
+					</ul>
+				</div>
+			</div>
 		</div>
+
 		<div class="anc" id="price"></div>
 		<div class="blockLO wow fadeIn" data-wow-delay="0.5s">
 			<div class="blockLO_content">
-				<div class="blockLO_header">заголовок блока</div>
-				<div class="blockLO_img">фото</div>
-				<div class="blockLO_content_desc">лево -ориентированный блок</div>
+				<div class="blockLO_header">hair</div>
+				<div class="blockLO_img" style="background-image: url(src/images/jpg/gal1.jpg);"></div>
+				<div class="blockLO_content_desc">Cuts, coloring and styling for any length and texture.</div>
 			</div>
 			<div class="blockLO_desc">
-				<div class="table_box">таблица/любое описание</div>
+				<div class="table_box">
+					<table class="price_table">
+						<tr><th>Service</th><th>Price</th></tr>
+						<tr><td>Women's haircut</td><td>from 1,500 &#8381;</td></tr>
+						<tr><td>Men's haircut</td><td>from 900 &#8381;</td></tr>
+						<tr><td>Kids' haircut</td><td>from 700 &#8381;</td></tr>
+						<tr><td>Single-tone coloring</td><td>from 3,000 &#8381;</td></tr>
+						<tr><td>Highlights / balayage</td><td>from 4,500 &#8381;</td></tr>
+						<tr><td>Blow-dry &amp; styling</td><td>from 1,200 &#8381;</td></tr>
+						<tr><td>Evening hairstyle</td><td>from 2,500 &#8381;</td></tr>
+						<tr><td>Keratin treatment</td><td>from 5,000 &#8381;</td></tr>
+					</table>
+				</div>
 			</div>
 		</div>
 
-		<div class="blockLO wow fadeIn" data-wow-delay="0.5s"> 
+		<div class="blockLO wow fadeIn" data-wow-delay="0.5s">
 			<div class="blockLO_desc">
-				<div class="table_box">таблица/любое описание</div>
+				<div class="table_box">
+					<table class="price_table">
+						<tr><th>Service</th><th>Price</th></tr>
+						<tr><td>Classic manicure</td><td>800 &#8381;</td></tr>
+						<tr><td>Hardware manicure</td><td>1,000 &#8381;</td></tr>
+						<tr><td>Gel polish</td><td>from 1,400 &#8381;</td></tr>
+						<tr><td>French manicure</td><td>from 1,600 &#8381;</td></tr>
+						<tr><td>Nail extensions</td><td>from 2,500 &#8381;</td></tr>
+						<tr><td>Nail art (per nail)</td><td>from 100 &#8381;</td></tr>
+						<tr><td>Gel polish removal</td><td>300 &#8381;</td></tr>
+					</table>
+				</div>
 			</div>
 			<div class="blockLO_content">
-				<div class="blockLO_header">заголовок блока</div>
-				<div class="blockLO_img">фото</div>
-				<div class="blockLO_content_desc">право -ориентированный блок</div>
+				<div class="blockLO_header">manicure</div>
+				<div class="blockLO_img" style="background-image: url(src/images/jpg/manic/3.jpg);"></div>
+				<div class="blockLO_content_desc">Neat, long-lasting nails, from classic care to bold nail art.</div>
 			</div>
 		</div>
 
 		<div class="blockLO wow fadeIn" data-wow-delay="0.5s">
 			<div class="blockLO_content">
-				<div class="blockLO_header">заголовок блока</div>
-				<div class="blockLO_img">фото</div>
-				<div class="blockLO_content_desc">лево -ориентированный блок</div>
+				<div class="blockLO_header">pedicure</div>
+				<div class="blockLO_img" style="background-image: url(src/images/jpg/ped/1.jpg);"></div>
+				<div class="blockLO_content_desc">Relaxing foot care with soothing bath and massage.</div>
 			</div>
 			<div class="blockLO_desc">
-				<div class="table_box">таблица/любое описание</div>
+				<div class="table_box">
+					<table class="price_table">
+						<tr><th>Service</th><th>Price</th></tr>
+						<tr><td>Classic pedicure</td><td>1,400 &#8381;</td></tr>
+						<tr><td>Hardware pedicure</td><td>1,700 &#8381;</td></tr>
+						<tr><td>Pedicure with gel polish</td><td>from 2,200 &#8381;</td></tr>
+						<tr><td>SPA pedicure</td><td>from 2,500 &#8381;</td></tr>
+						<tr><td>Polish only</td><td>500 &#8381;</td></tr>
+					</table>
+				</div>
 			</div>
 		</div>
+
 		<div class="anc" id="gallery"></div>
 		<div class="block_gallery wow fadeIn" data-wow-delay="0.5s">
-			<h1>галерея</h1>
+			<h1>gallery</h1>
 			<div class="button-group gallery_buttons">
-			    <button type="button" class="button button-pill" id="click1">Прически</button>
-			    <button id="click2" type="button" class="button button-pill">Маникюр</button>
-			    <button id="click3" type="button" class="button button-pill">Педикюр</button>
+			    <button type="button" class="button button-pill active" id="click1">Hairstyles</button>
+			    <button id="click2" type="button" class="button button-pill">Manicure</button>
+			    <button id="click3" type="button" class="button button-pill">Pedicure</button>
 			  </div>
 
-			  
+
 
 			<div class="gallery_flex" id="dad">
-				
-				
+
+
 			</div>
 		</div>
 
 		<div class="anc" id="promo"></div>
 		<div class="blockLO wow fadeIn" data-wow-delay="0.5s">
 			<div class="blockLO_content">
-				<div class="blockLO_header">заголовок блока/акции</div>
-				<div class="blockLO_img">фото</div>
-				<div class="blockLO_content_desc">лево -ориентированный блок</div>
+				<div class="blockLO_header">special offers</div>
+				<div class="blockLO_img" style="background-image: url(src/images/jpg/gal3.jpg);"></div>
+				<div class="blockLO_content_desc">Offers can't be combined. Ask the administrator for details.</div>
 			</div>
 			<div class="blockLO_desc">
-				<div class="table_box">таблица/любое описание</div>
+				<div class="table_box">
+					<ul class="promo_list">
+						<li><span class="promo_badge">-20%</span><span><b>First visit</b>20% off any service for new clients.</span></li>
+						<li><span class="promo_badge">-15%</span><span><b>Manicure + pedicure</b>Book both on the same day and save 15%.</span></li>
+						<li><span class="promo_badge">-10%</span><span><b>Birthday week</b>10% off three days before and after your birthday.</span></li>
+						<li><span class="promo_badge"><i class="fa fa-gift"></i></span><span><b>Gift cards</b>Available for any amount, valid for 6 months.</span></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="anc" id="contacts"></div>
 		<div class="blockLO cont bottomed wow fadeIn">
 			<div class="blockLO_desc">
-				<div class="table_box">
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0b8b2f6c0033989f43a595726c44abeda504c214b7c0e71f060d2bea9f056044&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
+				<div class="table_box map_box">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0b8b2f6c0033989f43a595726c44abeda504c214b7c0e71f060d2bea9f056044&amp;width=100%&amp;height=100%&amp;lang=en_US&amp;scroll=true">
 					</script>
 				</div>
 			</div>
 			<div class="blockLO_content">
-				<div class="blockLO_header">контакты</div>
+				<div class="blockLO_header">contacts</div>
 				<div class="blockLO_contacts">
 					<ul>
-						Наш Адрес
-						<hr>
-						<li>гор. Ростов-на-Дону</li>
-						<li>ул. Скачкова, 54</li>
+						<li class="contacts_title">Our address</li>
+						<li>54 Skachkova St.</li>
+						<li>Rostov-on-Don</li>
+					</ul>
+					<ul>
+						<li class="contacts_title">Opening hours</li>
+						<li>Mon&ndash;Fri: 9:00&ndash;21:00</li>
+						<li>Sat&ndash;Sun: 10:00&ndash;20:00</li>
 					</ul>
 					<div class="social_links">
-						<div class="social_links_element"><i class="fa fa-vk"></i></div>
-						<div class="social_links_element"><i class="fa fa-instagram"></i></div>
-						<div class="social_links_element"><i class="fa fa-facebook"></i></div>
-						<div class="social_links_element"><i class="fa fa-whatsapp"></i></div>
+						<a href="#" class="social_links_element" title="VK"><i class="fa fa-vk"></i></a>
+						<a href="#" class="social_links_element" title="Instagram"><i class="fa fa-instagram"></i></a>
+						<a href="#" class="social_links_element" title="Facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="social_links_element" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
 					</div>
 					<ul>
-						<li>написать нам</li>
-						<li><a class="call" href="tel:+786322412888">позвонить нам</a></li>
+						<li><a class="call" href="mailto:hello@example.com"><i class="fa fa-envelope-o"></i> hello@example.com</a></li>
+						<li><a class="call" href="tel:+78632000000"><i class="fa fa-phone"></i> +7 (863) 200-00-00</a></li>
 					</ul>
 				</div>
 			</div>
-			
+
 		</div>
 
 	</div>
 	<footer class="footer">
-		<a href="#">ссылка 1</a>
-		<a href="#">ссылка 2</a>
-		<a href="#">ссылка 3</a>
-		<a href="https://kirilinsky.ru" target="_blank">© kirilinsky 2018</a>
+		<a href="#price" class="go_to">services</a>
+		<a href="#gallery" class="go_to">gallery</a>
+		<a href="#contacts" class="go_to">contacts</a>
+		<a href="https://github.com/kirilinsky" target="_blank">&copy; kirilinsky 2018</a>
 	</footer>
-	
-	
-
-
-
-
-
-
-
-
-
 
 	<!-- scripts links -->
 	<script src="src/js/jq1_12.js"></script>
 	<script src="src/js/wow.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		  $('.go_to').click( function(){ 
-		  var scroll_el = $(this).attr('href'); 
-		        if ($(scroll_el).length != 0) { 
-		      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
+		  $('.go_to').click( function(){
+		  var scroll_el = $(this).attr('href');
+		        if ($(scroll_el).length != 0) {
+		      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
 		        }
-		      return false; 
+		      return false;
 		    });
 		});
 		var dad = document.getElementById("dad");
-		var source = "src/images/jpg/hair/";
 		var endSource = ".jpg";
-		var lengthPics = 9;
-		for(var i = 1;i <= lengthPics;i++){
-			var img = document.createElement("img");
-			img.classList.add("gallery_img", "wow", "flipInY");
-			img.src = source + i + endSource;
-			dad.appendChild(img);
-		}
-		var click1 = document.getElementById("click1");
-		var click2 = document.getElementById("click2");
-		var click3 = document.getElementById("click3");
-		click1.addEventListener("click", hair);
-		click2.addEventListener("click", man);
-		click3.addEventListener("click", ped);
+		var albums = {
+			click1: { source: "src/images/jpg/hair/", length: 9 },
+			click2: { source: "src/images/jpg/manic/", length: 6 },
+			click3: { source: "src/images/jpg/ped/", length: 3 }
+		};
 
-		function hair(){
+		function showAlbum(id){
+			var album = albums[id];
 			dad.innerHTML = '';
-			source = "src/images/jpg/hair/";
-			lengthPics = 9;
-			for(var i = 1;i <= lengthPics;i++) {
-			var img = document.createElement("img");
-			img.classList.add("gallery_img", "wow", "flipInX");
-			dad.appendChild(img);
-			img.src = source + i + endSource;
-			img.style.cssText = "transition: ease 0.3s;border-radius: 2px;box-shadow: 0 0 5px grey, 1px 1px 1px black;";
+			for(var i = 1;i <= album.length;i++) {
+				var img = document.createElement("img");
+				img.classList.add("gallery_img", "wow", "flipInX");
+				img.alt = "";
+				img.src = album.source + i + endSource;
+				dad.appendChild(img);
+			}
+			for (var key in albums) {
+				document.getElementById(key).classList.toggle("active", key === id);
 			}
 		}
-		function man(){
-			dad.innerHTML = '';
-			source = "src/images/jpg/manic/";
-			lengthPics = 6;
-			for(var i = 1;i <= lengthPics;i++) {
-			var img = document.createElement("img");
-			img.classList.add("gallery_img", "wow", "flipInX");
-			dad.appendChild(img);
-			img.src = source + i + endSource;
-			img.style.cssText = "transition: ease 0.3s; border-radius: 2px;box-shadow: 0 0 5px grey, 1px 1px 1px black;";
-			}
+
+		for (var key in albums) {
+			document.getElementById(key).addEventListener("click", function(){ showAlbum(this.id); });
 		}
-		function ped(){
-			dad.innerHTML = '';
-			source = "src/images/jpg/ped/";
-			lengthPics = 3;
-			for(var i = 1;i <= lengthPics;i++) {
-			var img = document.createElement("img");
-			img.classList.add("gallery_img", "wow", "flipInX");
-			dad.appendChild(img);
-			img.src = source + i + endSource;
-			img.style.cssText = "transition: ease 0.3s;border-radius: 2px;box-shadow: 0 0 5px grey, 1px 1px 1px black;";
-			}
-		}
+		showAlbum("click1");
 
 	</script>
 	<script>

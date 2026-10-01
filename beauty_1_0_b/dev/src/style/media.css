@@ -1,50 +1,104 @@
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+/* Tablets and small laptops ----------- */
+@media only screen
+and (max-width : 1024px) {
+	.header_wrap {
+		width: 95%;
+	}
+	a .header_element {
+		min-width: 0;
+		font-size: 1.3rem;
+		letter-spacing: 2px;
+	}
+	.blockLO, .block_gallery {
+		width: 92%;
+	}
+	.name {
+		right: 5%;
+	}
+	.gallery_img {
+		width: 28%;
+		margin: 10px;
+	}
 }
- 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
+
+/* Phones and small tablets ----------- */
+@media only screen
+and (max-width : 768px) {
+	a .header_logo {
+		margin: 2px 0;
+	}
+	a .header_element {
+		padding: 8px 6px;
+		font-size: 1.1rem;
+		letter-spacing: 1px;
+	}
+	.wide {
+		height: 75vh;
+	}
+	.name {
+		width: 90%;
+		min-width: 0;
+		right: 5%;
+		bottom: 6%;
+	}
+	.name h1 {
+		font-size: 3rem;
+		letter-spacing: 8px;
+		padding-left: 8px;
+	}
+	.blockLO {
+		flex-direction: column;
+		min-height: 0;
+	}
+	/* keep header + photo above the table on every block */
+	.blockLO_content {
+		order: -1;
+	}
+	.blockLO_content, .blockLO_desc {
+		width: 100%;
+		min-height: 0;
+		padding: 15px;
+	}
+	.blockLO_img {
+		min-height: 240px;
+	}
+	.table_box {
+		width: 100%;
+		padding: 5px;
+	}
+	.map_box {
+		min-height: 360px;
+	}
+	.gallery_img {
+		width: 44%;
+		margin: 6px;
+	}
+	.footer a {
+		margin: 8px 14px;
+	}
 }
- 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+
+/* Small phones ----------- */
+@media only screen
+and (max-width : 420px) {
+	.header_wrap {
+		justify-content: center;
+	}
+	a .header_logo {
+		display: none;
+	}
+	.gallery_buttons .button {
+		padding: 0 14px;
+		margin: 0 3px;
+	}
+	.price_table {
+		font-size: 1rem;
+	}
+	.promo_badge {
+		min-width: 56px;
+		margin-right: 12px;
+	}
+	.gallery_img {
+		width: 94%;
+	}
 }
- 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
-}
- 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
- 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
- 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
- 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
