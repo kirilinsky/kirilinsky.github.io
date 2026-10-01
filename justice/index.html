@@ -1,721 +1,847 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<title>	Юридические услуги</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Legal Services</title>
 	<link rel="stylesheet" href="style/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-	 <div class="topheader" id="head">
+	<div class="topheader" id="head">
 		<div class="imgbox"></div>
-	 </div>
-	 <div class="navbox">
-	 	<nav>
-	 		<a href="#head"  class="go_to">
-	 			<div class="navbutton">главная</div>
-	 		</a>
-	 		<a href="#servicelink" class="go_to">
-	 			<div class="navbutton">услуги и цены</div>
-	 		</a>
-	 		<a href="#aboutlink" class="go_to">
-	 			<div class="navbutton">о нас</div>
-	 		</a>
-	 		<a href="#contacts" class="go_to">
-	 			<div class="navbutton">контакты</div>
-	 		</a>
-	 	</nav>
-	 </div>
-	 <div class="bottomheader" >
-	 	<div class="achbox">
-	 		<div class="achwrap">
-	 			<div class="achitem">
-	 				<div class="achhead">Договор</div>
-	 				<div class="achpic">
-	 					<img src="img/1.png" alt="contract">
-	 				</div>
-	 				<div class="achdesc">
-	 					<p>
-	 						Перед началом работ заключаем договор.
-	 					</p>
-	 				</div>
-	 			</div>
-	 			<div class="achitem">
-	 				<div class="achhead">Точно в срок</div>
-	 				<div class="achpic">
-	 					<img src="img/2.png" alt="time">
-	 				</div>
-	 				<div class="achdesc">
-	 					<p>
-	 						Работаем строго по установленным срокам.
-	 					</p>
-	 				</div>
-	 			</div>
-	 			<div class="achitem">
-	 				<div class="achhead">Всегда на связи</div>
-	 				<div class="achpic">
-	 					<img src="img/3.png" alt="phone">
-	 				</div>
-	 				<div class="achdesc">
-	 					<p>
-	 						Сопровождение и консультирование 24/7.
-	 					</p>
-	 				</div>
-	 			</div>
-	 		</div>
-	 	</div>
-	 </div>		
+	</div>
+	<div class="navbox">
+		<nav>
+			<a href="#head" class="go_to">
+				<div class="navbutton">home</div>
+			</a>
+			<a href="#servicelink" class="go_to">
+				<div class="navbutton">services &amp; prices</div>
+			</a>
+			<a href="#aboutlink" class="go_to">
+				<div class="navbutton">about us</div>
+			</a>
+			<a href="#contacts" class="go_to">
+				<div class="navbutton">contacts</div>
+			</a>
+		</nav>
+	</div>
+	<div class="bottomheader">
+		<div class="achbox">
+			<div class="achwrap">
+				<div class="achitem">
+					<div class="achhead">Contract</div>
+					<div class="achpic">
+						<img src="img/1.png" alt="contract">
+					</div>
+					<div class="achdesc">
+						<p>
+							We sign a contract before any work begins.
+						</p>
+					</div>
+				</div>
+				<div class="achitem">
+					<div class="achhead">On time</div>
+					<div class="achpic">
+						<img src="img/2.png" alt="time">
+					</div>
+					<div class="achdesc">
+						<p>
+							We always stick to the agreed deadlines.
+						</p>
+					</div>
+				</div>
+				<div class="achitem">
+					<div class="achhead">Always in touch</div>
+					<div class="achpic">
+						<img src="img/3.png" alt="phone">
+					</div>
+					<div class="achdesc">
+						<p>
+							Support and consultations 24/7.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="block" id="service">
-		
+
 		<div class="blockwrap">
-				<div class="blockhead" id="servicelink">
-					Услуги и цены
+			<div class="blockhead" id="servicelink">
+				Services &amp; Prices
+			</div>
+			<div class="enter">
+				<h4>
+					browse the categories
+					of our services and their prices
+				</h4>
+			</div>
+
+			<div class="examples">
+
+				<div class="for-hover">
+					<div class="for-span">
+						<span id="hovered">category:</span>
+						<h2 id="hovered">family disputes</h2>
+						<a href="#family" data-toggle="modal" data-target="#family" id="hovered">services &amp;
+							prices</a>
+					</div>
+					<img src="img/sem.jpg" alt="picture">
+					<a href="#family" data-toggle="modal" data-target="#family">
+						<h4>Family disputes</h4>
+					</a>
 				</div>
-				<div class="enter">
-					<h4>
-						здесь можно ознакомиться с категориями 
-						предоставляемых услуг и их стоимостью
-					</h4>
+
+				<div class="for-hover">
+					<div class="for-span">
+						<span id="hovered">category:</span>
+						<h2 id="hovered">inheritance</h2>
+						<a href="#nasled" data-toggle="modal" data-target="#nasled" id="hovered">services &amp;
+							prices</a>
+					</div>
+					<img src="img/nasled.jpg" alt="picture">
+					<a href="#nasled" data-toggle="modal" data-target="#nasled">
+						<h4>Inheritance</h4>
+					</a>
 				</div>
-				
-				<div class="examples">
 
-						<div class="for-hover">
-							<div class="for-span">
-								<span id="hovered">категория:</span>
-								<h2 id="hovered">семейные споры</h2>
-								<a href="#family" data-toggle="modal" data-target="#family" id="hovered">услуги и цены</a>
+
+				<div class="for-hover">
+					<div class="for-span">
+						<span id="hovered">category:</span>
+						<h2 id="hovered">housing disputes</h2>
+						<a href="#jil" id="hovered" data-toggle="modal" data-target="#jil">services &amp; prices</a>
+					</div>
+					<img src="img/jil.jpg" alt="jile">
+					<a href="#jil" data-toggle="modal" data-target="#jil">
+						<h4>Housing disputes</h4>
+					</a>
+				</div>
+
+
+				<div class="for-hover">
+					<div class="for-span">
+						<span id="hovered">category:</span>
+						<h2 id="hovered">other matters</h2>
+						<a href="#others" id="hovered" data-toggle="modal" data-target="#others">services &amp;
+							prices</a>
+					</div>
+					<img src="img/other.jpg" alt="picture">
+					<a href="#others" data-toggle="modal" data-target="#others">
+						<h4>Other</h4>
+					</a>
+				</div>
+
+
+				<!-- modal 1 -->
+				<div class="modal fade" tabindex="-1" id="family">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+										aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Family law services in detail</h4>
 							</div>
-							<img src="img/sem.jpg" alt="picture">
-							<a href="#family" data-toggle="modal" data-target="#family"><h4>Семейные споры</h4></a>
-						</div>
+							<div class="modal-body">
+								<div class="modalwrap">
+									<!-- tabs -->
 
-						<div class="for-hover">
-							<div class="for-span">
-								<span id="hovered">категория:</span>
-								<h2 id="hovered">наследство</h2>
-								<a  href="#nasled" data-toggle="modal" data-target="#nasled" id="hovered">услуги и цены</a>
-							</div>
-							<img src="img/nasled.jpg" alt="picture">
-							<a  href="#nasled" data-toggle="modal" data-target="#nasled"><h4>Наследство</h4></a>
-						</div>
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#about1" role="tab"
+												data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i>
+												Services</a></li>
+										<li role="presentation"><a href="#table1" role="tab" data-toggle="tab"><i
+													class="fa fa-money" aria-hidden="true"></i> Price list</a></li>
+										<li role="presentation"><a href="#other1" aria-controls="messages" role="tab"
+												data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>
+												Details</a></li>
+									</ul>
 
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="about1">
+											<div class="forabout">
 
-						<div class="for-hover">
-							<div class="for-span">
-								<span id="hovered">категория:</span>
-								<h2 id="hovered">жилищные споры</h2>
-								<a href="#jil" id="hovered"  data-toggle="modal" data-target="#jil">услуги и цены</a>
-							</div>
-							<img src="img/jil.jpg" alt="jile">
-							<a href="#jil" data-toggle="modal" data-target="#jil"><h4>Жилищные споры</h4></a>
-						</div>
-							
+												<div class="aboutitem">
+													<div class="abouthead">Divorce</div>
+													<div class="aboutp">
 
-						<div class="for-hover">
-							<div class="for-span">
-								<span id="hovered">категория:</span>
-								<h2 id="hovered">прочие вопросы</h2>
-								<a href="#others" id="hovered"  data-toggle="modal" data-target="#others">услуги и цены</a>
-							</div>
-							<img src="img/other.jpg" alt="picture">
-							<a href="#others" data-toggle="modal" data-target="#others"><h4>Прочее</h4></a>
-						</div>
+														<img src="img/modal/razvod.jpg" alt="razvod">
+														<p>Divorce through the courts is, without exaggeration, the main
+															legal dispute between spouses. All other disputes stem from
+															it and are connected to it in one way or another. A court
+															divorce is a fairly complex procedure, both in preparing the
+															documents and in the court proceedings themselves.</p>
 
-						
-						<!-- модал 1 -->
-							<div class="modal fade" tabindex="-1"  id="family">
-							  <div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							        <h4 class="modal-title">Подробно об услугах в категории семейное право</h4>
-							      </div>
-							      <div class="modal-body">
-							      	<div class="modalwrap">
-										<!-- табы -->
-											
-											<!-- Навигационные вкладки -->  
-											<ul class="nav nav-tabs" role="tablist">
-											  <li role="presentation" class="active"><a href="#about1" role="tab" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
-											  <li role="presentation"><a href="#table1"role="tab" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
-											  <li role="presentation"><a href="#other1" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
-											</ul>
-
-											<!-- Вкладки панелей -->  
-											<div class="tab-content">
-											  <div role="tabpanel" class="tab-pane active" id="about1">
-											  	<div class="forabout">
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead">Развод</div>
-											  			<div class="aboutp">
-											  				
-											  				<img src="img/modal/razvod.jpg" alt="razvod">
-											  				<p>Расторжение брака в судебном порядке – это, без преувеличения, основной судебный спор между супругами. Все остальные споры производны от него, и в той или иной мере связаны с ним. Процедура расторжения брака в суде достаточно сложна и в плане подготовки документов, и в плане судебного процесса.</p>
-											  				
-											  			</div>
-											  		</div>
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead2">Взыскание алиментов</div>
-											  			<div class="aboutp">
-											  				<p>В данном случае, алименты – это денежные средства, выплачиваемые одним из супругов другому супругу на содержание их совместных несовершеннолетних детей. Плюс судебного спора о взыскании алиментов, заключается в том, что такое требование может быть подано в суд независимо от иска о расторжении брака. То есть, даже находясь в браке, один из супругов имеет право на взыскание со второго супруга алиментов.</p>
-											  				<img src="img/modal/alim.jpg" alt="alim">
-											  				
-											  			</div>
-											  		</div>
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead">Определение места жительства ребенка</div>
-											  			<div class="aboutp">
-											  				<img src="img/modal/mesdet.jpg" alt="alim">
-											  				<p>Этот спор непосредственно связан со спором о расторжении брака. Дело в том, что при расторжении брака судья должен выяснить ряд важных вопросов, без которых брак не может быть расторгнут в принципе. Как раз этот вопрос и должен разрешить суд. По умолчанию, ребенок, конечно же, остается с матерью. И, как правило, супруг, который желает развода, не стремится забрать ребенка себе. Нет, такие ситуации встречаются, но очень редко.</p>
-											  				
-											  			</div>
-											  		</div>
-
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead2">Раздел имущества</div>
-											  			<div class="aboutp">
-											  				<p>Еще один вид спора, который, по большому счету не привязан к факту расторжения брака. Закон допускает раздел совместного имущества, и между супругами, находящимися в браке, и между супругами, расторгающими брак, и между супругами, которые уже расторгли брак. В последнем случае Закон установил срок давности, который составляет три года. Это означает, что подать иск о разделе имущества супруги имеют право не позднее 3-х лет с даты расторжения их брака. После этого – все. Кто не успел, тот и виноват.</p>
-											  				<img src="img/modal/razdel.jpg" alt="razdel">
-											  			</div>
-											  		</div>
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead">Отцовство</div>
-											  			<div class="aboutp">
-											  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
-											  				<p>Вот такой раздел тоже имеет место среди семейных споров. Хотя, на самом деле, такие споры могут возникнуть и между лицами, не состоящими в браке. Я тут должен выделить два вида спора.Установление отцовства – такой спор может возникнуть в двух случаях: либо когда мужчина отказывается от признания себя отцом ребенка, либо когда наоборот, мать оказывается признать его отцом ребенка, и он хочет добиться справедливости. Все верно, ребенок должен знать, кто его отец.</p>
-											  				
-											  			</div>
-											  		</div>
-
-											  		<div class="aboutitem">
-											  			<div class="abouthead2">Родительские права</div>
-											  			<div class="aboutp">
-											  				<p>Лишение родительских прав – лишенный родительских прав человек, будь-то мать или отец ребенка, теряют абсолютно все свои права и обязанности по отношению к ребенку. Все, с даты вступления в силу такого решения суда, бывший родитель становится своему ребенку совершенно посторонним человеком. В некоторых случаях, плюс может быть только в том, что ни воспитывать, ни выплачивать алименты, ни исполнять прочие родительские обязанности этот человек тоже больше не должен.</p>
-											  				<img src="img/modal/rodprav.jpg" alt="roprav">
-											  			</div>
-											  		</div>
-											  	
-											  	
-											  
-											  		
-											  	</div>
-											  </div>
-											  <div role="tabpanel" class="tab-pane" id="table1">
-											  	<div class="fortable">
-											  		<table class="table table-striped">
-											  		  <tr>
-											  		  	<th>Услуга</th>
-											  		  	<th>Стоимость</th>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Расторжение брака (в случае согласия обоих супругов на развод)</td>
-											  		  	<td> от 10 500 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Расторжение брака (в случае отсутствия согласия одной из сторон на развод)</td>
-											  		  	<td>от 25 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Представление (защита) интересов в Органе опеки и попечительства по вопросам лишения родительских прав, усыновления (удочерения)</td>
-											  		  	<td> от 7 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Взыскание алиментов</td>
-											  		  	<td>от 12 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Лишение родительских прав</td>
-											  		  	<td> от 45 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Расторжение брака, определение места жительства и порядка общения с ребенком</td>
-											  		  	<td> от 35 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Расторжение брака и раздел совместно нажитого имущества</td>
-											  		  	<td> от 55 000 рублей</td>
-											  		  </tr>
-											  		  <tr>
-											  		  	<td>Расторжение брака и раздел бизнеса</td>
-											  		  	<td> от 75 000 рублей</td>
-											  		  </tr>
-											  		</table>
-
-											  	</div>
-											  	<p>*Сколько стоят услуги адвоката? Этот вопрос для клиента тоже важен, но никаких определенных тарифов, прейскурантов и прайс-листов на услуги адвоката не существует. Стоимость оказания услуг адвокатом с каждым доверителем оговаривается индивидуально и зависит от многих факторов: объема и сложности дела, количества следственных действий, судебных заседаний и т.д. Определить примерную цену услуг адвоката можно уже при разговоре по телефону, но все детали решаются непосредственно при встрече в офисе.</p>
-											  </div>
-											  <div role="tabpanel" class="tab-pane" id="other1">
-												<h2 align="center">Госпошлина за развод</h2><hr>
-												<div class="aboutus">
-													<div class="cell1">С 01.01.2016 госпошлина за расторжение брака через органы ЗАГС или суд (при условии отсутствия имущественных споров) составляет 650 рублей. <br>
-													 Госпошлина за получение свидетельства о разводе (выдает орган ЗАГС) – 650 рублей. <br>
-													 <b>Важно:</b> Госпошлину уплачивает каждый из супругов отдельно</div>
-													<div class="cell2 noshade"><img src="img/modal/money.gif" alt="money"></div>
+													</div>
 												</div>
-											  </div>
+
+												<div class="aboutitem">
+													<div class="abouthead2">Child support claims</div>
+													<div class="aboutp">
+														<p>Here, child support means money paid by one spouse to the
+															other for the upkeep of their minor children. The upside of
+															a child support claim is that it can be filed independently
+															of a divorce suit. In other words, even while still married,
+															one spouse is entitled to claim child support from the
+															other.</p>
+														<img src="img/modal/alim.jpg" alt="alim">
+
+													</div>
+												</div>
+
+												<div class="aboutitem">
+													<div class="abouthead">Determining the child's place of residence
+													</div>
+													<div class="aboutp">
+														<img src="img/modal/mesdet.jpg" alt="alim">
+														<p>This dispute is directly tied to divorce. When dissolving a
+															marriage, the judge must settle a number of key questions
+															without which the divorce cannot be granted at all, and this
+															is one of them. By default, the child usually stays with the
+															mother. And as a rule, the spouse seeking the divorce does
+															not try to take the child. Such cases do happen, but very
+															rarely.</p>
+
+													</div>
+												</div>
+
+
+												<div class="aboutitem">
+													<div class="abouthead2">Division of property</div>
+													<div class="aboutp">
+														<p>Another kind of dispute that, by and large, isn't tied to
+															divorce. The law allows joint property to be divided between
+															spouses who are still married, spouses who are divorcing,
+															and spouses who are already divorced. In the last case the
+															law sets a three-year limitation period: a claim for
+															division of property must be filed no later than 3 years
+															after the divorce. After that, it's too late.</p>
+														<img src="img/modal/razdel.jpg" alt="razdel">
+													</div>
+												</div>
+
+												<div class="aboutitem">
+													<div class="abouthead">Paternity</div>
+													<div class="aboutp">
+														<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+														<p>This is also a category of family disputes, although such
+															disputes can arise between people who were never married.
+															Establishing paternity can come up in two cases: either the
+															man refuses to acknowledge that he is the child's father,
+															or, the other way round, the mother refuses to recognise him
+															as the father and he wants justice. Quite rightly so: a
+															child should know who their father is.</p>
+
+													</div>
+												</div>
+
+												<div class="aboutitem">
+													<div class="abouthead2">Parental rights</div>
+													<div class="aboutp">
+														<p>Termination of parental rights: a person deprived of parental
+															rights, whether the mother or the father, loses absolutely
+															all rights and duties towards the child. From the day the
+															court decision takes effect, the former parent becomes a
+															complete stranger to the child. In some cases the only
+															upside is that this person no longer has to raise the child,
+															pay child support or fulfil any other parental duties.</p>
+														<img src="img/modal/rodprav.jpg" alt="roprav">
+													</div>
+												</div>
+
+
+
 
 											</div>
-										<!-- табы конец -->
-							   		</div>
-							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-							        <button type="button" class="btn btn-success" style="font-size:1rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-							        
-							      </div>
-							    </div>  
-							  </div> 
-							</div>  
+										</div>
+										<div role="tabpanel" class="tab-pane" id="table1">
+											<div class="fortable">
+												<table class="table table-striped">
+													<tr>
+														<th>Service</th>
+														<th>Price</th>
+													</tr>
+													<tr>
+														<td>Divorce (both spouses consent)</td>
+														<td> from 10,500 RUB</td>
+													</tr>
+													<tr>
+														<td>Divorce (one party does not consent)</td>
+														<td>from 25,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Representation before the guardianship authority in matters
+															of termination of parental rights and adoption</td>
+														<td> from 7,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Child support claims</td>
+														<td>from 12,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Termination of parental rights</td>
+														<td> from 45,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Divorce, child's place of residence and visitation
+															arrangements</td>
+														<td> from 35,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Divorce and division of joint marital property</td>
+														<td> from 55,000 RUB</td>
+													</tr>
+													<tr>
+														<td>Divorce and division of business</td>
+														<td> from 75,000 RUB</td>
+													</tr>
+												</table>
 
-							<!-- конец 1 модал -->
-
-
-							<!-- модал 2 -->
-								<div class="modal fade" tabindex="-1"  id="nasled">
-								  <div class="modal-dialog modal-lg">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title">Подробно об услугах в категории наследство </h4>
-								      </div>
-								      <div class="modal-body">
-								      	<div class="modalwrap">
-											<!-- табы -->
-												
-												<!-- Навигационные вкладки -->  
-												<ul class="nav nav-tabs" role="tablist">
-												  <li role="presentation" class="active"><a href="#about2" role="tab" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
-												  <li role="presentation"><a href="#table2"role="tab" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
-												  <li role="presentation"><a href="#other2" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
-												</ul>
-
-												<!-- Вкладки панелей -->  
-												<div class="tab-content">
-												  <div role="tabpanel" class="tab-pane active" id="about2">
-												  	<div class="forabout">
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Наследство</div>
-												  			<div class="aboutp">
-												  				<p>Наследство это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				<img src="img/nasled.jpg" alt="nasled">
-												  			</div>
-												  		</div>
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead">Алименты</div>
-												  			<div class="aboutp">
-												  				<img src="img/modal/alim.jpg" alt="alim">
-												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				
-												  			</div>
-												  		</div>
-
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Установление отцовства</div>
-												  			<div class="aboutp">
-												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
-												  			</div>
-												  		</div>
-												  	
-												  	
-												  
-												  		
-												  	</div>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="table2">
-												  	<div class="fortable">
-												  		<table class="table table-striped">
-												  		  <tr>
-												  		  	<th>Услуга</th>
-												  		  	<th>Стоимость</th>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Что-то</td>
-												  		  	<td>100 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td>320 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		</table>
-
-												  	</div>
-												  	<p>*Сколько стоят услуги адвоката? Этот вопрос для клиента тоже важен, но никаких определенных тарифов, прейскурантов и прайс-листов на услуги адвоката не существует. Стоимость оказания услуг адвокатом с каждым доверителем оговаривается индивидуально и зависит от многих факторов: объема и сложности дела, количества следственных действий, судебных заседаний и т.д. Определить примерную цену услуг адвоката можно уже при разговоре по телефону, но все детали решаются непосредственно при встрече в офисе.</p>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="other2">22..</div>
-
+											</div>
+											<p>*How much does a lawyer cost? It's an important question for any client,
+												but there are no fixed rates, tariffs or price lists for legal services.
+												The fee is agreed individually with each client and depends on many
+												factors: the scope and complexity of the case, the number of
+												investigative actions, court hearings, etc. We can give you a rough
+												estimate over the phone, and all the details are settled at a meeting in
+												our office.</p>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="other1">
+											<h2 align="center">Divorce state fee</h2>
+											<hr>
+											<div class="aboutus">
+												<div class="cell1">Since 01.01.2016 the state fee for divorce through
+													the registry office or the court (provided there are no property
+													disputes) is 650 RUB. <br>
+													The fee for a divorce certificate (issued by the registry office) is
+													650 RUB. <br>
+													<b>Important:</b> each spouse pays the fee separately
 												</div>
-											<!-- табы конец -->
-								   		</div>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-								        
-								      </div>
-								    </div>  
-								  </div> 
-								</div>  
-
-								<!-- конец 2 модал -->
-
-								<!-- модал 3 -->
-								<div class="modal fade" tabindex="-1"  id="jil">
-								  <div class="modal-dialog modal-lg">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title">Подробно об услугах в категории жилищные споры </h4>
-								      </div>
-								      <div class="modal-body">
-								      	<div class="modalwrap">
-											<!-- табы -->
-												
-												<!-- Навигационные вкладки -->  
-												<ul class="nav nav-tabs" role="tablist">
-												  <li class="active"><a href="#about3" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
-												  <li><a href="#table3" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
-												  <li role="presentation"><a href="#other3" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
-												</ul>
-
-												<!-- Вкладки панелей -->  
-												<div class="tab-content">
-												  <div role="tabpanel" class="tab-pane active" id="about3">
-												  	<div class="forabout">
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Жилищные споры</div>
-												  			<div class="aboutp">
-												  				<p>Жилищные споры это Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты..</p>
-												  				<img src="img/jil.jpg" alt="jil">
-												  			</div>
-												  		</div>
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead">Алименты</div>
-												  			<div class="aboutp">
-												  				<img src="img/modal/alim.jpg" alt="alim">
-												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				
-												  			</div>
-												  		</div>
-
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Установление отцовства</div>
-												  			<div class="aboutp">
-												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
-												  			</div>
-												  		</div>
-												  	
-												  	
-												  
-												  		
-												  	</div>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="table3">
-												  	<div class="fortable">
-												  		<table class="table table-striped">
-												  		  <tr>
-												  		  	<th>Услуга</th>
-												  		  	<th>Стоимость</th>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Что-то</td>
-												  		  	<td>1500 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td>3500 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		</table>
-
-												  	</div>
-												  	<p>*Сколько стоят услуги адвоката? Этот вопрос для клиента тоже важен, но никаких определенных тарифов, прейскурантов и прайс-листов на услуги адвоката не существует. Стоимость оказания услуг адвокатом с каждым доверителем оговаривается индивидуально и зависит от многих факторов: объема и сложности дела, количества следственных действий, судебных заседаний и т.д. Определить примерную цену услуг адвоката можно уже при разговоре по телефону, но все детали решаются непосредственно при встрече в офисе.</p>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="other3">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок там раз языкового, текстами предупредила свой большого силуэт строчка всемогущая несколько залетают! Дал которое он, строчка заманивший текста назад!</div>
+												<div class="cell2 noshade"><img src="img/modal/money.gif" alt="money">
 												</div>
-											<!-- табы конец -->
-								   		</div>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-								        
-								      </div>
-								    </div>  
-								  </div> 
-								</div>  
+											</div>
+										</div>
 
-								<!-- конец 3 модал -->
+									</div>
+									<!-- end tabs -->
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-success" style="font-size:1rem;"><i
+										class="fa fa-whatsapp" aria-hidden="true"></i></button>
 
-								<!-- модал 4 -->
-								<div class="modal fade" tabindex="-1"  id="others">
-								  <div class="modal-dialog modal-lg">
-								    <div class="modal-content">
-								      <div class="modal-header">
-								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								        <h4 class="modal-title">Подробно об услугах вне категорий</h4>
-								      </div>
-								      <div class="modal-body">
-								      	<div class="modalwrap">
-											<!-- табы -->
-												
-												<!-- Навигационные вкладки -->  
-												<ul class="nav nav-tabs" role="tablist">
-												  <li class="active"><a href="#about4" data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i> Услуги</a></li>
-												  <li><a href="#table4" data-toggle="tab"><i class="fa fa-money" aria-hidden="true"></i> Таблица цен</a></li>
-												  <li role="presentation"><a href="#other4" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i> Особенности</a></li>
-												</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 
-												<!-- Вкладки панелей -->  
-												<div class="tab-content">
-												  <div role="tabpanel" class="tab-pane active" id="about4">
-												  	<div class="forabout">
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Вне категорий</div>
-												  			<div class="aboutp">
-												  				<p>Жилищные споры это Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты..</p>
-												  				<img src="img/jil.jpg" alt="jil">
-												  			</div>
-												  		</div>
-
-												  		<div class="aboutitem">
-												  			<div class="abouthead">Алименты</div>
-												  			<div class="aboutp">
-												  				<img src="img/modal/alim.jpg" alt="alim">
-												  				<p>Алименты это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				
-												  			</div>
-												  		</div>
+				<!-- end modal 1 -->
 
 
-												  		<div class="aboutitem">
-												  			<div class="abouthead2">Установление отцовства</div>
-												  			<div class="aboutp">
-												  				<p>Установление отцовства это Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptate.</p>
-												  				<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
-												  			</div>
-												  		</div>
-												  	
-												  	
-												  
-												  		
-												  	</div>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="table4">
-												  	<div class="fortable">
-												  		<table class="table table-striped">
-												  		  <tr>
-												  		  	<th>Услуга</th>
-												  		  	<th>Стоимость</th>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Что-то</td>
-												  		  	<td>1500 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td>3500 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		  <tr>
-												  		  	<td>Еще</td>
-												  		  	<td> 400 р.</td>
-												  		  </tr>
-												  		</table>
+				<!-- modal 2 -->
+				<div class="modal fade" tabindex="-1" id="nasled">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+										aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Inheritance services in detail</h4>
+							</div>
+							<div class="modal-body">
+								<div class="modalwrap">
+									<!-- tabs -->
 
-												  	</div>
-												  	<p>*Сколько стоят услуги адвоката? Этот вопрос для клиента тоже важен, но никаких определенных тарифов, прейскурантов и прайс-листов на услуги адвоката не существует. Стоимость оказания услуг адвокатом с каждым доверителем оговаривается индивидуально и зависит от многих факторов: объема и сложности дела, количества следственных действий, судебных заседаний и т.д. Определить примерную цену услуг адвоката можно уже при разговоре по телефону, но все детали решаются непосредственно при встрече в офисе.</p>
-												  </div>
-												  <div role="tabpanel" class="tab-pane" id="other4">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок там раз языкового, текстами предупредила свой большого силуэт строчка всемогущая несколько залетают! Дал которое он, строчка заманивший текста назад!</div>
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#about2" role="tab"
+												data-toggle="tab"><i class="fa fa-handshake-o" aria-hidden="true"></i>
+												Services</a></li>
+										<li role="presentation"><a href="#table2" role="tab" data-toggle="tab"><i
+													class="fa fa-money" aria-hidden="true"></i> Price list</a></li>
+										<li role="presentation"><a href="#other2" aria-controls="messages" role="tab"
+												data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>
+												Details</a></li>
+									</ul>
 
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="about2">
+											<div class="forabout">
+
+												<div class="aboutitem">
+													<div class="abouthead2">Inheritance</div>
+													<div class="aboutp">
+														<p>Inheritance: Lorem ipsum dolor sit amet, consectetur
+															adipisicing elit. Voluptatem, voluptate.</p>
+														<img src="img/nasled.jpg" alt="nasled">
+													</div>
 												</div>
-											<!-- табы конец -->
-								   		</div>
-								      </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-								        <button type="button" class="btn btn-success" style="font-size:1.2rem;"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-								        
-								      </div>
-								    </div>  
-								  </div> 
-								</div>  
 
-								<!-- конец 4 модал -->
+												<div class="aboutitem">
+													<div class="abouthead">Child support</div>
+													<div class="aboutp">
+														<img src="img/modal/alim.jpg" alt="alim">
+														<p>Child support: Lorem ipsum dolor sit amet, consectetur
+															adipisicing elit. Voluptatem, voluptate.</p>
+
+													</div>
+												</div>
 
 
-						 
-			 </div>
-		 </div>
+												<div class="aboutitem">
+													<div class="abouthead2">Establishing paternity</div>
+													<div class="aboutp">
+														<p>Establishing paternity: Lorem ipsum dolor sit amet,
+															consectetur adipisicing elit. Voluptatem, voluptate.</p>
+														<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+													</div>
+												</div>
+
+
+
+
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="table2">
+											<div class="fortable">
+												<table class="table table-striped">
+													<tr>
+														<th>Service</th>
+														<th>Price</th>
+													</tr>
+													<tr>
+														<td>Something</td>
+														<td>100 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td>320 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+												</table>
+
+											</div>
+											<p>*How much does a lawyer cost? It's an important question for any client,
+												but there are no fixed rates, tariffs or price lists for legal services.
+												The fee is agreed individually with each client and depends on many
+												factors: the scope and complexity of the case, the number of
+												investigative actions, court hearings, etc. We can give you a rough
+												estimate over the phone, and all the details are settled at a meeting in
+												our office.</p>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="other2">22..</div>
+
+									</div>
+									<!-- end tabs -->
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-success" style="font-size:1.2rem;"><i
+										class="fa fa-whatsapp" aria-hidden="true"></i></button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- end modal 2 -->
+
+				<!-- modal 3 -->
+				<div class="modal fade" tabindex="-1" id="jil">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+										aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Housing dispute services in detail</h4>
+							</div>
+							<div class="modal-body">
+								<div class="modalwrap">
+									<!-- tabs -->
+
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="active"><a href="#about3" data-toggle="tab"><i
+													class="fa fa-handshake-o" aria-hidden="true"></i> Services</a></li>
+										<li><a href="#table3" data-toggle="tab"><i class="fa fa-money"
+													aria-hidden="true"></i> Price list</a></li>
+										<li role="presentation"><a href="#other3" aria-controls="messages" role="tab"
+												data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>
+												Details</a></li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="about3">
+											<div class="forabout">
+
+												<div class="aboutitem">
+													<div class="abouthead2">Housing disputes</div>
+													<div class="aboutp">
+														<p>Housing disputes: far far away, behind the word mountains,
+															there live the blind texts.</p>
+														<img src="img/jil.jpg" alt="jil">
+													</div>
+												</div>
+
+												<div class="aboutitem">
+													<div class="abouthead">Child support</div>
+													<div class="aboutp">
+														<img src="img/modal/alim.jpg" alt="alim">
+														<p>Child support: Lorem ipsum dolor sit amet, consectetur
+															adipisicing elit. Voluptatem, voluptate.</p>
+
+													</div>
+												</div>
+
+
+												<div class="aboutitem">
+													<div class="abouthead2">Establishing paternity</div>
+													<div class="aboutp">
+														<p>Establishing paternity: Lorem ipsum dolor sit amet,
+															consectetur adipisicing elit. Voluptatem, voluptate.</p>
+														<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+													</div>
+												</div>
+
+
+
+
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="table3">
+											<div class="fortable">
+												<table class="table table-striped">
+													<tr>
+														<th>Service</th>
+														<th>Price</th>
+													</tr>
+													<tr>
+														<td>Something</td>
+														<td>1500 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td>3500 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+												</table>
+
+											</div>
+											<p>*How much does a lawyer cost? It's an important question for any client,
+												but there are no fixed rates, tariffs or price lists for legal services.
+												The fee is agreed individually with each client and depends on many
+												factors: the scope and complexity of the case, the number of
+												investigative actions, court hearings, etc. We can give you a rough
+												estimate over the phone, and all the details are settled at a meeting in
+												our office.</p>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="other3">Far far away, behind the word
+											mountains, far from the countries Vokalia and Consonantia, there live the
+											blind texts. A small river named Duden flows by their place and supplies it
+											with the necessary regelialia. It is a paradisematic country, in which
+											roasted parts of sentences fly into your mouth!</div>
+									</div>
+									<!-- end tabs -->
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-success" style="font-size:1.2rem;"><i
+										class="fa fa-whatsapp" aria-hidden="true"></i></button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- end modal 3 -->
+
+				<!-- modal 4 -->
+				<div class="modal fade" tabindex="-1" id="others">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+										aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title">Other services in detail</h4>
+							</div>
+							<div class="modal-body">
+								<div class="modalwrap">
+									<!-- tabs -->
+
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="active"><a href="#about4" data-toggle="tab"><i
+													class="fa fa-handshake-o" aria-hidden="true"></i> Services</a></li>
+										<li><a href="#table4" data-toggle="tab"><i class="fa fa-money"
+													aria-hidden="true"></i> Price list</a></li>
+										<li role="presentation"><a href="#other4" aria-controls="messages" role="tab"
+												data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>
+												Details</a></li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="about4">
+											<div class="forabout">
+
+												<div class="aboutitem">
+													<div class="abouthead2">Uncategorized</div>
+													<div class="aboutp">
+														<p>Housing disputes: far far away, behind the word mountains,
+															there live the blind texts.</p>
+														<img src="img/jil.jpg" alt="jil">
+													</div>
+												</div>
+
+												<div class="aboutitem">
+													<div class="abouthead">Child support</div>
+													<div class="aboutp">
+														<img src="img/modal/alim.jpg" alt="alim">
+														<p>Child support: Lorem ipsum dolor sit amet, consectetur
+															adipisicing elit. Voluptatem, voluptate.</p>
+
+													</div>
+												</div>
+
+
+												<div class="aboutitem">
+													<div class="abouthead2">Establishing paternity</div>
+													<div class="aboutp">
+														<p>Establishing paternity: Lorem ipsum dolor sit amet,
+															consectetur adipisicing elit. Voluptatem, voluptate.</p>
+														<img src="img/modal/otcovstvo.jpg" alt="otcovstvo">
+													</div>
+												</div>
+
+
+
+
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="table4">
+											<div class="fortable">
+												<table class="table table-striped">
+													<tr>
+														<th>Service</th>
+														<th>Price</th>
+													</tr>
+													<tr>
+														<td>Something</td>
+														<td>1500 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td>3500 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+													<tr>
+														<td>More</td>
+														<td> 400 RUB</td>
+													</tr>
+												</table>
+
+											</div>
+											<p>*How much does a lawyer cost? It's an important question for any client,
+												but there are no fixed rates, tariffs or price lists for legal services.
+												The fee is agreed individually with each client and depends on many
+												factors: the scope and complexity of the case, the number of
+												investigative actions, court hearings, etc. We can give you a rough
+												estimate over the phone, and all the details are settled at a meeting in
+												our office.</p>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="other4">Far far away, behind the word
+											mountains, far from the countries Vokalia and Consonantia, there live the
+											blind texts. A small river named Duden flows by their place and supplies it
+											with the necessary regelialia. It is a paradisematic country, in which
+											roasted parts of sentences fly into your mouth!</div>
+
+									</div>
+									<!-- end tabs -->
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-success" style="font-size:1.2rem;"><i
+										class="fa fa-whatsapp" aria-hidden="true"></i></button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- end modal 4 -->
+
+
+
+			</div>
+		</div>
 	</div>
 
 	<div class="block" id="about">
 
 		<div class="blockwrap about">
-			<div class="blockhead"  id="aboutlink">О нас </div>
+			<div class="blockhead" id="aboutlink">About us</div>
 			<div class="aboutus">
-				
+
 				<div class="cell2"><img src="img/about.png" alt="about"></div>
 				<div class="cell1">
-					 Адвокатский кабинет <b>Юстиниан</b> оказывает юридические услуги организациям, индивидуальным предпринимателям и гражданам с <b>2005 г.</b> Юридическая помощь оказывается не только в Ростовской области, но и в иных регионах России. Фактически команду адвокатского кабинета составляют адвокаты, юристы разной направленности. Тесное сотрудничество с бухгалтерами, экспертами разной направленности позволяет нам эффективно разрешать сложнейшие споры, возникающие вопросы.
+					<b>Justinian</b> law office has been providing legal services to companies, sole proprietors and
+					private clients since <b>2005</b>. We help clients not only in the Rostov region but in other
+					regions of Russia as well. Our team is made up of attorneys and lawyers with a range of
+					specialisations. Close cooperation with accountants and experts in various fields lets us resolve
+					even the most complex disputes and questions effectively.
 				</div>
 			</div>
-			
-			
+
+
 			<div style="min-height: 17vh;"></div>
 		</div>
 	</div>
 	<div class="block" id="contacts">
 		<div class="blockwrap">
-			<div class="blockhead">Контакты </div>
-				<div class="contactswrap">
-					<div class="side form">
-						<div class="formwrap">
-							<div class="sechead">
-								<div class="formheader">Задать вопрос</div>
-								<p id="form">напишите нам и мы обязательно свяжемся с Вами, чтобы подробно обсудить Ваш вопрос.</p>
-							</div>
-							<div class="ifsuccess ">
-							<span id="ifsuccess"><span id="success">Спасибо за заявку</span> совсем скоро с Вами свяжутся<br><button class="btn btn-default" id="another">У меня еще один вопрос</button></span>
+			<div class="blockhead">Contacts</div>
+			<div class="contactswrap">
+				<div class="side form">
+					<div class="formwrap">
+						<div class="sechead">
+							<div class="formheader">Ask a question</div>
+							<p id="form">write to us and we'll get back to you to discuss your question in detail.</p>
+						</div>
+						<div class="ifsuccess ">
+							<span id="ifsuccess"><span id="success">Thank you for your request</span> we will contact
+								you very soon<br><button class="btn btn-default" id="another">I have another
+									question</button></span>
 
-							
-							</div>
-							<form action="#" id="form">
-							
-			
-								<!-- Hidden Required Fields -->
-							<input type="hidden" name="project_name" value="Юридическая Помощь">
-							<input type="hidden" name="admin_email" value="valera.az2016@yandex.ru">
-							<input type="hidden" name="form_subject" value="Поступил новый запрос">
-								<!-- END Hidden Required Fields -->
 
-							
+						</div>
+						<form action="#" id="form">
+
+
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="Legal Help">
+							<input type="hidden" name="admin_email" value="mail">
+							<input type="hidden" name="form_subject" value="New request received">
+							<!-- END Hidden Required Fields -->
+
+
 							<div class="forinput">
 								<input type="text" required id="name">
-								<label for="name" id="label"> Ваше Имя - <i class="fa fa-user" aria-hidden="true"></i></label>
+								<label for="name" id="label"> Your name - <i class="fa fa-user"
+										aria-hidden="true"></i></label>
 							</div>
-							
+
 							<div class="forinput">
-								<input type="email"  required id="email">
-								<label for="email" id="label"> Ваша Почта - <i class="fa fa-envelope" aria-hidden="true"></i></label>
+								<input type="email" required id="email">
+								<label for="email" id="label"> Your email - <i class="fa fa-envelope"
+										aria-hidden="true"></i></label>
 							</div>
 
 							<div class="forinput">
 								<input type="text" required id="phone">
-								<label for="phone" id="label"> Ваш Номер телефона - <i class="fa fa-phone" aria-hidden="true"></i></label>
+								<label for="phone" id="label"> Your phone - <i class="fa fa-phone"
+										aria-hidden="true"></i></label>
 							</div>
 
 							<div class="fortext">
-								<textarea rows="5" name="message" required 	placeholder="Ваш вопрос"></textarea>
+								<textarea rows="5" name="message" required placeholder="Your question"></textarea>
 							</div>
 
 							<div class="fortext">
 								<select name="category" id="category" required>
-									<option value=" " selected=" ">выберите тему вашего вопроса</option>
-									<option value="Семейные споры">Семейные споры</option>
-									<option value="Жилищные споры">Жилищные споры</option>
-									<option value="Вопрос по оформлению наслдества">Вопросы по оформлению наслдества</option>
-									<option value="Вопрос вне категорий">Вопрос вне категорий</option>
+									<option value=" " selected=" ">choose a topic for your question</option>
+									<option value="Family disputes">Family disputes</option>
+									<option value="Housing disputes">Housing disputes</option>
+									<option value="Inheritance question">Inheritance matters</option>
+									<option value="Other question">Other question</option>
 								</select>
 							</div>
 							<div class="forbutton ">
-								<button class="btn">отправить вопрос</button>
+								<button class="btn">send question</button>
 							</div>
 
 
 						</form>
-						</div>
-						
 					</div>
-					<div class="line"></div>
-					<div class="side contacts">
-						<div class="formwrap">
-							<div class="sechead">
-								<div class="formheader">Наши контакты</div>
-								<p id="form">Можете связаться с нами самостоятельно</p>
-							</div>
-							<table class="maintable table table-hover text-center">
-							  <thead class="thead-dark">
-							    <tr >
-							      <th class="maintable" scope="col"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>   Позвонить </th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row"><a href="tel: +79885566988">8-988-556-96-88</a></th>
-							    </tr>
-							    <tr>
-							      <th scope="row"><a href="tel: +79885566988">8-988-556-96-88</a></th>
-							    </tr>
-							  </tbody>
-							  <thead class="thead-dark">
-							    <tr >
-							      <th class="maintable" scope="col"><i class="fa fa-envelope-o" aria-hidden="true"> </i>  Написать </th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row"><a href="mailto: valera.az2016@yandex.ru">valera.az2016@yandex.ru</a></th>
-							    </tr>
-							  </tbody>
-							</table>
+
+				</div>
+				<div class="line"></div>
+				<div class="side contacts">
+					<div class="formwrap">
+						<div class="sechead">
+							<div class="formheader">Our contacts</div>
+							<p id="form">Or contact us directly</p>
 						</div>
+						<table class="maintable table table-hover text-center">
+							<thead class="thead-dark">
+								<tr>
+									<th class="maintable" scope="col"><i class="fa fa-volume-control-phone"
+											aria-hidden="true"></i> Call </th>
+								</tr>
+							</thead>
+
+							<thead class="thead-dark">
+								<tr>
+									<th class="maintable" scope="col"><i class="fa fa-envelope-o" aria-hidden="true">
+										</i> Email </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row"><a href="mailto: mail">mail</a></th>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 
 
 	<footer>
 		<div class="footerwrap">
-			<span>ООО "Юстиниан" - Ваш личный адвокат</span>
+			<span>Justinian LLC - your personal lawyer</span>
 			<span>dev by <a href="https://kirilinsky.ru" target="_blank">kirilisnky</a> @ 2018</span>
 		</div>
 	</footer>
@@ -724,20 +850,21 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- BEGIN JIVOSITE CODE {literal} -->
 	<script type='text/javascript'>
-	(function(){ var widget_id = '8NslzecrNp';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+		(function () { var widget_id = '8NslzecrNp'; var d = document; var w = window; function l() { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss); } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();
 	</script>
 	<!-- {/literal} END JIVOSITE CODE -->
 	<script>
-		  $(document).ready(function(){
-		    $('.go_to').click( function(){ 
-		  var scroll_el = $(this).attr('href'); 
-		        if ($(scroll_el).length != 0) { 
-		      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
-		        }
-		      return false; 
-		    });
+		$(document).ready(function () {
+			$('.go_to').click(function () {
+				var scroll_el = $(this).attr('href');
+				if ($(scroll_el).length != 0) {
+					$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+				}
+				return false;
+			});
 		});
 
 	</script>
 </body>
+
 </html>
