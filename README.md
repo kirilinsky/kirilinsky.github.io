@@ -77,24 +77,24 @@
 
 | Date | Project | About | Stack |
 |---|---|---|---|
-| 2019-02 | [Money Saver](https://kirilinsky.github.io/moneySaver/index.html) | Vue training app | HTML · CSS · JS · Vue |
-| 2019-01 | [Animated Preloader](https://kirilinsky.github.io/continue/animation/index.html) | Lesson with keyframes | HTML · CSS · JS |
-| 2019-01 | [Jade/Stylus template](https://kirilinsky.github.io/continue/jade_stylus_template/index.html) | Lesson with Jade and Stylus | HTML · CSS · JS |
-| 2019-01 | [Vue Clicker](https://kirilinsky.github.io/continue/clickerVue/index.html) | Clicker game on Vue.js | HTML · CSS · JS · Vue |
-| 2018-11 | [FlagApp for vk.com](https://kirilinsky.github.io/continue/anybody/index.html) | Not ported | HTML · CSS |
-| 2018-11 | [Vue Training](https://kirilinsky.github.io/vue_train/index.html) | Small Vue training projects | HTML · CSS · JS · Vue |
-| 2018-11 | [AJAX/MySQL comments](https://github.com/kirilinsky/kirilinsky.github.io/tree/master/ajax) | Comments saved to SQL database (source) | HTML · CSS · JS · PHP · MySQL |
-| 2018-11 | [Monster'A!](https://kirilinsky.github.io/clicker/index.html) | Don't forget to water your monstera! | HTML · CSS · JS |
-| 2018-11 | [FAQ page](https://kirilinsky.github.io/continue/faq/index.html) | Work in progress | HTML · CSS |
-| 2018-11 | [Binary](https://kirilinsky.github.io/continue/binary/index.html) | Binary lesson, see `console.log()` | JS |
-| 2018-11 | [Closure](https://kirilinsky.github.io/continue/closure/index.html) | Closure lesson, see `console.log()` | JS |
-| 2018-09 | [Adaptive Menu](https://kirilinsky.github.io/continue/adaptivemenu/index.html) | Responsive menu with hover effect | HTML · CSS · JS |
-| 2018-09 | [Adaptive Dropdown](https://kirilinsky.github.io/continue/drop/index.html) | Responsive dropdown menu | HTML · CSS · JS |
-| 2018-08 | [Currency exchange](https://kirilinsky.github.io/continue/metrics/index.html) | JS lesson, exchange values | HTML · CSS · JS |
-| 2018-07 | [Skill-o-meter](https://kirilinsky.github.io/continue/skill/index.html) | A joke | HTML · CSS · JS |
-| 2018-05 | [Range](https://kirilinsky.github.io/continue/range/index.html) | JS lesson, changeable range | HTML · CSS · JS |
-| 2018-04 | [Bootstrap Training](https://kirilinsky.github.io/continue/boots/index.html) | Lesson with Bootstrap 4 | HTML · CSS · Bootstrap |
-| 2018-04 | [PSD layout](https://kirilinsky.github.io/continue/tra5/index.html) | Simple layout from PSD | HTML · CSS |
-| 2018-04 | [PSD layout #2](https://kirilinsky.github.io/continue/train/index.html) | Another simple layout from PSD | HTML · CSS |
-| 2018-03 | [Simple Button](https://kirilinsky.github.io/continue/btn/index.html) | CSS3 lesson | HTML · CSS |
-| 2018-01 | [First layout](https://kirilinsky.github.io/continue/markt/index.html) | One of my first layouts. I know, it's awful. | HTML · CSS |
+| 2019‑02 | [Money Saver](https://kirilinsky.github.io/moneySaver/index.html) | Vue training app | HTML · CSS · JS · Vue |
+| 2019‑01 | [Animated Preloader](https://kirilinsky.github.io/continue/animation/index.html) | Lesson with keyframes | HTML · CSS · JS |
+| 2019‑01 | [Jade/Stylus template](https://kirilinsky.github.io/continue/jade_stylus_template/index.html) | Lesson with Jade and Stylus | HTML · CSS · JS |
+| 2019‑01 | [Vue Clicker](https://kirilinsky.github.io/continue/clickerVue/index.html) | Clicker game on Vue.js | HTML · CSS · JS · Vue |
+| 2018‑11 | [FlagApp for vk.com](https://kirilinsky.github.io/continue/anybody/index.html) | Not ported | HTML · CSS |
+| 2018‑11 | [Vue Training](https://kirilinsky.github.io/vue_train/index.html) | Small Vue training projects | HTML · CSS · JS · Vue |
+| 2018‑11 | [AJAX/MySQL comments](https://github.com/kirilinsky/kirilinsky.github.io/tree/master/ajax) | Comments saved to SQL database (source) | HTML · CSS · JS · PHP · MySQL |
+| 2018‑11 | [Monster'A!](https://kirilinsky.github.io/clicker/index.html) | Don't forget to water your monstera! | HTML · CSS · JS |
+| 2018‑11 | [FAQ page](https://kirilinsky.github.io/continue/faq/index.html) | Work in progress | HTML · CSS |
+| 2018‑11 | [Binary](https://kirilinsky.github.io/continue/binary/index.html) | Binary lesson, see `console.log()` | JS |
+| 2018‑11 | [Closure](https://kirilinsky.github.io/continue/closure/index.html) | Closure lesson, see `console.log()` | JS |
+| 2018‑09 | [Adaptive Menu](https://kirilinsky.github.io/continue/adaptivemenu/index.html) | Responsive menu with hover effect | HTML · CSS · JS |
+| 2018‑09 | [Adaptive Dropdown](https://kirilinsky.github.io/continue/drop/index.html) | Responsive dropdown menu | HTML · CSS · JS |
+| 2018‑08 | [Currency exchange](https://kirilinsky.github.io/continue/metrics/index.html) | JS lesson, exchange values | HTML · CSS · JS |
+| 2018‑07 | [Skill-o-meter](https://kirilinsky.github.io/continue/skill/index.html) | A joke | HTML · CSS · JS |
+| 2018‑05 | [Range](https://kirilinsky.github.io/continue/range/index.html) | JS lesson, changeable range | HTML · CSS · JS |
+| 2018‑04 | [Bootstrap Training](https://kirilinsky.github.io/continue/boots/index.html) | Lesson with Bootstrap 4 | HTML · CSS · Bootstrap |
+| 2018‑04 | [PSD layout](https://kirilinsky.github.io/continue/tra5/index.html) | Simple layout from PSD | HTML · CSS |
+| 2018‑04 | [PSD layout #2](https://kirilinsky.github.io/continue/train/index.html) | Another simple layout from PSD | HTML · CSS |
+| 2018‑03 | [Simple Button](https://kirilinsky.github.io/continue/btn/index.html) | CSS3 lesson | HTML · CSS |
+| 2018‑01 | [First layout](https://kirilinsky.github.io/continue/markt/index.html) | One of my first layouts. I know, it's awful. | HTML · CSS |

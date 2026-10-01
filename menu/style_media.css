@@ -14,6 +14,9 @@ body {
 	font-size: 9px;
 	color:brown;
 }
+.author a {
+	color: inherit;
+}
 .wrap{
 	position:relative;
 	width:80%;
@@ -156,6 +159,10 @@ ul li{
 	padding: 0 0 0 10px;
 	vertical-align: middle;
 }
+ul li.zebra {
+	background: #E8C8A3;
+	color: #362E30;
+}
 ul li:hover {
 	transition: ease 0.3s all;
 	list-style-image: url('choose.png');
@@ -163,7 +170,6 @@ ul li:hover {
 	color: #E1BF9A; 
 	box-shadow: 0 2px 1px #2F2729;
 	cursor: pointer;
-	list-style: red;
 	text-shadow: 0 0 1px #2F2729;
 }
 .main_wrap {
@@ -353,7 +359,9 @@ select#selectDay {
 }
 .cell.totalTotal{
 	grid-column: 1/5;
-	text-align: right;
+	justify-content: flex-end;
+	padding-right: 10px;
+	font-style: normal;
 	font-weight: bold;
 	font-size: 15px;
 }
