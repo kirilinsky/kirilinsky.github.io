@@ -13,6 +13,8 @@ and (max-width : 1024px) {
 		width: 92%;
 	}
 	.name {
+		width: auto;
+		min-width: 380px;
 		right: 5%;
 	}
 	.gallery_img {
@@ -24,13 +26,26 @@ and (max-width : 1024px) {
 /* Phones and small tablets ----------- */
 @media only screen
 and (max-width : 768px) {
+	.header_wrap {
+		width: 100%;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding: 0 8px;
+	}
 	a .header_logo {
-		margin: 2px 0;
+		width: 36px;
+		min-height: 36px;
+		margin: 4px 0;
 	}
 	a .header_element {
-		padding: 8px 6px;
-		font-size: 1.1rem;
+		min-width: 0;
+		padding: 12px 6px;
+		font-size: 1rem;
 		letter-spacing: 1px;
+		white-space: nowrap;
+	}
+	.anc {
+		height: 60px;
 	}
 	.wide {
 		height: 75vh;
@@ -38,6 +53,7 @@ and (max-width : 768px) {
 	.name {
 		width: 90%;
 		min-width: 0;
+		padding: 24px 16px;
 		right: 5%;
 		bottom: 6%;
 	}
@@ -82,10 +98,25 @@ and (max-width : 768px) {
 @media only screen
 and (max-width : 420px) {
 	.header_wrap {
-		justify-content: center;
+		justify-content: space-around;
+		padding: 0 4px;
 	}
 	a .header_logo {
 		display: none;
+	}
+	a .header_element {
+		padding: 12px 3px;
+		font-size: 0.85rem;
+		letter-spacing: 0.5px;
+	}
+	.name h1 {
+		font-size: 2.6rem;
+		letter-spacing: 6px;
+		padding-left: 6px;
+	}
+	.name_tagline {
+		font-size: 0.9rem;
+		letter-spacing: 2px;
 	}
 	.gallery_buttons .button {
 		padding: 0 14px;
